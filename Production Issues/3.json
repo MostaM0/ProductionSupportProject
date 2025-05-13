@@ -1,0 +1,117 @@
+[
+    {
+        "@timestamp": "2025-05-05 01:56:12.576",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.576Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.payment.PaymentRepository.findIfReversalExists(String,BigDecimal,String,String,Instant,String,String)\n parameters: [null, 30.00, 588734, Mad About Cake, 2025-05-05T01:55:37.575433Z, O20250505RJHIMYKL030OQR91001722, 20250505RJHIMYKL03091001722]\n totalTime: 1 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abc49d3272f5e96a77812a89abe",
+            "spanId": "7bbd2854fdd12dfb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.559",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.559Z",
+            "@version": "1",
+            "message": "Registering incoming payment for externalRequestId O20250505RJHIMYKL030OQR91001722",
+            "logger_name": "com.arbm.digibank.controller.PaymentsController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abc49d3272f5e96a77812a89abe",
+            "spanId": "7bbd2854fdd12dfb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.557",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.557Z",
+            "@version": "1",
+            "message": "Payment request: class PaymentRequest {\n    internalRequestId: 1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\n    externalRequestId: O20250505RJHIMYKL030OQR91001722\n    customerAccountNumber: 912010110557150\n    amount: 30.00\n    denomination: MYR\n    otherSideFullName: Mad About Cake\n    otherSideExternalId: \n    otherSideAccountNumber: null\n    otherSideBankCode: 588734\n    transferType: QR_DEBIT\n    recipientReference: QR Payment\n    paymentDetails: null\n    instructionDetails: {businessMessageId=20250505RJHIMYKL03091001722, transferType=6}\n    debtorAccountType: DFLT\n    creditorAccountType: SVGS\n    identificationType: null\n    identificationId: null\n    paymentType: PAY_TO_QR_CTM\n}",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "216018cb9f54acf7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.557",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.557Z",
+            "@version": "1",
+            "message": "[O20250505RJHIMYKL030OQR91001722] Registering incoming payment in payments-service",
+            "logger_name": "com.arbm.digibank.service.client.PaymentsService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "216018cb9f54acf7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.551",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.551Z",
+            "@version": "1",
+            "message": "Received retailPayment request with requestID [O20250505RJHIMYKL030OQR91001722], channelRef: [20250505RJHIMYKL03091001722]",
+            "logger_name": "com.arbm.digibank.controller.soap.IncomingPaymentsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "68181abc49d3272f5e96a77812a89abe",
+            "spanId": "216018cb9f54acf7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.503",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.503Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Sending PayToQRMessage SOAP request for businessMessageId: [20250505RJHIMYKL030OQR91001722].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.503",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.503Z",
+            "@version": "1",
+            "message": "businessMessageId 20250505RJHIMYKL030OQR91001722",
+            "logger_name": "com.arbm.digibank.model.PayToQR",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    }
+]

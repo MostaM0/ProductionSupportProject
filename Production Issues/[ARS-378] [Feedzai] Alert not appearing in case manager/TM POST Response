@@ -1,0 +1,36 @@
+Payment Creation Response:
+{
+        "@timestamp": "2025-03-29 01:59:00.662",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-29T01:59:00.662Z",
+            "@version": "1",
+            "message": "TM Posting creation result:
+             CreatePostingInstructionBatchResponse(
+             id=fcd81210-5719-4804-aae4-464f599920bd,
+              createTimestamp=2025-03-29T01:59:00.626112Z,
+               doneTimestamp=null,
+                done=false) ",
+            "logger_name": "com.arbm.digibank.service.vault.TmPostingService",
+        }
+    }
+
+
+Payment Final Status Response:
+{
+        "@timestamp": "2025-03-29 01:59:00.911",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-29T01:59:00.911Z",
+            "@version": "1",
+            "message": "Retrieved payment status from TM:
+             CbsPaymentResult(
+             transactionId=e140873c-423e-47f9-87a1-713de7fe234d,
+              payeeAccountId=da2174ec-80ff-4191-90c7-8f150dfe8c12,
+               amount=1000,
+                denomination=MYR,
+                 createdAt=2025-03-29T01:59:00.748708Z,
+                  status=ACCEPTED)",
+            "logger_name": "com.arbm.digibank.service.vault.TmPostingService",
+        }
+    },

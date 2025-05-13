@@ -1,0 +1,482 @@
+[
+    {
+        "@timestamp": "2025-05-05 01:56:16.931",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-05T01:56:16.931] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\",\"type\":\"QR_CREDIT_TRANSFER_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1748736000003786\\\",\\\"referenceId\\\":\\\"c39741a8-8644-4fe5-983d-e2759dc8bfa2\\\",\\\"businessMessageId\\\":\\\"20250505RJHIMYKL03091001722\\\",\\\"customerAccountId\\\":\\\"75b4a38c-272f-48b5-b460-bed36f0c8308\\\",\\\"amount\\\":\\\"30.00\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2025-05-05T01:56:12.705\\\",\\\"otherSideFullName\\\":\\\"Mad About Cake\\\",\\\"status\\\":\\\"FAILED\\\",\\\"errorCode\\\":\\\"45_INVALID_ACCOUNT\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:16.931",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-05T01:56:16.931] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1748736000003786\\\",\\\"referenceId\\\":\\\"c39741a8-8644-4fe5-983d-e2759dc8bfa2\\\",\\\"businessMessageId\\\":\\\"20250505RJHIMYKL03091001722\\\",\\\"customerAccountId\\\":\\\"75b4a38c-272f-48b5-b460-bed36f0c8308\\\",\\\"amount\\\":\\\"30.00\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2025-05-05T01:56:12.705\\\",\\\"otherSideFullName\\\":\\\"Mad About Cake\\\",\\\"status\\\":\\\"FAILED\\\",\\\"errorCode\\\":\\\"45_INVALID_ACCOUNT\\\"}\",\"requestId\":\"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\",\"type\":\"QR_CREDIT_TRANSFER_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:16.929",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:16.929Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, type=QR_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1748736000003786\",\"referenceId\":\"c39741a8-8644-4fe5-983d-e2759dc8bfa2\",\"businessMessageId\":\"20250505RJHIMYKL03091001722\",\"customerAccountId\":\"75b4a38c-272f-48b5-b460-bed36f0c8308\",\"amount\":\"30.00\",\"currency\":\"MYR\",\"date\":\"2025-05-05T01:56:12.705\",\"otherSideFullName\":\"Mad About Cake\",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"}) after total DB calls: 1 and total time: 1 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:16.928",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:16.928Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: 1779d0a4-5903-4bc6-8e40-4f307c0fb9f4",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "68181ac072aa514f603b128c939cda5d",
+            "spanId": "603b128c939cda5d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:16.926",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-05T01:56:16.925] [INFO] [apollo-server,,] default - {\"requestId\":\"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\"}"
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:16.926",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-05T01:56:16.926] [INFO] [apollo-server,,] default - Microservice request:  http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/1779d0a4-5903-4bc6-8e40-4f307c0fb9f4 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.727",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.712Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, type=QR_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1748736000003786\",\"referenceId\":\"c39741a8-8644-4fe5-983d-e2759dc8bfa2\",\"businessMessageId\":\"20250505RJHIMYKL03091001722\",\"customerAccountId\":\"75b4a38c-272f-48b5-b460-bed36f0c8308\",\"amount\":\"30.00\",\"currency\":\"MYR\",\"date\":\"2025-05-05T01:56:12.705\",\"otherSideFullName\":\"Mad About Cake\",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "87b7143ddbcfb510",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.720",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.72Z",
+            "@version": "1",
+            "message": "Received CreditTransferCompletedEvent event for request with internalRequestId [1779d0a4-5903-4bc6-8e40-4f307c0fb9f4]",
+            "logger_name": "com.arbm.digibank.consumer.CreditTransferCompletedConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "435a9fa6caa99eb6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.713",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.713Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"c39741a8-8644-4fe5-983d-e2759dc8bfa2\", \"internalRequestId\": \"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\", \"externalRequestId\": null, \"customerId\": \"1748736000003786\", \"amount\": \"30.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": null, \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"Mad About Cake\", \"otherSideAccountType\": null, \"customerName\": \" RAJA ZAFRIN BIN RAJA ZAIN\", \"customerAccountId\": \"75b4a38c-272f-48b5-b460-bed36f0c8308\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110557150\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FAILED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2QR_CTM\", \"createdAt\": \"2025-05-05T01:56:11.485219Z\", \"updatedAt\": \"2025-05-05T01:56:12.705Z\", \"version\": \"2\", \"recipientReference\": \"QR Payment\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"6d0aae6d-1422-4139-bd05-107803eb3c74\", \"otherSideQrId\": \"MBBQR1015129\", \"otherSideFinancialInstitutionId\": \"588734\", \"otherSideQrCode\": \"00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842\", \"QrCategory\": \"01\", \"acceptedTransactionTypes\": \"[01, 03]\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "4998a323fa785d97",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.713",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.713Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"c39741a8-8644-4fe5-983d-e2759dc8bfa2\", \"internalRequestId\": \"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\", \"externalRequestId\": null, \"customerId\": \"1748736000003786\", \"amount\": \"30.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": null, \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"Mad About Cake\", \"otherSideAccountType\": null, \"customerName\": \" RAJA ZAFRIN BIN RAJA ZAIN\", \"customerAccountId\": \"75b4a38c-272f-48b5-b460-bed36f0c8308\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110557150\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FAILED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2QR_CTM\", \"createdAt\": \"2025-05-05T01:56:11.485219Z\", \"updatedAt\": \"2025-05-05T01:56:11.489Z\", \"version\": \"1\", \"recipientReference\": \"QR Payment\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"6d0aae6d-1422-4139-bd05-107803eb3c74\", \"otherSideQrId\": \"MBBQR1015129\", \"otherSideFinancialInstitutionId\": \"588734\", \"otherSideQrCode\": \"00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842\", \"QrCategory\": \"01\", \"acceptedTransactionTypes\": \"[01, 03]\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "f1c451fe91b38dd7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.711",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.71Z",
+            "@version": "1",
+            "message": "Saving response under id 1779d0a4-5903-4bc6-8e40-4f307c0fb9f4",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "435a9fa6caa99eb6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.710",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.71Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, externalRequestId=null, businessMessageId=null, customerId=1748736000003786, smeId=null, amount=30.00, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=MBBEMYKL, otherSideAccountType=null, otherSideName=Mad About Cake, customerName= RAJA ZAFRIN BIN RAJA ZAIN, customerAccountType=SVGS, customerAccountId=75b4a38c-272f-48b5-b460-bed36f0c8308, customerAccountNumber=912010110557150, transactionId=null, tmCreatedAt=null, paymentStatus=FAILED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_CTM, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=6d0aae6d-1422-4139-bd05-107803eb3c74, otherSideQrId=MBBQR1015129, otherSideFinancialInstitutionId=588734, otherSideQrCode=00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842, qrCategory=01, acceptedTransactionTypes=[01, 03])]\n totalTime: 6 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "435a9fa6caa99eb6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.704",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.704Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)\n parameters: [1779d0a4-5903-4bc6-8e40-4f307c0fb9f4]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "435a9fa6caa99eb6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.700",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-05T01:56:12.700] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"registerQRPaymentProspect\":{\"success\":true,\"requestId\":\"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\"}}}"
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.576",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.576Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)\n parameters: [1779d0a4-5903-4bc6-8e40-4f307c0fb9f4]\n totalTime: 0 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abc49d3272f5e96a77812a89abe",
+            "spanId": "7bbd2854fdd12dfb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.570",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.57Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4 Processing interbankPayment",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abc49d3272f5e96a77812a89abe",
+            "spanId": "7bbd2854fdd12dfb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:12.557",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:12.557Z",
+            "@version": "1",
+            "message": "Payment request: class PaymentRequest {\n    internalRequestId: 1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\n    externalRequestId: O20250505RJHIMYKL030OQR91001722\n    customerAccountNumber: 912010110557150\n    amount: 30.00\n    denomination: MYR\n    otherSideFullName: Mad About Cake\n    otherSideExternalId: \n    otherSideAccountNumber: null\n    otherSideBankCode: 588734\n    transferType: QR_DEBIT\n    recipientReference: QR Payment\n    paymentDetails: null\n    instructionDetails: {businessMessageId=20250505RJHIMYKL03091001722, transferType=6}\n    debtorAccountType: DFLT\n    creditorAccountType: SVGS\n    identificationType: null\n    identificationId: null\n    paymentType: PAY_TO_QR_CTM\n}",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "216018cb9f54acf7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.503",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.503Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] FisRequestEntity has been saved.",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.503",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.503Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Sending PayToQRMessage SOAP request for businessMessageId: [20250505RJHIMYKL030OQR91001722].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.498",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.498Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Saving FisRequestEntity for businessMessageId: [20250505RJHIMYKL03091001722].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.495",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.495Z",
+            "@version": "1",
+            "message": "PayToQRRequest(requestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, enquiryAssociationId=6d0aae6d-1422-4139-bd05-107803eb3c74, customerId=1748736000003786, creditorQRId=MBBQR1015129, creditorBankCode=MBBEMYKL, creditorFinancialInstitutionId=588734, creditorName=Mad About Cake, qrCategory=01, creditorQRCode=00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842, currency=MYR, amount=30, debtorFullName= RAJA ZAFRIN BIN RAJA ZAIN, debtorAccountNumber=912010110557150, debtorAccountType=SVGS, recipientReference=QR Payment, acceptedTransactionTypes=[01, 03], creditorAccountType=null)",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.495",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.495Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Received qr transfer request.",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "289e752db3237e66",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.494",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.494Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"c39741a8-8644-4fe5-983d-e2759dc8bfa2\", \"internalRequestId\": \"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\", \"externalRequestId\": null, \"customerId\": \"1748736000003786\", \"amount\": \"30\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": null, \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"Mad About Cake\", \"otherSideAccountType\": null, \"customerName\": \" RAJA ZAFRIN BIN RAJA ZAIN\", \"customerAccountId\": \"75b4a38c-272f-48b5-b460-bed36f0c8308\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110557150\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"POSTED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2QR_CTM\", \"createdAt\": \"2025-05-05T01:56:11.485219Z\", \"updatedAt\": \"2025-05-05T01:56:11.485Z\", \"version\": \"0\", \"recipientReference\": \"QR Payment\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"6d0aae6d-1422-4139-bd05-107803eb3c74\", \"otherSideQrId\": \"MBBQR1015129\", \"otherSideFinancialInstitutionId\": \"588734\", \"otherSideQrCode\": \"00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842\", \"QrCategory\": \"01\", \"acceptedTransactionTypes\": \"[01, 03]\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "6925de7a23ba427d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.492",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.491Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"c39741a8-8644-4fe5-983d-e2759dc8bfa2\", \"internalRequestId\": \"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\", \"externalRequestId\": null, \"customerId\": \"1748736000003786\", \"amount\": \"30\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": null, \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"Mad About Cake\", \"otherSideAccountType\": null, \"customerName\": \" RAJA ZAFRIN BIN RAJA ZAIN\", \"customerAccountId\": \"75b4a38c-272f-48b5-b460-bed36f0c8308\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110557150\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FRAML_ACCEPTED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2QR_CTM\", \"createdAt\": \"2025-05-05T01:56:11.485219Z\", \"updatedAt\": \"2025-05-05T01:56:11.485Z\", \"version\": \"0\", \"recipientReference\": \"QR Payment\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"6d0aae6d-1422-4139-bd05-107803eb3c74\", \"otherSideQrId\": \"MBBQR1015129\", \"otherSideFinancialInstitutionId\": \"588734\", \"otherSideQrCode\": \"00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842\", \"QrCategory\": \"01\", \"acceptedTransactionTypes\": \"[01, 03]\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "b2e4c6625201e7a4",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.492",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.492Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, externalRequestId=null, businessMessageId=null, customerId=1748736000003786, smeId=null, amount=30, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=MBBEMYKL, otherSideAccountType=null, otherSideName=Mad About Cake, customerName= RAJA ZAFRIN BIN RAJA ZAIN, customerAccountType=SVGS, customerAccountId=75b4a38c-272f-48b5-b460-bed36f0c8308, customerAccountNumber=912010110557150, transactionId=null, tmCreatedAt=null, paymentStatus=POSTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_CTM, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=6d0aae6d-1422-4139-bd05-107803eb3c74, otherSideQrId=MBBQR1015129, otherSideFinancialInstitutionId=588734, otherSideQrCode=00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842, qrCategory=01, acceptedTransactionTypes=[01, 03])]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.492",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.492Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Registering pay to QR request for fis-gateway-service. CustomerId: [1748736000003786]",
+            "logger_name": "com.arbm.digibank.service.client.fisgateway.FisPaymentQRRequestsService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.489",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.489Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, externalRequestId=null, businessMessageId=null, customerId=1748736000003786, smeId=null, amount=30, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=MBBEMYKL, otherSideAccountType=null, otherSideName=Mad About Cake, customerName= RAJA ZAFRIN BIN RAJA ZAIN, customerAccountType=SVGS, customerAccountId=75b4a38c-272f-48b5-b460-bed36f0c8308, customerAccountNumber=912010110557150, transactionId=null, tmCreatedAt=null, paymentStatus=FRAML_ACCEPTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_CTM, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=6d0aae6d-1422-4139-bd05-107803eb3c74, otherSideQrId=MBBQR1015129, otherSideFinancialInstitutionId=588734, otherSideQrCode=00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842, qrCategory=01, acceptedTransactionTypes=[01, 03])]\n totalTime: 4 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.381",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.38Z",
+            "@version": "1",
+            "message": "To payment entity PaymentEntity(internalRequestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, externalRequestId=null, businessMessageId=null, customerId=1748736000003786, smeId=null, amount=30, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=MBBEMYKL, otherSideAccountType=null, otherSideName=Mad About Cake, customerName= RAJA ZAFRIN BIN RAJA ZAIN, customerAccountType=SVGS, customerAccountId=75b4a38c-272f-48b5-b460-bed36f0c8308, customerAccountNumber=912010110557150, transactionId=null, tmCreatedAt=null, paymentStatus=PROSPECT, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_CTM, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=6d0aae6d-1422-4139-bd05-107803eb3c74, otherSideQrId=MBBQR1015129, otherSideFinancialInstitutionId=588734, otherSideQrCode=00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842, qrCategory=01, acceptedTransactionTypes=[01, 03])",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.375",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.375Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Fetching customer account number from deposit API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.375",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.375Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Fetching customer name from customer API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.371",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.371Z",
+            "@version": "1",
+            "message": "QRPaymentProspectRequest(requestId=1779d0a4-5903-4bc6-8e40-4f307c0fb9f4, enquiryAssociationId=6d0aae6d-1422-4139-bd05-107803eb3c74, customerId=1748736000003786, amount=30, denomination=MYR, creditorQRId=MBBQR1015129, qrCategory=01, creditorBankCode=MBBEMYKL, creditorFinancialInstitutionId=588734, creditorName=Mad About Cake, creditorQRCode=00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842, debtorAccountType=SVGS, acceptedTransactionTypes=[01, 03], debtorSmeId=null)",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.371",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-05T01:56:11.371Z",
+            "@version": "1",
+            "message": "[1779d0a4-5903-4bc6-8e40-4f307c0fb9f4] Received QR payment prospect request ...",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "68181abb111de56113f7b6e131246a8b",
+            "spanId": "13f7b6e131246a8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-05 01:56:11.366",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-05T01:56:11.366] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/qr-payments/payment-prospects {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjY1ZmJjNTc1LTljY2QtNGJlOC1hYjM3LWI0MjVmZDRiOGY0NiIsImlhdCI6MTc0NjQxMDA3MSwiZXhwIjoxNzQ2NDEwMzcxLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3NDg3MzYwMDAwMDM3ODYiLCJzaWQiOiI1ODNlMDExNy1iZGMxLTRhMzItYTRhMC1jMTM2OWIwMGIyOTUiLCJhdXRoX3RpbWUiOjE3NDY0MTAwNzAsImFjciI6Im1vYmlsZV9vdHBfYXBwcm92YWwiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiJlMjZhYzFjMC0wMWUyLTRkZmItYmMwMi00NzRhODc5NDVkM2QifQ.SxgiNxcg7y_ascnXKtWD9r9KEh3-PxqZnp1xmFggEe1oHE1tBxrDZwhj_tGnaUje0StAlIDop-FZa4uS44KT8N3NtmVDmtz8Ox8_FEHwKUXpq80OWCoaFCotm7T5Mx3INgVFRb1VJa71CZ1Vr9Udv_0klBcBIqyyipKF-QAum1EgIj6QZZpmHIuSdb0yJpp4Lv829myyIJhukJJt1m-zHL_Nwxj-BAZjqyNJLB-mXcjDYq-eJeS1UgGqeoVpuNHlVdpDE7TGNQ-VSBziK3dxZhBeaRudeB2srZZsggourfCYkZoGVfiyWb_R4_tzEchISUZBpLe6I1IC98m_I2C2Zg\"},\"body\":\"{\\\"requestId\\\":\\\"1779d0a4-5903-4bc6-8e40-4f307c0fb9f4\\\",\\\"enquiryAssociationId\\\":\\\"6d0aae6d-1422-4139-bd05-107803eb3c74\\\",\\\"customerId\\\":\\\"1748736000003786\\\",\\\"amount\\\":30,\\\"denomination\\\":\\\"MYR\\\",\\\"creditorQRId\\\":\\\"MBBQR1015129\\\",\\\"qrCategory\\\":\\\"01\\\",\\\"creditorBankCode\\\":\\\"MBBEMYKL\\\",\\\"creditorFinancialInstitutionId\\\":\\\"588734\\\",\\\"creditorName\\\":\\\"Mad About Cake\\\",\\\"creditorQRCode\\\":\\\"00020201021126580014A000000615000101065887340212MBBQR1015129031000000000005204581253034585802MY5914MAD ABOUT CAKE6012KUALA LUMPUR63040842\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\",\\\"acceptedTransactionTypes\\\":[\\\"01\\\",\\\"03\\\"]}\"}"
+    }
+]

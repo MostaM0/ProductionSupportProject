@@ -1,0 +1,35 @@
+
+
+POST request to /v1/posting-instruction-batches:asyncCreate on TM:
+{
+        "@timestamp": "2025-03-29 01:59:00.617",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-29T01:59:00.617Z",
+            "@version": "1",
+            "message": "About to register posting instruction batch from request:
+             CreatePostingInstructionBatchRequest(
+             requestId=I20250329PBBEMYKL010ORM09502984,
+            postingInstructionBatch=PostingInstructionBatch(clientId=payments,
+             clientBatchId=I20250329PBBEMYKL010ORM09502984,
+              postingInstructions=[PostingInstruction(clientTransactionId=e140873c-423e-47f9-87a1-713de7fe234d,
+               inboundHardSettlement=HardSettlement(
+               amount=1000.00,
+                denomination=MYR,
+                internalAccountId=PAYNET_RPP_SETTLEMENT,
+                 targetAccount=TargetAccount(paymentDeviceToken=null,
+                  accountId=da2174ec-80ff-4191-90c7-8f150dfe8c12),
+                   targetAccountId=null),
+                    outboundHardSettlement=null,
+                     instructionDetails={busMsgId=20250329PBBEMYKL01009502984,
+                      transferType=5, dbtracctTpPrtry=SVGS,
+                       cdtracctTpPrtry=SVGS,
+                        paymentType=DUITNOW_ACC,
+                         PAYMENT_TYPE=duitnow_acc_interbank,
+                          PAYMENT_CATEGORY=cat_duitnow_acc_proxy},
+                           override=null)],
+                            status=null,
+                             insertionTimestamp=null, batchDetails={original_posting_client_batch_id=I20250329PBBEMYKL010ORM09502984}))",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+        }
+    }

@@ -1,0 +1,1406 @@
+[
+    {
+        "@timestamp": "2025-02-02 21:19:51.800",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:51.800] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1703769902553855/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjA0MTdiNWVhLTQ2ZTYtNDA2OS1hNTVlLTNkNzY2OTE1NWIzYiIsImlhdCI6MTczODUzMTAwNSwiZXhwIjoxNzM4NTMxMzA1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzAzNzY5OTAyNTUzODU1Iiwic2lkIjoiNDQ5ODA5ZGEtNjk4OC00MGFjLWE1OWQtZjJlMjY2MTMyNzY0IiwiYXV0aF90aW1lIjoxNzM4NTI5NjUzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiI0NDYyMjRhOS0zMGY0LTQ5NGUtYjVjOC03ZmZlNGNmMDIzNzMifQ.BDg0xLJKZsGC98VDpeHpST1vy1SQTkrlpiqUypsx800ZR7ePknJV63YY0jMFkHjgOR-IUo2SM0Uo_u2TVbFpdY4bBdjrZ3yzOqBqcXkL1AE8yzagjirZbxNoDpyqCFiQr81hQpqsepSDQFKnijZA29GHg0XXR1BCOygmCLT2barG6Uj_izuJ1AUcq5u8vYCo_XH5nFkK9GI4k2WjiN4oG3PwBc1hju1yyfl0pqB9y1fOVYzBn_C6gfelXiqIBYFELQG0o5W61M6uiDa4gmK-fvBPlnQPuLfc-oa3vl6t3unHKJIOb-UUDUCBrxkhjJ3H3JOrP0w99R9cGsh0qFMZuQ\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:50.415",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:50.414Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1703769902553855, PAY_TO_QR, 2025-02-02T21:19:50.412222Z]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe17613c5e4476d723d7ad8d88f15",
+            "spanId": "6d723d7ad8d88f15",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:50.415",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:50.415Z",
+            "@version": "1",
+            "message": "Customer with id: [1703769902553855] is authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe17613c5e4476d723d7ad8d88f15",
+            "spanId": "6d723d7ad8d88f15",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:50.411",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:50.411Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1703769902553855] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe17613c5e4476d723d7ad8d88f15",
+            "spanId": "6d723d7ad8d88f15",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:45.711",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:45.710",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:45.709",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:45.708",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:45.708] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1703769902553855\",\"createdAt\":\"2023-12-28T13:25:02.555367Z\",\"updatedAt\":\"2025-02-02T20:54:17.191449Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"NERIZA BINTI NAZAR\",\"nickname\":\"titaaa16\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"900112126796\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1990-01-12\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":true,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":true},\"employments\":[{\"id\":44338,\"employer\":\"Al Rajhi\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"INFORMATION_AND_COMMUNICATIONS_TECHNOLOGY_PROFESSIONALS\",\"annualIncomeBracket\":\"RM12000_RM17999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Saving, Financing\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":65476,\"line1\":\"BLOK 166 LOT 1851B\",\"line2\":\"TAMAN MAWAR\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SABAH\",\"type\":\"RESIDENTIAL\"},{\"id\":117763,\"line1\":\"no 55, Jalan Mewah 2/4\",\"line2\":\"Taman Pandan Mewahh\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"Neriza90Nazar\",\"pingOneId\":\"446224a9-30f4-494e-b5c8-7ffe4cf02373\"},\"accounts\":[{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:45.692",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:45.692] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.631",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.630",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.628",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.628] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1703769902553855\",\"createdAt\":\"2023-12-28T13:25:02.555367Z\",\"updatedAt\":\"2025-02-02T20:54:17.191449Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"NERIZA BINTI NAZAR\",\"nickname\":\"titaaa16\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"900112126796\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1990-01-12\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":true,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":true},\"employments\":[{\"id\":44338,\"employer\":\"Al Rajhi\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"INFORMATION_AND_COMMUNICATIONS_TECHNOLOGY_PROFESSIONALS\",\"annualIncomeBracket\":\"RM12000_RM17999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Saving, Financing\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":65476,\"line1\":\"BLOK 166 LOT 1851B\",\"line2\":\"TAMAN MAWAR\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SABAH\",\"type\":\"RESIDENTIAL\"},{\"id\":117763,\"line1\":\"no 55, Jalan Mewah 2/4\",\"line2\":\"Taman Pandan Mewahh\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"Neriza90Nazar\",\"pingOneId\":\"446224a9-30f4-494e-b5c8-7ffe4cf02373\"},\"accounts\":[{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.628",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.607",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.607] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.355",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.355] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"10.07\"},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.22\"},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.71\"},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1306.97\"},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"105.54\"},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0.24\"}],\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\",\"balance\":\"1741.31\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.350",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.349",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.348",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.347] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1703769902553855\",\"createdAt\":\"2023-12-28T13:25:02.555367Z\",\"updatedAt\":\"2025-02-02T20:54:17.191449Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"NERIZA BINTI NAZAR\",\"nickname\":\"titaaa16\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"900112126796\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1990-01-12\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":true,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":true},\"employments\":[{\"id\":44338,\"employer\":\"Al Rajhi\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"INFORMATION_AND_COMMUNICATIONS_TECHNOLOGY_PROFESSIONALS\",\"annualIncomeBracket\":\"RM12000_RM17999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Saving, Financing\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":65476,\"line1\":\"BLOK 166 LOT 1851B\",\"line2\":\"TAMAN MAWAR\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SABAH\",\"type\":\"RESIDENTIAL\"},{\"id\":117763,\"line1\":\"no 55, Jalan Mewah 2/4\",\"line2\":\"Taman Pandan Mewahh\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"Neriza90Nazar\",\"pingOneId\":\"446224a9-30f4-494e-b5c8-7ffe4cf02373\"},\"accounts\":[{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.348",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.339",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:44.338Z",
+            "@version": "1",
+            "message": "Number of unread notification=1039 from customerId=1703769902553855 with requestId=1bcaff11-48f3-4783-8419-28bacfa417b6",
+            "logger_name": "com.arbm.digibank.service.NotificationService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "679fe170828add1bb52a561764dcd04c",
+            "spanId": "b52a561764dcd04c",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.328",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:44.327Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe1709877894176d98c452f1085e8",
+            "spanId": "76d98c452f1085e8",
+            "RequestId": "bc847168-d036-43f5-9c49-c64d10f64de1",
+            "data": {
+                "requestId": "\"bc847168-d036-43f5-9c49-c64d10f64de1\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"bc847168-d036-43f5-9c49-c64d10f64de1\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2023-12-30T16:17:00.199124Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "NERIZA BINTI NAZAR",
+                        "trackingNumber": "EG489380524MY",
+                        "cardDeliverOption": "MAILING",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "68000",
+                        "delivTown": "Ampang",
+                        "delivState": "Selangor",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 190
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.327",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:44.327Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe1709877894176d98c452f1085e8",
+            "spanId": "76d98c452f1085e8",
+            "RequestId": "bc847168-d036-43f5-9c49-c64d10f64de1",
+            "data": {
+                "requestId": "\"bc847168-d036-43f5-9c49-c64d10f64de1\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"bc847168-d036-43f5-9c49-c64d10f64de1\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2023-12-30T16:17:00.199124Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "NERIZA BINTI NAZAR",
+                    "trackingNumber": "EG489380524MY",
+                    "cardDeliverOption": "MAILING",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "68000",
+                    "delivTown": "Ampang",
+                    "delivState": "Selangor",
+                    "delivCountry": "MY"
+                },
+                "processTime": 189
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.311",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.310] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1703769902553855/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.306",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.302] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.300",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.299] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.300",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.300] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.290",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:44.290] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:44.138",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:44.138Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1703769902553855 and accountNumber=912010110279540",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe1709877894176d98c452f1085e8",
+            "spanId": "76d98c452f1085e8",
+            "RequestId": "bc847168-d036-43f5-9c49-c64d10f64de1"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:32.514",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:32.514] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"e63cfa88-8aa7-4396-9946-e6d785e2cd37\",\"type\":\"QR_CREDIT_TRANSFER_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1703769902553855\\\",\\\"referenceId\\\":\\\"2af55b74-8d86-42be-a874-9563204c0d7d\\\",\\\"businessMessageId\\\":\\\"20250203RJHIMYKL04091000054\\\",\\\"customerAccountId\\\":\\\"285de9c8-bee0-4043-b95e-4f475456e34b\\\",\\\"amount\\\":\\\"2.00\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2025-02-02T21:19:31.391\\\",\\\"otherSideFullName\\\":\\\" NERIZA BINTI NAZAR\\\",\\\"status\\\":\\\"FAILED\\\",\\\"errorCode\\\":\\\"45_INVALID_ACCOUNT\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:32.514",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:32.514] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1703769902553855\\\",\\\"referenceId\\\":\\\"2af55b74-8d86-42be-a874-9563204c0d7d\\\",\\\"businessMessageId\\\":\\\"20250203RJHIMYKL04091000054\\\",\\\"customerAccountId\\\":\\\"285de9c8-bee0-4043-b95e-4f475456e34b\\\",\\\"amount\\\":\\\"2.00\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2025-02-02T21:19:31.391\\\",\\\"otherSideFullName\\\":\\\" NERIZA BINTI NAZAR\\\",\\\"status\\\":\\\"FAILED\\\",\\\"errorCode\\\":\\\"45_INVALID_ACCOUNT\\\"}\",\"requestId\":\"e63cfa88-8aa7-4396-9946-e6d785e2cd37\",\"type\":\"QR_CREDIT_TRANSFER_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:32.512",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:32.512Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=e63cfa88-8aa7-4396-9946-e6d785e2cd37, type=QR_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1703769902553855\",\"referenceId\":\"2af55b74-8d86-42be-a874-9563204c0d7d\",\"businessMessageId\":\"20250203RJHIMYKL04091000054\",\"customerAccountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"amount\":\"2.00\",\"currency\":\"MYR\",\"date\":\"2025-02-02T21:19:31.391\",\"otherSideFullName\":\" NERIZA BINTI NAZAR\",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"}) after total DB calls: 1 and total time: 1 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:31.400",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:31.4Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=e63cfa88-8aa7-4396-9946-e6d785e2cd37, type=QR_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1703769902553855\",\"referenceId\":\"2af55b74-8d86-42be-a874-9563204c0d7d\",\"businessMessageId\":\"20250203RJHIMYKL04091000054\",\"customerAccountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"amount\":\"2.00\",\"currency\":\"MYR\",\"date\":\"2025-02-02T21:19:31.391\",\"otherSideFullName\":\" NERIZA BINTI NAZAR\",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe1622a736edf8b558d979a9c51ef",
+            "spanId": "1e1de77f615f0750",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:31.163",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:31.163Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1703769902553855/customerIft with method: GET succeeded with status code 200: OK in totalTime: 7 ms",
+            "logger_name": "com.arbm.digibank.filter.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe16358cfcda273b73d8b2389a604",
+            "spanId": "ed9cf3b44acb600e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:31.155",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:31.155Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1703769902553855]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe16358cfcda273b73d8b2389a604",
+            "spanId": "ed9cf3b44acb600e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:30.254",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:30.254Z",
+            "@version": "1",
+            "message": "PayToQRRequest(requestId=e63cfa88-8aa7-4396-9946-e6d785e2cd37, enquiryAssociationId=4cc8a32a-eddb-42ae-a995-106d981539b2, customerId=1703769902553855, creditorQRId=2912010110279540, creditorBankCode=RJHIMYKL, creditorFinancialInstitutionId=432134, creditorName= NERIZA BINTI NAZAR, qrCategory=02, creditorQRCode=00020201021126480014A00000061500010106432134021629120101102795405204000053034585802MY5918NERIZA BINTI NAZAR6012Kuala Lumpur82646C350E0A1132EFDA677A7233AA0A191203C0B630244DC8C9BF212154F6AF240A6304F1D6, currency=MYR, amount=2, debtorFullName= NERIZA BINTI NAZAR, debtorAccountNumber=912010110279540, debtorAccountType=SVGS, recipientReference=QR Payment, acceptedTransactionTypes=[01, 03], creditorAccountType=null)",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe1622a736edf8b558d979a9c51ef",
+            "spanId": "9dc35d108a533849",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:30.069",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:30.068Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1703769902553855, customerName= NERIZA BINTI NAZAR, customerDPName=titaaa16)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "679fe1622a736edf8b558d979a9c51ef",
+            "spanId": "93cf978e38c2b7a9",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:30.066",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:30.066Z",
+            "@version": "1",
+            "message": "Customer Id: 1703769902553855",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "679fe1622a736edf8b558d979a9c51ef",
+            "spanId": "93cf978e38c2b7a9",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:30.052",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:30.052] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/qr-payments/payment-prospects {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjA0MTdiNWVhLTQ2ZTYtNDA2OS1hNTVlLTNkNzY2OTE1NWIzYiIsImlhdCI6MTczODUzMTAwNSwiZXhwIjoxNzM4NTMxMzA1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzAzNzY5OTAyNTUzODU1Iiwic2lkIjoiNDQ5ODA5ZGEtNjk4OC00MGFjLWE1OWQtZjJlMjY2MTMyNzY0IiwiYXV0aF90aW1lIjoxNzM4NTI5NjUzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiI0NDYyMjRhOS0zMGY0LTQ5NGUtYjVjOC03ZmZlNGNmMDIzNzMifQ.BDg0xLJKZsGC98VDpeHpST1vy1SQTkrlpiqUypsx800ZR7ePknJV63YY0jMFkHjgOR-IUo2SM0Uo_u2TVbFpdY4bBdjrZ3yzOqBqcXkL1AE8yzagjirZbxNoDpyqCFiQr81hQpqsepSDQFKnijZA29GHg0XXR1BCOygmCLT2barG6Uj_izuJ1AUcq5u8vYCo_XH5nFkK9GI4k2WjiN4oG3PwBc1hju1yyfl0pqB9y1fOVYzBn_C6gfelXiqIBYFELQG0o5W61M6uiDa4gmK-fvBPlnQPuLfc-oa3vl6t3unHKJIOb-UUDUCBrxkhjJ3H3JOrP0w99R9cGsh0qFMZuQ\"},\"body\":\"{\\\"requestId\\\":\\\"e63cfa88-8aa7-4396-9946-e6d785e2cd37\\\",\\\"enquiryAssociationId\\\":\\\"4cc8a32a-eddb-42ae-a995-106d981539b2\\\",\\\"customerId\\\":\\\"1703769902553855\\\",\\\"amount\\\":2,\\\"denomination\\\":\\\"MYR\\\",\\\"creditorQRId\\\":\\\"2912010110279540\\\",\\\"qrCategory\\\":\\\"02\\\",\\\"creditorBankCode\\\":\\\"RJHIMYKL\\\",\\\"creditorFinancialInstitutionId\\\":\\\"432134\\\",\\\"creditorName\\\":\\\" NERIZA BINTI NAZAR\\\",\\\"creditorQRCode\\\":\\\"00020201021126480014A00000061500010106432134021629120101102795405204000053034585802MY5918NERIZA BINTI NAZAR6012Kuala Lumpur82646C350E0A1132EFDA677A7233AA0A191203C0B630244DC8C9BF212154F6AF240A6304F1D6\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\",\\\"acceptedTransactionTypes\\\":[\\\"01\\\",\\\"03\\\"]}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:13.344",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:13.344] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"7269fcb2-9f7d-4127-8b77-740330a594fa\",\"type\":\"QR_ENQUIRY_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1703769902553855\\\",\\\"requestStatus\\\":\\\"SUCCESSFUL\\\",\\\"mappedErrorCode\\\":\\\"U000_SUCCESS\\\",\\\"creditorName\\\":\\\" NERIZA BINTI NAZAR\\\",\\\"enquiryAssociationId\\\":\\\"4cc8a32a-eddb-42ae-a995-106d981539b2\\\",\\\"qrCategory\\\":\\\"02\\\",\\\"acceptedPaymentsType\\\":\\\"01,03\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:13.344",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:13.344] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1703769902553855\\\",\\\"requestStatus\\\":\\\"SUCCESSFUL\\\",\\\"mappedErrorCode\\\":\\\"U000_SUCCESS\\\",\\\"creditorName\\\":\\\" NERIZA BINTI NAZAR\\\",\\\"enquiryAssociationId\\\":\\\"4cc8a32a-eddb-42ae-a995-106d981539b2\\\",\\\"qrCategory\\\":\\\"02\\\",\\\"acceptedPaymentsType\\\":\\\"01,03\\\"}\",\"requestId\":\"7269fcb2-9f7d-4127-8b77-740330a594fa\",\"type\":\"QR_ENQUIRY_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:11.576",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:11.576Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1703769902553855, customerName= NERIZA BINTI NAZAR, customerDPName=titaaa16)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "679fe14f6586503164f8bdf572e63178",
+            "spanId": "88e7ea496e3d382b",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:11.573",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:11.573Z",
+            "@version": "1",
+            "message": "Customer Id: 1703769902553855",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "679fe14f6586503164f8bdf572e63178",
+            "spanId": "88e7ea496e3d382b",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:11.104",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:11.103Z",
+            "@version": "1",
+            "message": "QREnquiryRequest(requestId=7269fcb2-9f7d-4127-8b77-740330a594fa, customerId=1703769902553855, creditorQRId=2912010110279540, creditorBankCode=RJHIMYKL, creditorFinancialInstitutionId=432134, creditorQRCode=00020201021126480014A00000061500010106432134021629120101102795405204000053034585802MY5918NERIZA BINTI NAZAR6012Kuala Lumpur82646C350E0A1132EFDA677A7233AA0A191203C0B630244DC8C9BF212154F6AF240A6304F1D6, currency=MYR, debtorFullName= NERIZA BINTI NAZAR, debtorAccountNumber=912010110279540, debtorAccountType=SVGS, recipientReference=QR Payment)",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe14ef58172cb0376ff7a469511f7",
+            "spanId": "44b986e6d28f50c8",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:11.060",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:11.06Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1703769902553855, customerName= NERIZA BINTI NAZAR, customerDPName=titaaa16)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "679fe14ef58172cb0376ff7a469511f7",
+            "spanId": "df5bbcad21d1226f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:11.057",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:11.057Z",
+            "@version": "1",
+            "message": "Customer Id: 1703769902553855",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "679fe14ef58172cb0376ff7a469511f7",
+            "spanId": "df5bbcad21d1226f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:10.699",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:10.699Z",
+            "@version": "1",
+            "message": "getting killswitch for customerId 1703769902553855 , pingoneId 446224a9-30f4-494e-b5c8-7ffe4cf02373",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "679fe14ef58172cb0376ff7a469511f7",
+            "spanId": "70b4b9aa4d8cd822",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:10.548",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:19:10.548Z",
+            "@version": "1",
+            "message": "Fetching user by customerId: customerId=1703769902553855",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayUserFetchServiceImpl",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "679fe14ef58172cb0376ff7a469511f7",
+            "spanId": "70b4b9aa4d8cd822",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:19:10.505",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:19:10.504] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/qr-payments/creditor-details-requests {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjA0MTdiNWVhLTQ2ZTYtNDA2OS1hNTVlLTNkNzY2OTE1NWIzYiIsImlhdCI6MTczODUzMTAwNSwiZXhwIjoxNzM4NTMxMzA1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzAzNzY5OTAyNTUzODU1Iiwic2lkIjoiNDQ5ODA5ZGEtNjk4OC00MGFjLWE1OWQtZjJlMjY2MTMyNzY0IiwiYXV0aF90aW1lIjoxNzM4NTI5NjUzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiI0NDYyMjRhOS0zMGY0LTQ5NGUtYjVjOC03ZmZlNGNmMDIzNzMifQ.BDg0xLJKZsGC98VDpeHpST1vy1SQTkrlpiqUypsx800ZR7ePknJV63YY0jMFkHjgOR-IUo2SM0Uo_u2TVbFpdY4bBdjrZ3yzOqBqcXkL1AE8yzagjirZbxNoDpyqCFiQr81hQpqsepSDQFKnijZA29GHg0XXR1BCOygmCLT2barG6Uj_izuJ1AUcq5u8vYCo_XH5nFkK9GI4k2WjiN4oG3PwBc1hju1yyfl0pqB9y1fOVYzBn_C6gfelXiqIBYFELQG0o5W61M6uiDa4gmK-fvBPlnQPuLfc-oa3vl6t3unHKJIOb-UUDUCBrxkhjJ3H3JOrP0w99R9cGsh0qFMZuQ\"},\"body\":\"{\\\"requestId\\\":\\\"7269fcb2-9f7d-4127-8b77-740330a594fa\\\",\\\"customerId\\\":\\\"1703769902553855\\\",\\\"creditorQRCode\\\":\\\"00020201021126480014A00000061500010106432134021629120101102795405204000053034585802MY5918NERIZA BINTI NAZAR6012Kuala Lumpur82646C350E0A1132EFDA677A7233AA0A191203C0B630244DC8C9BF212154F6AF240A6304F1D6\\\",\\\"currency\\\":\\\"MYR\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:38.427",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:38.426Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=3f40eb18-437c-49c7-9750-c5acfc34bf53, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "138bbdf7e221116b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:34.401",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:34.401Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=3f40eb18-437c-49c7-9750-c5acfc34bf53, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "0078febb3e711c60",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:32.380",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:32.38Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=3f40eb18-437c-49c7-9750-c5acfc34bf53, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "4f8413dad36f3680",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:22.266",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:22.263Z",
+            "@version": "1",
+            "message": "Return Info QRCodeInfo(responseCode=SUCCESS, responseDescription=SUCCESS, proxyId=1703769902553855, proxyType=CIC, proxyStatus=ACTIVE, financialInstitutionId=432134, accountNumber=912010110279540, accountType=SAVINGS_ACCOUNT, customerName=NERIZA BINTI NAZAR, acceptedPaymentsTypes=[CASA, WALLET, CREDIT_CARD], secondaryIdType=NRIC, secondaryId=, coolingOffDuration=0)",
+            "logger_name": "com.arbm.digibank.service.qrcode.QRLookupService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe11dff624750d428dbadb1c11ed6",
+            "spanId": "d428dbadb1c11ed6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:22.265",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:22.262Z",
+            "@version": "1",
+            "message": "Received customer Info RetailCustomerAccountForQr(customerId=1703769902553855, customerName=NERIZA BINTI NAZAR, nric=900112126796, city=Kuala Lumpur, phoneNumber=+60138276241, accountNumber=912010110279540)",
+            "logger_name": "com.arbm.digibank.service.qrcode.QRLookupService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe11dff624750d428dbadb1c11ed6",
+            "spanId": "d428dbadb1c11ed6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:21.244",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:21.243Z",
+            "@version": "1",
+            "message": "Retrieving customer information for QR from customer-service. CustomerId: [1703769902553855]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe11dff624750d428dbadb1c11ed6",
+            "spanId": "d428dbadb1c11ed6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:21.243",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:21.243Z",
+            "@version": "1",
+            "message": "Received request to lookup QR code for customerId=1703769902553855",
+            "logger_name": "com.arbm.digibank.controller.QRCodeManagementController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe11dff624750d428dbadb1c11ed6",
+            "spanId": "d428dbadb1c11ed6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:21.238",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:21.237] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1703769902553855/qr-lookup {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:20.582",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:20.582Z",
+            "@version": "1",
+            "message": "Customer with id: [1703769902553855] is authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe11ca26f1e83b4c15c8f830f7ab8",
+            "spanId": "b4c15c8f830f7ab8",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:20.581",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:20.581Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1703769902553855, PAY_TO_QR, 2025-02-02T21:18:20.578119Z]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe11ca26f1e83b4c15c8f830f7ab8",
+            "spanId": "b4c15c8f830f7ab8",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:20.576",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:20.576Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1703769902553855] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe11ca26f1e83b4c15c8f830f7ab8",
+            "spanId": "b4c15c8f830f7ab8",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:20.570",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:20.569] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1703769902553855/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjA0MTdiNWVhLTQ2ZTYtNDA2OS1hNTVlLTNkNzY2OTE1NWIzYiIsImlhdCI6MTczODUzMTAwNSwiZXhwIjoxNzM4NTMxMzA1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzAzNzY5OTAyNTUzODU1Iiwic2lkIjoiNDQ5ODA5ZGEtNjk4OC00MGFjLWE1OWQtZjJlMjY2MTMyNzY0IiwiYXV0aF90aW1lIjoxNzM4NTI5NjUzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiI0NDYyMjRhOS0zMGY0LTQ5NGUtYjVjOC03ZmZlNGNmMDIzNzMifQ.BDg0xLJKZsGC98VDpeHpST1vy1SQTkrlpiqUypsx800ZR7ePknJV63YY0jMFkHjgOR-IUo2SM0Uo_u2TVbFpdY4bBdjrZ3yzOqBqcXkL1AE8yzagjirZbxNoDpyqCFiQr81hQpqsepSDQFKnijZA29GHg0XXR1BCOygmCLT2barG6Uj_izuJ1AUcq5u8vYCo_XH5nFkK9GI4k2WjiN4oG3PwBc1hju1yyfl0pqB9y1fOVYzBn_C6gfelXiqIBYFELQG0o5W61M6uiDa4gmK-fvBPlnQPuLfc-oa3vl6t3unHKJIOb-UUDUCBrxkhjJ3H3JOrP0w99R9cGsh0qFMZuQ\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:19.359",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:19.358",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:19.357",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:19.357] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1703769902553855\",\"createdAt\":\"2023-12-28T13:25:02.555367Z\",\"updatedAt\":\"2025-02-02T20:54:17.191449Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"NERIZA BINTI NAZAR\",\"nickname\":\"titaaa16\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"900112126796\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1990-01-12\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":true,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":true},\"employments\":[{\"id\":44338,\"employer\":\"Al Rajhi\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"INFORMATION_AND_COMMUNICATIONS_TECHNOLOGY_PROFESSIONALS\",\"annualIncomeBracket\":\"RM12000_RM17999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Saving, Financing\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":65476,\"line1\":\"BLOK 166 LOT 1851B\",\"line2\":\"TAMAN MAWAR\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SABAH\",\"type\":\"RESIDENTIAL\"},{\"id\":117763,\"line1\":\"no 55, Jalan Mewah 2/4\",\"line2\":\"Taman Pandan Mewahh\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"Neriza90Nazar\",\"pingOneId\":\"446224a9-30f4-494e-b5c8-7ffe4cf02373\"},\"accounts\":[{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:19.357",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1703769902553855',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:19.337",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:19.336] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.703",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:15.702Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe1179cca8167595ed50b11fba407",
+            "spanId": "595ed50b11fba407",
+            "RequestId": "df2460b7-d896-4dd6-a599-28c79a1478d3",
+            "data": {
+                "requestId": "\"df2460b7-d896-4dd6-a599-28c79a1478d3\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"df2460b7-d896-4dd6-a599-28c79a1478d3\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2023-12-30T16:17:00.199124Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "NERIZA BINTI NAZAR",
+                    "trackingNumber": "EG489380524MY",
+                    "cardDeliverOption": "MAILING",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "68000",
+                    "delivTown": "Ampang",
+                    "delivState": "Selangor",
+                    "delivCountry": "MY"
+                },
+                "processTime": 189
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.703",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:15.703Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe1179cca8167595ed50b11fba407",
+            "spanId": "595ed50b11fba407",
+            "RequestId": "df2460b7-d896-4dd6-a599-28c79a1478d3",
+            "data": {
+                "requestId": "\"df2460b7-d896-4dd6-a599-28c79a1478d3\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"df2460b7-d896-4dd6-a599-28c79a1478d3\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2023-12-30T16:17:00.199124Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "NERIZA BINTI NAZAR",
+                        "trackingNumber": "EG489380524MY",
+                        "cardDeliverOption": "MAILING",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "68000",
+                        "delivTown": "Ampang",
+                        "delivState": "Selangor",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 191
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.564",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.564] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"10.07\"},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.22\"},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.71\"},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1306.97\"},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"105.54\"},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0.24\"}],\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\",\"balance\":\"1741.31\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.513",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:18:15.513Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1703769902553855 and accountNumber=912010110279540",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe1179cca8167595ed50b11fba407",
+            "spanId": "595ed50b11fba407",
+            "RequestId": "df2460b7-d896-4dd6-a599-28c79a1478d3"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.505",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.505] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.505",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.505] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1703769902553855&accountNumber=912010110279540 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"df2460b7-d896-4dd6-a599-28c79a1478d3\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.501",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.501] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.501",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.501] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.496",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.496] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1703769902553855/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.493",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.493] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:18:15.491",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:18:15.491] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.362",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:47.362Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe0bf36faf3ca835d112e0831d143",
+            "spanId": "835d112e0831d143",
+            "RequestId": "b3774263-7612-4514-b742-8d12cc6900e3",
+            "data": {
+                "requestId": "\"b3774263-7612-4514-b742-8d12cc6900e3\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"b3774263-7612-4514-b742-8d12cc6900e3\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2023-12-30T16:17:00.199124Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "NERIZA BINTI NAZAR",
+                    "trackingNumber": "EG489380524MY",
+                    "cardDeliverOption": "MAILING",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "68000",
+                    "delivTown": "Ampang",
+                    "delivState": "Selangor",
+                    "delivCountry": "MY"
+                },
+                "processTime": 184
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.362",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:47.362Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe0bf36faf3ca835d112e0831d143",
+            "spanId": "835d112e0831d143",
+            "RequestId": "b3774263-7612-4514-b742-8d12cc6900e3",
+            "data": {
+                "requestId": "\"b3774263-7612-4514-b742-8d12cc6900e3\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"b3774263-7612-4514-b742-8d12cc6900e3\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2023-12-30T16:17:00.199124Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "NERIZA BINTI NAZAR",
+                        "trackingNumber": "EG489380524MY",
+                        "cardDeliverOption": "MAILING",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "68000",
+                        "delivTown": "Ampang",
+                        "delivState": "Selangor",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 184
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.260",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:47.260] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1703769902553855/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.179",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:47.178Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1703769902553855 and accountNumber=912010110279540",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe0bf36faf3ca835d112e0831d143",
+            "spanId": "835d112e0831d143",
+            "RequestId": "b3774263-7612-4514-b742-8d12cc6900e3"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.172",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:47.171] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.172",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:47.172] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1703769902553855&accountNumber=912010110279540 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"b3774263-7612-4514-b742-8d12cc6900e3\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:47.160",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:47.160] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:46.944",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:46.944] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"10.07\"},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.22\"},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.71\"},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1306.97\"},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"105.54\"},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0.24\"}],\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\",\"balance\":\"1741.31\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:46.861",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:46.860] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:46.861",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:46.861] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:46.834",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:46.834] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:46.332",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:46.332] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1703769902553855/status {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:46.331",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": ""
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:45.392",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:16:45.392] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:20.374",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:20.374Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=abcb0278-c5ab-4be3-9843-9f04b34f6a10, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "dfe287c09bd8ba0c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:16.350",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:16.349Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=abcb0278-c5ab-4be3-9843-9f04b34f6a10, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "800f05ca0a7ae79b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:14.328",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:14.327Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=abcb0278-c5ab-4be3-9843-9f04b34f6a10, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "be648a199285f218",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:13.815",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:13.815Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=248921c4-7bd9-46a5-ad5f-f643ae3730a1, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "8a2250cc8eaa1ce7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:09.790",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:09.79Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=248921c4-7bd9-46a5-ad5f-f643ae3730a1, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "4d6677d20b04b956",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:16:07.767",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:16:07.767Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=248921c4-7bd9-46a5-ad5f-f643ae3730a1, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "cb7cb41c8b60c449",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.954",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:15:57.953Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe08d305e56ed169806dfd9a5838a",
+            "spanId": "169806dfd9a5838a",
+            "RequestId": "70927cfe-cdfd-4a20-bd8e-b6e2be697470",
+            "data": {
+                "requestId": "\"70927cfe-cdfd-4a20-bd8e-b6e2be697470\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"70927cfe-cdfd-4a20-bd8e-b6e2be697470\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2023-12-30T16:17:00.199124Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "NERIZA BINTI NAZAR",
+                    "trackingNumber": "EG489380524MY",
+                    "cardDeliverOption": "MAILING",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "68000",
+                    "delivTown": "Ampang",
+                    "delivState": "Selangor",
+                    "delivCountry": "MY"
+                },
+                "processTime": 222
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.954",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:15:57.954Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe08d305e56ed169806dfd9a5838a",
+            "spanId": "169806dfd9a5838a",
+            "RequestId": "70927cfe-cdfd-4a20-bd8e-b6e2be697470",
+            "data": {
+                "requestId": "\"70927cfe-cdfd-4a20-bd8e-b6e2be697470\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"70927cfe-cdfd-4a20-bd8e-b6e2be697470\"",
+                    "customerId": "\"1703769902553855\"",
+                    "accountNumber": "\"912010110279540\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "84af9143-c95a-4b03-baff-9a70eb535aa7",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2023-12-30T16:17:00.199124Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "NERIZA BINTI NAZAR",
+                        "trackingNumber": "EG489380524MY",
+                        "cardDeliverOption": "MAILING",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "No 52, Jalan Mewah 2/4Taman Pandan Mewah",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "68000",
+                        "delivTown": "Ampang",
+                        "delivState": "Selangor",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 224
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.788",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.788] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"10.07\"},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.22\"},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.71\"},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1306.97\"},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"targetedContribution\":null,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"105.54\"},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0.24\"}],\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\",\"balance\":\"1741.31\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.731",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:15:57.731Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1703769902553855 and accountNumber=912010110279540",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "679fe08d305e56ed169806dfd9a5838a",
+            "spanId": "169806dfd9a5838a",
+            "RequestId": "70927cfe-cdfd-4a20-bd8e-b6e2be697470"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.723",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.723] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.723",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.723] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1703769902553855 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.723",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.722] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1703769902553855&accountNumber=912010110279540 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"70927cfe-cdfd-4a20-bd8e-b6e2be697470\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.722",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.722] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"285de9c8-bee0-4043-b95e-4f475456e34b\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1703769902553855\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2023-12-28T13:30:59.944979Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"b0fbe6ac-0e51-4150-bb96-adf8c4751d6e\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"Pot 1\",\"openingTimestamp\":\"2024-01-10T06:19:23.540405Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"1d60989c-7f0e-4d9d-96f6-ef0415e93616\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"Test\",\"openingTimestamp\":\"2024-01-13T00:05:19.537442Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"ae032bbf-6460-41db-b3e9-e9463546d026\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"test pot\",\"openingTimestamp\":\"2024-03-15T08:18:06.879518Z\",\"targetedSavingsGoal\":10,\"imageId\":\"house5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"5f9c8f0f-369b-43f7-a738-c07a8a652ea7\",\"customerId\":\"1703769902553855\",\"category\":\"House\",\"name\":\"28may\",\"openingTimestamp\":\"2024-05-28T08:30:05.369041Z\",\"targetedSavingsGoal\":100,\"imageId\":\"house6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"abcb0278-c5ab-4be3-9843-9f04b34f6a10\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Testtest\",\"openingTimestamp\":\"2024-06-28T19:13:30.924778Z\",\"targetedSavingsGoal\":1,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"248921c4-7bd9-46a5-ad5f-f643ae3730a1\",\"customerId\":\"1703769902553855\",\"category\":\"Others\",\"name\":\"Savings\",\"openingTimestamp\":\"2024-06-22T13:24:34.410119Z\",\"targetedSavingsGoal\":999999,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"e5d317f6-f145-4a21-80f4-a891b09c0e56\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"1234567890123456789012345\",\"openingTimestamp\":\"2024-07-18T08:07:35.035911Z\",\"targetedSavingsGoal\":1,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"629ae079-797a-4b68-ae42-658eafbdec66\",\"customerId\":\"1703769902553855\",\"category\":\"Travel\",\"name\":\"jalan\",\"openingTimestamp\":\"2024-09-21T01:18:48.273233Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"travel4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"a4e2fd25-c018-4c13-864d-acec62d210ef\",\"customerId\":\"1703769902553855\",\"category\":\"Pilgrimage\",\"name\":\"1234567890123456789012349\",\"openingTimestamp\":\"2024-09-21T03:43:08.890607Z\",\"targetedSavingsGoal\":1,\"imageId\":\"pilgrimage4\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"customerId\":\"1703769902553855\",\"category\":\"Education\",\"name\":\"DR saving pot\",\"openingTimestamp\":\"2024-09-21T01:41:26.615311Z\",\"targetedSavingsGoal\":100,\"imageId\":\"education5\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.709",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.709] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.705",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.705] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1703769902553855/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:57.698",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:15:57.698] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1703769902553855/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:56.500",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:15:56.5Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=3f40eb18-437c-49c7-9750-c5acfc34bf53, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fdee1dbc9f54e100325ac6eb8f761",
+            "spanId": "6987433fc0e1b0c9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:52.473",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:15:52.472Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=3f40eb18-437c-49c7-9750-c5acfc34bf53, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fdee1dbc9f54e100325ac6eb8f761",
+            "spanId": "2c45710c1ae4c02a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:15:50.449",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:15:50.449Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=3f40eb18-437c-49c7-9750-c5acfc34bf53, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1703769902553855\",\"savingPotId\":\"3f40eb18-437c-49c7-9750-c5acfc34bf53\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fdee1dbc9f54e100325ac6eb8f761",
+            "spanId": "69ab9efad99a00a1",
+            "bc": "payments"
+        }
+    }
+]

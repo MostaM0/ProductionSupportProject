@@ -1,0 +1,470 @@
+[
+    {
+        "@timestamp": "2025-02-02 23:36:18.174",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:18.173Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\", \"internalRequestId\": \"0b0f077d-5d42-46b9-a797-1c82bea555dd\", \"externalRequestId\": null, \"customerId\": \"1711949863562173\", \"amount\": \"4.54\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"162263396221\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"WAN MOHAMAD SABQI BI      \", \"otherSideAccountType\": \"SVGS\", \"customerName\": \" WAN MOHAMAD SABQI BIN WAN ISMAIL\", \"customerAccountId\": \"59da1cb4-610b-430b-b53a-17969e3245ef\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110359581\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FAILED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-02-02T23:36:11.728832Z\", \"updatedAt\": \"2025-02-02T23:36:15.437Z\", \"version\": \"1\", \"recipientReference\": \"Test\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "d85787b52afd0fd5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:18.174",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:18.173Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\", \"internalRequestId\": \"0b0f077d-5d42-46b9-a797-1c82bea555dd\", \"externalRequestId\": null, \"customerId\": \"1711949863562173\", \"amount\": \"4.54\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"162263396221\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"WAN MOHAMAD SABQI BI      \", \"otherSideAccountType\": \"SVGS\", \"customerName\": \" WAN MOHAMAD SABQI BIN WAN ISMAIL\", \"customerAccountId\": \"59da1cb4-610b-430b-b53a-17969e3245ef\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110359581\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FAILED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-02-02T23:36:11.728832Z\", \"updatedAt\": \"2025-02-02T23:36:16.921Z\", \"version\": \"2\", \"recipientReference\": \"Test\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "68fbaab8d23d20ef",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:17.891",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:17.891Z",
+            "@version": "1",
+            "message": "Received CreditTransferCompletedEvent event for request with internalRequestId [0b0f077d-5d42-46b9-a797-1c82bea555dd]",
+            "logger_name": "com.arbm.digibank.consumer.CreditTransferCompletedConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "4a41fefb7cf91b92",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:17.141",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:17.141] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"0b0f077d-5d42-46b9-a797-1c82bea555dd\",\"type\":\"ACCOUNT_CREDIT_TRANSFER_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1711949863562173\\\",\\\"referenceId\\\":\\\"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\\\",\\\"businessMessageId\\\":\\\"20250203RJHIMYKL01091000445\\\",\\\"customerAccountId\\\":\\\"59da1cb4-610b-430b-b53a-17969e3245ef\\\",\\\"amount\\\":\\\"4.54\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2025-02-02T23:36:16.921\\\",\\\"otherSideFullName\\\":\\\"WAN MOHAMAD SABQI BI      \\\",\\\"status\\\":\\\"FAILED\\\",\\\"errorCode\\\":\\\"45_INVALID_ACCOUNT\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:17.141",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:17.141] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1711949863562173\\\",\\\"referenceId\\\":\\\"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\\\",\\\"businessMessageId\\\":\\\"20250203RJHIMYKL01091000445\\\",\\\"customerAccountId\\\":\\\"59da1cb4-610b-430b-b53a-17969e3245ef\\\",\\\"amount\\\":\\\"4.54\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2025-02-02T23:36:16.921\\\",\\\"otherSideFullName\\\":\\\"WAN MOHAMAD SABQI BI      \\\",\\\"status\\\":\\\"FAILED\\\",\\\"errorCode\\\":\\\"45_INVALID_ACCOUNT\\\"}\",\"requestId\":\"0b0f077d-5d42-46b9-a797-1c82bea555dd\",\"type\":\"ACCOUNT_CREDIT_TRANSFER_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:17.139",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:17.139Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=0b0f077d-5d42-46b9-a797-1c82bea555dd, type=ACCOUNT_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1711949863562173\",\"referenceId\":\"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\",\"businessMessageId\":\"20250203RJHIMYKL01091000445\",\"customerAccountId\":\"59da1cb4-610b-430b-b53a-17969e3245ef\",\"amount\":\"4.54\",\"currency\":\"MYR\",\"date\":\"2025-02-02T23:36:16.921\",\"otherSideFullName\":\"WAN MOHAMAD SABQI BI      \",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"}) after total DB calls: 12 and total time: 2382 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:16.929",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:16.928Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=0b0f077d-5d42-46b9-a797-1c82bea555dd, type=ACCOUNT_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1711949863562173\",\"referenceId\":\"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\",\"businessMessageId\":\"20250203RJHIMYKL01091000445\",\"customerAccountId\":\"59da1cb4-610b-430b-b53a-17969e3245ef\",\"amount\":\"4.54\",\"currency\":\"MYR\",\"date\":\"2025-02-02T23:36:16.921\",\"otherSideFullName\":\"WAN MOHAMAD SABQI BI      \",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "f614f3f7f0fc8b8a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:16.926",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:16.926Z",
+            "@version": "1",
+            "message": "Saving response under id 0b0f077d-5d42-46b9-a797-1c82bea555dd",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "4a41fefb7cf91b92",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:16.925",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:16.925Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=0b0f077d-5d42-46b9-a797-1c82bea555dd, externalRequestId=null, businessMessageId=null, customerId=1711949863562173, smeId=null, amount=4.54, denomination=MYR, otherSideAccountNumber=162263396221, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=WAN MOHAMAD SABQI BI      , customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountType=SVGS, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef, customerAccountNumber=912010110359581, transactionId=null, tmCreatedAt=null, paymentStatus=FAILED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Test, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 5 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "4a41fefb7cf91b92",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:16.920",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:16.92Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)\n parameters: [0b0f077d-5d42-46b9-a797-1c82bea555dd]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "4a41fefb7cf91b92",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:16.911",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:16.911Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] Payment prospect request for customer [1711949863562173] has been sent.",
+            "logger_name": "com.arbm.digibank.service.interbank.ReviewableApprovedPaymentProspectService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "ebd499268a6f45e7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:16.796",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:16.796Z",
+            "@version": "1",
+            "message": "Payment request: class PaymentRequest {\n    internalRequestId: 0b0f077d-5d42-46b9-a797-1c82bea555dd\n    externalRequestId: O20250203RJHIMYKL010ORM91000445\n    customerAccountNumber: 912010110359581\n    amount: 4.54\n    denomination: MYR\n    otherSideFullName: WAN MOHAMAD SABQI BI      \n    otherSideExternalId: \n    otherSideAccountNumber: 162263396221\n    otherSideBankCode: MBBEMYKL\n    transferType: DEBIT\n    recipientReference: Test\n    paymentDetails: null\n    instructionDetails: {businessMessageId=20250203RJHIMYKL01091000445, transferType=4}\n    debtorAccountType: SVGS\n    creditorAccountType: SVGS\n    identificationType: null\n    identificationId: null\n    paymentType: PAY_TO_ACCOUNT\n}",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "fc0da1554d8220d9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.455",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.454Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] FisRequestEntity has been saved.",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "9804a57305682c76",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.455",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.454Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] Sending CreditTransferMessage SOAP request for businessMessageId: [20250203RJHIMYKL010ORM91000445].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "9804a57305682c76",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.450",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.45Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] Saving FisRequestEntity for businessMessageId: [20250203RJHIMYKL01091000445].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "9804a57305682c76",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.447",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.447Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\", \"internalRequestId\": \"0b0f077d-5d42-46b9-a797-1c82bea555dd\", \"externalRequestId\": null, \"customerId\": \"1711949863562173\", \"amount\": \"4.54\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"162263396221\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"WAN MOHAMAD SABQI BI      \", \"otherSideAccountType\": \"SVGS\", \"customerName\": \" WAN MOHAMAD SABQI BIN WAN ISMAIL\", \"customerAccountId\": \"59da1cb4-610b-430b-b53a-17969e3245ef\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110359581\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"POSTED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-02-02T23:36:11.728832Z\", \"updatedAt\": \"2025-02-02T23:36:15.437Z\", \"version\": \"1\", \"recipientReference\": \"Test\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "48484d0fd50b56a2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.445",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.444Z",
+            "@version": "1",
+            "message": "Received credit transfer request request with ID: 0b0f077d-5d42-46b9-a797-1c82bea555dd",
+            "logger_name": "com.arbm.digibank.controller.rest.CreditTransfersController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "9804a57305682c76",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.442",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.442Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] Sending payment prospect request to fis-gateway for customer: [1711949863562173] and paymentType: [PAY2ACCOUNT]",
+            "logger_name": "com.arbm.digibank.service.client.fisgateway.FisPaymentProspectFacade",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "ebd499268a6f45e7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.441",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.441Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=0b0f077d-5d42-46b9-a797-1c82bea555dd, externalRequestId=null, businessMessageId=null, customerId=1711949863562173, smeId=null, amount=4.54, denomination=MYR, otherSideAccountNumber=162263396221, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=WAN MOHAMAD SABQI BI      , customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountType=SVGS, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef, customerAccountNumber=912010110359581, transactionId=null, tmCreatedAt=null, paymentStatus=POSTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Test, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 8 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "ebd499268a6f45e7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.432",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.432Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)\n parameters: [0b0f077d-5d42-46b9-a797-1c82bea555dd]\n totalTime: 4 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "ebd499268a6f45e7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:15.427",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:15.427Z",
+            "@version": "1",
+            "message": "Successfully decoded token with requestId: [0b0f077d-5d42-46b9-a797-1c82bea555dd]",
+            "logger_name": "com.arbm.digibank.service.jwt.TransactionTokenParser",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016d03d9707b90ef118f8ab84034",
+            "spanId": "ebd499268a6f45e7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:14.757",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:14.756Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: 0b0f077d-5d42-46b9-a797-1c82bea555dd",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67a0016ede4a1f23ebff42db09c5a209",
+            "spanId": "ebff42db09c5a209",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:14.750",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:14.749] [INFO] [apollo-server,,] default - Microservice request:  http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/0b0f077d-5d42-46b9-a797-1c82bea555dd {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:14.749",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:14.749] [INFO] [apollo-server,,] default - {\"requestId\":\"0b0f077d-5d42-46b9-a797-1c82bea555dd\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:12.043",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:12.043] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"startPayToAccountPayment\":{\"flowId\":\"*HIDDEN*\",\"requestId\":\"0b0f077d-5d42-46b9-a797-1c82bea555dd\"}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.745",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:11.744Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"14662931-ded2-4ed7-9ce0-e6f507fa6ca1\", \"internalRequestId\": \"0b0f077d-5d42-46b9-a797-1c82bea555dd\", \"externalRequestId\": null, \"customerId\": \"1711949863562173\", \"amount\": \"4.54\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"162263396221\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"WAN MOHAMAD SABQI BI      \", \"otherSideAccountType\": \"SVGS\", \"customerName\": \" WAN MOHAMAD SABQI BIN WAN ISMAIL\", \"customerAccountId\": \"59da1cb4-610b-430b-b53a-17969e3245ef\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110359581\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FRAML_ACCEPTED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-02-02T23:36:11.728832Z\", \"updatedAt\": \"2025-02-02T23:36:11.728Z\", \"version\": \"0\", \"recipientReference\": \"Test\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016b75b2aeccc9c58d55ed10a43f",
+            "spanId": "88f3fa7e3f2f556e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.741",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:11.741] [INFO] [apollo-server,,] default - Microservice request:  http://customer-iam-service.customer-iam-service.svc.cluster.local:8080/customer-iam-service/v1/transaction-approval/initialize {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjYzNTE3YzY4LTMwNmMtNDk5My1hNjYwLTE5NjFhNGI3OTllNiIsImlhdCI6MTczODUzOTMzMCwiZXhwIjoxNzM4NTM5NjMwLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzExOTQ5ODYzNTYyMTczIiwic2lkIjoiYWI4Y2VkZTMtYzY3MS00NmM4LTkxMGMtMWNjYTQ1OTRhODQyIiwiYXV0aF90aW1lIjoxNzM4NTI5NjIzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiI3YmIzZWRmMi1iMzcxLTQ0ZWItOTNkOC1lOWFhNTQ1NzBhOWQifQ.hOvU-8CpPDodR3sahaFGFK52CbhKjoz2BOAOmYtUIwKEN-ZPDXgljV2PRMSVX2U7UKf3R-jFuElEbkQZrCFWX9jV0Mb4MezjRR_HHNSrZwD-eQB-tsEmAbPTzjRjCBmkSQAEWEp4Vj2GJH1CPYNQZ5pU2Kb-2qnjor_N_GP1C2TJn6rcUGYyUQ42yQGkfsDlWbC2yxcDgXumWM1JKYdAxaMXeqJcROxvjbwRSY8LiHIf6LqOq1TRMQwtU7cMNmAGkHpcV74J0rHJ8l8MMnMxu8Xicnq66LO0iSdb6rXeKMtq-qJlSEgLnZUACD4Od-OjPhU-PTjHUioZKS6L8V57iw\"},\"body\":\"{\\\"username\\\":\\\"7bb3edf2-b371-44eb-93d8-e9aa54570a9d\\\",\\\"transactionUuid\\\":\\\"0b0f077d-5d42-46b9-a797-1c82bea555dd\\\",\\\"sum\\\":4.54,\\\"currency\\\":\\\"MYR\\\",\\\"recipient\\\":\\\"Test\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.734",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:11.734Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=0b0f077d-5d42-46b9-a797-1c82bea555dd, externalRequestId=null, businessMessageId=null, customerId=1711949863562173, smeId=null, amount=4.54, denomination=MYR, otherSideAccountNumber=162263396221, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=WAN MOHAMAD SABQI BI      , customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountType=SVGS, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef, customerAccountNumber=912010110359581, transactionId=null, tmCreatedAt=null, paymentStatus=FRAML_ACCEPTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Test, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 7 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016b75b2aeccc9c58d55ed10a43f",
+            "spanId": "c9c58d55ed10a43f",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.490",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:11.49Z",
+            "@version": "1",
+            "message": "To payment entity PaymentEntity(internalRequestId=0b0f077d-5d42-46b9-a797-1c82bea555dd, externalRequestId=null, businessMessageId=null, customerId=1711949863562173, smeId=null, amount=4.54, denomination=MYR, otherSideAccountNumber=162263396221, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=WAN MOHAMAD SABQI BI      , customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountType=SVGS, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef, customerAccountNumber=912010110359581, transactionId=null, tmCreatedAt=null, paymentStatus=PROSPECT, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Test, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016b75b2aeccc9c58d55ed10a43f",
+            "spanId": "c9c58d55ed10a43f",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.483",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:11.483Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] Fetching customer name from customer API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016b75b2aeccc9c58d55ed10a43f",
+            "spanId": "c9c58d55ed10a43f",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.482",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:11.482Z",
+            "@version": "1",
+            "message": "[0b0f077d-5d42-46b9-a797-1c82bea555dd] Fetching customer account number from deposit API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016b75b2aeccc9c58d55ed10a43f",
+            "spanId": "c9c58d55ed10a43f",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.478",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:36:11.478Z",
+            "@version": "1",
+            "message": "Received reviewable account payment prospect request request with ID: 0b0f077d-5d42-46b9-a797-1c82bea555dd",
+            "logger_name": "com.arbm.digibank.controller.PayToAccountRequestsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67a0016b75b2aeccc9c58d55ed10a43f",
+            "spanId": "c9c58d55ed10a43f",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:36:11.471",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T23:36:11.471] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/account-payments/reviewable-payment-prospects {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjYzNTE3YzY4LTMwNmMtNDk5My1hNjYwLTE5NjFhNGI3OTllNiIsImlhdCI6MTczODUzOTMzMCwiZXhwIjoxNzM4NTM5NjMwLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzExOTQ5ODYzNTYyMTczIiwic2lkIjoiYWI4Y2VkZTMtYzY3MS00NmM4LTkxMGMtMWNjYTQ1OTRhODQyIiwiYXV0aF90aW1lIjoxNzM4NTI5NjIzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiI3YmIzZWRmMi1iMzcxLTQ0ZWItOTNkOC1lOWFhNTQ1NzBhOWQifQ.hOvU-8CpPDodR3sahaFGFK52CbhKjoz2BOAOmYtUIwKEN-ZPDXgljV2PRMSVX2U7UKf3R-jFuElEbkQZrCFWX9jV0Mb4MezjRR_HHNSrZwD-eQB-tsEmAbPTzjRjCBmkSQAEWEp4Vj2GJH1CPYNQZ5pU2Kb-2qnjor_N_GP1C2TJn6rcUGYyUQ42yQGkfsDlWbC2yxcDgXumWM1JKYdAxaMXeqJcROxvjbwRSY8LiHIf6LqOq1TRMQwtU7cMNmAGkHpcV74J0rHJ8l8MMnMxu8Xicnq66LO0iSdb6rXeKMtq-qJlSEgLnZUACD4Od-OjPhU-PTjHUioZKS6L8V57iw\"},\"body\":\"{\\\"creditorAccountNumber\\\":\\\"162263396221\\\",\\\"creditorBankCode\\\":\\\"MBBEMYKL\\\",\\\"creditorAccountType\\\":\\\"SVGS\\\",\\\"requestId\\\":\\\"0b0f077d-5d42-46b9-a797-1c82bea555dd\\\",\\\"customerId\\\":\\\"1711949863562173\\\",\\\"amount\\\":4.54,\\\"denomination\\\":\\\"MYR\\\",\\\"creditorName\\\":\\\"WAN MOHAMAD SABQI BI      \\\",\\\"debtorAccountId\\\":\\\"59da1cb4-610b-430b-b53a-17969e3245ef\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\",\\\"recipientReference\\\":\\\"Test\\\"}\"}"
+    }
+]

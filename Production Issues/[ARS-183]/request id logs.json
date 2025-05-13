@@ -1,0 +1,419 @@
+[
+    {
+        "@timestamp": "2025-03-15 08:25:00.840",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.84Z",
+            "@version": "1",
+            "message": "Received CreditTransferCompletedEvent event for request with internalRequestId [46c3dcad-5207-44b8-aee1-a08e7964d8fa]",
+            "logger_name": "com.arbm.digibank.consumer.CreditTransferCompletedConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "5d8c99268c4ba3ca",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.825",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.825Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=46c3dcad-5207-44b8-aee1-a08e7964d8fa, type=ACCOUNT_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1748736000002675\",\"referenceId\":\"6c656101-0f0b-46ea-9a5f-828c37441616\",\"businessMessageId\":\"20250315RJHIMYKL01091004522\",\"customerAccountId\":\"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\",\"amount\":\"20.00\",\"currency\":\"MYR\",\"date\":\"2025-03-15T08:25:00.82\",\"otherSideFullName\":\"Mohd Nasrula Aiman\",\"status\":\"FAILED\",\"errorCode\":\"45_INVALID_ACCOUNT\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "f21e644371019264",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.825",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.825Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"6c656101-0f0b-46ea-9a5f-828c37441616\", \"internalRequestId\": \"46c3dcad-5207-44b8-aee1-a08e7964d8fa\", \"externalRequestId\": \"O20250315RJHIMYKL010ORM91004522\", \"customerId\": \"1748736000002675\", \"amount\": \"20.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8888005611082\", \"otherSideBankCode\": \"GXSPMYKL\", \"otherSideName\": \"Mohd Nasrula Aiman\", \"otherSideAccountType\": \"DFLT\", \"customerName\": \"MOHD NASRULA AIMAN\", \"customerAccountId\": \"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110546047\", \"transactionId\": \"d996b3f2-48b5-4640-811e-8e2b5020c6d0\", \"tmCreatedAt\": \"2025-03-15T08:25:00.521982Z\", \"paymentStatus\": \"FAILED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"REJECTED\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-03-15T08:24:59.483221Z\", \"updatedAt\": \"2025-03-15T08:25:00.820Z\", \"version\": \"4\", \"recipientReference\": \"Transfer refund\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": true, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250315RJHIMYKL01091004522\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "a20f460e4f518cc8",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.825",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.825Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"6c656101-0f0b-46ea-9a5f-828c37441616\", \"internalRequestId\": \"46c3dcad-5207-44b8-aee1-a08e7964d8fa\", \"externalRequestId\": \"O20250315RJHIMYKL010ORM91004522\", \"customerId\": \"1748736000002675\", \"amount\": \"20.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8888005611082\", \"otherSideBankCode\": \"GXSPMYKL\", \"otherSideName\": \"Mohd Nasrula Aiman\", \"otherSideAccountType\": \"DFLT\", \"customerName\": \"MOHD NASRULA AIMAN\", \"customerAccountId\": \"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110546047\", \"transactionId\": \"d996b3f2-48b5-4640-811e-8e2b5020c6d0\", \"tmCreatedAt\": \"2025-03-15T08:25:00.521982Z\", \"paymentStatus\": \"FAILED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"REJECTED\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-03-15T08:24:59.483221Z\", \"updatedAt\": \"2025-03-15T08:25:00.708Z\", \"version\": \"3\", \"recipientReference\": \"Transfer refund\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": true, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250315RJHIMYKL01091004522\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "d93f3203cecac9e5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.823",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.823Z",
+            "@version": "1",
+            "message": "Saving response under id 46c3dcad-5207-44b8-aee1-a08e7964d8fa",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "5d8c99268c4ba3ca",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.822",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.822Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=46c3dcad-5207-44b8-aee1-a08e7964d8fa, externalRequestId=O20250315RJHIMYKL010ORM91004522, businessMessageId=20250315RJHIMYKL01091004522, customerId=1748736000002675, smeId=null, amount=20.00, denomination=MYR, otherSideAccountNumber=8888005611082, otherSideBankCode=GXSPMYKL, otherSideAccountType=DFLT, otherSideName=Mohd Nasrula Aiman, customerName=MOHD NASRULA AIMAN, customerAccountType=SVGS, customerAccountId=5900ee0f-651d-4a10-85df-dd32ca7ccd2f, customerAccountNumber=912010110546047, transactionId=d996b3f2-48b5-4640-811e-8e2b5020c6d0, tmCreatedAt=2025-03-15T08:25:00.521982Z, paymentStatus=FAILED, tmStatus=REJECTED, transferType=DEBIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=Transfer refund, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=true, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "5d8c99268c4ba3ca",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.820",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.82Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)\n parameters: [46c3dcad-5207-44b8-aee1-a08e7964d8fa]\n totalTime: 1 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "5d8c99268c4ba3ca",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.715",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.715Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"6c656101-0f0b-46ea-9a5f-828c37441616\", \"internalRequestId\": \"46c3dcad-5207-44b8-aee1-a08e7964d8fa\", \"externalRequestId\": \"O20250315RJHIMYKL010ORM91004522\", \"customerId\": \"1748736000002675\", \"amount\": \"20.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8888005611082\", \"otherSideBankCode\": \"GXSPMYKL\", \"otherSideName\": \"Mohd Nasrula Aiman\", \"otherSideAccountType\": \"DFLT\", \"customerName\": \"MOHD NASRULA AIMAN\", \"customerAccountId\": \"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110546047\", \"transactionId\": \"d996b3f2-48b5-4640-811e-8e2b5020c6d0\", \"tmCreatedAt\": \"2025-03-15T08:25:00.521982Z\", \"paymentStatus\": \"REJECTED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"REJECTED\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-03-15T08:24:59.483221Z\", \"updatedAt\": \"2025-03-15T08:25:00.708Z\", \"version\": \"3\", \"recipientReference\": \"Transfer refund\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": true, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250315RJHIMYKL01091004522\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "6f1dcdb76ea5551a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.712",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.712Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"6c656101-0f0b-46ea-9a5f-828c37441616\", \"internalRequestId\": \"46c3dcad-5207-44b8-aee1-a08e7964d8fa\", \"externalRequestId\": \"O20250315RJHIMYKL010ORM91004522\", \"customerId\": \"1748736000002675\", \"amount\": \"20.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8888005611082\", \"otherSideBankCode\": \"GXSPMYKL\", \"otherSideName\": \"Mohd Nasrula Aiman\", \"otherSideAccountType\": \"DFLT\", \"customerName\": \"MOHD NASRULA AIMAN\", \"customerAccountId\": \"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110546047\", \"transactionId\": \"d996b3f2-48b5-4640-811e-8e2b5020c6d0\", \"tmCreatedAt\": \"2025-03-15T08:25:00.521982Z\", \"paymentStatus\": \"REJECTED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"ACCEPTED\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-03-15T08:24:59.483221Z\", \"updatedAt\": \"2025-03-15T08:25:00.705Z\", \"version\": \"2\", \"recipientReference\": \"Transfer refund\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": true, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250315RJHIMYKL01091004522\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "c49491ca90f2f2df",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.710",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.71Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=46c3dcad-5207-44b8-aee1-a08e7964d8fa, externalRequestId=O20250315RJHIMYKL010ORM91004522, businessMessageId=20250315RJHIMYKL01091004522, customerId=1748736000002675, smeId=null, amount=20.00, denomination=MYR, otherSideAccountNumber=8888005611082, otherSideBankCode=GXSPMYKL, otherSideAccountType=DFLT, otherSideName=Mohd Nasrula Aiman, customerName=MOHD NASRULA AIMAN, customerAccountType=SVGS, customerAccountId=5900ee0f-651d-4a10-85df-dd32ca7ccd2f, customerAccountNumber=912010110546047, transactionId=d996b3f2-48b5-4640-811e-8e2b5020c6d0, tmCreatedAt=2025-03-15T08:25:00.521982Z, paymentStatus=REJECTED, tmStatus=REJECTED, transferType=DEBIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=Transfer refund, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=true, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "990504b2b7162f85",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.707",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.707Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=46c3dcad-5207-44b8-aee1-a08e7964d8fa, externalRequestId=O20250315RJHIMYKL010ORM91004522, businessMessageId=20250315RJHIMYKL01091004522, customerId=1748736000002675, smeId=null, amount=20.00, denomination=MYR, otherSideAccountNumber=8888005611082, otherSideBankCode=GXSPMYKL, otherSideAccountType=DFLT, otherSideName=Mohd Nasrula Aiman, customerName=MOHD NASRULA AIMAN, customerAccountType=SVGS, customerAccountId=5900ee0f-651d-4a10-85df-dd32ca7ccd2f, customerAccountNumber=912010110546047, transactionId=d996b3f2-48b5-4640-811e-8e2b5020c6d0, tmCreatedAt=2025-03-15T08:25:00.521982Z, paymentStatus=REJECTED, tmStatus=ACCEPTED, transferType=DEBIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=Transfer refund, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=true, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "990504b2b7162f85",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.418",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.418Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"6c656101-0f0b-46ea-9a5f-828c37441616\", \"internalRequestId\": \"46c3dcad-5207-44b8-aee1-a08e7964d8fa\", \"externalRequestId\": \"O20250315RJHIMYKL010ORM91004522\", \"customerId\": \"1748736000002675\", \"amount\": \"20.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8888005611082\", \"otherSideBankCode\": \"GXSPMYKL\", \"otherSideName\": \"Mohd Nasrula Aiman\", \"otherSideAccountType\": \"DFLT\", \"customerName\": \"MOHD NASRULA AIMAN\", \"customerAccountId\": \"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110546047\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"CREATED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"ACCEPTED\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-03-15T08:24:59.483221Z\", \"updatedAt\": \"2025-03-15T08:25:00.412Z\", \"version\": \"1\", \"recipientReference\": \"Transfer refund\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": true, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250315RJHIMYKL01091004522\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "b544446173798f00",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.416",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.416Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=46c3dcad-5207-44b8-aee1-a08e7964d8fa, externalRequestId=O20250315RJHIMYKL010ORM91004522, businessMessageId=20250315RJHIMYKL01091004522, customerId=1748736000002675, smeId=null, amount=20.00, denomination=MYR, otherSideAccountNumber=8888005611082, otherSideBankCode=GXSPMYKL, otherSideAccountType=DFLT, otherSideName=Mohd Nasrula Aiman, customerName=MOHD NASRULA AIMAN, customerAccountType=SVGS, customerAccountId=5900ee0f-651d-4a10-85df-dd32ca7ccd2f, customerAccountNumber=912010110546047, transactionId=null, tmCreatedAt=null, paymentStatus=CREATED, tmStatus=ACCEPTED, transferType=DEBIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=Transfer refund, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=true, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 4 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "990504b2b7162f85",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.412",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.412Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)\n parameters: [46c3dcad-5207-44b8-aee1-a08e7964d8fa]\n totalTime: 0 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "990504b2b7162f85",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.412",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.412Z",
+            "@version": "1",
+            "message": "Updating outbound payment with internal request id 46c3dcad-5207-44b8-aee1-a08e7964d8fa to status CREATED",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "990504b2b7162f85",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.407",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.407Z",
+            "@version": "1",
+            "message": "[46c3dcad-5207-44b8-aee1-a08e7964d8fa Processing interbankPayment",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d5395c2858adff7653124039fbf334",
+            "spanId": "990504b2b7162f85",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:25:00.394",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:25:00.394Z",
+            "@version": "1",
+            "message": "Payment request: class PaymentRequest {\n    internalRequestId: 46c3dcad-5207-44b8-aee1-a08e7964d8fa\n    externalRequestId: O20250315RJHIMYKL010ORM91004522\n    customerAccountNumber: 912010110546047\n    amount: 20.00\n    denomination: MYR\n    otherSideFullName: Mohd Nasrula Aiman\n    otherSideExternalId: \n    otherSideAccountNumber: 8888005611082\n    otherSideBankCode: GXSPMYKL\n    transferType: DEBIT\n    recipientReference: Transfer refund\n    paymentDetails: null\n    instructionDetails: {businessMessageId=20250315RJHIMYKL01091004522, transferType=4}\n    debtorAccountType: DFLT\n    creditorAccountType: SVGS\n    identificationType: null\n    identificationId: null\n    paymentType: PAY_TO_ACCOUNT\n}",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "17e6de8bbb4c605d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.504",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.504Z",
+            "@version": "1",
+            "message": "[46c3dcad-5207-44b8-aee1-a08e7964d8fa] FisRequestEntity has been saved.",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "a6631caef3cfb141",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.504",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.504Z",
+            "@version": "1",
+            "message": "[46c3dcad-5207-44b8-aee1-a08e7964d8fa] Sending CreditTransferMessage SOAP request for businessMessageId: [20250315RJHIMYKL010ORM91004522].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "a6631caef3cfb141",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.500",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.499Z",
+            "@version": "1",
+            "message": "[46c3dcad-5207-44b8-aee1-a08e7964d8fa] Saving FisRequestEntity for businessMessageId: [20250315RJHIMYKL01091004522].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "a6631caef3cfb141",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.493",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.493Z",
+            "@version": "1",
+            "message": "Received credit transfer request request with ID: 46c3dcad-5207-44b8-aee1-a08e7964d8fa",
+            "logger_name": "com.arbm.digibank.controller.rest.CreditTransfersController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "a6631caef3cfb141",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.491",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.491Z",
+            "@version": "1",
+            "message": "[46c3dcad-5207-44b8-aee1-a08e7964d8fa] Registering credit transfer request for fis-gateway-service. CustomerId: [1748736000002675]",
+            "logger_name": "com.arbm.digibank.service.client.fisgateway.CreditTransferRequestsService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "f2808ae0bae8aa5a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.489",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.489Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"6c656101-0f0b-46ea-9a5f-828c37441616\", \"internalRequestId\": \"46c3dcad-5207-44b8-aee1-a08e7964d8fa\", \"externalRequestId\": null, \"customerId\": \"1748736000002675\", \"amount\": \"20.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8888005611082\", \"otherSideBankCode\": \"GXSPMYKL\", \"otherSideName\": \"Mohd Nasrula Aiman\", \"otherSideAccountType\": \"DFLT\", \"customerName\": \"MOHD NASRULA AIMAN\", \"customerAccountId\": \"5900ee0f-651d-4a10-85df-dd32ca7ccd2f\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110546047\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"POSTED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"ACCEPTED\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-03-15T08:24:59.483221Z\", \"updatedAt\": \"2025-03-15T08:24:59.483Z\", \"version\": \"0\", \"recipientReference\": \"Transfer refund\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": true, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "dba966eed9b086ea",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.487",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.487Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=46c3dcad-5207-44b8-aee1-a08e7964d8fa, externalRequestId=null, businessMessageId=null, customerId=1748736000002675, smeId=null, amount=20.00, denomination=MYR, otherSideAccountNumber=8888005611082, otherSideBankCode=GXSPMYKL, otherSideAccountType=DFLT, otherSideName=Mohd Nasrula Aiman, customerName=MOHD NASRULA AIMAN, customerAccountType=SVGS, customerAccountId=5900ee0f-651d-4a10-85df-dd32ca7ccd2f, customerAccountNumber=912010110546047, transactionId=null, tmCreatedAt=null, paymentStatus=POSTED, tmStatus=ACCEPTED, transferType=DEBIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=Transfer refund, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=true, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 4 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "f2808ae0bae8aa5a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-15 08:24:59.480",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-15T08:24:59.48Z",
+            "@version": "1",
+            "message": "Received OutboundTransferReversalEvent event for request with requestId [46c3dcad-5207-44b8-aee1-a08e7964d8fa]",
+            "logger_name": "com.arbm.digibank.consumer.OutboundTransferReversalConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d539592b51b5842643251b2c2f4dda",
+            "spanId": "f2808ae0bae8aa5a",
+            "bc": "payments"
+        }
+    }
+]

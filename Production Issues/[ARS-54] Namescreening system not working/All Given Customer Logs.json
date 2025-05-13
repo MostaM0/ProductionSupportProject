@@ -1,0 +1,2132 @@
+[
+    {
+        "@timestamp": "2024-08-09 04:14:08.976",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:08.976Z",
+            "@version": "1",
+            "message": "going to save account setting up reasons: AccountSettingUpReasonRequest(customerId=1723176705253531, accountSettingUpReasonsArray=[Daily spending, Saving, Financing])",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b59790c580539118da746c5445388b",
+            "spanId": "18da746c5445388b",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:08.970",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:14:08.969] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/accountsettingupreason {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"customerId\\\":\\\"1723176705253531\\\",\\\"accountSettingUpReasonsArray\\\":[\\\"Daily spending\\\",\\\"Saving\\\",\\\"Financing\\\"]}\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:08.969",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:14:08.969] [INFO] [apollo-server,,] default - {\"input\":{\"customerId\":\"1723176705253531\",\"accountSettingUpReasons\":[\"Daily spending\",\"Saving\",\"Financing\"]}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:07.797",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:07.796Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b5978fa9d1921cdea12306307bc4fb",
+            "spanId": "7f19bded37b7b7e3",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:07.797",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:07.796Z",
+            "@version": "1",
+            "message": "END - consumeEmploymentSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.EmploymentSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b5978fa9d1921cdea12306307bc4fb",
+            "spanId": "7f19bded37b7b7e3",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:07.780",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:07.78Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b5978f765bb1ee6b5e4330fb98f1cd",
+            "spanId": "0cf1d1c2269b8657",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:07.778",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:07.777Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.customers-employment-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b5978f765bb1ee6b5e4330fb98f1cd",
+            "spanId": "0cf1d1c2269b8657",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:07.778",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:07.778Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b5978f765bb1ee6b5e4330fb98f1cd",
+            "spanId": "0cf1d1c2269b8657",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:07.777",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:07.777Z",
+            "@version": "1",
+            "message": "START - consumeEmploymentSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.EmploymentSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b5978fa9d1921cdea12306307bc4fb",
+            "spanId": "7f19bded37b7b7e3",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:06.089",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:14:06.089Z",
+            "@version": "1",
+            "message": "going save employment with parameter CustomerEmploymentRequest(customerId=1723176705253531, employmentType=GOVERNMENT_EMPLOYEE, employer=Malaysia Armed Forces, employmentSector=ADMINISTRATIVE_AND_SUPPORT_SERVICE_ACTIVITIES, occupation=ARMED_FORCES_OCCUPATIONS, annualIncomeBracket=RM48000_RM71999)",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5978e21f0ef7fcb265c2df624668a",
+            "spanId": "cb265c2df624668a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:06.081",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:14:06.081] [INFO] [apollo-server,,] default - {\"input\":{\"customerId\":\"1723176705253531\",\"occupation\":\"ARMED_FORCES_OCCUPATIONS\",\"employmentType\":\"GOVERNMENT_EMPLOYEE\",\"annualIncomeBracket\":\"RM48000_RM71999\",\"employmentSector\":\"ADMINISTRATIVE_AND_SUPPORT_SERVICE_ACTIVITIES\",\"employer\":\"Malaysia Armed Forces\"}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:14:06.081",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:14:06.081] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/customer-employement {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"customerId\\\":\\\"1723176705253531\\\",\\\"employer\\\":\\\"Malaysia Armed Forces\\\",\\\"employmentType\\\":\\\"GOVERNMENT_EMPLOYEE\\\",\\\"employmentSector\\\":\\\"ADMINISTRATIVE_AND_SUPPORT_SERVICE_ACTIVITIES\\\",\\\"occupation\\\":\\\"ARMED_FORCES_OCCUPATIONS\\\",\\\"annualIncomeBracket\\\":\\\"RM48000_RM71999\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:16.294",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:16.294Z",
+            "@version": "1",
+            "message": "trying to save documents with customer id -> :  1723176705253531",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5975cb038c13b9c9e869b9f1e34a1",
+            "spanId": "9c9e869b9f1e34a1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:16.292",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:16.291Z",
+            "@version": "1",
+            "message": "deleting documents by customer id -> :  1723176705253531",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5975cb038c13b9c9e869b9f1e34a1",
+            "spanId": "9c9e869b9f1e34a1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:16.212",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:16.212Z",
+            "@version": "1",
+            "message": "going save profile with parameter StoreCustomerProfileRequest(customerId=1723176705253531, documentIds=[DocumentId(documentId=17), DocumentId(documentId=19), DocumentId(documentId=20), DocumentId(documentId=21), DocumentId(documentId=37), DocumentId(documentId=23), DocumentId(documentId=33), DocumentId(documentId=25), DocumentId(documentId=26), DocumentId(documentId=27), DocumentId(documentId=34), DocumentId(documentId=29), DocumentId(documentId=30)], maritalStatus=Married, ethnicity=Malay, nickname=Nazril, email=nazrilshah1995@gmail.com)",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5975cb038c13b9c9e869b9f1e34a1",
+            "spanId": "9c9e869b9f1e34a1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:16.197",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:13:16.197] [INFO] [apollo-server,,] default - {\"input\":{\"customerId\":\"1723176705253531\",\"ethnicity\":\"*HIDDEN*\",\"maritalStatus\":\"*HIDDEN*\",\"documentIds\":[{\"documentId\":17},{\"documentId\":19},{\"documentId\":20},{\"documentId\":21},{\"documentId\":37},{\"documentId\":23},{\"documentId\":33},{\"documentId\":25},{\"documentId\":26},{\"documentId\":27},{\"documentId\":34},{\"documentId\":29},{\"documentId\":30}],\"email\":\"*HIDDEN*\",\"nickname\":\"Nazril\"}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:16.197",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:13:16.197] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/customer-profile {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"customerId\\\":\\\"1723176705253531\\\",\\\"maritalStatus\\\":\\\"Married\\\",\\\"ethnicity\\\":\\\"Malay\\\",\\\"nickname\\\":\\\"Nazril\\\",\\\"email\\\":\\\"nazrilshah1995@gmail.com\\\",\\\"documentIds\\\":[{\\\"document_id\\\":17},{\\\"document_id\\\":19},{\\\"document_id\\\":20},{\\\"document_id\\\":21},{\\\"document_id\\\":37},{\\\"document_id\\\":23},{\\\"document_id\\\":33},{\\\"document_id\\\":25},{\\\"document_id\\\":26},{\\\"document_id\\\":27},{\\\"document_id\\\":34},{\\\"document_id\\\":29},{\\\"document_id\\\":30}]}\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:08.237",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:08.236Z",
+            "@version": "1",
+            "message": "Customer 1723176705253531 identity verified",
+            "logger_name": "com.arbm.digibank.consumer.CustomerIdentityVerificationResultConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "66b5974edb0f5982b1bd8898daded8f4",
+            "spanId": "3009610527d92760",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.819",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.799Z",
+            "@version": "1",
+            "message": "START - consumeAddressSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.AddressSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b5975317a4099a4bf7bdaf68893ac7",
+            "spanId": "0c4fe8cbc983b839",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.819",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.806Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b5975317a4099a4bf7bdaf68893ac7",
+            "spanId": "0c4fe8cbc983b839",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.819",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.806Z",
+            "@version": "1",
+            "message": "END - consumeAddressSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.AddressSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b5975317a4099a4bf7bdaf68893ac7",
+            "spanId": "0c4fe8cbc983b839",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.819",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.81Z",
+            "@version": "1",
+            "message": "START - consumeAddressSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.AddressSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753659a92c69aeb90ba314acaa2",
+            "spanId": "e9ae7af2aba4f6d7",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.819",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.817Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753659a92c69aeb90ba314acaa2",
+            "spanId": "e9ae7af2aba4f6d7",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.819",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.817Z",
+            "@version": "1",
+            "message": "END - consumeAddressSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.AddressSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753659a92c69aeb90ba314acaa2",
+            "spanId": "e9ae7af2aba4f6d7",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.782",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.782Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753f3f57ba9ae5a2a4b7678b5e0",
+            "spanId": "7b707424d73970bd",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.780",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.78Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.customers-address-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753f3f57ba9ae5a2a4b7678b5e0",
+            "spanId": "7b707424d73970bd",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.780",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.78Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753f3f57ba9ae5a2a4b7678b5e0",
+            "spanId": "7b707424d73970bd",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.775",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.774Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b597534de902106b6056917c0bba85",
+            "spanId": "97481ed5072de051",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.773",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.772Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.customers-address-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b597534de902106b6056917c0bba85",
+            "spanId": "97481ed5072de051",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.773",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.773Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b597534de902106b6056917c0bba85",
+            "spanId": "97481ed5072de051",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.767",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.756Z",
+            "@version": "1",
+            "message": "START - consumeAddressSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.AddressSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597536de9688b949564a4c0ca144b",
+            "spanId": "658c812cccb9385c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.767",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.762Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597536de9688b949564a4c0ca144b",
+            "spanId": "658c812cccb9385c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.767",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.762Z",
+            "@version": "1",
+            "message": "END - consumeAddressSnapshot: 1723176705253531",
+            "logger_name": "com.arbm.digibank.consumer.AddressSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597536de9688b949564a4c0ca144b",
+            "spanId": "658c812cccb9385c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.758",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.758Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753718e4c902612904c15febd19",
+            "spanId": "aafbea7be3580963",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.757",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.757Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59753d0eeb50ac6d879993fbc20d1",
+            "spanId": "7b585bb76437cbfe",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:13:06.499Z\", \"version\": 6, \"firstname\": null, \"overallStatus\": \"FAILED\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.756",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.756Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.customers-address-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753718e4c902612904c15febd19",
+            "spanId": "aafbea7be3580963",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.756",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.756Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753718e4c902612904c15febd19",
+            "spanId": "aafbea7be3580963",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.749",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.749Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:13:06.499Z\", \"version\": 6, \"firstname\": null, \"overallStatus\": \"FAILED\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59753d0eeb50ac6d879993fbc20d1",
+            "spanId": "7b585bb76437cbfe"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.745",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.745Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753aae5d6b4622e52ca5f59f7e5",
+            "spanId": "15c7ac82195fa524",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.745",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.745Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b5975349c439631958e8ddbc1709b8",
+            "spanId": "0fe771459c300883",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:13:05.453Z\", \"version\": 5, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.718Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753703dcfd08678fd9a46fddc24",
+            "spanId": "672719b5e4f64315",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.718Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753703dcfd08678fd9a46fddc24",
+            "spanId": "672719b5e4f64315",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.724Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753993b0894693d3b356f7c7d39",
+            "spanId": "0a938e9f5a05147a",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.724Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59753993b0894693d3b356f7c7d39",
+            "spanId": "0a938e9f5a05147a",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.739Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597532aa4450b72c5f79fd4184107",
+            "spanId": "1d559cac00bda7f2",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.739Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597532aa4450b72c5f79fd4184107",
+            "spanId": "1d559cac00bda7f2",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.742Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753aae5d6b4622e52ca5f59f7e5",
+            "spanId": "15c7ac82195fa524",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.742",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.742Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753aae5d6b4622e52ca5f59f7e5",
+            "spanId": "15c7ac82195fa524",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.737",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.737Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:13:05.453Z\", \"version\": 5, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b5975349c439631958e8ddbc1709b8",
+            "spanId": "0fe771459c300883"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.729",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.729Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753df68fc3cda66715fb52b1647",
+            "spanId": "3c7eb3ba7c73f497",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.727",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.727Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753df68fc3cda66715fb52b1647",
+            "spanId": "3c7eb3ba7c73f497",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.727",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.727Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59753df68fc3cda66715fb52b1647",
+            "spanId": "3c7eb3ba7c73f497",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.727",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.727Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59753eaeaf499a74dbb2335e9e971",
+            "spanId": "eaedb3a7c54c1ff0",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:13:05.424Z\", \"version\": 4, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.720",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.72Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b5975322214838d4ce3073f22e3d6c",
+            "spanId": "afef339a0cdb49c6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.718",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.718Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b5975322214838d4ce3073f22e3d6c",
+            "spanId": "afef339a0cdb49c6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.718",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.718Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b5975322214838d4ce3073f22e3d6c",
+            "spanId": "afef339a0cdb49c6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:07.718",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:07.718Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:13:05.424Z\", \"version\": 4, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59753eaeaf499a74dbb2335e9e971",
+            "spanId": "eaedb3a7c54c1ff0"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:06.503",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:06.502Z",
+            "@version": "1",
+            "message": "Fetching user by customerId: customerId=1723176705253531",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayUserFetchServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66b5974ec403acf374c9e88cf022c43c",
+            "spanId": "67f3ff8823a58d55",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:06.502",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:06.502Z",
+            "@version": "1",
+            "message": "Status for customerId: 1723176705253531 was changed to: FAILED in customer service",
+            "logger_name": "com.arbm.digibank.consumer.CustomerOverallStatusConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66b5974ec403acf374c9e88cf022c43c",
+            "spanId": "67f3ff8823a58d55",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.464",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.463Z",
+            "@version": "1",
+            "message": "Fetching user by customerId: customerId=1723176705253531",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayUserFetchServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66b5974ec403acf374c9e88cf022c43c",
+            "spanId": "9c14fc417b0a88e5",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.463",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.463Z",
+            "@version": "1",
+            "message": "Status for customerId: 1723176705253531 was changed to: FAILED in customer service",
+            "logger_name": "com.arbm.digibank.consumer.CustomerOverallStatusConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66b5974ec403acf374c9e88cf022c43c",
+            "spanId": "9c14fc417b0a88e5",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.451",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.451Z",
+            "@version": "1",
+            "message": "Customer 1723176705253531 identity verified",
+            "logger_name": "com.arbm.digibank.consumer.CustomerIdentityVerifiedConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974edb0f5982b1bd8898daded8f4",
+            "spanId": "7cb016530a2f3b75",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.448",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.448Z",
+            "@version": "1",
+            "message": " Getting devices for customer=1723176705253531 and status=ACTIVE_VERIFIED",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b59751e75e53d20c1b8350974c7376",
+            "spanId": "0c1b8350974c7376",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.447",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.447Z",
+            "@version": "1",
+            "message": "Customer 1723176705253531 statuses will be changed to {\"customerId\": \"1723176705253531\", \"statusType\": \"ELIGIBILITY\", \"statusValue\": \"FAILED\", \"comment\": \"Customer's is not equal to [NATIONAL_ID], it is equal to MILITARY_ID\", \"changedAt\": \"2024-08-09T04:13:02.653Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974ec403acf374c9e88cf022c43c",
+            "spanId": "f11920fbb70a4efc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.446",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.446Z",
+            "@version": "1",
+            "message": "consumeCreateSilentNotificationCommand, notificationId: null, customerId: 1723176705253531, ttl: 86400",
+            "logger_name": "com.arbm.digibank.processor.CreateSilentNotificationCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66b5974ed6081a426c06e00da9345440",
+            "spanId": "6cddf33d750df7a7",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.446",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.446Z",
+            "@version": "1",
+            "message": "Retrieving DeviceId from customer-service. CustomerId: [1723176705253531]",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66b5974ed6081a426c06e00da9345440",
+            "spanId": "6cddf33d750df7a7",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:05.414",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:05.413Z",
+            "@version": "1",
+            "message": "Customer 1723176705253531 statuses will be changed to {\"customerId\": \"1723176705253531\", \"statusType\": \"IDENTITY_VERIFICATION\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2024-08-09T04:13:02.652Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974e28ea6f5c48d029f5d64f010e",
+            "spanId": "c6191d7ebecec6dc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:03.398",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:03.398Z",
+            "@version": "1",
+            "message": "Consume: {\"timestamp\": \"2024-08-09T04:13:01.265Z\", \"scanReference\": \"7dd1f973-e2e5-4b06-a988-395f177d2a81\", \"document\": {\"status\": \"APPROVED_VERIFIED\", \"type\": \"ID_CARD\", \"idSubtype\": \"MILITARY_ID\", \"issuingCountry\": \"MYS\", \"firstName\": \"N/A\", \"lastName\": \"MOHAMAD NAZRIL BIN MOHD SHAH\", \"dob\": \"1995-05-16\", \"expiry\": null, \"issuingDate\": null, \"number\": \"950516106455\", \"usState\": \"W. PERSEKUTUAN (KL)\", \"personalNumber\": null, \"optionalData1\": null, \"placeOfBirth\": null, \"optionalData2\": null, \"address\": {\"line1\": \"MARKAS TENTERA DARAT\", \"line2\": \"CAWANGAN SUMBER MANUSIA\", \"line3\": \"KEMENTAH JALAN PADANG TEMBAK\", \"line4\": null, \"line5\": null, \"subdivision\": \"W. PERSEKUTUAN (KL)\", \"country\": \"MYS\", \"postalCode\": \"50634\", \"city\": \"KUALA LUMPUR\", \"formattedAddress\": \"MARKAS TENTERA DARAT, CAWANGAN SUMBER MANUSIA, KEMENTAH JALAN PADANG TEMBAK, KUALA LUMPUR, W. PERSEKUTUAN (KL), 50634, MYS\"}, \"issuingAuthority\": null, \"issuingPlace\": null, \"curp\": null, \"gender\": \"M\", \"nationality\": null, \"taxNumber\": null, \"cpf\": null, \"registrationNumber\": null, \"mothersName\": null, \"fathersName\": null, \"personalIdentificationNumber\": null, \"rgNumber\": null, \"voterIdNumber\": null, \"issuingNumber\": \"950516106455\"}, \"transaction\": {\"status\": null, \"source\": null, \"date\": \"2024-08-09T04:13:01.265Z\", \"clientIp\": null, \"customerId\": \"1723176705253531\", \"merchantScanReference\": \"7dd1f973-e2e5-4b06-a988-395f177d2a81\", \"merchantReportingCriteria\": null}, \"verification\": {\"mrzCheck\": null, \"rejectReason\": null, \"identityVerification\": {\"similarity\": \"MATCH\", \"validity\": true, \"reason\": null}, \"additionalChecks\": {\"addressValidation\": null, \"proofOfResidency\": null, \"personalNumberValidation\": null, \"faceSearchFindings\": null, \"watchlistScreening\": {\"searchDate\": \"null\", \"searchId\": null, \"searchReference\": null, \"searchResultUrl\": null, \"searchResults\": null, \"searchStatus\": null}}}, \"facemap\": null}",
+            "logger_name": "com.arbm.digibank.consumer.JumioDataConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974e32c3fd7d499875132f7ec64d",
+            "spanId": "d7eb8063c3138738",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.985",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.897Z",
+            "@version": "1",
+            "message": "Consume: {\"timestamp\": \"2024-08-09T04:13:01.265Z\", \"scanReference\": \"7dd1f973-e2e5-4b06-a988-395f177d2a81\", \"document\": {\"status\": \"APPROVED_VERIFIED\", \"type\": \"ID_CARD\", \"idSubtype\": \"MILITARY_ID\", \"issuingCountry\": \"MYS\", \"firstName\": \"N/A\", \"lastName\": \"MOHAMAD NAZRIL BIN MOHD SHAH\", \"dob\": \"1995-05-16\", \"expiry\": null, \"issuingDate\": null, \"number\": \"950516106455\", \"usState\": \"W. PERSEKUTUAN (KL)\", \"personalNumber\": null, \"optionalData1\": null, \"placeOfBirth\": null, \"optionalData2\": null, \"address\": {\"line1\": \"MARKAS TENTERA DARAT\", \"line2\": \"CAWANGAN SUMBER MANUSIA\", \"line3\": \"KEMENTAH JALAN PADANG TEMBAK\", \"line4\": null, \"line5\": null, \"subdivision\": \"W. PERSEKUTUAN (KL)\", \"country\": \"MYS\", \"postalCode\": \"50634\", \"city\": \"KUALA LUMPUR\", \"formattedAddress\": \"MARKAS TENTERA DARAT, CAWANGAN SUMBER MANUSIA, KEMENTAH JALAN PADANG TEMBAK, KUALA LUMPUR, W. PERSEKUTUAN (KL), 50634, MYS\"}, \"issuingAuthority\": null, \"issuingPlace\": null, \"curp\": null, \"gender\": \"M\", \"nationality\": null, \"taxNumber\": null, \"cpf\": null, \"registrationNumber\": null, \"mothersName\": null, \"fathersName\": null, \"personalIdentificationNumber\": null, \"rgNumber\": null, \"voterIdNumber\": null, \"issuingNumber\": \"950516106455\"}, \"transaction\": {\"status\": null, \"source\": null, \"date\": \"2024-08-09T04:13:01.265Z\", \"clientIp\": null, \"customerId\": \"1723176705253531\", \"merchantScanReference\": \"7dd1f973-e2e5-4b06-a988-395f177d2a81\", \"merchantReportingCriteria\": null}, \"verification\": {\"mrzCheck\": null, \"rejectReason\": null, \"identityVerification\": {\"similarity\": \"MATCH\", \"validity\": true, \"reason\": null}, \"additionalChecks\": {\"addressValidation\": null, \"proofOfResidency\": null, \"personalNumberValidation\": null, \"faceSearchFindings\": null, \"watchlistScreening\": {\"searchDate\": \"null\", \"searchId\": null, \"searchReference\": null, \"searchResultUrl\": null, \"searchResults\": null, \"searchStatus\": null}}}, \"facemap\": null}",
+            "logger_name": "com.arbm.digibank.consumer.JumioDataConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974e32c3fd7d499875132f7ec64d",
+            "spanId": "2f35d0391b8cb521",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.442",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.442Z",
+            "@version": "1",
+            "message": "Get the notification template name UNSUCCESSFUL_ONBOARDING, for customer 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.NotificationTemplateService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66b5974e001419ad89d09d1ecf3090ea",
+            "spanId": "a9803b12d0ff5362",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.442",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.442Z",
+            "@version": "1",
+            "message": "Notification Entity:  NotificationsEntity(notificationId=b73df99a-7a3f-4d12-acb2-477e8dba7cfb, customerId=1723176705253531, content=Please reach out to our Customer Care team at 1800 81 9149., header=Sorry! Your onboarding is unsuccessful., isRead=false, internalNotifId=null, isDeleted=false) ",
+            "logger_name": "com.arbm.digibank.service.NotificationOnesignalService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.438",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.438Z",
+            "@version": "1",
+            "message": " Getting devices for customer=1723176705253531 and status=ACTIVE_VERIFIED",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974ec3bd4639e163bd38b513c828",
+            "spanId": "e163bd38b513c828",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.436",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.436Z",
+            "@version": "1",
+            "message": "consumeCreateNotificationCommand, notificationId: null, customerId: 1723176705253531, templateName: UNSUCCESSFUL_ONBOARDING",
+            "logger_name": "com.arbm.digibank.processor.CreateNotificationCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66b5974e001419ad89d09d1ecf3090ea",
+            "spanId": "a9803b12d0ff5362",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.436",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.436Z",
+            "@version": "1",
+            "message": "Retrieving DeviceId from customer-service. CustomerId: [1723176705253531]",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66b5974e001419ad89d09d1ecf3090ea",
+            "spanId": "a9803b12d0ff5362",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.395",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.395Z",
+            "@version": "1",
+            "message": "Consume: {\"timestamp\": \"2024-08-09T04:13:01.265Z\", \"scanReference\": \"7dd1f973-e2e5-4b06-a988-395f177d2a81\", \"document\": {\"status\": \"APPROVED_VERIFIED\", \"type\": \"ID_CARD\", \"idSubtype\": \"MILITARY_ID\", \"issuingCountry\": \"MYS\", \"firstName\": \"N/A\", \"lastName\": \"MOHAMAD NAZRIL BIN MOHD SHAH\", \"dob\": \"1995-05-16\", \"expiry\": null, \"issuingDate\": null, \"number\": \"950516106455\", \"usState\": \"W. PERSEKUTUAN (KL)\", \"personalNumber\": null, \"optionalData1\": null, \"placeOfBirth\": null, \"optionalData2\": null, \"address\": {\"line1\": \"MARKAS TENTERA DARAT\", \"line2\": \"CAWANGAN SUMBER MANUSIA\", \"line3\": \"KEMENTAH JALAN PADANG TEMBAK\", \"line4\": null, \"line5\": null, \"subdivision\": \"W. PERSEKUTUAN (KL)\", \"country\": \"MYS\", \"postalCode\": \"50634\", \"city\": \"KUALA LUMPUR\", \"formattedAddress\": \"MARKAS TENTERA DARAT, CAWANGAN SUMBER MANUSIA, KEMENTAH JALAN PADANG TEMBAK, KUALA LUMPUR, W. PERSEKUTUAN (KL), 50634, MYS\"}, \"issuingAuthority\": null, \"issuingPlace\": null, \"curp\": null, \"gender\": \"M\", \"nationality\": null, \"taxNumber\": null, \"cpf\": null, \"registrationNumber\": null, \"mothersName\": null, \"fathersName\": null, \"personalIdentificationNumber\": null, \"rgNumber\": null, \"voterIdNumber\": null, \"issuingNumber\": \"950516106455\"}, \"transaction\": {\"status\": null, \"source\": null, \"date\": \"2024-08-09T04:13:01.265Z\", \"clientIp\": null, \"customerId\": \"1723176705253531\", \"merchantScanReference\": \"7dd1f973-e2e5-4b06-a988-395f177d2a81\", \"merchantReportingCriteria\": null}, \"verification\": {\"mrzCheck\": null, \"rejectReason\": null, \"identityVerification\": {\"similarity\": \"MATCH\", \"validity\": true, \"reason\": null}, \"additionalChecks\": {\"addressValidation\": null, \"proofOfResidency\": null, \"personalNumberValidation\": null, \"faceSearchFindings\": null, \"watchlistScreening\": {\"searchDate\": \"null\", \"searchId\": null, \"searchReference\": null, \"searchResultUrl\": null, \"searchResults\": null, \"searchStatus\": null}}}, \"facemap\": null}",
+            "logger_name": "com.arbm.digibank.consumer.JumioDataConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b5974e32c3fd7d499875132f7ec64d",
+            "spanId": "b32675b8543d5e75",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:13:02.202",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:13:02.201Z",
+            "@version": "1",
+            "message": "Jumio V4 callback data: JumioV4Callback(callbackSentAt=2024-08-09T04:13:02.165Z, userReference=1723176705253531, workflowExecution=WorkflowExecution(id=7dd1f973-e2e5-4b06-a988-395f177d2a81, href=https://retrieval.apac-1.jumio.ai/api/v1/workflow-executions/7dd1f973-e2e5-4b06-a988-395f177d2a81, definitionKey=10032, status=PROCESSED), account=Account(id=744e36d4-0da6-4a59-bbb4-0b006c873a1e, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/744e36d4-0da6-4a59-bbb4-0b006c873a1e))",
+            "logger_name": "com.arbm.digibank.controller.JumioV4CallbackController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "66b5974e32c3fd7d499875132f7ec64d",
+            "spanId": "7c04e9142c3dd707",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:58.290",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:58.290] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:58.278",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:58.278] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:58.278",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:58.278] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:53.156",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:53.155] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:53.143",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:53.142] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:53.143",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:53.143] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:47.903",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:47.903] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:47.894",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:47.893] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:47.894",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:47.894] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:42.738",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:42.738] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:42.727",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:42.727] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:42.727",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:42.727] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:37.621",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:37.621] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:37.608",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:37.608] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:37.608",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:37.608] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:32.531",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:32.531] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:32.521",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:32.520] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:32.521",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:32.521] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:27.458",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:27.458] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:27.446",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:27.445] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:27.446",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:27.446] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:21.957",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:21.957] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:21.945",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:21.945] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:21.944",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:21.944] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:16.690",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:16.689] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:16.679",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:16.679] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:16.679",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:16.679] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:11.517",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:11.517] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:11.503",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:11.503] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:11.503",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:11.503] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.701",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.701Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59717d06b0aafdd9ceeee508b223c",
+            "spanId": "456c001dcce419a1",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:53.371Z\", \"version\": 3, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.693",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.693Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:53.371Z\", \"version\": 3, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59717d06b0aafdd9ceeee508b223c",
+            "spanId": "456c001dcce419a1"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.690",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.684Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59717f31948ee2441af0f6baabd87",
+            "spanId": "c209bd919fe6035c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.689",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.684Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59717f31948ee2441af0f6baabd87",
+            "spanId": "c209bd919fe6035c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.687",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.687Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59717077df0ae46c3436cf0513eb7",
+            "spanId": "55457239c7db32b1",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.685",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.685Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59717077df0ae46c3436cf0513eb7",
+            "spanId": "55457239c7db32b1",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.685",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.685Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59717077df0ae46c3436cf0513eb7",
+            "spanId": "55457239c7db32b1",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.677",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.677Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59717ce214d2c25e195bcf5638cab",
+            "spanId": "2391b4cdf1242a0a",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:49.805Z\", \"version\": 2, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.669",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.669Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b597175c5bf0a5a28f0dca1309537b",
+            "spanId": "04708d03a3f0a41e",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.668",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.667Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b597175c5bf0a5a28f0dca1309537b",
+            "spanId": "04708d03a3f0a41e",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.668",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.667Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59717c19e7408894edd656bed4a99",
+            "spanId": "0b2b5a9a4fd568cb",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.668",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.667Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59717c19e7408894edd656bed4a99",
+            "spanId": "0b2b5a9a4fd568cb",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.668",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.668Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:49.805Z\", \"version\": 2, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_VERIFIED\", \"lastUpdate\": \"2024-08-09T04:11:49.791Z\", \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59717ce214d2c25e195bcf5638cab",
+            "spanId": "2391b4cdf1242a0a"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:07.667",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:12:07.667Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b597175c5bf0a5a28f0dca1309537b",
+            "spanId": "04708d03a3f0a41e",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:06.371",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:06.371] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:06.358",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:06.358] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:06.358",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:06.358] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:01.180",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:01.180] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:01.166",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:01.166] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:12:01.166",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:12:01.166] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:56.059",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:56.059] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:53.371Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[{\"identityReferenceId\":\"7dd1f973-e2e5-4b06-a988-395f177d2a81\",\"startVerificationDate\":\"2024-08-09T04:11:53.362Z\",\"status\":\"PENDING\"}],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:56.045",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:56.045] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:56.045",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:56.045] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:53.214",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "Request contains: JumioV4AccountRequest(customerInternalReference=1723176705253531, workflowDefinition=WorkflowDefinition(key=10032, credentials=[Credential(category=ID, country=Country(predefinedType=DEFINED, values=[MYS]), type=Type(predefinedType=DEFINED, values=[ID_CARD]))]), userReference=1723176705253531, callbackUrl=https://jumio.api.prod-arbm.com/cis-service/v1/callbacks/verification-status, userConsent=UserConsent(userIp=128.0.0.1, userLocation=UserLocation(country=MYS, state=Kuala Lumpur)))"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:53.143",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:53.143Z",
+            "@version": "1",
+            "message": "Init verification for 1723176705253531",
+            "logger_name": "com.arbm.digibank.controller.IdentityVerificationController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "66b5970977d1944edf4dd5ad6dd57c22",
+            "spanId": "df4dd5ad6dd57c22",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:53.131",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:53.130] [INFO] [apollo-server,,] default - {\"initVerificationInput\":{\"customerIp\":\"128.0.0.1\",\"customerState\":\"Kuala Lumpur\",\"customerCountry\":\"MYS\",\"customerId\":\"1723176705253531\"}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:53.131",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:53.131] [INFO] [apollo-server,,] default - Microservice request:  http://customer-identity-service.customer-identity-service.svc.cluster.local:8080/cis-service/v1/verification/1723176705253531 {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"customerIp\\\":\\\"128.0.0.1\\\",\\\"customerCountry\\\":\\\"MYS\\\",\\\"customerState\\\":\\\"Kuala Lumpur\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:50.898",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:50.898] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:49.805Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"updatedAt\":\"2024-08-09T04:11:49.791Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:50.880",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:50.879] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:50.880",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:50.880] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.951",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.951Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59705f6519d6698b61a0b19c84595",
+            "spanId": "686c730c2ed82aea",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1723176146156279,1723176705253531]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.951",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.951Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b59705f6519d6698b61a0b19c84595",
+            "spanId": "686c730c2ed82aea",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1723176146156279\",\"1723176705253531\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.798",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.798Z",
+            "@version": "1",
+            "message": "Customer device 1723176705253531 statuses will be changed to {\"customerId\": \"1723176705253531\", \"deviceInstallationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"statusValue\": \"ACTIVE_VERIFIED\", \"comment\": null, \"changedAt\": \"2024-08-09T04:11:49.791Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerDeviceStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66b59705eec2d459650af0e575d6b43e",
+            "spanId": "6c1a7a8582e36318",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.512",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.512Z",
+            "@version": "1",
+            "message": "Requesting PhoneNumberVerification Otp for CustomerId: 1723176705253531, PhoneNumber: +60172658425",
+            "logger_name": "com.arbm.digibank.controller.ValidateOtpController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "66b59705eec2d459650af0e575d6b43e",
+            "spanId": "650af0e575d6b43e",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.356",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:49.355] [INFO] [apollo-server,,] default - {\"otpValidationInput\":{\"phoneNumber\":\"*HIDDEN*\",\"customerId\":\"1723176705253531\",\"otp\":\"*HIDDEN*\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\"}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.356",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:49.356] [INFO] [apollo-server,,] default - Microservice request:  http://onboarding-service.onboarding-service.svc.cluster.local:8080/onboarding-service/v1/validate-otp {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"X-Request-ID\":\"49ebc6ba-bad1-487b-b840-86fd655396ab\"},\"body\":\"{\\\"customerId\\\":\\\"1723176705253531\\\",\\\"phoneNumber\\\":\\\"+60172658425\\\",\\\"otp\\\":\\\"713977\\\",\\\"deviceInstallationId\\\":\\\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.173",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.172Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b597057fb2866b419625cb1019c96b",
+            "spanId": "12ae6a340ee38aca",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:45.303Z\", \"version\": 1, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_UNVERIFIED\", \"lastUpdate\": null, \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.165",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.165Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:45.303Z\", \"version\": 1, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [{\"id\": 207545, \"os\": \"iOS 17.5.1\", \"model\": \"iPhone14,7\", \"installationId\": \"FC373671-5896-4EDC-B2E6-BB0AEE25330D\", \"status\": \"ACTIVE_UNVERIFIED\", \"lastUpdate\": null, \"createdOn\": \"2024-08-09T04:11:45.270Z\"}], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b597057fb2866b419625cb1019c96b",
+            "spanId": "12ae6a340ee38aca"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.161",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.161Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b597054c8bcbfadcfb36d8809173b0",
+            "spanId": "8d30c7b4661718a6",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.receiveCustomerUpdatedMessage",
+                "input": {
+                    "message": "{\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:45.256Z\", \"version\": 0, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [], \"iam\": null, \"preferences\": null, \"accounts\": []}"
+                },
+                "result": null,
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.159",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.159Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59705555019fcfe29d03847eaa2ba",
+            "spanId": "fa6240ff9e448179",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.158",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.158Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59705555019fcfe29d03847eaa2ba",
+            "spanId": "fa6240ff9e448179",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.158",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.158Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59705555019fcfe29d03847eaa2ba",
+            "spanId": "fa6240ff9e448179",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.155",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.155Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59705af40ca1e2a6cf0eb8adaab4c",
+            "spanId": "88978da7f6e706d2",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.155",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.155Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b59705af40ca1e2a6cf0eb8adaab4c",
+            "spanId": "88978da7f6e706d2",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.154",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.154Z",
+            "@version": "1",
+            "message": "the customer 1723176705253531 does not exit in FRAML system",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59705d569339b3cd462c1d1025783",
+            "spanId": "2e09fba5cee64f02",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.152",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.152Z",
+            "@version": "1",
+            "message": "Received Message in group ${digibank.kafka.event.customers.consumers-customer-snapshot-v1}: 1723176705253531",
+            "logger_name": "com.arbm.digibank.messaging.CustomerEventProcessing",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59705d569339b3cd462c1d1025783",
+            "spanId": "2e09fba5cee64f02",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.152",
+        "kubernetes.container_name": "crr-calc-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.152Z",
+            "@version": "1",
+            "message": "Start update customer info: 1723176705253531",
+            "logger_name": "com.arbm.digibank.service.customer.CustomerEventProcessingServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "crr-calc-service",
+            "traceId": "66b59705d569339b3cd462c1d1025783",
+            "spanId": "2e09fba5cee64f02",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.152",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.152Z",
+            "@version": "1",
+            "message": "Received customer update {\"id\": 1723176705253531, \"createdOn\": \"2024-08-09T04:11:45.256Z\", \"lastUpdate\": \"2024-08-09T04:11:45.256Z\", \"version\": 0, \"firstname\": null, \"overallStatus\": \"PROSPECT\", \"lastname\": null, \"nickname\": null, \"phoneNumber\": \"+60172658425\", \"email\": null, \"nric\": null, \"dateOfBirth\": null, \"placeOfBirth\": null, \"mailingAddressSameAsResidence\": false, \"gender\": null, \"nationality\": null, \"type\": \"EXTERNAL_CUSTOMER\", \"devices\": [], \"iam\": null, \"preferences\": null, \"accounts\": []}",
+            "logger_name": "com.arbm.digibank.service.KafkaConsumerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66b597054c8bcbfadcfb36d8809173b0",
+            "spanId": "8d30c7b4661718a6"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.152",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.151Z",
+            "@version": "1",
+            "message": "CustomerSnapshot for customer id: 1723176705253531 ",
+            "logger_name": "com.arbm.digibank.consumer.CustomerSnapshotConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597057ab85310bb37c9c4874530aa",
+            "spanId": "febafadb7d000893",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:49.152",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:49.151Z",
+            "@version": "1",
+            "message": "Skip sending data to Feedzai for customer 1723176705253531 because status is not active",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceCustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66b597057ab85310bb37c9c4874530aa",
+            "spanId": "febafadb7d000893",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.648",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.647] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:45.303Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_UNVERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.637",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.637] [INFO] [apollo-server,,] default - {\"customerId\":\"1723176705253531\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.637",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.637] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.564",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.563] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"createInitialCustomer\":{\"customerId\":\"1723176705253531\"}}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.563",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.563] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1723176705253531\",\"createdAt\":\"2024-08-09T04:11:45.256Z\",\"updatedAt\":\"2024-08-09T04:11:45.303Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"statuses\":{\"eligibility\":\"INITIATED\",\"identityVerifiaction\":\"NOT_INITIATED\",\"crr\":\"NOT_INITIATED\",\"cbs\":\"NOT_INITIATED\",\"coolingOff\":\"NOT_INITIATED\",\"depositAccounts\":\"INACTIVE\",\"overall\":\"PROSPECT\"},\"type\":\"EXTERNAL_CUSTOMER\",\"devices\":[{\"deviceId\":\"207545\",\"createdAt\":\"2024-08-09T04:11:45.270Z\",\"deviceOs\":\"iOS 17.5.1\",\"deviceModel\":\"iPhone14,7\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\",\"deviceStatus\":\"ACTIVE_UNVERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[],\"identityVerifications\":[],\"employments\":[],\"acceptedDocuments\":[],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[],\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.552",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.551] [INFO] [apollo-server,,] default - Microservice response: {\"id\":\"1723176705253531\",\"deviceInstallationId\":\"FC373671-5896-4EDC-B2E6-BB0AEE25330D\"}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.552",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-09T04:11:45.552] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1723176705253531 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-09 04:11:45.479",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2024-08-09T04:11:45.479Z",
+            "@version": "1",
+            "message": "[5afa779fca3f3ddd0a20a5a5cddec028] Requesting PhoneNumberVerification OTP for CustomerId: 1723176705253531 for phone number:  +60172******",
+            "logger_name": "com.arbm.digibank.controller.InitiateOtpController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "66b59701cfce894fdad8e2a8d70426cf",
+            "spanId": "dad8e2a8d70426cf",
+            "bc": "customers"
+        }
+    }
+]

@@ -1,0 +1,126 @@
+[
+    {
+        "@timestamp": "2025-02-02 21:57:03.840",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:57:03.840] [INFO] [apollo-server,,] default - Microservice response: {\"id\":\"13b7df83-cade-4afb-ace0-7c089cb3893c\",\"customerId\":\"1730699089744064\",\"category\":\"Education\",\"name\":\"Kids edu\",\"openingTimestamp\":\"2025-02-02T21:57:03.587986Z\",\"targetedSavingsGoal\":10,\"imageId\":\"education1\",\"status\":\"INITIATED\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:57:03.840",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:57:03.840] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"createSavingPot\":{\"requestId\":\"13b7df83-cade-4afb-ace0-7c089cb3893c\",\"savingPot\":{\"id\":\"13b7df83-cade-4afb-ace0-7c089cb3893c\",\"customerId\":\"1730699089744064\",\"category\":\"Education\",\"name\":\"Kids edu\",\"openingTimestamp\":\"2025-02-02T21:57:03.587986Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"education1\",\"status\":\"INITIATED\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1,\"balance\":\"0\"}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:57:03.675",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:57:03.675Z",
+            "@version": "1",
+            "message": "Details of account to be created: CreateAccountRequest(requestId=06c09886-f0d3-4925-b2e8-59aa73c88525, account=Account(id=13b7df83-cade-4afb-ace0-7c089cb3893c, productId=null, stakeholderIds=[1730699089744064], status=ACCOUNT_STATUS_OPEN, openingTimestamp=null, instanceParamVals={main_account=aeb15156-1a75-422a-81df-011a2b82f9ad, profit_application_day=1, account_tier_names=[\"standard\"], tiered_profit_rates={\"standard\": { \"tier1\": \"0.033\"} }, balance_tier_ranges={\"tier1\": { \"min\": \"0\" } }, tiered_minimum_balance_threshold={\"standard\": \"0\" }, minimum_deposit=0.01, maximum_deposit=1e+08, maximum_daily_deposit=1e+08, maximum_withdrawal=250000, maximum_daily_withdrawal=500000, maximum_balance=1e+08}, derivedInstanceParamVals={}, details={}, accounting=null, productVersionId=135))",
+            "logger_name": "com.arbm.digibank.tm.rest.coreapi.account.AccountService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "679fea2f17a61c4150fd225f628ca7f2",
+            "spanId": "50fd225f628ca7f2",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:57:03.588",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:57:03.587Z",
+            "@version": "1",
+            "message": "Received SavingPotCreationRequest(customerId=1730699089744064, category=Education, name=Kids edu, targetedSavingsGoal=10, targetedContribution=null, autoContribution=null, imageId=education1)",
+            "logger_name": "com.arbm.digibank.accounts.savingpot.controller.SavingPotControllerV1",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "679fea2f17a61c4150fd225f628ca7f2",
+            "spanId": "50fd225f628ca7f2",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:57:03.582",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:57:03.582] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/saving-pots {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"customerId\\\":\\\"1730699089744064\\\",\\\"category\\\":\\\"Education\\\",\\\"name\\\":\\\"Kids edu\\\",\\\"targetedSavingsGoal\\\":10,\\\"imageId\\\":\\\"education1\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:42.686",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:42.685] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"61c5040f-6ca4-471b-8c00-7e38bdaa13d5\",\"customerId\":\"1730699089744064\",\"category\":\"Travel\",\"name\":\"Europe\",\"openingTimestamp\":\"2024-11-15T14:10:33.799558Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"travel6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"}],\"savingAccount\":{\"accountId\":\"aeb15156-1a75-422a-81df-011a2b82f9ad\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1730699089744064\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-11-04T05:49:28.934182Z\",\"currency\":\"MYR\",\"balance\":\"35.9\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:42.576",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:42.576] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"aeb15156-1a75-422a-81df-011a2b82f9ad\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1730699089744064\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-11-04T05:49:28.934182Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"61c5040f-6ca4-471b-8c00-7e38bdaa13d5\",\"customerId\":\"1730699089744064\",\"category\":\"Travel\",\"name\":\"Europe\",\"openingTimestamp\":\"2024-11-15T14:10:33.799558Z\",\"targetedSavingsGoal\":100,\"imageId\":\"travel6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:42.576",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:42.576] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1730699089744064 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:42.566",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:42.565] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1730699089744064/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.994",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.993] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"61c5040f-6ca4-471b-8c00-7e38bdaa13d5\",\"customerId\":\"1730699089744064\",\"category\":\"Travel\",\"name\":\"Europe\",\"openingTimestamp\":\"2024-11-15T14:10:33.799558Z\",\"targetedSavingsGoal\":100,\"targetedContribution\":null,\"imageId\":\"travel6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"0\"}],\"savingAccount\":{\"accountId\":\"aeb15156-1a75-422a-81df-011a2b82f9ad\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1730699089744064\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-11-04T05:49:28.934182Z\",\"currency\":\"MYR\",\"balance\":\"35.9\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.879",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.879] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"aeb15156-1a75-422a-81df-011a2b82f9ad\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1730699089744064\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-11-04T05:49:28.934182Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"61c5040f-6ca4-471b-8c00-7e38bdaa13d5\",\"customerId\":\"1730699089744064\",\"category\":\"Travel\",\"name\":\"Europe\",\"openingTimestamp\":\"2024-11-15T14:10:33.799558Z\",\"targetedSavingsGoal\":100,\"imageId\":\"travel6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.879",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.879] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1730699089744064 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.871",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.871] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1730699089744064/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.857",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.857] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"aeb15156-1a75-422a-81df-011a2b82f9ad\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1730699089744064\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-11-04T05:49:28.934182Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"61c5040f-6ca4-471b-8c00-7e38bdaa13d5\",\"customerId\":\"1730699089744064\",\"category\":\"Travel\",\"name\":\"Europe\",\"openingTimestamp\":\"2024-11-15T14:10:33.799558Z\",\"targetedSavingsGoal\":100,\"imageId\":\"travel6\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.857",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.857] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1730699089744064&accountNumber=912010110515315 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"df43d537-8da9-4730-a315-d3e8350f38bd\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.844",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.844] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1730699089744064/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.838",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.838] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1730699089744064/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.585",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.585] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1730699089744064\",\"createdAt\":\"2024-11-04T05:44:49.747Z\",\"updatedAt\":\"2025-01-17T11:35:38.178Z\",\"offboardingStatus\":\"NOT_APPLICABLE\",\"lastName\":\"MUHAMMAD HARIZ BIN ABD RAHIM\",\"nickname\":\"Hariz\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"860818595523\",\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"type\":\"EXTERNAL_CUSTOMER\",\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":true},\"devices\":[{\"deviceId\":\"233507\",\"createdAt\":\"2024-11-04T05:44:49.785Z\",\"updatedAt\":\"2024-11-04T05:54:04.317Z\",\"deviceOs\":\"iOS 18.0.1\",\"deviceModel\":\"iPhone13,2\",\"deviceInstallationId\":\"0DDA94EA-D2ED-43BD-89E3-C75E60D01B28\",\"deviceStatus\":\"INACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"},{\"deviceId\":\"233511\",\"createdAt\":\"2024-11-04T05:54:04.342Z\",\"updatedAt\":\"2024-11-12T20:54:44.517Z\",\"deviceOs\":\"iOS 18.0.1\",\"deviceModel\":\"iPhone13,2\",\"deviceInstallationId\":\"f2f3a053-acb3-478c-9872-fa0efc425366\",\"deviceStatus\":\"INACTIVE_VERIFIED\",\"appInfo\":\"1.7.4\"},{\"deviceId\":\"377411\",\"createdAt\":\"2025-01-16T15:22:32.314Z\",\"updatedAt\":\"2025-01-17T11:35:38.166Z\",\"deviceOs\":\"iOS 18.1.1\",\"deviceModel\":\"iPhone 12\",\"deviceInstallationId\":\"9a99c9e6-2b40-4c88-b8c4-5ef0e95e6a27\",\"deviceStatus\":\"INACTIVE_VERIFIED\",\"appInfo\":\"\"},{\"deviceId\":\"235306\",\"createdAt\":\"2024-11-12T21:00:39.749Z\",\"updatedAt\":\"2025-01-16T15:22:32.289Z\",\"deviceOs\":\"\",\"deviceModel\":\"\",\"deviceInstallationId\":\"0d41e4b4-2395-4164-8839-35d122e4cbf3\",\"deviceStatus\":\"INACTIVE_VERIFIED\",\"appInfo\":\"\"},{\"deviceId\":\"235305\",\"createdAt\":\"2024-11-12T20:54:44.544Z\",\"updatedAt\":\"2024-11-12T21:00:39.721Z\",\"deviceOs\":\"iOS 18.1\",\"deviceModel\":\"iPhone 11 Pro\",\"deviceInstallationId\":\"2da3abe5-fa6c-40db-b577-ba8eab7caaf8\",\"deviceStatus\":\"INACTIVE_VERIFIED\",\"appInfo\":\"\"},{\"deviceId\":\"377486\",\"createdAt\":\"2025-01-17T11:35:38.173Z\",\"deviceOs\":\"iOS 18.1.1\",\"deviceModel\":\"iPhone 12\",\"deviceInstallationId\":\"a8bf5f96-72e3-4fc3-aaec-1d8992cc4c68\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"\"}],\"accounts\":[{\"accountId\":\"aeb15156-1a75-422a-81df-011a2b82f9ad\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}],\"identityVerifications\":[{\"identityReferenceId\":\"3c3d71c3-1a3e-4c99-8ba0-8d5b56d6a058\",\"startVerificationDate\":\"2024-11-04T05:45:19.753Z\",\"status\":\"VERIFIED\",\"documentType\":\"ID_CARD\",\"documentSubtype\":\"NATIONAL_ID\",\"documentCountry\":\"MYS\"}],\"employments\":[{\"id\":78667,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"APPLICATIONS_PROGRAMMERS\",\"annualIncomeBracket\":\"RM120000_AND_ABOVE\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending\",\"Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"acceptedDocuments\":[{\"acceptedDocumentId\":1262224,\"acceptedDocumentDate\":\"2024-11-04T05:55:22.551Z\",\"document\":{\"id\":18,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Personal+Financing-i+Declaration+and+Authorisation+-+ver1Oct22.pdf\",\"title\":\"Personal Financing-i Declaration & Authorization\",\"version\":1,\"type\":\"PERSONAL_FINANCING_DECLARATION_AND_AUTHORISATION\",\"alias\":\"PERSONAL_FINANCING_DECLARATION_AND_AUTHORISATION\"}},{\"acceptedDocumentId\":1262211,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.278Z\",\"document\":{\"id\":21,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Savings+Account-i+-+ver1Oct22.pdf\",\"title\":\"Savings Account Product Disclosure Sheet\",\"version\":2,\"type\":\"SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET\",\"alias\":\"SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET\"}},{\"acceptedDocumentId\":1262210,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.277Z\",\"document\":{\"id\":20,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Personal+Data+Protection+Notice+-+ver1Oct22.pdf\",\"title\":\"Personal Data Protection\",\"version\":2,\"type\":\"PERSONAL_DATA_PROTECTION\",\"alias\":\"PERSONAL_DATA_PROTECTION\"}},{\"acceptedDocumentId\":1262209,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.276Z\",\"document\":{\"id\":19,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/PIDM+Brochure.pdf\",\"title\":\"PIDM DIS Brochure\",\"version\":1,\"type\":\"PIDM_DIS_BROCHURE\",\"alias\":\"PIDM_DIS_BROCHURE\"}},{\"acceptedDocumentId\":1262208,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.274Z\",\"document\":{\"id\":17,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Digi+Bank+Deposit+and+Debit+Card+-+Declaration+and+Authorisation+-+ver1Oct22.pdf\",\"title\":\"Deposit Acct & Debit card declaration & authorization\",\"version\":1,\"type\":\"DEPOSIT_ACC_AND_DEBIT_CARD_DECLARATION_AND_AUTHORISATION\",\"alias\":\"DEPOSIT_ACC_AND_DEBIT_CARD_DECLARATION_AND_AUTHORISATION\"}},{\"acceptedDocumentId\":1262215,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.283Z\",\"document\":{\"id\":25,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Supplementary+TC+National+Addressing+Database+(NAD)+Terms+and+Conditions++-+ver1Oct22.pdf\",\"title\":\"National Addressing Databases (NAD) Terms & Conditions\",\"version\":1,\"type\":\"NAD_TERMS_AND_CONDITIONS\",\"alias\":\"NAD_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1262214,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.282Z\",\"document\":{\"id\":33,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Specific+Terms+and+Conditions+V.20Jun2023.pdf\",\"title\":\"Specific Terms and Conditions\",\"version\":3,\"type\":\"DEPOSIT_AND_CARD_SPECIFIC_TERMS_AND_CONDITIONS\",\"alias\":\"DEPOSIT_AND_CARD_SPECIFIC_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1262213,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.281Z\",\"document\":{\"id\":23,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/General+Terms+and+Conditions+-+ver2Oct22.pdf\",\"title\":\"General Terms & Conditions\",\"version\":2,\"type\":\"GENERAL_TERMS_AND_CONDITIONS\",\"alias\":\"GENERAL_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1262212,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.279Z\",\"document\":{\"id\":37,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Debit+Card-i-ver2922024.pdf\",\"title\":\"Debit Card-i Product Disclosure Sheet\",\"version\":4,\"type\":\"DEBIT_CARD_PRODUCT_DISCLOSURE_SHEET\",\"alias\":\"DEBIT_CARD_PRODUCT_DISCLOSURE_SHEET\"}},{\"acceptedDocumentId\":1262219,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.288Z\",\"document\":{\"id\":29,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Client+Charter+-+ver1Oct22.pdf\",\"title\":\"Client Charter\",\"version\":1,\"type\":\"CLIENT_CHARTER\",\"alias\":\"CLIENT_CHARTER\"}},{\"acceptedDocumentId\":1262218,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.286Z\",\"document\":{\"id\":34,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Internet+and+Mobile+Banking+Banking+T%26C+(alrajhi%4024seven+personal+%2B+Rize)+-+ver1Jul23.pdf\",\"title\":\"Internet & Mobile Banking Terms & Conditions\",\"version\":2,\"type\":\"INTERNET_AND_MOBILE_BANKING_TERMS_AND_CONDITIONS\",\"alias\":\"INTERNET_AND_MOBILE_BANKING_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1262217,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.285Z\",\"document\":{\"id\":27,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/DuitNow+QR+Terms+and+Conditions-+ver1Oct22.pdf\",\"title\":\"DuitNow QR Terms & Conditions\",\"version\":1,\"type\":\"DUITNOW_QR_TERMS_AND_CONDITIONS\",\"alias\":\"DUITNOW_QR_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1262216,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.284Z\",\"document\":{\"id\":26,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Supplementary+TC+DuitNow+Transfer+Terms+and+Conditions++-+ver1Oct22.pdf\",\"title\":\"DuitNow Transfer Terms & Conditions\",\"version\":1,\"type\":\"DUITNOW_TRANSFER_TERMS_AND_CONDITIONS\",\"alias\":\"DUITNOW_TRANSFER_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1262223,\"acceptedDocumentDate\":\"2024-11-04T05:55:22.536Z\",\"document\":{\"id\":35,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Savings+Account-i+-+ver12Dec23.pdf\",\"title\":\"Savings Account Product Disclosure Sheet\",\"version\":3,\"type\":\"SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET\",\"alias\":\"SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET\"}},{\"acceptedDocumentId\":1262220,\"acceptedDocumentDate\":\"2024-11-04T05:47:35.289Z\",\"document\":{\"id\":30,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Treating+Customer+Fairly+-+ver1Oct22.pdf\",\"title\":\"Treating Customer Fairly\",\"version\":1,\"type\":\"TREATING_CUSTOMER_FAIRLY\",\"alias\":\"TREATING_CUSTOMER_FAIRLY\"}}],\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[{\"id\":115188,\"line1\":\"C-16-08\",\"line2\":\"KEN RIMBA CONDOMINIUM 1\",\"line3\":\"JLN LENGKUAS 16/26 SEKSYEN 16\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"},{\"id\":120013,\"line1\":\"No 18 Jalan Bidara 4/7F\",\"line2\":\"Seksyen 4\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Selangor\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"hariz1986\",\"pingOneId\":\"d863d85f-eb85-4ad6-8bb9-49dc90c44940\"},\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.585",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.585] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1730699089744064/status {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:56:35.501",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:56:35.501] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1730699089744064 {\"method\":\"GET\",\"headers\":{}}"
+    }
+]

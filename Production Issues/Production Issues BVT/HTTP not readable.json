@@ -1,0 +1,87 @@
+[
+    {
+        "@timestamp": "2025-02-02 23:09:52.522",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:09:52.522Z",
+            "@version": "1",
+            "message": "Call to payment-service API endpoint: /payment-service/v1/payments with method: POST failed with status code 400: BAD_REQUEST in totalTime: 6 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "fis-gateway",
+            "traceId": "679ffb4001a6dc98015691162bc7e1b6",
+            "spanId": "2af50f78491f6a01",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:09:52.521",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:09:52.52Z",
+            "@version": "1",
+            "message": "Handle HttpMessageNotReadableException for errorId: e83cc0c8-af5c-4339-9de8-cf0fac967e4e, exception: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field \"identificationType\" (class com.arbm.digibank.generated.model.PaymentRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"identificationType\" (class com.arbm.digibank.generated.model.PaymentRequest), not marked as ignorable (16 known properties: \"paymentType\", \"otherSideFullName\", \"denomination\", \"creditorAccountType\", \"otherSideExternalId\", \"otherSideAccountNumber\", \"otherSideBankCode\", \"debtorAccountType\", \"recipientReference\", \"instructionDetails\", \"customerAccountNumber\", \"paymentDetails\", \"externalRequestId\", \"transferType\", \"internalRequestId\", \"amount\"])\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 639] (through reference chain: com.arbm.digibank.generated.model.PaymentRequest[\"identificationType\"])\n\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\n\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\n\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\n\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:696)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:289)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)\n\tat org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\tat org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:103)\n\tat org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:769)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field \"identificationType\" (class com.arbm.digibank.generated.model.PaymentRequest), not marked as ignorable (16 known properties: \"paymentType\", \"otherSideFullName\", \"denomination\", \"creditorAccountType\", \"otherSideExternalId\", \"otherSideAccountNumber\", \"otherSideBankCode\", \"debtorAccountType\", \"recipientReference\", \"instructionDetails\", \"customerAccountNumber\", \"paymentDetails\", \"externalRequestId\", \"transferType\", \"internalRequestId\", \"amount\"])\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 639] (through reference chain: com.arbm.digibank.generated.model.PaymentRequest[\"identificationType\"])\n\tat com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)\n\tat com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127)\n\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2036)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1650)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:460)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1405)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)\n\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)\n\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\n\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\n\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\n\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\n\t... 65 more\n",
+            "logger_name": "com.arbm.digibank.rest.error.ErrorHandler",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "payment-service",
+            "traceId": "679ffb4001a6dc98015691162bc7e1b6",
+            "spanId": "b0070496e76e9d8b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:09:52.507",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:09:52.507Z",
+            "@version": "1",
+            "message": "Updating request for transaction to IN_PROGRESS status for business message ID: 20250203RJHIMYKL01091000145",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679ffb4001a6dc98015691162bc7e1b6",
+            "spanId": "2af50f78491f6a01",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:09:52.501",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:09:52.5Z",
+            "@version": "1",
+            "message": "Received request [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}DoRetailPaymentTrxRq]",
+            "logger_name": "org.springframework.ws.server.MessageTracing.received",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "fis-gateway",
+            "traceId": "679ffb4001a6dc98015691162bc7e1b6",
+            "spanId": "2af50f78491f6a01",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 23:09:52.501",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T23:09:52.501Z",
+            "@version": "1",
+            "message": "Received retailPayment request with requestID [O20250203RJHIMYKL010ORM91000145], channelRef: [20250203RJHIMYKL01091000145]",
+            "logger_name": "com.arbm.digibank.controller.soap.IncomingPaymentsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679ffb4001a6dc98015691162bc7e1b6",
+            "spanId": "2af50f78491f6a01",
+            "bc": "payments"
+        }
+    }
+]

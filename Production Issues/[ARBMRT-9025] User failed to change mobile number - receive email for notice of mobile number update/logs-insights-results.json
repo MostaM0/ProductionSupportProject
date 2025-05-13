@@ -1,0 +1,68 @@
+[
+    {
+        "@timestamp": "2025-03-27 09:38:05.435",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T09:38:05.432Z",
+            "@version": "1",
+            "message": "apiResponse: class AsyncResultResponse {\n    requestId: 30adeeed-0114-96cc-966e-cae34d61ca69\n    type: CHANGE_PHONE_NUMBER_PROGRESSED\n    payload: {\"type\":\"CHANGE_NUMBER_PROCESS\",\"status\":\"FINISHED\"}\n}",
+            "logger_name": "com.arbm.digibank.service.asyncresult.AsyncResultService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "mfa-service",
+            "traceId": "67e51c780216ab3870689378749de26c",
+            "spanId": "f4504ed7eae6fa9a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 09:38:05.429",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T09:38:05.429Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=30adeeed-0114-96cc-966e-cae34d61ca69, type=CHANGE_PHONE_NUMBER_PROGRESSED, payload={\"type\":\"CHANGE_NUMBER_PROCESS\",\"status\":\"FINISHED\"}) after total DB calls: 17 and total time: 4537 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 09:38:04.953",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T09:38:04.953Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=30adeeed-0114-96cc-966e-cae34d61ca69, type=CHANGE_PHONE_NUMBER_PROGRESSED, payload={\"type\":\"CHANGE_NUMBER_PROCESS\",\"status\":\"FINISHED\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e51c742d2281d7116ef5706ab94060",
+            "spanId": "8e6f68cd9b87a0fc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:39.925",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:39.924Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=bffc6621-55f0-9ab4-b6a4-ca42eaced4ff, type=CHANGE_PHONE_NUMBER_PROGRESSED, payload={\"type\":\"CHANGE_NUMBER_PROCESS\",\"status\":\"FINISHED\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e51208253d3fe1cea9d08ed520d1be",
+            "spanId": "a32d9816c92f76f6",
+            "bc": "payments"
+        }
+    }
+]

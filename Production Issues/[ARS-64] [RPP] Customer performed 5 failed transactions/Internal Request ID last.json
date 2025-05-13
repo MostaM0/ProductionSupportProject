@@ -1,0 +1,114 @@
+[
+    {
+        "@timestamp": "2024-09-24 01:04:43.474",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-24T01:04:43.473Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"d8eea69b-53bd-4737-b62f-243934e746ff\", \"internalRequestId\": \"7accd9fc-f191-4d2a-9233-da3deb9430b1\", \"externalRequestId\": null, \"customerId\": \"1715581689971758\", \"amount\": \"1000\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"8604716511\", \"otherSideBankCode\": \"CIBBMYKL\", \"otherSideName\": \"MOHD SYAHRUL BIN ISHAK                                                          \", \"otherSideAccountType\": \"CACC\", \"customerName\": \" MOHD SYAHRUL BIN ISHAK\", \"customerAccountId\": \"1fa1594e-c72d-40d8-8006-ab43c958b61a\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110399876\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FRAML_ACCEPTED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2024-09-24T01:04:43.431267Z\", \"updatedAt\": \"2024-09-24T01:04:43.431Z\", \"version\": \"0\", \"recipientReference\": \"Savings\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66f2102b473ff967e5f1918ee752c10d",
+            "spanId": "9ffb47ce94c53622",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.439",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-24T01:04:43.439] [INFO] [apollo-server,,] default - Microservice request:  http://customer-iam-service.customer-iam-service.svc.cluster.local:8080/customer-iam-service/v1/transaction-approval/initialize {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjcxODYyNmZjLTA1ZTgtNDFmNi1iYmE1LWM2YmE1ZjI4ZTg4MiIsImlhdCI6MTcyNzEzOTg2MSwiZXhwIjoxNzI3MTQwMTYxLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzE1NTgxNjg5OTcxNzU4Iiwic2lkIjoiOThjMmJlMDEtNTlmNC00NTUzLWEyOWUtMzQxNDY4ZDdhOTFkIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiYmNmZDZhZmQtZDYzNS00MGFiLWEwODQtMGVjYmRiMTA1YWVkIn0.CEBrw8xJxZRe5WV38V8EK0Q_niqs9YrWMhDbmAXYASeISLXWkFciJuqjBQJ89VOnD1e84inX1hFGoRwbL0Ms5pjYdEsF3rvrga-q3-2Sdduu2wEy0dn_taiqazZZoFINATyojORr9Twx1jnM5nahQ047ojfbH3IPDpFzV79Kh7qbEHIOvtpjMiF2NC_icprP2xDvgXu0_jH6Xejr3p5WWPFTct5kVg37ussr6xxxLKTwtvm5ec6kTU5y-1iaRYsORGoI-UHwWldgQDDsFxMsfdZYA4hrjm67vKunTVtArbZOGgrAWhNjpQOb1Mxh1jPCJhpeCBwLRgWArnbK4ZjErA\"},\"body\":\"{\\\"username\\\":\\\"bcfd6afd-d635-40ab-a084-0ecbdb105aed\\\",\\\"transactionUuid\\\":\\\"7accd9fc-f191-4d2a-9233-da3deb9430b1\\\",\\\"sum\\\":1000,\\\"currency\\\":\\\"MYR\\\",\\\"recipient\\\":\\\"Savings\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.437",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-24T01:04:43.437Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=7accd9fc-f191-4d2a-9233-da3deb9430b1, externalRequestId=null, businessMessageId=null, customerId=1715581689971758, smeId=null, amount=1000, denomination=MYR, otherSideAccountNumber=8604716511, otherSideBankCode=CIBBMYKL, otherSideAccountType=CACC, otherSideName=MOHD SYAHRUL BIN ISHAK                                                          , customerName= MOHD SYAHRUL BIN ISHAK, customerAccountType=SVGS, customerAccountId=1fa1594e-c72d-40d8-8006-ab43c958b61a, customerAccountNumber=912010110399876, transactionId=null, tmCreatedAt=null, paymentStatus=FRAML_ACCEPTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Savings, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)]\n totalTime: 7 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66f2102b473ff967e5f1918ee752c10d",
+            "spanId": "e5f1918ee752c10d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.307",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-24T01:04:43.306Z",
+            "@version": "1",
+            "message": "To payment entity PaymentEntity(internalRequestId=7accd9fc-f191-4d2a-9233-da3deb9430b1, externalRequestId=null, businessMessageId=null, customerId=1715581689971758, smeId=null, amount=1000, denomination=MYR, otherSideAccountNumber=8604716511, otherSideBankCode=CIBBMYKL, otherSideAccountType=CACC, otherSideName=MOHD SYAHRUL BIN ISHAK                                                          , customerName= MOHD SYAHRUL BIN ISHAK, customerAccountType=SVGS, customerAccountId=1fa1594e-c72d-40d8-8006-ab43c958b61a, customerAccountNumber=912010110399876, transactionId=null, tmCreatedAt=null, paymentStatus=PROSPECT, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Savings, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null)",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66f2102b473ff967e5f1918ee752c10d",
+            "spanId": "e5f1918ee752c10d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.301",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-24T01:04:43.301Z",
+            "@version": "1",
+            "message": "[7accd9fc-f191-4d2a-9233-da3deb9430b1] Fetching customer account number from deposit API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66f2102b473ff967e5f1918ee752c10d",
+            "spanId": "e5f1918ee752c10d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.301",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-24T01:04:43.301Z",
+            "@version": "1",
+            "message": "[7accd9fc-f191-4d2a-9233-da3deb9430b1] Fetching customer name from customer API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66f2102b473ff967e5f1918ee752c10d",
+            "spanId": "e5f1918ee752c10d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.298",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-24T01:04:43.298Z",
+            "@version": "1",
+            "message": "Received reviewable account payment prospect request request with ID: 7accd9fc-f191-4d2a-9233-da3deb9430b1",
+            "logger_name": "com.arbm.digibank.controller.PayToAccountRequestsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66f2102b473ff967e5f1918ee752c10d",
+            "spanId": "e5f1918ee752c10d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-24 01:04:43.292",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-24T01:04:43.292] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/account-payments/reviewable-payment-prospects {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjcxODYyNmZjLTA1ZTgtNDFmNi1iYmE1LWM2YmE1ZjI4ZTg4MiIsImlhdCI6MTcyNzEzOTg2MSwiZXhwIjoxNzI3MTQwMTYxLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzE1NTgxNjg5OTcxNzU4Iiwic2lkIjoiOThjMmJlMDEtNTlmNC00NTUzLWEyOWUtMzQxNDY4ZDdhOTFkIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiYmNmZDZhZmQtZDYzNS00MGFiLWEwODQtMGVjYmRiMTA1YWVkIn0.CEBrw8xJxZRe5WV38V8EK0Q_niqs9YrWMhDbmAXYASeISLXWkFciJuqjBQJ89VOnD1e84inX1hFGoRwbL0Ms5pjYdEsF3rvrga-q3-2Sdduu2wEy0dn_taiqazZZoFINATyojORr9Twx1jnM5nahQ047ojfbH3IPDpFzV79Kh7qbEHIOvtpjMiF2NC_icprP2xDvgXu0_jH6Xejr3p5WWPFTct5kVg37ussr6xxxLKTwtvm5ec6kTU5y-1iaRYsORGoI-UHwWldgQDDsFxMsfdZYA4hrjm67vKunTVtArbZOGgrAWhNjpQOb1Mxh1jPCJhpeCBwLRgWArnbK4ZjErA\"},\"body\":\"{\\\"creditorAccountNumber\\\":\\\"8604716511\\\",\\\"creditorBankCode\\\":\\\"CIBBMYKL\\\",\\\"creditorAccountType\\\":\\\"CACC\\\",\\\"requestId\\\":\\\"7accd9fc-f191-4d2a-9233-da3deb9430b1\\\",\\\"customerId\\\":\\\"1715581689971758\\\",\\\"amount\\\":1000,\\\"denomination\\\":\\\"MYR\\\",\\\"creditorName\\\":\\\"MOHD SYAHRUL BIN ISHAK                                                          \\\",\\\"debtorAccountId\\\":\\\"1fa1594e-c72d-40d8-8006-ab43c958b61a\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\",\\\"recipientReference\\\":\\\"Savings\\\"}\"}"
+    }
+]

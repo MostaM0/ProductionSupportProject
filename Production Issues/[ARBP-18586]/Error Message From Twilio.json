@@ -1,0 +1,88 @@
+[
+    {
+        "@timestamp": "2025-01-03 06:26:32.718",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2025-01-03T06:26:32.718Z",
+            "@version": "1",
+            "message": "An error occurred with code[E402001], details[twilio gateway not responded]",
+            "logger_name": "com.arbm.digibank.rest.exception.common.RestExceptionHandler",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "677783177bd48771b72bab1414762472",
+            "spanId": "b72bab1414762472",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-01-03 06:26:32.715",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2025-01-03T06:26:32.713Z",
+            "@version": "1",
+            "message": "Error while handling creating otp request by twilio gateway service",
+            "logger_name": "com.arbm.digibank.service.OtpV1Service",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "com.arbm.digibank.exception.ExternalApiException: External Api endpoint: /twilio-otp-gateway/v1/otps/create\n\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\tSuppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: \nError has been observed at the following site(s):\n\t*__checkpoint ⇢ Request to POST http://twilio-otp-gateway.twilio-otp-gateway.svc.cluster.local:8080/twilio-otp-gateway/v1/otps/create [DefaultWebClient]\nOriginal Stack Trace:\n\t\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\t\tat reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)\n\t\tat reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)\n\t\tat reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onSubscribeInner(MonoFlatMapMany.java:150)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:189)\n\t\tat reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)\n\t\tat reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onNext(FluxRetryWhen.java:174)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)\n\t\tat reactor.netty.http.client.HttpClientConnect$HttpIOHandlerObserver.onStateChange(HttpClientConnect.java:431)\n\t\tat reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:677)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onStateChange(DefaultPooledConnectionProvider.java:187)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onStateChange(DefaultPooledConnectionProvider.java:444)\n\t\tat reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:637)\n\t\tat reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:336)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:323)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:444)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:280)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\n\t\tat io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)\n\t\tat io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)\n\t\tat io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)\n\t\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\t\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\t\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "677783177bd48771b72bab1414762472",
+            "spanId": "b72bab1414762472",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-01-03 06:26:32.703",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2025-01-03T06:26:32.703Z",
+            "@version": "1",
+            "message": "Call to OTP_SERVICE Api endpoint: /twilio-otp-gateway/v1/otps/create with method: POST failed with status code 500: INTERNAL_SERVER_ERROR",
+            "logger_name": "com.arbm.digibank.rest.filter.ClientApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "677783177bd48771b72bab1414762472",
+            "spanId": "b72bab1414762472",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-01-03 06:26:31.610",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2025-01-03T06:26:31.61Z",
+            "@version": "1",
+            "message": "createOtpVerificationRequest: CreateOtpVerificationRequest(contact=+60198882882, contactType=MOBILE, serviceId=ONBOARDING, verificationAttributes=[VerificationAttribute(name=attributeName, value=attributeValue)]) \n",
+            "logger_name": "com.arbm.digibank.service.OtpV1Service",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "677783177bd48771b72bab1414762472",
+            "spanId": "b72bab1414762472",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-01-03 06:26:31.609",
+        "kubernetes.container_name": "customer-phone-verification-service",
+        "logBody": {
+            "@timestamp": "2025-01-03T06:26:31.609Z",
+            "@version": "1",
+            "message": "CreateOtpVerificationRequest :CreateOtpVerificationRequest(contact=+60198882882, contactType=MOBILE, serviceId=ONBOARDING, verificationAttributes=[VerificationAttribute(name=attributeName, value=attributeValue)]) ",
+            "logger_name": "com.arbm.digibank.controller.VerifyOtpV1Controller",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-phone-verification-service",
+            "traceId": "677783177bd48771b72bab1414762472",
+            "spanId": "b72bab1414762472",
+            "bc": "customers"
+        }
+    }
+]

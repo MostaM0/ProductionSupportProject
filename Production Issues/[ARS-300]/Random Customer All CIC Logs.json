@@ -1,0 +1,1066 @@
+[
+    {
+        "@timestamp": "2025-03-26 07:40:10.829",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:10.829Z",
+            "@version": "1",
+            "message": "Customer 8861356f-44bb-4681-88b5-04d7700e04df statuses will be changed to {\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"statusType\": \"ELIGIBILITY\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2025-03-26T07:40:07.707Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e3af57238e743ffc41298604e53b7b",
+            "spanId": "e094fd77ab694920",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:10.528",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:10.528Z",
+            "@version": "1",
+            "message": "Error handler threw an exception",
+            "logger_name": "org.springframework.kafka.listener.KafkaMessageListenerContainer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Seek to current after exception; nested exception is org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208)\n\tat org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:135)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2704)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2585)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2454)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2332)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2003)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1373)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1364)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1255)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2717)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2687)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2647)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2574)\n\t... 9 common frames omitted\nCaused by: java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(CustomerStatusCommandConsumer.kt:28)\n\tat jdk.internal.reflect.GeneratedMethodAccessor491.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$6edd55df.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2667)\n\t... 11 common frames omitted\n",
+            "springAppName": "customer-service",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:10.326",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:10.326Z",
+            "@version": "1",
+            "message": "Customer 8861356f-44bb-4681-88b5-04d7700e04df statuses will be changed to {\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"statusType\": \"ELIGIBILITY\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2025-03-26T07:40:07.707Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e3af57238e743ffc41298604e53b7b",
+            "spanId": "28144308262e8143",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:09.926",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:09.925Z",
+            "@version": "1",
+            "message": "Error handler threw an exception",
+            "logger_name": "org.springframework.kafka.listener.KafkaMessageListenerContainer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Seek to current after exception; nested exception is org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208)\n\tat org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:135)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2704)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2585)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2454)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2332)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2003)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1373)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1364)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1255)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2717)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2687)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2647)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2574)\n\t... 9 common frames omitted\nCaused by: java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(CustomerStatusCommandConsumer.kt:28)\n\tat jdk.internal.reflect.GeneratedMethodAccessor491.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$6edd55df.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2667)\n\t... 11 common frames omitted\n",
+            "springAppName": "customer-service",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:09.824",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:09.824Z",
+            "@version": "1",
+            "message": "Customer 8861356f-44bb-4681-88b5-04d7700e04df statuses will be changed to {\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"statusType\": \"ELIGIBILITY\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2025-03-26T07:40:07.707Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e3af57238e743ffc41298604e53b7b",
+            "spanId": "19d7a4345de2905a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:08.316",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:08.316Z",
+            "@version": "1",
+            "message": "Customer 8861356f-44bb-4681-88b5-04d7700e04df statuses will be changed to {\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"statusType\": \"IDENTITY_VERIFICATION\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2025-03-26T07:40:07.707Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e3af57da229cfa9f21ec77341ee56c",
+            "spanId": "3443f1ce8eb4acab",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:08.015",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:08.015Z",
+            "@version": "1",
+            "message": "Error handler threw an exception",
+            "logger_name": "org.springframework.kafka.listener.KafkaMessageListenerContainer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Seek to current after exception; nested exception is org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208)\n\tat org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:135)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2704)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2585)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2454)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2332)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2003)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1373)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1364)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1255)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2717)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2687)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2647)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2574)\n\t... 9 common frames omitted\nCaused by: java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(CustomerStatusCommandConsumer.kt:28)\n\tat jdk.internal.reflect.GeneratedMethodAccessor491.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$6edd55df.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2667)\n\t... 11 common frames omitted\n",
+            "springAppName": "customer-service",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.858",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.858Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : IDENTITY_STAFF_REVIEW , status: INITIATED , finished on : null",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.855",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : IDENTITY_STAFF_REVIEW>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.852",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.852Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : IDENTITY_CUSTOMER_REVIEW , status: INITIATED , finished on : null",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.850",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : IDENTITY_CUSTOMER_REVIEW>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.847",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.847Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_CALLBACK , status: FINISHED , finished on : 2025-03-26T07:40:07.847076Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.847",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.847Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_SCANNING , status: FINISHED , finished on : 2025-03-26T07:40:07.847327Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.846",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.846Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_SCANNING , status: FINISHED , finished on : 2025-03-26T07:40:07.846633Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.845",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.844Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_CALLBACK , status: FINISHED , finished on : 2025-03-26T07:40:07.844762Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af57ed43da68bdec15a325bb2786",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.839",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.839Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af57ed43da68bdec15a325bb2786",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.825",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.825Z",
+            "@version": "1",
+            "message": "Started updating Jumio Callback Step status for prospectCustomerId = 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.IdentityVerificationService",
+            "thread_name": "Checklist-AsyncThread::2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af57ed43da68bdec15a325bb2786",
+            "spanId": "f56c45a84d8a9082",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.813",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.813Z",
+            "@version": "1",
+            "message": "Customer 8861356f-44bb-4681-88b5-04d7700e04df statuses will be changed to {\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"statusType\": \"IDENTITY_VERIFICATION\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2025-03-26T07:40:07.707Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e3af57da229cfa9f21ec77341ee56c",
+            "spanId": "db34516326facede",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.812",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.811Z",
+            "@version": "1",
+            "message": "Error handler threw an exception",
+            "logger_name": "org.springframework.kafka.listener.KafkaMessageListenerContainer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Seek to current after exception; nested exception is org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208)\n\tat org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:135)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2704)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2585)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2454)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2332)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2003)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1373)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1364)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1255)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(com.arbm.digibank.producer.generated.avro.model.CustomerStatusCommand)' threw exception; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"; nested exception is java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2717)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2687)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2647)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2574)\n\t... 9 common frames omitted\nCaused by: java.lang.NumberFormatException: For input string: \"8861356f-44bb-4681-88b5-04d7700e04df\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.consumer.CustomerStatusCommandConsumer.consumeCustomerStatusCommand(CustomerStatusCommandConsumer.kt:28)\n\tat jdk.internal.reflect.GeneratedMethodAccessor491.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$6edd55df.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2667)\n\t... 11 common frames omitted\n",
+            "springAppName": "customer-service",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.783",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.783Z",
+            "@version": "1",
+            "message": "Trying to update(verification-status) after receiving verification-result from 'customerIdentityService' after applying verification rules on JUMIO call back for the prospect customer with id 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.IdentityVerificationService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af57ed43da68bdec15a325bb2786",
+            "spanId": "8bc0d73b5be426ff",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.782",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.782Z",
+            "@version": "1",
+            "message": "Prospect Customer with prospectId(8861356f-44bb-4681-88b5-04d7700e04df) identity-verification-result received ({\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"scanReference\": \"6a7ed294-20a1-411f-ab68-7da56ab082a9\", \"searchId\": \"2237684532\", \"verificationResult\": \"VERIFIED\"})",
+            "logger_name": "com.arbm.digibank.consumer.CustomerIdentityVerificationResultConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af57ed43da68bdec15a325bb2786",
+            "spanId": "8bc0d73b5be426ff",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.777",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.776Z",
+            "@version": "1",
+            "message": "Step 1: Used Result topic after Jumio callback is (onboarding.customer-identity-service.ekyc-result.v3), for scanReferenceId(6a7ed294-20a1-411f-ab68-7da56ab082a9), for customerId(8861356f-44bb-4681-88b5-04d7700e04df) with event({\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"scanReference\": \"6a7ed294-20a1-411f-ab68-7da56ab082a9\", \"searchId\": \"2237684532\", \"verificationResult\": \"VERIFIED\"})",
+            "logger_name": "com.arbm.digibank.publisher.IdentityVerificationResultPublisher",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.777",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.776Z",
+            "@version": "1",
+            "message": "Step 2: Used Result topic after Jumio callback is (onboarding.customer-identity-service.ekyc-result.v3), for scanReferenceId(6a7ed294-20a1-411f-ab68-7da56ab082a9), for customerId(8861356f-44bb-4681-88b5-04d7700e04df) with record(ProducerRecord(topic=onboarding.customer-identity-service.ekyc-result.v3, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = kafka_messageKey, value = [54, 97, 55, 101, 100, 50, 57, 52, 45, 50, 48, 97, 49, 45, 52, 49, 49, 102, 45, 97, 98, 54, 56, 45, 55, 100, 97, 53, 54, 97, 98, 48, 56, 50, 97, 57])], isReadOnly = false), key=6a7ed294-20a1-411f-ab68-7da56ab082a9, value={\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"scanReference\": \"6a7ed294-20a1-411f-ab68-7da56ab082a9\", \"searchId\": \"2237684532\", \"verificationResult\": \"VERIFIED\"}, timestamp=null))",
+            "logger_name": "com.arbm.digibank.publisher.IdentityVerificationResultPublisher",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:07.710",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:07.71Z",
+            "@version": "1",
+            "message": "Customer 8861356f-44bb-4681-88b5-04d7700e04df statuses will be changed to {\"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"statusType\": \"IDENTITY_VERIFICATION\", \"statusValue\": \"PASSED\", \"comment\": \"\", \"changedAt\": \"2025-03-26T07:40:07.707Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerStatusCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e3af57da229cfa9f21ec77341ee56c",
+            "spanId": "ea802f1df0f0c266",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:06.256",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:06.256Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af556e6d265461d910e047e016d0",
+            "spanId": "352dcae95f9da813",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:06.222",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:06.221Z",
+            "@version": "1",
+            "message": "Consume: {\"timestamp\": \"2025-03-26T07:40:05.075Z\", \"scanReference\": \"6a7ed294-20a1-411f-ab68-7da56ab082a9\", \"document\": {\"status\": \"APPROVED_VERIFIED\", \"type\": \"ID_CARD\", \"idSubtype\": \"NATIONAL_ID\", \"issuingCountry\": \"MYS\", \"firstName\": \"N/A\", \"lastName\": \"CHING CHOON SIONG\", \"dob\": \"1983-08-23\", \"expiry\": null, \"issuingDate\": null, \"number\": \"830823015653\", \"usState\": null, \"personalNumber\": null, \"optionalData1\": null, \"placeOfBirth\": null, \"optionalData2\": null, \"address\": {\"line1\": \"NO 15 JALAN MUTIARA 3\", \"line2\": \"TAMAN MUTIARA\", \"line3\": \"SRI GADING\", \"line4\": null, \"line5\": null, \"subdivision\": \"JOHOR\", \"country\": \"MYS\", \"postalCode\": \"83300\", \"city\": \"BATU PAHAT\", \"formattedAddress\": \"NO 15 JALAN MUTIARA 3, TAMAN MUTIARA, SRI GADING, BATU PAHAT, JOHOR, 83300, MYS\"}, \"issuingAuthority\": null, \"issuingPlace\": null, \"curp\": null, \"gender\": \"M\", \"nationality\": \"MYS\", \"taxNumber\": null, \"cpf\": null, \"registrationNumber\": null, \"mothersName\": null, \"fathersName\": null, \"personalIdentificationNumber\": null, \"rgNumber\": null, \"voterIdNumber\": null, \"issuingNumber\": \"830823015653\"}, \"transaction\": {\"status\": null, \"source\": null, \"date\": \"2025-03-26T07:40:05.075Z\", \"clientIp\": null, \"customerId\": \"8861356f-44bb-4681-88b5-04d7700e04df\", \"merchantScanReference\": \"6a7ed294-20a1-411f-ab68-7da56ab082a9\", \"merchantReportingCriteria\": null}, \"verification\": {\"mrzCheck\": null, \"rejectReason\": null, \"identityVerification\": {\"similarity\": \"MATCH\", \"validity\": true, \"reason\": null}, \"additionalChecks\": {\"addressValidation\": null, \"proofOfResidency\": null, \"personalNumberValidation\": null, \"faceSearchFindings\": null, \"watchlistScreening\": {\"searchDate\": \"2025-03-26T07:40:04.000Z\", \"searchId\": \"2237684532\", \"searchReference\": \"1742974804-QowHqWDv\", \"searchResultUrl\": \"https://app.eu.complyadvantage.com/public/search/1742974804-QowHqWDv/303991a0c519\", \"searchResults\": null, \"searchStatus\": \"SUCCESS\"}}}, \"facemap\": null, \"LivenessStatus\": \"NONE\"}",
+            "logger_name": "com.arbm.digibank.consumer.JumioCallbackCISEventConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af556e6d265461d910e047e016d0",
+            "spanId": "352dcae95f9da813",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:06.191",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:06.191Z",
+            "@version": "1",
+            "message": "Jumio retrieval data after callback for -> account id = 0db01504-3b30-419f-8b43-6fc6844ffa9f , customer id = 8861356f-44bb-4681-88b5-04d7700e04df , workflowExecutionId = 6a7ed294-20a1-411f-ab68-7da56ab082a9 , retrievalData = JumioV4Response(account=AccountResponse(id=0db01504-3b30-419f-8b43-6fc6844ffa9f, href=null), workflow=WorkflowExecutionResponse(definitionKey=10032, status=PROCESSED, userReference=8861356f-44bb-4681-88b5-04d7700e04df, customerInternalReference=8861356f-44bb-4681-88b5-04d7700e04df), createdAt=2025-03-26T07:38:10.719Z, startedAt=2025-03-26T07:38:51.594Z, completedAt=2025-03-26T07:40:05.075Z, credentials=[Credentials(id=0c108c42-7af5-4ed0-bb12-43eb788a6dbc, category=FACEMAP, parts=[CredentialsPart(classifier=LIVENESS_1, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_1), CredentialsPart(classifier=LIVENESS_3, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_3), CredentialsPart(classifier=LIVENESS_2, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_2), CredentialsPart(classifier=LIVENESS_5, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_5), CredentialsPart(classifier=LIVENESS_4, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_4), CredentialsPart(classifier=LIVENESS_7, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_7), CredentialsPart(classifier=LIVENESS_6, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/0c108c42-7af5-4ed0-bb12-43eb788a6dbc/parts/LIVENESS_6)]), Credentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID, parts=[CredentialsPart(classifier=FRONT, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/7472abf8-948b-4de7-b345-40358c78b2a7/parts/FRONT), CredentialsPart(classifier=BACK, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/7472abf8-948b-4de7-b345-40358c78b2a7/parts/BACK)]), Credentials(id=479f6373-ae99-4b42-b996-575508780ab7, category=SELFIE, parts=[CredentialsPart(classifier=FACE, href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/credentials/479f6373-ae99-4b42-b996-575508780ab7/parts/FACE)])], decision=Decision(risk=Risk(score=2.0), type=PASSED, details=DecisionDetails(label=PASSED)), steps=Step(href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f/workflow-executions/6a7ed294-20a1-411f-ab68-7da56ab082a9/steps), capabilities=Capabilities(usability=[CapabilitiesElement(id=6287220f-bb77-4305-8240-3e322316e305, credentials=[CapabilitiesCredentials(id=479f6373-ae99-4b42-b996-575508780ab7, category=SELFIE)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK))), CapabilitiesElement(id=0c6eb696-82c4-46aa-9772-4edeed7e533b, credentials=[CapabilitiesCredentials(id=0c108c42-7af5-4ed0-bb12-43eb788a6dbc, category=FACEMAP)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK))), CapabilitiesElement(id=808d93cc-66fd-4dc9-b6cc-9a59e96caef0, credentials=[CapabilitiesCredentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK)))], liveness=[Liveness(id=4d11a7bd-3900-4069-92a1-6112df97d0dc, credentials=[CapabilitiesCredentials(id=0c108c42-7af5-4ed0-bb12-43eb788a6dbc, category=FACEMAP), CapabilitiesCredentials(id=479f6373-ae99-4b42-b996-575508780ab7, category=SELFIE)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK)), data=LivenessData(type=JUMIO_STANDARD, predictedAge=30, ageConfidenceRange=15-54, validFaceMapForAuthentication=null))], similarity=[Similarity(id=40fc717e-0abf-4b24-bc00-b44195ec16f4, credentials=[CapabilitiesCredentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID), CapabilitiesCredentials(id=479f6373-ae99-4b42-b996-575508780ab7, category=SELFIE)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=MATCH)), data=SimiliarityData(similarity=MATCH))], authentication=[], imageChecks=[ImageChecks(id=cf0316c8-549e-433b-be97-a16f4319a15d, credentials=[CapabilitiesCredentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID), CapabilitiesCredentials(id=479f6373-ae99-4b42-b996-575508780ab7, category=SELFIE)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK)), faceSearchFindingsItem=null)], extraction=[Extraction(id=20061855-0704-484e-aaa1-1fa503784246, credentials=[CapabilitiesCredentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK)), data=ExtractionData(type=ID_CARD, subType=NATIONAL_ID, issuingCountry=MYS, firstName=N/A, lastName=CHING CHOON SIONG, dateOfBirth=1983-08-23, expiryDate=null, issuingDate=null, documentNumber=830823015653, state=null, personalNumber=null, optionalMrzField1=null, optionalMrzField2=null, address=Address(line1=NO 15 JALAN MUTIARA 3, line2=TAMAN MUTIARA, line3=SRI GADING, line4=null, line5=null, country=MYS, postalCode=83300, subdivision=JOHOR, city=BATU PAHAT, formattedAddress=NO 15 JALAN MUTIARA 3, TAMAN MUTIARA, SRI GADING, BATU PAHAT, JOHOR, 83300, MYS), issuingAuthority=null, issuingPlace=null, curp=null, gender=M, nationality=MYS, placeOfBirth=null, taxNumber=null, cpf=null, registrationNumber=null, mothersName=null, fathersName=null, personalIdentificationNumber=null, rgNumber=null, documentIdentificationNumber=null, citizenship=null, religion=null, maritialStatus=null, currentAge=41, lastNameAtBirth=null, remarks=null, disability=null))], dataChecks=[CapabilitiesElement(id=b9eb5faf-8395-4a12-b829-f2178c47460b, credentials=[CapabilitiesCredentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID)], decision=CapabilitiesDecision(type=PASSED, details=CapabilitiesDecisionDetails(label=OK)))], watchlistScreening=[WatchlistScreening(id=b9b30091-0cd5-46c2-856d-fa993a67d0b6, credentials=[CapabilitiesCredentials(id=7472abf8-948b-4de7-b345-40358c78b2a7, category=ID)], decision=CapabilitiesDecision(type=WARNING, details=CapabilitiesDecisionDetails(label=ALERT)), data=WatchlistScreeningData(searchDate=2025-03-26T07:40:04.000Z, searchStatus=SUCCESS, searchId=2237684532, searchReference=1742974804-QowHqWDv, searchResultUrl=https://app.eu.complyadvantage.com/public/search/1742974804-QowHqWDv/303991a0c519, searchResults=1))], addressValidation=[], proofOfResidency=[], drivingLicenseVerification=[], braCpfValidation=[], biometricVerification=[]))",
+            "logger_name": "com.arbm.digibank.service.JumioV4CallbackService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67e3af556e6d265461d910e047e016d0",
+            "spanId": "3aa8940fa9a33faa",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:40:05.966",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:40:05.966Z",
+            "@version": "1",
+            "message": "Jumio V4 callback data: JumioV4Callback(callbackSentAt=2025-03-26T07:40:05.930Z, userReference='8861356f-44bb-4681-88b5-04d7700e04df', workflowExecution=WorkflowExecution(id='6a7ed294-20a1-411f-ab68-7da56ab082a9', href=https://retrieval.apac-1.jumio.ai/api/v1/workflow-executions/6a7ed294-20a1-411f-ab68-7da56ab082a9, definitionKey=10032, status=PROCESSED), account=Account(id='0db01504-3b30-419f-8b43-6fc6844ffa9f', href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/0db01504-3b30-419f-8b43-6fc6844ffa9f))",
+            "logger_name": "com.arbm.digibank.controller.JumioV4CallbackController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67e3af556e6d265461d910e047e016d0",
+            "spanId": "3aa8940fa9a33faa",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:39:24.815",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:39:24.815Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af2c67d0d22d707477b7117b6480",
+            "spanId": "d77a59c149ce4cc4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:39:24.814",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:39:24.814Z",
+            "@version": "1",
+            "message": "Checking for blockers in onboarding checklist to Auto resolve if exist for prospect ID: 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistHealingService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af2c67d0d22d707477b7117b6480",
+            "spanId": "d77a59c149ce4cc4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:54.460",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:54.46Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af0e7c9b67be6da4bb937b094d38",
+            "spanId": "d7e902b41ed75a2f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:54.459",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:54.459Z",
+            "@version": "1",
+            "message": "Checking for blockers in onboarding checklist to Auto resolve if exist for prospect ID: 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistHealingService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af0e7c9b67be6da4bb937b094d38",
+            "spanId": "d7e902b41ed75a2f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:53.934",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:53.934Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_SCANNING , status: FINISHED , finished on : 2025-03-26T07:38:53.934121Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af0d15d114180c43b7f204731a8a",
+            "spanId": "017cadaff0d2cc74",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:53.931",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_SCANNING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:53.929",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:53.929Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af0d15d114180c43b7f204731a8a",
+            "spanId": "017cadaff0d2cc74",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:53.905",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:53.904Z",
+            "@version": "1",
+            "message": "Trying to update(verification-status) after finishing JUMIO Scanning by (FE) for the prospect customer with id 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.IdentityVerificationService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3af0d15d114180c43b7f204731a8a",
+            "spanId": "017cadaff0d2cc74",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:10.770",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:10.77Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-3]: for customerId(8861356f-44bb-4681-88b5-04d7700e04df), for accountId(0db01504-3b30-419f-8b43-6fc6844ffa9f), for flow(10032), responseTopic(onboarding.customer-identity-service.ekyc-response.v3), resultTopic(onboarding.customer-identity-service.ekyc-result.v3)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67e3aee28723336eb003938a096779fc",
+            "spanId": "b003938a096779fc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:10.769",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:10.768Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-2]: for customerId(8861356f-44bb-4681-88b5-04d7700e04df), for accountId(0db01504-3b30-419f-8b43-6fc6844ffa9f), for flow(10032)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67e3aee28723336eb003938a096779fc",
+            "spanId": "b003938a096779fc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:10.656",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "Request contains: JumioV4AccountRequest(customerInternalReference=8861356f-44bb-4681-88b5-04d7700e04df, workflowDefinition=WorkflowDefinition(key=10032, credentials=[Credential(category=ID, country=Country(predefinedType=DEFINED, values=[MYS]), type=Type(predefinedType=DEFINED, values=[ID_CARD]))]), userReference=8861356f-44bb-4681-88b5-04d7700e04df, callbackUrl=https://jumio.api.prod-arbm.com/cis-service/v1/callbacks/verification-status, userConsent=UserConsent(userIp=128.0.0.1, userLocation=UserLocation(country=MYS, state=Kuala Lumpur)))"
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:10.616",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:10.616Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(8861356f-44bb-4681-88b5-04d7700e04df), for accountId(null), for flow(10032)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67e3aee28723336eb003938a096779fc",
+            "spanId": "b003938a096779fc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:10.614",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:10.613Z",
+            "@version": "1",
+            "message": "Init verification for 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67e3aee28723336eb003938a096779fc",
+            "spanId": "b003938a096779fc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 07:38:10.587",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T07:38:10.587Z",
+            "@version": "1",
+            "message": "Trying to initiate Onboarding Identity-Verification to start JUMIO Scanning by (FE) for (MYKAD) for the prospect customer with id 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.IdentityVerificationService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3aee223faf10a3d0adf5b3c26cfe5",
+            "spanId": "3d79965028ec8c53",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.602",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.602Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_CALLBACK , status: INITIATED , finished on : null",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.600",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_CALLBACK>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.598",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.598Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_SCANNING , status: INITIATED , finished on : null",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.596",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : JUMIO_MYKAD_SCANNING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.594",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.593Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : ASSIGN_MOBILE_PREFERENCES , status: FINISHED , finished on : 2025-03-26T05:59:35.593849Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e397c771f10d640354a83f31af14b7",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.594",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.594Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : ASSIGN_MOBILE_PREFERENCES , status: FINISHED , finished on : 2025-03-26T05:59:35.594124Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.566",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.565Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e397c771f10d640354a83f31af14b7",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.566",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.565Z",
+            "@version": "1",
+            "message": "Trying to store personal details(preferences-Mobile) of prospect customer(8861356f-44bb-4681-88b5-04d7700e04df)",
+            "logger_name": "com.arbm.digibank.service.customer.PersonalDetailsService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e397c771f10d640354a83f31af14b7",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:35.542",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:35.542Z",
+            "@version": "1",
+            "message": "Trying to store personal details(preferences) of prospect customer with id 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.PersonalDetailsService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e397c771f10d640354a83f31af14b7",
+            "spanId": "7c4a6aeb72f68ea4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.303",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.303Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : ASSIGN_MOBILE_PREFERENCES , status: INITIATED , finished on : null",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "3710e97a22d567d4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.300",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : ASSIGN_MOBILE_PREFERENCES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.297",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.296Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : CUSTOMER_ACCOUNT_IN_IAM , status: FINISHED , finished on : 2025-03-26T05:59:17.296926Z",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e397b24d263ddf5936171e7fcbf6bb",
+            "spanId": "3710e97a22d567d4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.258",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.258Z",
+            "@version": "1",
+            "message": "getCustomerActiveDevice 8861356f-44bb-4681-88b5-04d7700e04df ",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e397b3fac17d94f2743460b0857552",
+            "spanId": "13eb5dcbda49221c",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.256",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.256Z",
+            "@version": "1",
+            "message": "Getting updateCurrentDevice -> fetchCurrentUserDevice for customer=8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.login.DeviceHandler",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b3fac17d94f2743460b0857552",
+            "spanId": "f2743460b0857552",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.250",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.249Z",
+            "@version": "1",
+            "message": "Update device for customerId: 8861356f-44bb-4681-88b5-04d7700e04df, deviceId: activeVerified, xRequestID: 78245698-e4ea-9247-bd3f-b76c0390de8d, body: DeviceUpdateRequest(deviceOs=N/A, deviceModel=N/A, applicationVersion=Unknown)",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67e397b3fac17d94f2743460b0857552",
+            "spanId": "1d811456dfb344cc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.247",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.247Z",
+            "@version": "1",
+            "message": "Updating customer device for customer=8861356f-44bb-4681-88b5-04d7700e04df, deviceMetadata=DeviceMetadata(deviceOs=N/A, deviceModel=N/A, applicationVersion=Unknown) | updateCurrentDevice -> [customersApiService.updateDevice]",
+            "logger_name": "com.arbm.digibank.service.login.DeviceHandler",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b3fac17d94f2743460b0857552",
+            "spanId": "f2743460b0857552",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:17.237",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:17.236Z",
+            "@version": "1",
+            "message": "Fetch User Details [fetchUserDetails]: UserDetails(pingOneUserId=fef4776c-b975-453c-aa31-e891574e101d, customerId=8861356f-44bb-4681-88b5-04d7700e04df, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b3fac17d94f2743460b0857552",
+            "spanId": "f2743460b0857552",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:15.767",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:15.767Z",
+            "@version": "1",
+            "message": "Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=fef4776c-b975-453c-aa31-e891574e101d, customerId=8861356f-44bb-4681-88b5-04d7700e04df, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b3fac17d94f2743460b0857552",
+            "spanId": "f2743460b0857552",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:15.189",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:15.189Z",
+            "@version": "1",
+            "message": "Create PingOne user account: action=import, customerId=8861356f-44bb-4681-88b5-04d7700e04df, username=GE5990877",
+            "logger_name": "com.arbm.digibank.service.CreateUserService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b22c1e5c8804e626fde3d116b2",
+            "spanId": "04e626fde3d116b2",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:14.957",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:14.957Z",
+            "@version": "1",
+            "message": "Create user account: customerId=8861356f-44bb-4681-88b5-04d7700e04df, username=GE5990877",
+            "logger_name": "com.arbm.digibank.service.CreateUserService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b22c1e5c8804e626fde3d116b2",
+            "spanId": "04e626fde3d116b2",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:14.957",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:14.957Z",
+            "@version": "1",
+            "message": "Fetching user by customerId: customerId=8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayUserFetchServiceImpl",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67e397b22c1e5c8804e626fde3d116b2",
+            "spanId": "04e626fde3d116b2",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:14.952",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : CUSTOMER_ACCOUNT_IN_IAM>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 05:59:14.949",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:59:14.949Z",
+            "@version": "1",
+            "message": "Checklist for prospect customer with ID = 8861356f-44bb-4681-88b5-04d7700e04df is locked successfully!",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e397b24d263ddf5936171e7fcbf6bb",
+            "spanId": "3710e97a22d567d4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:58:14.932",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:58:14.932Z",
+            "@version": "1",
+            "message": "End saving Prospect customer with ID: 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.OtpService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "spanId": "daf3012022e6efa1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:58:14.917",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:58:14.917Z",
+            "@version": "1",
+            "message": "--send change event -- prospect customer id = 8861356f-44bb-4681-88b5-04d7700e04df , step : CUSTOMER_ACCOUNT_IN_IAM , status: INITIATED , finished on : null",
+            "logger_name": "com.arbm.digibank.service.checklist.ChecklistUpdater",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3977637f162265e96968a1ce8953e",
+            "spanId": "daf3012022e6efa1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:58:14.915",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": "Runner>>>>>>>>>>>>>>>prospect id = 8861356f-44bb-4681-88b5-04d7700e04df , step : CUSTOMER_ACCOUNT_IN_IAM>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    },
+    {
+        "@timestamp": "2025-03-26 05:58:14.884",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:58:14.884Z",
+            "@version": "1",
+            "message": "start updating Prospect customer with ID: 8861356f-44bb-4681-88b5-04d7700e04df with statuses, devices, and accepted documents ",
+            "logger_name": "com.arbm.digibank.service.customer.OtpService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3977637f162265e96968a1ce8953e",
+            "spanId": "daf3012022e6efa1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-26 05:58:14.858",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2025-03-26T05:58:14.858Z",
+            "@version": "1",
+            "message": "start saving Prospect customer with ID: 8861356f-44bb-4681-88b5-04d7700e04df",
+            "logger_name": "com.arbm.digibank.service.customer.OtpService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "67e3977637f162265e96968a1ce8953e",
+            "spanId": "daf3012022e6efa1",
+            "bc": "customers"
+        }
+    }
+]

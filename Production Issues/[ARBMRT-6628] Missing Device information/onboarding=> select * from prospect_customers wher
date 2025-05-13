@@ -1,0 +1,202 @@
+onboarding=> select * from prospect_customers where id = '881bad0b-4dba-4cc8-ac56-a50c1f2e042b';
+-[ RECORD 1 ]---------------------+-------------------------------------
+id                                | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+is_still_prospect                 | t
+mobile_number                     | +60123657560
+is_mobile_number_verified         | t
+nickname                          | Jun
+email                             | chiajunyi@yahoo.com
+temp_email                        |
+fullname                          | CHIA JUN YI
+firstname                         | CHIA
+lastname                          | JUN YI
+nric                              | 860203145040
+date_of_birth                     | 1986-02-03
+place_of_birth                    | Malaysia
+gender                            | F
+nationality                       | MYS
+type                              | EXTERNAL_CUSTOMER
+mailing_address_same_as_residence | f
+overall_status                    | PROSPECT
+customer_id                       |
+version                           | 13
+created_on                        | 2024-12-01 07:56:20.20714
+last_updated                      | 2024-12-01 08:31:57.54241
+
+onboarding=> select * from onboarding_steps where prospect_customer_id = '881bad0b-4dba-4cc8-ac56-a50c1f2e042b';
+-[ RECORD 1 ]--------+-------------------------------------
+id                   | 11321
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | INIT_OTP
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 1
+finished_on          | 2024-12-01 07:56:20.239919
+created_on           | 2024-12-01 07:56:20.240298
+last_updated         | 2024-12-01 07:56:20.240301
+-[ RECORD 2 ]--------+-------------------------------------
+id                   | 11322
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | VERIFY_OTP
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 1
+finished_on          | 2024-12-01 07:56:20.239923
+created_on           | 2024-12-01 07:56:20.242108
+last_updated         | 2024-12-01 07:56:20.24211
+-[ RECORD 3 ]--------+-------------------------------------
+id                   | 11323
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | ACCEPT_DOCUMENTS
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 1
+finished_on          | 2024-12-01 07:56:20.239925
+created_on           | 2024-12-01 07:56:20.242841
+last_updated         | 2024-12-01 07:56:20.242843
+-[ RECORD 4 ]--------+-------------------------------------
+id                   | 11324
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | CUSTOMER_ACCOUNT_IN_IAM
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 2147483647
+finished_on          | 2024-12-01 08:01:40.786407
+created_on           | 2024-12-01 07:56:20.243438
+last_updated         | 2024-12-01 08:01:38.312641
+-[ RECORD 5 ]--------+-------------------------------------
+id                   | 11326
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | JUMIO_MYKAD_SCANNING
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 50
+finished_on          | 2024-12-01 08:15:49.298026
+created_on           | 2024-12-01 07:56:20.244663
+last_updated         | 2024-12-01 08:15:49.274651
+-[ RECORD 6 ]--------+-------------------------------------
+id                   | 11327
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | JUMIO_MYKAD_CALLBACK
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 3
+finished_on          | 2024-12-01 08:15:49.291888
+created_on           | 2024-12-01 07:56:20.245438
+last_updated         | 2024-12-01 08:15:49.274651
+-[ RECORD 7 ]--------+-------------------------------------
+id                   | 11330
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | ASSIGN_EMPLOYMENT_DATA
+status               | INITIATED
+retry_attempt        | 1
+max_attempt          | 1
+finished_on          |
+created_on           | 2024-12-01 07:56:20.247698
+last_updated         | 2024-12-01 08:31:57.092196
+-[ RECORD 8 ]--------+-------------------------------------
+id                   | 11331
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | CRR_CALCULATION_PROCESS
+status               | NOT_INITIATED
+retry_attempt        | 0
+max_attempt          | 5
+finished_on          |
+created_on           | 2024-12-01 07:56:20.248459
+last_updated         | 2024-12-01 07:56:20.24846
+-[ RECORD 9 ]--------+-------------------------------------
+id                   | 11332
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | INIT_CUSTOMER_IN_CRM
+status               | NOT_INITIATED
+retry_attempt        | 0
+max_attempt          | 5
+finished_on          |
+created_on           | 2024-12-01 07:56:20.249156
+last_updated         | 2024-12-01 07:56:20.249158
+-[ RECORD 10 ]-------+-------------------------------------
+id                   | 11333
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | CUSTOMER_ACCOUNT_IN_TM
+status               | NOT_INITIATED
+retry_attempt        | 0
+max_attempt          | 1
+finished_on          |
+created_on           | 2024-12-01 07:56:20.249959
+last_updated         | 2024-12-01 07:56:20.249961
+-[ RECORD 11 ]-------+-------------------------------------
+id                   | 11334
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | CUSTOMER_ACCOUNT_IN_MONEYTHOR
+status               | NOT_INITIATED
+retry_attempt        | 0
+max_attempt          | 1
+finished_on          |
+created_on           | 2024-12-01 07:56:20.250887
+last_updated         | 2024-12-01 07:56:20.250889
+-[ RECORD 12 ]-------+-------------------------------------
+id                   | 11335
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | CUSTOMER_SAVINGS_ACCOUNT_IN_TM
+status               | NOT_INITIATED
+retry_attempt        | 0
+max_attempt          | 1
+finished_on          |
+created_on           | 2024-12-01 07:56:20.251622
+last_updated         | 2024-12-01 07:56:20.251623
+-[ RECORD 13 ]-------+-------------------------------------
+id                   | 11336
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | INITIAL_FUND_TRANSFER_VERIFICATION
+status               | NOT_INITIATED
+retry_attempt        | 0
+max_attempt          | 1
+finished_on          |
+created_on           | 2024-12-01 07:56:20.252395
+last_updated         | 2024-12-01 07:56:20.252397
+-[ RECORD 14 ]-------+-------------------------------------
+id                   | 11325
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | ASSIGN_MOBILE_PREFERENCES
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 2147483647
+finished_on          | 2024-12-01 08:01:57.280308
+created_on           | 2024-12-01 07:56:20.244027
+last_updated         | 2024-12-01 08:01:57.227849
+-[ RECORD 15 ]-------+-------------------------------------
+id                   | 11328
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | IDENTITY_CUSTOMER_REVIEW
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 2147483647
+finished_on          | 2024-12-01 08:31:57.549593
+created_on           | 2024-12-01 07:56:20.246166
+last_updated         | 2024-12-01 08:31:57.092196
+-[ RECORD 16 ]-------+-------------------------------------
+id                   | 11329
+checklist_id         | 703
+prospect_customer_id | 881bad0b-4dba-4cc8-ac56-a50c1f2e042b
+type                 | IDENTITY_STAFF_REVIEW
+status               | FINISHED
+retry_attempt        | 1
+max_attempt          | 2147483647
+finished_on          | 2024-12-01 08:31:57.541457
+created_on           | 2024-12-01 07:56:20.246912
+last_updated         | 2024-12-01 08:31:57.092196

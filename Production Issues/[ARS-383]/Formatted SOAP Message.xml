@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:BusMsg
+	xmlns:ns="urn:rpp"
+	xmlns:ns1="urn:iso:std:iso:20022:tech:xsd:head.001.001.01"
+	xmlns:ns2="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.06.01">
+	<ns:AppHdr>
+		<ns1:Fr>
+			<ns1:FIId>
+				<ns1:FinInstnId>
+					<ns1:Othr>
+						<ns1:Id>RJHIMYKL</ns1:Id>
+					</ns1:Othr>
+				</ns1:FinInstnId>
+			</ns1:FIId>
+		</ns1:Fr>
+		<ns1:To>
+			<ns1:FIId>
+				<ns1:FinInstnId>
+					<ns1:Othr>
+						<ns1:Id>RPPEMYKL</ns1:Id>
+					</ns1:Othr>
+				</ns1:FinInstnId>
+			</ns1:FIId>
+		</ns1:To>
+		<ns1:BizMsgIdr>20241204RJHIMYKL030OQR91000068</ns1:BizMsgIdr>
+		<ns1:MsgDefIdr>pacs.008.001.06.01</ns1:MsgDefIdr>
+		<ns1:BizSvc>RPP</ns1:BizSvc>
+		<ns1:CreDt>2024-12-04T06:54:41Z</ns1:CreDt>
+		<ns1:CpyDplct>CODU</ns1:CpyDplct>
+		<ns1:PssblDplct>false</ns1:PssblDplct>
+		<ns1:Sgntr
+			xmlns:ns1="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+			<ds:Signature
+				xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:SignedInfo>
+					<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+					<ds:Reference URI="">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+						<ds:DigestValue>2OjeW6zm7mteqcwFhs0n7pfhQJ/yTUX03UbytA8Qsbk=</ds:DigestValue>
+					</ds:Reference>
+				</ds:SignedInfo>
+				<ds:SignatureValue>rSBWT5xKw3CQ7wYUUpJN6niqK51X19p0SYYDb0UoxPUHUa7hy7WXzTGoIOrGTT6oXV0yc2KLlIslWu7ri3i+tPQPk4edHCYqFxJQldwqm4lSzFGxEKMXNBx7cqZi9JgPm9a4XxsORKYRP+mRQPzBABx2/JsMkCZfsMuH2HkJW8i3tkxCs4t0D7qZ2TFUmgQflpqOgIlO7Yb6WSEYDuLddFl+BJcaO04edrQ7CRFuz/Ob85PSANpRpkerhOWG7qUL6RcPZHYsGd/0XfJK+2GRqNSk8YSrgb15BRoLB9kvlSBmZJVtqjuiizHA+m9CMq9PqZz1gxMu6jUxikx57yPHEw==</ds:SignatureValue>
+				<ds:KeyInfo>
+					<ds:X509Data>
+						<ds:X509IssuerSerial>
+							<ds:X509IssuerName>CN=FNXSMYNBCA,OU=PayNet RPP,O=FINEXUS Cards Sdn Bhd,ST=Kuala Lumpur,C=MY</ds:X509IssuerName>
+							<ds:X509SerialNumber>431302886319403695318354213281913918035673350822</ds:X509SerialNumber>
+						</ds:X509IssuerSerial>
+					</ds:X509Data>
+				</ds:KeyInfo>
+			</ds:Signature>
+		</ns1:Sgntr>
+	</ns:AppHdr>
+	<ns:Document>
+		<ns:FIToFICstmrCdtTrfInf>
+			<ns2:GrpHdr>
+				<ns2:MsgId>20241204RJHIMYKL03091000068</ns2:MsgId>
+				<ns2:CreDtTm>2024-12-04T14:54:42.691</ns2:CreDtTm>
+				<ns2:NbOfTxs>1</ns2:NbOfTxs>
+				<ns2:SttlmInf>
+					<ns2:SttlmMtd>CLRG</ns2:SttlmMtd>
+				</ns2:SttlmInf>
+			</ns2:GrpHdr>
+			<ns2:CdtTrfTxInf>
+				<ns2:PmtId>
+					<ns2:EndToEndId>20241204RJHIMYKL030OQR91000068</ns2:EndToEndId>
+					<ns2:TxId>20241204RJHIMYKL03091000068</ns2:TxId>
+				</ns2:PmtId>
+				<ns2:PmtTpInf>
+					<ns2:CtgyPurp>
+						<ns2:Prtry>EPAY</ns2:Prtry>
+					</ns2:CtgyPurp>
+				</ns2:PmtTpInf>
+				<ns2:IntrBkSttlmAmt Ccy="MYR">3.09</ns2:IntrBkSttlmAmt>
+				<ns2:IntrBkSttlmDt>2024-12-04</ns2:IntrBkSttlmDt>
+				<ns2:ChrgBr>DEBT</ns2:ChrgBr>
+				<ns2:InstgAgt>
+					<ns2:FinInstnId>
+						<ns2:Othr>
+							<ns2:Id>RJHIMYKL</ns2:Id>
+						</ns2:Othr>
+					</ns2:FinInstnId>
+				</ns2:InstgAgt>
+				<ns2:Dbtr>
+					<ns2:Nm>ABDULLAH BIN SAMIN</ns2:Nm>
+				</ns2:Dbtr>
+				<ns2:DbtrAcct>
+					<ns2:Id>
+						<ns2:Othr>
+							<ns2:Id>912010119038772</ns2:Id>
+						</ns2:Othr>
+					</ns2:Id>
+					<ns2:Tp>
+						<ns2:Prtry>SVGS</ns2:Prtry>
+					</ns2:Tp>
+				</ns2:DbtrAcct>
+				<ns2:DbtrAgt>
+					<ns2:FinInstnId>
+						<ns2:Othr>
+							<ns2:Id>RJHIMYKL</ns2:Id>
+						</ns2:Othr>
+					</ns2:FinInstnId>
+				</ns2:DbtrAgt>
+				<ns2:CdtrAgt>
+					<ns2:FinInstnId>
+						<ns2:Othr>
+							<ns2:Id>890145</ns2:Id>
+						</ns2:Othr>
+					</ns2:FinInstnId>
+				</ns2:CdtrAgt>
+				<ns2:Cdtr>
+					<ns2:Nm>Fasspay Test Account</ns2:Nm>
+				</ns2:Cdtr>
+				<ns2:CdtrAcct>
+					<ns2:Id>
+						<ns2:Othr>
+							<ns2:Id>800030000000002</ns2:Id>
+						</ns2:Othr>
+					</ns2:Id>
+					<ns2:Tp>
+						<ns2:Prtry>DFLT</ns2:Prtry>
+					</ns2:Tp>
+				</ns2:CdtrAcct>
+				<ns2:SplmtryData>
+					<ns2:Envlp>
+						<ns2:InstrForCdtrAgt>
+							<ns2:RecptRef>QR Payment</ns2:RecptRef>
+							<ns2:ScndValInd>N</ns2:ScndValInd>
+						</ns2:InstrForCdtrAgt>
+						<ns2:Dbtr>
+							<ns2:IPAddr>192.0.0.1</ns2:IPAddr>
+							<ns2:Id>912010119038772</ns2:Id>
+						</ns2:Dbtr>
+						<ns2:QRTxInfo>
+							<ns2:QRCd>00020201021126650014A0000006150001010689014502158000300000000020314Harris Company5204171153034585802MY5914Harris Company6005Senai61058140062270302000505118070708000141658264bdf85b46f5ea86fef56fba2febf941551a5bc97bffd16459129123c82ee9e6cc6304E336</ns2:QRCd>
+							<ns2:QRCategory>01</ns2:QRCategory>
+							<ns2:AcceptedPymtType>01</ns2:AcceptedPymtType>
+							<ns2:AcceptedPymtType>03</ns2:AcceptedPymtType>
+						</ns2:QRTxInfo>
+					</ns2:Envlp>
+				</ns2:SplmtryData>
+			</ns2:CdtTrfTxInf>
+		</ns:FIToFICstmrCdtTrfInf>
+	</ns:Document>
+</ns:BusMsg>

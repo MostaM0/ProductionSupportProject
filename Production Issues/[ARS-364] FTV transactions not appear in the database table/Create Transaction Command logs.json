@@ -1,0 +1,87 @@
+[
+    {
+        "@timestamp": "2025-03-17 04:03:50.891",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.891Z",
+            "@version": "1",
+            "message": "Published CreateTransactionCommand with referenceId: {"referenceId": "6cafd301-b337-4bda-98d4-19147433c8fc", "type": "DUITNOW_QR_P2P", "amount": 180, "currency": "MYR", "creationTimestamp": "2025-03-17T04:03:50.822Z", "source": {"accountId": null, "customerId": null, "accountNumber": "912010110330020", "name": "NEXTRIGITY SOLUTION", "smeId": null}, "destination": {"accountId": "791b9d94-f2c6-436b-bd0a-6103c5e70df3", "customerId": "1708757193629814", "accountNumber": "912010110330020", "name": "MUHAMAD IHTHESHAM BIN AKBAR BATCHA", "smeId": null}, "status": "COMMITTED", "otherDetails": "DuitQR P2P Transfer", "recipientReference": "70914370", "merchantCode": null, "merchantId": null, "isInitialPayment": false}",
+            "logger_name": "com.arbm.digibank.producer.CreateTransactionCommandProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "a66366d229a9aaf9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.891",
+        "kubernetes.container_name": "transaction-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.891Z",
+            "@version": "1",
+            "message": "CreateTransactionCommand caught",
+            "logger_name": "com.arbm.digibank.processor.TransactionCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "e793b5b99ef8003d",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.888",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.888Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)n parameters: [I20250317MBBEMYKL040OQR70914370]n totalTime: 1 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "917867ce58df59dd",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.887",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.887Z",
+            "@version": "1",
+            "message": "Received TM Posting Instruction Batch history event: PostingInstructionBatch(id=6cafd301-b337-4bda-98d4-19147433c8fc, createRequestId=I20250317MBBEMYKL040OQR70914370, clientId=payments, clientBatchId=I20250317MBBEMYKL040OQR70914370, postingInstructions=[PostingInstruction(id=26fc4e05-46bb-4669-b7df-51812c9e7983, clientTransactionId=53420441-c9ec-4efb-8ff9-7036eea926e1, pics=[], instructionDetails={PAYMENT_TYPE=duitnow_qr, busMsgId=20250317MBBEMYKL04070914370, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=CACC, paymentType=DUITNOW_QR_P2P, transferType=7}, committedPostings=[Posting(credit=true, amount=180, denomination=MYR, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), Posting(credit=false, amount=180, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObj(restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=ExternalPostingInstruction(amount=180, denomination=MYR, targetAccount=Account(paymentDeviceToken=null, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3), internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false), outboundHardSettlement=null, transfer=null, customInstruction=null)], batchDetails={original_posting_client_batch_id=I20250317MBBEMYKL040OQR70914370}, valueTimestamp=2025-03-17T04:03:50.822214Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, error=null, insertionTimestamp=2025-03-17T04:03:50.822214Z, dryRun=false)",
+            "logger_name": "com.arbm.digibank.consumer.PaymentVaultPostingConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "917867ce58df59dd",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.887",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.887Z",
+            "@version": "1",
+            "message": "Preparing posting history kafka event with postingInstructionBatch id: 6cafd301-b337-4bda-98d4-19147433c8fc",
+            "logger_name": "com.arbm.digibank.service.PostingHistoryService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "917867ce58df59dd",
+            "bc": "payments"
+        }
+    }
+]

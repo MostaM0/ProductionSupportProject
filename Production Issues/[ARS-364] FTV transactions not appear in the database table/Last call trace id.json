@@ -1,0 +1,240 @@
+[
+    {
+        "@timestamp": "2025-03-17 04:05:34.093",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.093Z",
+            "@version": "1",
+            "message": "Sent response [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}GetCustomerAccountStatusRs] for request [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}GetCustomerAccountStatusRq]",
+            "logger_name": "org.springframework.ws.server.MessageTracing.sent",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "ece1349a148caf6c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.092",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.092Z",
+            "@version": "1",
+            "message": "Call to payment-service API endpoint: /payment-service/v1/accounts/912010110330020 with method: GET succeeded with status code 200: OK in totalTime: 14 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "ece1349a148caf6c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.091",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.091Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1708757193629814/customerIft with method: GET succeeded with status code 200: OK in totalTime: 6 ms",
+            "logger_name": "com.arbm.digibank.filter.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "5e8d2fb7b6d6a043",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.089",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.088Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1708757193629814, customerName= MUHAMAD IHTHESHAM BIN AKBAR BATCHA, customerDPName=Sham)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "b547d68361dec411",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.086",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.086Z",
+            "@version": "1",
+            "message": "Customer Id: 1708757193629814",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "b547d68361dec411",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.085",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.085Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1708757193629814]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "5e8d2fb7b6d6a043",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.084",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.084Z",
+            "@version": "1",
+            "message": "Call to Account Deposit API endpoint: /saving-accounts with method: GET succeeded with status code 200: OK in totalTime: 4 ms",
+            "logger_name": "com.arbm.digibank.filter.AccountDepositApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "5e8d2fb7b6d6a043",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.082",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.082Z",
+            "@version": "1",
+            "message": "Request to retrieve account by following accountNumber: 912010110330020",
+            "logger_name": "com.arbm.digibank.accounts.savingaccount.controller.SavingAccountControllerV1",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "210451e7f22e8486",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.080",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.08Z",
+            "@version": "1",
+            "message": "Received querry to get account info for account number [912010110330020]",
+            "logger_name": "com.arbm.digibank.controller.AccountInfoController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "5e8d2fb7b6d6a043",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.080",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.08Z",
+            "@version": "1",
+            "message": "Getting account info for account number 912010110330020",
+            "logger_name": "com.arbm.digibank.service.interbank.AccountInfoService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "5e8d2fb7b6d6a043",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.080",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.08Z",
+            "@version": "1",
+            "message": "Retrieving account information from saving-account-service. Account number: 912010110330020",
+            "logger_name": "com.arbm.digibank.service.client.DepositAccountInfoService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "5e8d2fb7b6d6a043",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.078",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.078Z",
+            "@version": "1",
+            "message": "Received accountStatus request for account Number [912010110330020]",
+            "logger_name": "com.arbm.digibank.controller.soap.AccountController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "ece1349a148caf6c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.078",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.078Z",
+            "@version": "1",
+            "message": "[PYMZCAE20250317120533997] Retrieving account status from payments-service",
+            "logger_name": "com.arbm.digibank.service.client.AccountEnquiryService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "ece1349a148caf6c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:05:34.077",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:05:34.077Z",
+            "@version": "1",
+            "message": "Received request [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}GetCustomerAccountStatusRq]",
+            "logger_name": "org.springframework.ws.server.MessageTracing.received",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "fis-gateway",
+            "traceId": "67d79f8e569d3066205885bd41aa70b6",
+            "spanId": "ece1349a148caf6c",
+            "bc": "payments"
+        }
+    }
+]

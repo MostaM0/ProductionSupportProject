@@ -1,0 +1,285 @@
+[
+    {
+        "@timestamp": "2025-02-05 03:14:01.977",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "      url: 'http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/9e2f4e84-3b17-47db-8786-268ccfaaefe6',"
+    },
+    {
+        "@timestamp": "2025-02-05 03:14:01.977",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "handle-api-request error info    2-  : {\"httpCode\":408,\"message\":\"Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000\",\"requestId\":\"\",\"originalException\":{\"title\":\"Processing timeout\",\"detail\":\"Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000\"},\"retryAfter\":\"0\"}"
+    },
+    {
+        "@timestamp": "2025-02-05 03:14:01.977",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-05T03:14:01.977] [WARN] [apollo-server,,] default - [{\"message\":\"Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000\",\"locations\":[{\"line\":2,\"column\":3}],\"path\":[\"getAsyncResultLongPolling\"],\"extensions\":{\"httpCode\":408,\"originalException\":{\"title\":\"Processing timeout\",\"detail\":\"Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000\"},\"requestId\":\"\",\"retryAfter\":0,\"code\":\"MICROSERVICE_ERROR\"}}]"
+    },
+    {
+        "@timestamp": "2025-02-05 03:14:01.977",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-05T03:14:01.977] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"errors\":[{\"message\":\"Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000\",\"locations\":[{\"line\":2,\"column\":3}],\"path\":[\"getAsyncResultLongPolling\"],\"extensions\":{\"httpCode\":408,\"originalException\":{\"title\":\"Processing timeout\",\"detail\":\"Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000\"},\"requestId\":\"\",\"retryAfter\":0,\"code\":\"MICROSERVICE_ERROR\"}}],\"data\":null}"
+    },
+    {
+        "@timestamp": "2025-02-05 03:14:01.976",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "      url: 'http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/9e2f4e84-3b17-47db-8786-268ccfaaefe6',"
+    },
+    {
+        "@timestamp": "2025-02-05 03:14:01.975",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:14:01.974Z",
+            "@version": "1",
+            "message": "Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "async-response-service",
+            "traceId": "67a2d75b3e2b81ae0d68075847991a0c",
+            "spanId": "0d68075847991a0c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:14:01.975",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:14:01.974Z",
+            "@version": "1",
+            "message": "Error occurred: Processing timeout, detail: Processing retrieval of Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "async-response-service",
+            "traceId": "67a2d75b3e2b81ae0d68075847991a0c",
+            "spanId": "0d68075847991a0c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.927",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.927Z",
+            "@version": "1",
+            "message": "Account: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 set to status AWAITING_LINK_CREATION",
+            "logger_name": "com.arbm.digibank.accounts.common.statemachine.AccountStateMachine",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c91040e6c4113efa5728ecde2",
+            "spanId": "dda6085e676a9996",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.843",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.738Z",
+            "@version": "1",
+            "message": "consumeAccountEvent: AccountEventV2(eventId=ca67481f-8ba2-4981-8654-088331491cdf_2, timestamp=2025-02-05T03:13:32.485004Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, accountUpdateCreated=null, accountUpdateUpdated=AccountUpdatedEvent(accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:32.485004Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:32.485004Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateStatus=ACCOUNT_UPDATE_STATUS_COMPLETED, isCreatedEvent=true, isClosedOrCanceledEvent=false, isFailureEvent=false)",
+            "logger_name": "com.arbm.digibank.accounts.common.processor.AccountEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c91040e6c4113efa5728ecde2",
+            "spanId": "dda6085e676a9996",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.843",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.738Z",
+            "@version": "1",
+            "message": "inside handle event  AccountEventV2(eventId=ca67481f-8ba2-4981-8654-088331491cdf_2, timestamp=2025-02-05T03:13:32.485004Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, accountUpdateCreated=null, accountUpdateUpdated=AccountUpdatedEvent(accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:32.485004Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:32.485004Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateStatus=ACCOUNT_UPDATE_STATUS_COMPLETED, isCreatedEvent=true, isClosedOrCanceledEvent=false, isFailureEvent=false)",
+            "logger_name": "com.arbm.digibank.accounts.common.processor.AccountEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c91040e6c4113efa5728ecde2",
+            "spanId": "dda6085e676a9996",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.843",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.739Z",
+            "@version": "1",
+            "message": "handleSavingPotEvent: AccountEventV2(eventId=ca67481f-8ba2-4981-8654-088331491cdf_2, timestamp=2025-02-05T03:13:32.485004Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, accountUpdateCreated=null, accountUpdateUpdated=AccountUpdatedEvent(accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:32.485004Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:32.485004Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateStatus=ACCOUNT_UPDATE_STATUS_COMPLETED, isCreatedEvent=true, isClosedOrCanceledEvent=false, isFailureEvent=false)",
+            "logger_name": "com.arbm.digibank.accounts.common.processor.AccountEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c91040e6c4113efa5728ecde2",
+            "spanId": "dda6085e676a9996",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.752",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.751Z",
+            "@version": "1",
+            "message": "Received AccountLinkRequest(accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, customerId=1704890040478171)",
+            "logger_name": "com.arbm.digibank.controller.PortfolioController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "67a2d75c91040e6c4113efa5728ecde2",
+            "spanId": "ddc7c688aea1f91e",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.747",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.747Z",
+            "@version": "1",
+            "message": "Handle NotFoundException: NotFoundException(name=No portfolio link in database, message=No portfolio link for account with id: 9e2f4e84-3b17-47db-8786-268ccfaaefe6, errorId=616331da-7926-45a6-be5b-f0fff09357aa)",
+            "logger_name": "com.arbm.digibank.rest.error.ErrorHandler",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "67a2d75c91040e6c4113efa5728ecde2",
+            "spanId": "fbea5a1d9e1a2bbc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.343",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.343Z",
+            "@version": "1",
+            "message": "handleSavingPotEvent: AccountEventV2(eventId=ca67481f-8ba2-4981-8654-088331491cdf, timestamp=2025-02-05T03:13:31.746119Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, accountUpdateCreated=AccountCreatedEvent(accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:31.746119Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null)), accountUpdateUpdated=null, accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:31.746119Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateStatus=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, isCreatedEvent=true, isClosedOrCanceledEvent=false, isFailureEvent=false)",
+            "logger_name": "com.arbm.digibank.accounts.common.processor.AccountEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c6199aec8f598c9d3eccea3b3",
+            "spanId": "0e87af734400e3d5",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.340",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.34Z",
+            "@version": "1",
+            "message": "consumeAccountEvent: AccountEventV2(eventId=ca67481f-8ba2-4981-8654-088331491cdf, timestamp=2025-02-05T03:13:31.746119Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, accountUpdateCreated=AccountCreatedEvent(accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:31.746119Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null)), accountUpdateUpdated=null, accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:31.746119Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateStatus=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, isCreatedEvent=true, isClosedOrCanceledEvent=false, isFailureEvent=false)",
+            "logger_name": "com.arbm.digibank.accounts.common.processor.AccountEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c6199aec8f598c9d3eccea3b3",
+            "spanId": "0e87af734400e3d5",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:32.340",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:32.34Z",
+            "@version": "1",
+            "message": "inside handle event  AccountEventV2(eventId=ca67481f-8ba2-4981-8654-088331491cdf, timestamp=2025-02-05T03:13:31.746119Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, accountUpdateCreated=AccountCreatedEvent(accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:31.746119Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null)), accountUpdateUpdated=null, accountUpdate=AccountUpdateResponse(id=602d073f-f123-41ea-b5ed-2a945c0715b3, accountId=9e2f4e84-3b17-47db-8786-268ccfaaefe6, status=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-05T03:13:31.746119Z, lastStatusUpdateTimestamp=2025-02-05T03:13:31.746119Z, accountUpdateBatchId=, failureReason=, instanceParamValsUpdate=null, productVersionUpdate=null, activationUpdate={}, closureUpdate=null), updateStatus=ACCOUNT_UPDATE_STATUS_PENDING_EXECUTION, isCreatedEvent=true, isClosedOrCanceledEvent=false, isFailureEvent=false)",
+            "logger_name": "com.arbm.digibank.accounts.common.processor.AccountEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75c6199aec8f598c9d3eccea3b3",
+            "spanId": "0e87af734400e3d5",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.974",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:31.973Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: 9e2f4e84-3b17-47db-8786-268ccfaaefe6",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67a2d75b3e2b81ae0d68075847991a0c",
+            "spanId": "0d68075847991a0c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.970",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-05T03:13:31.969] [INFO] [apollo-server,,] default - Microservice request:  http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/9e2f4e84-3b17-47db-8786-268ccfaaefe6 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.969",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-05T03:13:31.969] [INFO] [apollo-server,,] default - {\"requestId\":\"9e2f4e84-3b17-47db-8786-268ccfaaefe6\"}"
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.495",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-05T03:13:31.494] [INFO] [apollo-server,,] default - Microservice response: {\"id\":\"9e2f4e84-3b17-47db-8786-268ccfaaefe6\",\"customerId\":\"1704890040478171\",\"category\":\"Travel\",\"name\":\"Danish1\",\"openingTimestamp\":\"2025-02-05T03:13:31.272963Z\",\"targetedSavingsGoal\":10,\"imageId\":\"travel1\",\"status\":\"INITIATED\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}"
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.495",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-05T03:13:31.495] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"createSavingPot\":{\"requestId\":\"9e2f4e84-3b17-47db-8786-268ccfaaefe6\",\"savingPot\":{\"id\":\"9e2f4e84-3b17-47db-8786-268ccfaaefe6\",\"customerId\":\"1704890040478171\",\"category\":\"Travel\",\"name\":\"Danish1\",\"openingTimestamp\":\"2025-02-05T03:13:31.272963Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"travel1\",\"status\":\"INITIATED\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1,\"balance\":\"0\"}}}}"
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.479",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:31.479Z",
+            "@version": "1",
+            "message": "Account: 9e2f4e84-3b17-47db-8786-268ccfaaefe6 set to status INITIATED",
+            "logger_name": "com.arbm.digibank.accounts.common.statemachine.AccountStateMachine",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75b8eb8c5ebcd2632380174a3c4",
+            "spanId": "cd2632380174a3c4",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-05 03:13:31.347",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-05T03:13:31.347Z",
+            "@version": "1",
+            "message": "Details of account to be created: CreateAccountRequest(requestId=ca67481f-8ba2-4981-8654-088331491cdf, account=Account(id=9e2f4e84-3b17-47db-8786-268ccfaaefe6, productId=null, stakeholderIds=[1704890040478171], status=ACCOUNT_STATUS_OPEN, openingTimestamp=null, instanceParamVals={main_account=9790d47d-51cc-46ba-9966-9bef635f9bb9, profit_application_day=1, account_tier_names=[\"standard\"], tiered_profit_rates={\"standard\": { \"tier1\": \"0.033\"} }, balance_tier_ranges={\"tier1\": { \"min\": \"0\" } }, tiered_minimum_balance_threshold={\"standard\": \"0\" }, minimum_deposit=0.01, maximum_deposit=1e+08, maximum_daily_deposit=1e+08, maximum_withdrawal=250000, maximum_daily_withdrawal=500000, maximum_balance=1e+08}, derivedInstanceParamVals={}, details={}, accounting=null, productVersionId=135))",
+            "logger_name": "com.arbm.digibank.tm.rest.coreapi.account.AccountService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67a2d75b8eb8c5ebcd2632380174a3c4",
+            "spanId": "cd2632380174a3c4",
+            "bc": "deposits"
+        }
+    }
+]

@@ -1,0 +1,448 @@
+[
+    {
+        "@timestamp": "2025-04-07 08:09:36.362",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:36.362Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=93edb30e-9e75-4713-aacc-4fdbde980576, type=QR_ENQUIRY_COMPLETED, payload={\"customerId\":\"1731227902648103\",\"requestStatus\":\"FAILED\",\"mappedErrorCode\":\"U171_UNKNOWN_ERROR_OCCURRED\",\"creditorName\":\"QR Payment\",\"enquiryAssociationId\":\"cd7dcb82-1dbf-43d9-a7f1-00e28b598fbc\",\"qrCategory\":\"\",\"acceptedPaymentsType\":\"01,03\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "5712ea5d5e4937d3",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.410",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.409Z",
+            "@version": "1",
+            "message": "BusinessMessageId saved in DB: 20250407RJHIMYKL52091005241. BusinessMessageIdExtended to be send out to FIS: 20250407RJHIMYKL520OQR91005241",
+            "logger_name": "com.arbm.digibank.service.BusinessMessageIdGenerator",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "3865245fbf3457f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.410",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.409Z",
+            "@version": "1",
+            "message": "[93edb30e-9e75-4713-aacc-4fdbde980576] Saving FisRequestEntity for businessMessageId: [20250407RJHIMYKL52091005241].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "3865245fbf3457f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.407",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.407Z",
+            "@version": "1",
+            "message": "Updating SequenceTrackerEntity for sequenceDate: [2025-04-07], sequenceNumber: [5240].",
+            "logger_name": "com.arbm.digibank.service.SequenceTrackerService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "3865245fbf3457f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.406",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.406Z",
+            "@version": "1",
+            "message": "Printing QREnquiryRequest",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "3865245fbf3457f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.406",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.406Z",
+            "@version": "1",
+            "message": "QREnquiryRequest(
+            requestId=93edb30e-9e75-4713-aacc-4fdbde980576,
+             customerId=1731227902648103,
+              creditorQRId=216227800089589RHBQR000000,
+               creditorBankCode=RHBBMYKL,
+                creditorFinancialInstitutionId=564160,
+                 creditorQRCode=00020201021126580014A000000615000101065641600226216227800089589RHBQR0000005204000053034585802MY5925MUHAMMAD AMIRUDDIN BIN MO6002MY8264B98D6567D6C144717E40164EE69FE2AAD3139B910E7E85725270B85C4C244B7063047AC7,
+                  currency=MYR,
+                   debtorFullName= MATHIVAANAN A/L MARIAPPAN,
+                    debtorAccountNumber=912010110517451,
+                     debtorAccountType=SVGS,
+                      recipientReference=QR Payment)",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.406",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.406Z",
+            "@version": "1",
+            "message": "[93edb30e-9e75-4713-aacc-4fdbde980576] Received qr enquiry request.",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "3865245fbf3457f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.406",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.406Z",
+            "@version": "1",
+            "message": "env",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "3865245fbf3457f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.404",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.404Z",
+            "@version": "1",
+            "message": "Call to Account Deposit API endpoint: /customer-accounts/1731227902648103/accounts with method: GET succeeded with status code 200: OK in totalTime: 5 ms",
+            "logger_name": "com.arbm.digibank.filter.AccountDepositApiFilter",
+            "thread_name": "reactor-http-epoll-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.404",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.404Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1731227902648103/customerIft with method: GET succeeded with status code 200: OK in totalTime: 5 ms",
+            "logger_name": "com.arbm.digibank.filter.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.404",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.404Z",
+            "@version": "1",
+            "message": "[93edb30e-9e75-4713-aacc-4fdbde980576] Sending QR Enquiry Request to fis-gateway. CustomerId: [1731227902648103",
+            "logger_name": "com.arbm.digibank.service.client.PaymentQRService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.403",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.402Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1731227902648103, customerName= MATHIVAANAN A/L MARIAPPAN, customerDPName=Mathi1287)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "dacb719a22a9047d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.400",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.4Z",
+            "@version": "1",
+            "message": "Customer Id: 1731227902648103",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "dacb719a22a9047d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.399",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.398Z",
+            "@version": "1",
+            "message": "Processing QR code: 00020201021126580014A000000615000101065641600226216227800089589RHBQR0000005204000053034585802MY5925MUHAMMAD AMIRUDDIN BIN MO6002MY8264B98D6567D6C144717E40164EE69FE2AAD3139B910E7E85725270B85C4C244B7063047AC7",
+            "logger_name": "com.arbm.digibank.service.qr.QRParser",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.399",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.398Z",
+            "@version": "1",
+            "message": "Retrieving account information from saving-account-service. Customer ID: 1731227902648103",
+            "logger_name": "com.arbm.digibank.service.client.DepositAccountInfoService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.399",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.399Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1731227902648103]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.252",
+        "kubernetes.container_name": "customer-iam-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.251Z",
+            "@version": "1",
+            "message": "Kill Switch Req for pingoneid: 426671b9-1ea6-4a20-ae02-a1a0cf882aa7 and environment: 44e438c9-1f16-40ed-94fe-e4a18e19c517",
+            "logger_name": "com.arbm.digibank.service.PingOneUserDevicesService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "5c3e4f0f257b661d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.250",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.249Z",
+            "@version": "1",
+            "message": "Call customer-iam-gateway to get worker access token",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayWorkerTokenServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "06d3cff524f7cd9f",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:25.250",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:25.25Z",
+            "@version": "1",
+            "message": "getting killswitch for customerId 1731227902648103 , pingoneId 426671b9-1ea6-4a20-ae02-a1a0cf882aa7",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "06d3cff524f7cd9f",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.915",
+        "kubernetes.container_name": "customer-iam-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.915Z",
+            "@version": "1",
+            "message": "PingOne onboarding / fetch existing user with username",
+            "logger_name": "com.arbm.digibank.controller.PingOneUsersController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "25574cf7b16bc208",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.915",
+        "kubernetes.container_name": "customer-iam-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.915Z",
+            "@version": "1",
+            "message": "Fetch user for username: null and environment: 44e438c9-1f16-40ed-94fe-e4a18e19c517",
+            "logger_name": "com.arbm.digibank.service.PingOneFetchUserService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-gateway",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "25574cf7b16bc208",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.914",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.913Z",
+            "@version": "1",
+            "message": "Fetching user by customerId: customerId=1731227902648103",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayUserFetchServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "06d3cff524f7cd9f",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.914",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.914Z",
+            "@version": "1",
+            "message": "Call customer-iam-gateway to get worker access token",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayWorkerTokenServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "06d3cff524f7cd9f",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.912",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.912Z",
+            "@version": "1",
+            "message": "Printing QR Creditor Details Request",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.912",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.912Z",
+            "@version": "1",
+            "message": "QRCreditorDetailsRequest(requestId=93edb30e-9e75-4713-aacc-4fdbde980576, customerId=1731227902648103, creditorQRCode=00020201021126580014A000000615000101065641600226216227800089589RHBQR0000005204000053034585802MY5925MUHAMMAD AMIRUDDIN BIN MO6002MY8264B98D6567D6C144717E40164EE69FE2AAD3139B910E7E85725270B85C4C244B7063047AC7, currency=MYR, debtorAccountType=SVGS, smeId=null)",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-04-07 08:09:24.912",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-04-07T08:09:24.912Z",
+            "@version": "1",
+            "message": "[93edb30e-9e75-4713-aacc-4fdbde980576] Received creditor details request by qr enquiry.",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67f38834560a67412ba44539ee1c2c19",
+            "spanId": "2ba44539ee1c2c19",
+            "bc": "payments"
+        }
+    }
+]

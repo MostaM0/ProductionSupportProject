@@ -1,0 +1,611 @@
+[
+    {
+        "@timestamp": "2025-03-27 08:27:36.816",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-03-27T08:27:36.816] [INFO] [apollo-server,,] default - Microservice response: {"requestId":"059d978b-005b-4ceb-a7b9-50b9f55f2e96","type":"QR_CREDIT_TRANSFER_COMPLETED","payload":"{"customerId":"1748736000002811","referenceId":"32887ff3-a5d8-4b6f-9e70-787a82352621","businessMessageId":"20250327RJHIMYKL04091004235","customerAccountId":"732bc027-c11a-4124-862c-f6a407e9ce93","amount":"200.00","currency":"MYR","date":"2025-03-27T08:27:34.968","otherSideFullName":"ZURAIDAH BINTI ARRIAFDI                                                         ","status":"SUCCESSFUL","errorCode":"U000_SUCCESS"}"}"
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:36.816",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-03-27T08:27:36.816] [INFO] [apollo-server,,] default - {"http":{"headers":{}},"data":{"getAsyncResultLongPolling":{"payload":"{"customerId":"1748736000002811","referenceId":"32887ff3-a5d8-4b6f-9e70-787a82352621","businessMessageId":"20250327RJHIMYKL04091004235","customerAccountId":"732bc027-c11a-4124-862c-f6a407e9ce93","amount":"200.00","currency":"MYR","date":"2025-03-27T08:27:34.968","otherSideFullName":"ZURAIDAH BINTI ARRIAFDI                                                         ","status":"SUCCESSFUL","errorCode":"U000_SUCCESS"}","requestId":"059d978b-005b-4ceb-a7b9-50b9f55f2e96","type":"QR_CREDIT_TRANSFER_COMPLETED"}}}"
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:36.815",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:36.814Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, type=QR_CREDIT_TRANSFER_COMPLETED, payload={"customerId":"1748736000002811","referenceId":"32887ff3-a5d8-4b6f-9e70-787a82352621","businessMessageId":"20250327RJHIMYKL04091004235","customerAccountId":"732bc027-c11a-4124-862c-f6a407e9ce93","amount":"200.00","currency":"MYR","date":"2025-03-27T08:27:34.968","otherSideFullName":"ZURAIDAH BINTI ARRIAFDI                                                         ","status":"SUCCESSFUL","errorCode":"U000_SUCCESS"}) after total DB calls: 1 and total time: 2 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:36.812",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:36.812Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: 059d978b-005b-4ceb-a7b9-50b9f55f2e96",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e50bf8090a815f389f1000754719e9",
+            "spanId": "389f1000754719e9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:36.809",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-03-27T08:27:36.807] [INFO] [apollo-server,,] default - {"requestId":"059d978b-005b-4ceb-a7b9-50b9f55f2e96"}"
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:36.809",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-03-27T08:27:36.808] [INFO] [apollo-server,,] default - Microservice request:  http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/059d978b-005b-4ceb-a7b9-50b9f55f2e96 {"method":"GET","headers":{}}"
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.982",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.982Z",
+            "@version": "1",
+            "message": "Received CreditTransferCompletedEvent event for request with internalRequestId [059d978b-005b-4ceb-a7b9-50b9f55f2e96]",
+            "logger_name": "com.arbm.digibank.consumer.CreditTransferCompletedConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "4cdbd364bed1d870",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.975",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.975Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": "O20250327RJHIMYKL040OQR91004235", "customerId": "1748736000002811", "amount": "200.00", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": "0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951", "tmCreatedAt": "2025-03-27T08:27:33.828376Z", "paymentStatus": "COMPLETED", "otherSideExternalId": "", "tmStatus": "ACCEPTED", "transferType": "QR_DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:34.035Z", "version": "4", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": "20250327RJHIMYKL04091004235", "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "cf1805600f947411",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.975",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.975Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": "O20250327RJHIMYKL040OQR91004235", "customerId": "1748736000002811", "amount": "200.00", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": "0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951", "tmCreatedAt": "2025-03-27T08:27:33.828376Z", "paymentStatus": "COMPLETED", "otherSideExternalId": "", "tmStatus": "ACCEPTED", "transferType": "QR_DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:34.968Z", "version": "5", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": "20250327RJHIMYKL04091004235", "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "2f0ec6042bfa8c7a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.975",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.975Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, type=QR_CREDIT_TRANSFER_COMPLETED, payload={"customerId":"1748736000002811","referenceId":"32887ff3-a5d8-4b6f-9e70-787a82352621","businessMessageId":"20250327RJHIMYKL04091004235","customerAccountId":"732bc027-c11a-4124-862c-f6a407e9ce93","amount":"200.00","currency":"MYR","date":"2025-03-27T08:27:34.968","otherSideFullName":"ZURAIDAH BINTI ARRIAFDI                                                         ","status":"SUCCESSFUL","errorCode":"U000_SUCCESS"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "2f3dfed234df2e44",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.973",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.973Z",
+            "@version": "1",
+            "message": "Saving response under id 059d978b-005b-4ceb-a7b9-50b9f55f2e96",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "4cdbd364bed1d870",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.972",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.972Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: Object org.springframework.data.repository.CrudRepository.save(Object)n parameters: [PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=O20250327RJHIMYKL040OQR91004235, businessMessageId=20250327RJHIMYKL04091004235, customerId=1748736000002811, smeId=null, amount=200.00, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951, tmCreatedAt=2025-03-27T08:27:33.828376Z, paymentStatus=COMPLETED, tmStatus=ACCEPTED, transferType=QR_DEBIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])]n totalTime: 5 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "4cdbd364bed1d870",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.967",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.967Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)n parameters: [059d978b-005b-4ceb-a7b9-50b9f55f2e96]n totalTime: 3 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "4cdbd364bed1d870",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.964",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-03-27T08:27:34.964] [INFO] [apollo-server,,] default - {"http":{"headers":{}},"data":{"registerQRPaymentProspect":{"success":true,"requestId":"059d978b-005b-4ceb-a7b9-50b9f55f2e96"}}}"
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.319",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.319Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": "O20250327RJHIMYKL040OQR91004235", "customerId": "1748736000002811", "amount": "200.00", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": "0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951", "tmCreatedAt": "2025-03-27T08:27:33.828376Z", "paymentStatus": "ACCEPTED", "otherSideExternalId": "", "tmStatus": "null", "transferType": "QR_DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:34.029Z", "version": "3", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": "20250327RJHIMYKL04091004235", "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "e70a82ca52dc8960",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.282",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.282Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": "O20250327RJHIMYKL040OQR91004235", "customerId": "1748736000002811", "amount": "200.00", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": "0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951", "tmCreatedAt": "2025-03-27T08:27:33.828376Z", "paymentStatus": "ACCEPTED", "otherSideExternalId": "", "tmStatus": "ACCEPTED", "transferType": "QR_DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:34.035Z", "version": "4", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": "20250327RJHIMYKL04091004235", "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "a6f2ddcdda1e1260",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.039",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.039Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: Object org.springframework.data.repository.CrudRepository.save(Object)n parameters: [PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=O20250327RJHIMYKL040OQR91004235, businessMessageId=20250327RJHIMYKL04091004235, customerId=1748736000002811, smeId=null, amount=200.00, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951, tmCreatedAt=2025-03-27T08:27:33.828376Z, paymentStatus=ACCEPTED, tmStatus=ACCEPTED, transferType=QR_DEBIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])]n totalTime: 5 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "c997d8ce3469f7dc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:34.033",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:34.032Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: Object org.springframework.data.repository.CrudRepository.save(Object)n parameters: [PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=O20250327RJHIMYKL040OQR91004235, businessMessageId=20250327RJHIMYKL04091004235, customerId=1748736000002811, smeId=null, amount=200.00, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=0e1d7c47-fc6c-4b73-ac2b-bf71b39c6951, tmCreatedAt=2025-03-27T08:27:33.828376Z, paymentStatus=ACCEPTED, tmStatus=null, transferType=QR_DEBIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])]n totalTime: 4 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "c997d8ce3469f7dc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:33.695",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:33.695Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": "O20250327RJHIMYKL040OQR91004235", "customerId": "1748736000002811", "amount": "200.00", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": null, "tmCreatedAt": null, "paymentStatus": "CREATED", "otherSideExternalId": "", "tmStatus": "null", "transferType": "QR_DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:33.687Z", "version": "2", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": "20250327RJHIMYKL04091004235", "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "1f32ffd291ec6b14",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:33.692",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:33.692Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: Object org.springframework.data.repository.CrudRepository.save(Object)n parameters: [PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=O20250327RJHIMYKL040OQR91004235, businessMessageId=20250327RJHIMYKL04091004235, customerId=1748736000002811, smeId=null, amount=200.00, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=null, tmCreatedAt=null, paymentStatus=CREATED, tmStatus=null, transferType=QR_DEBIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])]n totalTime: 5 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "c997d8ce3469f7dc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:33.687",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:33.687Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByInternalRequestId(String)n parameters: [059d978b-005b-4ceb-a7b9-50b9f55f2e96]n totalTime: 0 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "c997d8ce3469f7dc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:33.687",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:33.687Z",
+            "@version": "1",
+            "message": "Updating outbound payment with internal request id 059d978b-005b-4ceb-a7b9-50b9f55f2e96 to status CREATED",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "c997d8ce3469f7dc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:33.679",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:33.679Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96 Processing interbankPayment",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf56387d5934e80a20d3a242f42",
+            "spanId": "c997d8ce3469f7dc",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:33.663",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:33.662Z",
+            "@version": "1",
+            "message": "Payment request: class PaymentRequest {n    internalRequestId: 059d978b-005b-4ceb-a7b9-50b9f55f2e96n    externalRequestId: O20250327RJHIMYKL040OQR91004235n    customerAccountNumber: 912010110547409n    amount: 200.00n    denomination: MYRn    otherSideFullName: ZURAIDAH BINTI ARRIAFDI                                                         n    otherSideExternalId: n    otherSideAccountNumber: nulln    otherSideBankCode: 501854n    transferType: QR_DEBITn    recipientReference: QR Paymentn    paymentDetails: nulln    instructionDetails: {businessMessageId=20250327RJHIMYKL04091004235, transferType=6}n    debtorAccountType: DFLTn    creditorAccountType: SVGSn    identificationType: nulln    identificationId: nulln    paymentType: PAY_TO_QR_P2Pn}",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "cf7daf3b5cbee64a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.626",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.626Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] FisRequestEntity has been saved.",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "c97c6b6044044d93",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.626",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.626Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Sending PayToQRMessage SOAP request for businessMessageId: [20250327RJHIMYKL040OQR91004235].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "c97c6b6044044d93",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.623",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.621Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Saving FisRequestEntity for businessMessageId: [20250327RJHIMYKL04091004235].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c97c6b6044044d93",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.619",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.618Z",
+            "@version": "1",
+            "message": "PayToQRRequest(requestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, customerId=1748736000002811, creditorQRId=7617267071, creditorBankCode=CIBBMYKL, creditorFinancialInstitutionId=501854, creditorName=ZURAIDAH BINTI ARRIAFDI                                                         , qrCategory=02, creditorQRCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, currency=MYR, amount=200, debtorFullName= ZURAIDAH BINTI ARRIAFDI, debtorAccountNumber=912010110547409, debtorAccountType=SVGS, recipientReference=QR Payment, acceptedTransactionTypes=[01, 03], creditorAccountType=null)",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c97c6b6044044d93",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.619",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.618Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Received qr transfer request.",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentQRController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c97c6b6044044d93",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.618",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.618Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": null, "customerId": "1748736000002811", "amount": "200", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": null, "tmCreatedAt": null, "paymentStatus": "POSTED", "otherSideExternalId": null, "tmStatus": "null", "transferType": "DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:32.604Z", "version": "0", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": null, "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "9ad531902c0fd2f5",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.616",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.616Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Registering pay to QR request for fis-gateway-service. CustomerId: [1748736000002811]",
+            "logger_name": "com.arbm.digibank.service.client.fisgateway.FisPaymentQRRequestsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.615",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.615Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: Object org.springframework.data.repository.CrudRepository.save(Object)n parameters: [PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=null, businessMessageId=null, customerId=1748736000002811, smeId=null, amount=200, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=null, tmCreatedAt=null, paymentStatus=POSTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])]n totalTime: 5 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.612",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.612Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {"id": "32887ff3-a5d8-4b6f-9e70-787a82352621", "internalRequestId": "059d978b-005b-4ceb-a7b9-50b9f55f2e96", "externalRequestId": null, "customerId": "1748736000002811", "amount": "200", "denomination": "MYR", "otherSideAccountNumber": null, "otherSideBankCode": "CIBBMYKL", "otherSideName": "ZURAIDAH BINTI ARRIAFDI                                                         ", "otherSideAccountType": null, "customerName": " ZURAIDAH BINTI ARRIAFDI", "customerAccountId": "732bc027-c11a-4124-862c-f6a407e9ce93", "customerAccountType": "SVGS", "customerAccountNumber": "912010110547409", "transactionId": null, "tmCreatedAt": null, "paymentStatus": "FRAML_ACCEPTED", "otherSideExternalId": null, "tmStatus": "null", "transferType": "DEBIT", "paymentType": "PAY2QR_P2P", "createdAt": "2025-03-27T08:27:32.604217Z", "updatedAt": "2025-03-27T08:27:32.604Z", "version": "0", "recipientReference": "QR Payment", "paymentDetails": null, "proxyRegistrationNumber": null, "isInitialPayment": false, "isInitialPaymentReversal": false, "enquiryAssociationId": "4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b", "otherSideQrId": "7617267071", "otherSideFinancialInstitutionId": "501854", "otherSideQrCode": "00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029", "QrCategory": "02", "acceptedTransactionTypes": "[01, 03]", "businessMessageId": null, "smeId": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "3974cff017714ccf",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.609",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.609Z",
+            "@version": "1",
+            "message": "Repository method intercepted: n signature: Object org.springframework.data.repository.CrudRepository.save(Object)n parameters: [PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=null, businessMessageId=null, customerId=1748736000002811, smeId=null, amount=200, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=null, tmCreatedAt=null, paymentStatus=FRAML_ACCEPTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])]n totalTime: 7 msn result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.472",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.472Z",
+            "@version": "1",
+            "message": "To payment entity PaymentEntity(internalRequestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96, externalRequestId=null, businessMessageId=null, customerId=1748736000002811, smeId=null, amount=200, denomination=MYR, otherSideAccountNumber=null, otherSideBankCode=CIBBMYKL, otherSideAccountType=null, otherSideName=ZURAIDAH BINTI ARRIAFDI                                                         , customerName= ZURAIDAH BINTI ARRIAFDI, customerAccountType=SVGS, customerAccountId=732bc027-c11a-4124-862c-f6a407e9ce93, customerAccountNumber=912010110547409, transactionId=null, tmCreatedAt=null, paymentStatus=PROSPECT, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2QR_P2P, recipientReference=QR Payment, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b, otherSideQrId=7617267071, otherSideFinancialInstitutionId=501854, otherSideQrCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029, qrCategory=02, acceptedTransactionTypes=[01, 03])",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.465",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.465Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Fetching customer name from customer API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.464",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.464Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Fetching customer account number from deposit API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.462",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.462Z",
+            "@version": "1",
+            "message": "QRPaymentProspectRequest(
+            requestId=059d978b-005b-4ceb-a7b9-50b9f55f2e96,
+             enquiryAssociationId=4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b,
+              customerId=1748736000002811,
+               amount=200,
+                denomination=MYR,
+                 creditorQRId=7617267071,
+                  qrCategory=02,
+                   creditorBankCode=CIBBMYKL,
+                    creditorFinancialInstitutionId=501854,
+                     creditorName=ZURAIDAH BINTI ARRIAFDI                                                         , creditorQRCode=00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029,
+                      debtorAccountType=SVGS,
+                       acceptedTransactionTypes=[01, 03], debtorSmeId=null)",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.462",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:27:32.462Z",
+            "@version": "1",
+            "message": "[059d978b-005b-4ceb-a7b9-50b9f55f2e96] Received QR payment prospect request ...",
+            "logger_name": "com.arbm.digibank.controller.PayToQRRequestsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67e50bf4d6bf3c60c1b371669f98352a",
+            "spanId": "c1b371669f98352a",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:27:32.457",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-03-27T08:27:32.457] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/qr-payments/payment-prospects {"method":"POST","headers":{"Content-Type":"application/json","Authorization":"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImI5M2Y0OGYzLTY2MDItNDk5Mi05OGZlLWM3OWYxMDRiODRiNyIsImlhdCI6MTc0MzA2Mzk3OCwiZXhwIjoxNzQzMDY0Mjc4LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzQ4NzM2MDAwMDAyODExIiwic2lkIjoiZGMwZGY2MjQtMjU1NS00OGEzLWE5OGYtM2YwZDgzYmZiMjMwIiwiYXV0aF90aW1lIjoxNzQzMDYxNjEzLCJhY3IiOiJkaWdpYmFua19sb2dpbl9wb2xpY3kiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIzYTkzMDg2MC1lMDE2LTRkZGEtODNjZS0zMjBiOGU4NzM5MWUifQ.SkIYmbQq5qjFfoLHZ4nZ1Uu7-yG4NmP7SCaBxAX-CEIr3WNH03LHLZ4hnvJ2ixk4fk__41D_BjT31_hi3LT1kRI9Fvlne9zXgRvg8Q-s1Yzz3M8jR-BKTmZNp3IJOkh5pCA9TwCB9daPMVSovYXc7WQiNRLokXOJesu7ak4Tni4hY7yjsuT_xfpmX1T2Ha1BjJwIKxpiLDhLJBl0Z7khAIn40z30RbqtIMEw8lQ0K3shwEzF5iiLMAtGITRfYL7qWsZPGcbdLlIR2WdpAEBjdUdDNthVbpszWujQ25wCS-_NoZ4_kA1EhzTACznMA0mgGJLrpo7PhcwwjUEYR1gnYw"},"body":"{"requestId":"059d978b-005b-4ceb-a7b9-50b9f55f2e96","enquiryAssociationId":"4effeb2d-ad62-4b99-8a8e-1bd4ea474e2b","customerId":"1748736000002811","amount":200,"denomination":"MYR","creditorQRId":"7617267071","qrCategory":"02","creditorBankCode":"CIBBMYKL","creditorFinancialInstitutionId":"501854","creditorName":"ZURAIDAH BINTI ARRIAFDI                                                         ","creditorQRCode":"00020201021126420014A00000061500010106501854021076172670715204000053034585802MY5923ZURAIDAH BINTI ARRIAFDI6002MY62070103p2p82640a125d0ab7245bddf6e129a9276ba0e0d5a235e5e135ea5eff96f4fbad342e1163047029","debtorAccountType":"SVGS","acceptedTransactionTypes":["01","03"]}"}"
+    }
+]

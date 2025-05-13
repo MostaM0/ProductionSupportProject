@@ -1,0 +1,342 @@
+[
+    {
+        "@timestamp": "2025-04-14 07:32:38.010",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:38.009Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "data": {
+                "requestId": "\"5b978ccb-adb1-49e8-b6bf-12720bcd3ef3\"",
+                "functionId": "CardIssuanceController.cardReg",
+                "input": {
+                    "requestId": "\"5b978ccb-adb1-49e8-b6bf-12720bcd3ef3\"",
+                    "cardRegRequest": "{\"accountNumber\":\"912010110541535\",\"customerId\":\"1748736000002224\",\"deliveryOption\":\"MAILING\"}"
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "2498a77a-46ab-4229-9b0f-d24978fc2397"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 918
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:38.009",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:38.008Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "data": {
+                "requestId": "\"5b978ccb-adb1-49e8-b6bf-12720bcd3ef3\"",
+                "functionId": "CardIssuanceService.registerCard-gIAlu-s",
+                "input": {
+                    "requestId": "\"5b978ccb-adb1-49e8-b6bf-12720bcd3ef3\"",
+                    "request": "{\"accountNumber\":\"912010110541535\",\"customerId\":\"1748736000002224\",\"deliveryOption\":\"MAILING\"}"
+                },
+                "result": {
+                    "cardId": "2498a77a-46ab-4229-9b0f-d24978fc2397"
+                },
+                "processTime": 905
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:38.008",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:38.008Z",
+            "@version": "1",
+            "message": "Registered Card successfully with requestId=5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "logger_name": "com.arbm.digibank.service.CardIssuanceService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.988",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.988Z",
+            "@version": "1",
+            "message": "Save CardStatusInfo to DB with urn=0031104250154475",
+            "logger_name": "com.arbm.digibank.service.CardIssuanceService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.985",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.984Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "data": {
+                "requestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+                "functionId": "http://finexus-gateway.finexus-gateway.svc.cluster.local:8080/v1/issuance/card-reg",
+                "input": "{\"cardType\":\"VDCRY1\",\"sourceCode\":\"SC002\",\"promoCode\":\"RY1ISS\",\"name\":\"AINA BAZILAH BINTI MAULUD\",\"newId\":\"901215115154\",\"cif\":\"1748736000002224\",\"nationality\":\"MY\",\"dob\":\"19901215\",\"title\":\"MS\",\"gender\":\"F\",\"mobileNo\":\"60179144053\",\"residenceAddress1\":\"         A             A A    I    C    \",\"residencePostCode\":\"21020\",\"residenceTown\":\"KUALA TERENGGANU\",\"residenceState\":\"TERENGGANU\",\"residenceCountry\":\"MY\",\"mailingAddress1\":\"C       p     p                        p\",\"mailingPostCode\":\"47110\",\"mailingTown\":\"Puchong\",\"mailingState\":\"Selangor\",\"mailingCountry\":\"MY\",\"delivOption\":\"M\",\"cashWithDailyLimit\":\"\",\"retailDailyLimit\":\"\",\"fundTransferDailyLimit\":\"\",\"casaInfo\":\"1748736000002224|912010110541535|P|AINA BAZILAH BINTI MAULUD|Y|91201|700|MYR\",\"sequenceNo\":\"1876080202125900\",\"fi\":\"432134\",\"sourceSystem\":\"DGB\",\"cardIndicator\":\"P\",\"urn\":\"\",\"last4Pan\":\"\",\"embossName\":\"AINA BAZILAH BINTI MAU\",\"newIdIndicator\":\"N\",\"issuePlace\":\"\",\"issueDate\":\"\",\"maritalStatus\":\"\",\"race\":\"\",\"customerCategory\":\"00\",\"motherName\":\"\",\"emailAddress\":\"aina_bazilah@yahoo.com\",\"homePhoneNo\":\"\",\"billingOption\":\"\",\"securityQuestion\":\"\",\"residenceAddress2\":\"A    A I \",\"residenceAddress3\":\"\",\"residenceAddress4\":\"\",\"mailingAddress2\":\"             p         I    C    A    A \",\"mailingAddress3\":\"I \",\"mailingAddress4\":\"\",\"delivCenterCode\":\"\",\"delivOffName\":\"\",\"delivOffDept\":\"\",\"delivAddress1\":\"C-08-07,pangsapuri seri sentosa,Jalan sp\",\"delivAddress2\":\" 3/1,saujana puchongBUKIT BUCHU BATU RAK\",\"delivAddress3\":\"IT\",\"delivAddress4\":\"\",\"delivPostCode\":\"47110\",\"delivTown\":\"Puchong\",\"delivState\":\"Selangor\",\"delivCountry\":\"MY\",\"authMethod\":\" \",\"pinBlockFormat\":\"\",\"mobilePIN\":\"\",\"msgRefNo\":\"\",\"otp\":\"\"}",
+                "result": "{\"fi\":\"432134\",\"responseCode\":\"000\",\"responseDescription\":\"Card Application Successful\",\"signedMessage\":\"fIgBaJEVwu51QiBGGW0oeNssEA8mVOeTRCpZOdQeL1emv7F2LLk7XLmDroKFGlYICUN9FhdoVE9C9dkvVGaWfRjs0je2Wpn4fH96OqZ701OBqcL6iCQNmQNNNS/4kqt3E/x9TfML3pejMhFXtYhpgmqoQpihSor+gd7fi6YufdzbWn4bXtupAshlxN14PRm2YG5IG/RYiNbRgSBsORUn/SVtYE2wCslIr3IjT9hhX1Y09xBPiFGWuQZwUkzMhA7vTb6DdLISsd1yYFZq2/DDifA6dcGAceyHvFKYB0FC/VFHGAKM+EiQK3QQxrkU44UTLhBWANrMExoGqw4OwX2ZwNOL1n3OU5efEu/zPnuC7VrwY3H1ikeejr23gcopfkh/THg6ugyeKpokzWUztyHebqKt36Fr+TLvHqBQOLkWLMXF0EOipWQqGpwaVUZvCxgdjF5ab4Kwxve0rvFzWCuczlbXwCrvVMnj6OR4ZvBpPz4EYBdFPwwMD5IEcB5gIVwHpjkEo06QUGolf/mg1XvKFpTHqwi0WmezFF388PATcIMo+V485GHzpDnbWxLunUcf47WiWpkcOT0hhuAj5Od3c+C3J1JUjt5TKcriXK8odYJ4g4ng26vI+1mHQWD9Tg8WRvHPGDicyovTrRK+Y8cC/RbTsXQKvcaggcIv5OeSjNw=\",\"sequenceNo\":\"1876080202125900\",\"crn\":\"0\",\"urn\":\"0031104250154475\",\"lastFourPan\":\"8596\",\"internalRefNumber\":\"041400024197\"}",
+                "processTime": 559
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.414",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.413Z",
+            "@version": "1",
+            "message": "fnxRequest FinexusCardRegRequest(cardType=VDCRY1, sourceCode=SC002, promoCode=RY1ISS, name=AINA BAZILAH BINTI MAULUD, newId=901215115154, cif=1748736000002224, nationality=MY, dob=19901215, title=MS, gender=F, mobileNo=60179144053, residenceAddress1=         A             A A    I    C    , residencePostCode=21020, residenceTown=KUALA TERENGGANU, residenceState=TERENGGANU, residenceCountry=MY, mailingAddress1=C       p     p                        p, mailingPostCode=47110, mailingTown=Puchong, mailingState=Selangor, mailingCountry=MY, delivOption=M, cashWithDailyLimit=, retailDailyLimit=, fundTransferDailyLimit=, casaInfo=1748736000002224|912010110541535|P|AINA BAZILAH BINTI MAULUD|Y|91201|700|MYR, sequenceNo=1876080202125900, fi=432134, sourceSystem=DGB, cardIndicator=P, urn=, last4Pan=, embossName=AINA BAZILAH BINTI MAU, newIdIndicator=N, issuePlace=, issueDate=, maritalStatus=, race=, customerCategory=00, motherName=, emailAddress=aina_bazilah@yahoo.com, homePhoneNo=, billingOption=, securityQuestion=, residenceAddress2=A    A I , residenceAddress3=, residenceAddress4=, mailingAddress2=             p         I    C    A    A , mailingAddress3=I , mailingAddress4=, delivCenterCode=, delivOffName=, delivOffDept=, delivAddress1=C-08-07,pangsapuri seri sentosa,Jalan sp, delivAddress2= 3/1,saujana puchongBUKIT BUCHU BATU RAK, delivAddress3=IT, delivAddress4=, delivPostCode=47110, delivTown=Puchong, delivState=Selangor, delivCountry=MY, authMethod= , pinBlockFormat=, mobilePIN=, msgRefNo=, otp=)",
+            "logger_name": "com.arbm.digibank.service.CardIssuanceService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.334",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.334Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "data": {
+                "requestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+                "functionId": "http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/saving-accounts?account_number=912010110541535",
+                "input": "",
+                "result": "{\"accountId\":\"1d582c4a-2fc2-4948-b242-4d38a50aea99\",\"accountNumber\":\"912010110541535\",\"customerId\":\"1748736000002224\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"openingTimestamp\":\"2025-02-20T09:42:27.973898Z\",\"activationTimestamp\":\"2025-02-20T09:43:46.785844Z\",\"blockDetails\":null}",
+                "processTime": 5
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.322",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.322Z",
+            "@version": "1",
+            "message": "RESIDENTIAL [Address(countryCode=MYS, city=KUALA TERENGGANU, postalCode=21020, subdivision=TERENGGANU, type=RESIDENTIAL, id=121827, line1=LOT 9562KAMPUNG TELUK DALAMBUKIT BUCHU B, line2=ATU RAKIT, line3=, line4=, line5=)]",
+            "logger_name": "com.arbm.digibank.helper.CardIssuanceServiceHelper",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.322",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.322Z",
+            "@version": "1",
+            "message": "deliveryOption [MAILING]",
+            "logger_name": "com.arbm.digibank.helper.CardIssuanceServiceHelper",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.321",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.32Z",
+            "@version": "1",
+            "message": "addressMap [{MAILING=Address(countryCode=MYS, city=Puchong, postalCode=47110, subdivision=Selangor, type=MAILING, id=121923, line1=C-08-07,pangsapuri seri sentosa,, line2=Jalan sp 3/1,saujana puchong, line3=BUKIT BUCHU BATU RAKIT, line4=null, line5=null), RESIDENTIAL=Address(countryCode=MYS, city=KUALA TERENGGANU, postalCode=21020, subdivision=TERENGGANU, type=RESIDENTIAL, id=121827, line1=LOT 9562, line2=KAMPUNG TELUK DALAM, line3=BUKIT BUCHU BATU RAKIT, line4=null, line5=null)}]",
+            "logger_name": "com.arbm.digibank.helper.CardIssuanceServiceHelper",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.321",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.321Z",
+            "@version": "1",
+            "message": "MAILING [Address(countryCode=MYS, city=Puchong, postalCode=47110, subdivision=Selangor, type=MAILING, id=121923, line1=C-08-07,pangsapuri seri sentosa,Jalan sp, line2= 3/1,saujana puchongBUKIT BUCHU BATU RAK, line3=IT, line4=, line5=)]",
+            "logger_name": "com.arbm.digibank.helper.CardIssuanceServiceHelper",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.319",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.319Z",
+            "@version": "1",
+            "message": "Customer CustomerDetailsRs(customerId=1748736000002224, createdAt=2025-02-20T09:42:27.206682Z, updatedAt=2025-02-22T02:07:09.334270Z, firstName=null, lastName=AINA BAZILAH BINTI MAULUD, nickname=Aina, phoneNumber=+60179144053, email=aina_bazilah@yahoo.com, nric=901215115154, statuses=CustomerStatuses(eligibility=PASSED, identityVerifiaction=PASSED, crr=PASSED, cbs=PASSED, depositAccounts=ACTIVE, overall=ACTIVE), type=EXTERNAL_CUSTOMER, mobilePreferences=MobilePreferences(pushNotificationsAllowed=true, marketingEmailFlag=true, marketingPhoneCallFlag=true, marketingSmsFlag=true, marketingPushFlag=true), devices=[Device(deviceId=380132, createdAt=2025-02-20T09:42:27.439164Z, updatedAt=2025-02-20T09:19:46.902024Z, deviceOs=Android 13 (SDK 33), deviceModel=Xiaomi 2312DRA50G, deviceInstallationId=d5237193-3320-438e-9959-dd0d88ab5169, deviceStatus=ACTIVE_VERIFIED)], accounts=[Account(accountId=1d582c4a-2fc2-4948-b242-4d38a50aea99, accountNumber=912010110541535, status=ACTIVE)], identityVerifications=[IdentityVerificationResponse(identityReferenceId=72380da5-bc6e-4531-adfc-eec2aed83cf5, startVerificationDate=2025-02-20T09:21:56.568557Z, status=REJECTED, documentType=ID_CARD, documentSubtype=NATIONAL_ID, documentCountry=MYS), IdentityVerificationResponse(identityReferenceId=828070b0-c37f-4c4d-8b88-db0955e54f43, startVerificationDate=2025-02-20T09:25:09.597561Z, status=VERIFIED, documentType=ID_CARD, documentSubtype=NATIONAL_ID, documentCountry=MYS)], employments=[CustomerEmploymentDataResponse(id=81514, employmentType=HOUSEWIFE_HOUSEHUSBAND, employer=null, employmentSector=null, occupation=HOUSEWIFE_HOUSEHUSBAND, annualIncomeBracket=LESS_THAN_RM12000)], profiles=Profiles(maritalStatus=Married, ethnicity=Malay, accountSettingUpReasons=[Savings, Daily spending, Pay bills], bnmCcc=Individual Bumi, residencyStatus=U, entityType=11, religion=Muslim), acceptedDocuments=[AcceptedDocument(acceptedDocumentId=1302683, acceptedDocumentDate=2025-02-20T09:42:27.315493Z, document=Document(id=25, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Supplementary+TC+National+Addressing+Database+(NAD)+Terms+and+Conditions++-+ver1Oct22.pdf, title=National Addressing Databases (NAD) Terms & Conditions, version=1, type=NAD_TERMS_AND_CONDITIONS, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302682, acceptedDocumentDate=2025-02-20T09:42:27.306451Z, document=Document(id=26, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Supplementary+TC+DuitNow+Transfer+Terms+and+Conditions++-+ver1Oct22.pdf, title=DuitNow Transfer Terms & Conditions, version=1, type=DUITNOW_TRANSFER_TERMS_AND_CONDITIONS, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302681, acceptedDocumentDate=2025-02-20T09:42:27.296415Z, document=Document(id=19, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/PIDM+Brochure.pdf, title=PIDM DIS Brochure, version=1, type=PIDM_DIS_BROCHURE, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302687, acceptedDocumentDate=2025-02-20T09:42:27.353194Z, document=Document(id=30, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Treating+Customer+Fairly+-+ver1Oct22.pdf, title=Treating Customer Fairly, version=1, type=TREATING_CUSTOMER_FAIRLY, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302686, acceptedDocumentDate=2025-02-20T09:42:27.343478Z, document=Document(id=27, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/DuitNow+QR+Terms+and+Conditions-+ver1Oct22.pdf, title=DuitNow QR Terms & Conditions, version=1, type=DUITNOW_QR_TERMS_AND_CONDITIONS, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302685, acceptedDocumentDate=2025-02-20T09:42:27.333535Z, document=Document(id=17, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Digi+Bank+Deposit+and+Debit+Card+-+Declaration+and+Authorisation+-+ver1Oct22.pdf, title=Deposit Acct & Debit card declaration & authorization, version=1, type=DEPOSIT_ACC_AND_DEBIT_CARD_DECLARATION_AND_AUTHORISATION, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302684, acceptedDocumentDate=2025-02-20T09:42:27.324392Z, document=Document(id=37, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Debit+Card-i-ver2922024.pdf, title=Debit Card-i Product Disclosure Sheet, version=4, type=DEBIT_CARD_PRODUCT_DISCLOSURE_SHEET, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302691, acceptedDocumentDate=2025-02-20T09:42:27.391138Z, document=Document(id=29, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Client+Charter+-+ver1Oct22.pdf, title=Client Charter, version=1, type=CLIENT_CHARTER, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302690, acceptedDocumentDate=2025-02-20T09:42:27.381883Z, document=Document(id=20, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Personal+Data+Protection+Notice+-+ver1Oct22.pdf, title=Personal Data Protection, version=2, type=PERSONAL_DATA_PROTECTION, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302689, acceptedDocumentDate=2025-02-20T09:42:27.372142Z, document=Document(id=34, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Internet+and+Mobile+Banking+Banking+T%26C+(alrajhi%4024seven+personal+%2B+Rize)+-+ver1Jul23.pdf, title=Internet & Mobile Banking Terms & Conditions, version=2, type=INTERNET_AND_MOBILE_BANKING_TERMS_AND_CONDITIONS, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302688, acceptedDocumentDate=2025-02-20T09:42:27.362557Z, document=Document(id=33, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Specific+Terms+and+Conditions+V.20Jun2023.pdf, title=Specific Terms and Conditions, version=3, type=DEPOSIT_AND_CARD_SPECIFIC_TERMS_AND_CONDITIONS, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302693, acceptedDocumentDate=2025-02-20T09:42:27.409754Z, document=Document(id=35, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Savings+Account-i+-+ver12Dec23.pdf, title=Savings Account Product Disclosure Sheet, version=3, type=SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET, createdOn=null, lastUpdated=null)), AcceptedDocument(acceptedDocumentId=1302692, acceptedDocumentDate=2025-02-20T09:42:27.400419Z, document=Document(id=23, url=https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/General+Terms+and+Conditions+-+ver2Oct22.pdf, title=General Terms & Conditions, version=2, type=GENERAL_TERMS_AND_CONDITIONS, createdOn=null, lastUpdated=null))], dateOfBirth=1990-12-15, placeOfBirth=Malaysia, gender=F, nationality=MYS, mailingAddressSameAsResidence=false, addresses=[Address(countryCode=MYS, city=Puchong, postalCode=47110, subdivision=Selangor, type=MAILING, id=121923, line1=C-08-07,pangsapuri seri sentosa,, line2=Jalan sp 3/1,saujana puchong, line3=BUKIT BUCHU BATU RAKIT, line4=null, line5=null), Address(countryCode=MYS, city=KUALA TERENGGANU, postalCode=21020, subdivision=TERENGGANU, type=RESIDENTIAL, id=121827, line1=LOT 9562, line2=KAMPUNG TELUK DALAM, line3=BUKIT BUCHU BATU RAKIT, line4=null, line5=null)], iam=Iam(username=Ainapian, pingOneId=6bed55b1-1198-4880-b21a-7be25d397972, secureWord=null))",
+            "logger_name": "com.arbm.digibank.helper.CardIssuanceServiceHelper",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.226",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.226Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "data": {
+                "requestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+                "functionId": "http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1748736000002224",
+                "input": "",
+                "result": "{\"customerId\":\"1748736000002224\",\"createdAt\":\"2025-02-20T09:42:27.206682Z\",\"updatedAt\":\"2025-02-22T02:07:09.33427Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"offboardingStatus\":\"NOT_APPLICABLE\",\"firstName\":null,\"lastName\":\"AINA BAZILAH BINTI MAULUD\",\"nickname\":\"Aina\",\"phoneNumber\":\"+60179144053\",\"email\":\"aina_bazilah@yahoo.com\",\"nric\":\"901215115154\",\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\",\"coolingOff\":\"PASSED\",\"coolingOffActivatedAt\":null},\"type\":\"EXTERNAL_CUSTOMER\",\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":true,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":true},\"devices\":[{\"deviceId\":\"380132\",\"createdAt\":\"2025-02-20T09:42:27.439164Z\",\"updatedAt\":\"2025-02-20T09:19:46.902024Z\",\"deviceOs\":\"Android 13 (SDK 33)\",\"deviceModel\":\"Xiaomi 2312DRA50G\",\"deviceInstallationId\":\"d5237193-3320-438e-9959-dd0d88ab5169\",\"deviceStatus\":\"ACTIVE_VERIFIED\",\"appInfo\":\"Unknown\"}],\"accounts\":[{\"accountId\":\"1d582c4a-2fc2-4948-b242-4d38a50aea99\",\"accountNumber\":\"912010110541535\",\"status\":\"ACTIVE\"}],\"identity-verifications\":[{\"identityReferenceId\":\"72380da5-bc6e-4531-adfc-eec2aed83cf5\",\"startVerificationDate\":\"2025-02-20T09:21:56.568557Z\",\"status\":\"REJECTED\",\"documentType\":\"ID_CARD\",\"documentSubtype\":\"NATIONAL_ID\",\"documentCountry\":\"MYS\"},{\"identityReferenceId\":\"828070b0-c37f-4c4d-8b88-db0955e54f43\",\"startVerificationDate\":\"2025-02-20T09:25:09.597561Z\",\"status\":\"VERIFIED\",\"documentType\":\"ID_CARD\",\"documentSubtype\":\"NATIONAL_ID\",\"documentCountry\":\"MYS\"}],\"employments\":[{\"employmentType\":\"HOUSEWIFE_HOUSEHUSBAND\",\"id\":81514,\"employer\":null,\"employmentSector\":null,\"occupation\":\"HOUSEWIFE_HOUSEHUSBAND\",\"annualIncomeBracket\":\"LESS_THAN_RM12000\"}],\"profiles\":{\"maritalStatus\":\"Married\",\"ethnicity\":\"Malay\",\"accountSettingUpReasons\":[\"Savings\",\"Daily spending\",\"Pay bills\"],\"bnmCcc\":\"Individual Bumi\",\"residencyStatus\":\"U\",\"entityType\":11,\"religion\":\"Muslim\"},\"acceptedDocuments\":[{\"acceptedDocumentId\":1302683,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.315493Z\",\"document\":{\"id\":25,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Supplementary+TC+National+Addressing+Database+(NAD)+Terms+and+Conditions++-+ver1Oct22.pdf\",\"title\":\"National Addressing Databases (NAD) Terms & Conditions\",\"version\":1,\"type\":\"NAD_TERMS_AND_CONDITIONS\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"NAD_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1302682,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.306451Z\",\"document\":{\"id\":26,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Supplementary+TC+DuitNow+Transfer+Terms+and+Conditions++-+ver1Oct22.pdf\",\"title\":\"DuitNow Transfer Terms & Conditions\",\"version\":1,\"type\":\"DUITNOW_TRANSFER_TERMS_AND_CONDITIONS\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"DUITNOW_TRANSFER_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1302681,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.296415Z\",\"document\":{\"id\":19,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/PIDM+Brochure.pdf\",\"title\":\"PIDM DIS Brochure\",\"version\":1,\"type\":\"PIDM_DIS_BROCHURE\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"PIDM_DIS_BROCHURE\"}},{\"acceptedDocumentId\":1302687,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.353194Z\",\"document\":{\"id\":30,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Treating+Customer+Fairly+-+ver1Oct22.pdf\",\"title\":\"Treating Customer Fairly\",\"version\":1,\"type\":\"TREATING_CUSTOMER_FAIRLY\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"TREATING_CUSTOMER_FAIRLY\"}},{\"acceptedDocumentId\":1302686,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.343478Z\",\"document\":{\"id\":27,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/DuitNow+QR+Terms+and+Conditions-+ver1Oct22.pdf\",\"title\":\"DuitNow QR Terms & Conditions\",\"version\":1,\"type\":\"DUITNOW_QR_TERMS_AND_CONDITIONS\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"DUITNOW_QR_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1302685,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.333535Z\",\"document\":{\"id\":17,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Digi+Bank+Deposit+and+Debit+Card+-+Declaration+and+Authorisation+-+ver1Oct22.pdf\",\"title\":\"Deposit Acct & Debit card declaration & authorization\",\"version\":1,\"type\":\"DEPOSIT_ACC_AND_DEBIT_CARD_DECLARATION_AND_AUTHORISATION\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"DEPOSIT_ACC_AND_DEBIT_CARD_DECLARATION_AND_AUTHORISATION\"}},{\"acceptedDocumentId\":1302684,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.324392Z\",\"document\":{\"id\":37,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Debit+Card-i-ver2922024.pdf\",\"title\":\"Debit Card-i Product Disclosure Sheet\",\"version\":4,\"type\":\"DEBIT_CARD_PRODUCT_DISCLOSURE_SHEET\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"DEBIT_CARD_PRODUCT_DISCLOSURE_SHEET\"}},{\"acceptedDocumentId\":1302691,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.391138Z\",\"document\":{\"id\":29,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Client+Charter+-+ver1Oct22.pdf\",\"title\":\"Client Charter\",\"version\":1,\"type\":\"CLIENT_CHARTER\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"CLIENT_CHARTER\"}},{\"acceptedDocumentId\":1302690,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.381883Z\",\"document\":{\"id\":20,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Personal+Data+Protection+Notice+-+ver1Oct22.pdf\",\"title\":\"Personal Data Protection\",\"version\":2,\"type\":\"PERSONAL_DATA_PROTECTION\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"PERSONAL_DATA_PROTECTION\"}},{\"acceptedDocumentId\":1302689,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.372142Z\",\"document\":{\"id\":34,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Internet+and+Mobile+Banking+Banking+T%26C+(alrajhi%4024seven+personal+%2B+Rize)+-+ver1Jul23.pdf\",\"title\":\"Internet & Mobile Banking Terms & Conditions\",\"version\":2,\"type\":\"INTERNET_AND_MOBILE_BANKING_TERMS_AND_CONDITIONS\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"INTERNET_AND_MOBILE_BANKING_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1302688,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.362557Z\",\"document\":{\"id\":33,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Specific+Terms+and+Conditions+V.20Jun2023.pdf\",\"title\":\"Specific Terms and Conditions\",\"version\":3,\"type\":\"DEPOSIT_AND_CARD_SPECIFIC_TERMS_AND_CONDITIONS\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"DEPOSIT_AND_CARD_SPECIFIC_TERMS_AND_CONDITIONS\"}},{\"acceptedDocumentId\":1302693,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.409754Z\",\"document\":{\"id\":35,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/Product+Disclosure+Sheet_Savings+Account-i+-+ver12Dec23.pdf\",\"title\":\"Savings Account Product Disclosure Sheet\",\"version\":3,\"type\":\"SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"SAVINGS_ACCOUNT_PRODUCT_DISCLOSURE_SHEET\"}},{\"acceptedDocumentId\":1302692,\"acceptedDocumentDate\":\"2025-02-20T09:42:27.400419Z\",\"document\":{\"id\":23,\"url\":\"https://prod-912407396582-onboarding-staticfiles-s3.s3.ap-southeast-1.amazonaws.com/General+Terms+and+Conditions+-+ver2Oct22.pdf\",\"title\":\"General Terms & Conditions\",\"version\":2,\"type\":\"GENERAL_TERMS_AND_CONDITIONS\",\"createdOn\":null,\"lastUpdated\":null,\"alias\":\"GENERAL_TERMS_AND_CONDITIONS\"}}],\"date_of_birth\":\"1990-12-15\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"smes\":[],\"mailingAddressSameAsResidence\":false,\"addresses\":[{\"countryCode\":\"MYS\",\"city\":\"Puchong\",\"postalCode\":\"47110\",\"subdivision\":\"Selangor\",\"type\":\"MAILING\",\"id\":121923,\"line1\":\"C-08-07,pangsapuri seri sentosa,\",\"line2\":\"Jalan sp 3/1,saujana puchong\",\"line3\":\"BUKIT BUCHU BATU RAKIT\",\"line4\":null,\"line5\":null},{\"countryCode\":\"MYS\",\"city\":\"KUALA TERENGGANU\",\"postalCode\":\"21020\",\"subdivision\":\"TERENGGANU\",\"type\":\"RESIDENTIAL\",\"id\":121827,\"line1\":\"LOT 9562\",\"line2\":\"KAMPUNG TELUK DALAM\",\"line3\":\"BUKIT BUCHU BATU RAKIT\",\"line4\":null,\"line5\":null}],\"iam\":{\"username\":\"Ainapian\",\"pingOneId\":\"6bed55b1-1198-4880-b21a-7be25d397972\"},\"insight\":{\"numberOfSavingPots\":0,\"numberOfActiveCard\":0,\"numberOfFinancing\":0}}",
+                "processTime": 40
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.147",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.147Z",
+            "@version": "1",
+            "message": "Account SavingAccount(accountId=1d582c4a-2fc2-4948-b242-4d38a50aea99, accountNumber=912010110541535, customerId=1748736000002224, status=ACTIVE, currency=MYR, openingTimestamp=2025-02-20T09:42:27.973898Z, blockDetails=null)",
+            "logger_name": "com.arbm.digibank.service.CardIssuanceService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.138",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.138Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "data": {
+                "requestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+                "functionId": "http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/saving-accounts?account_number=912010110541535",
+                "input": "",
+                "result": "{\"accountId\":\"1d582c4a-2fc2-4948-b242-4d38a50aea99\",\"accountNumber\":\"912010110541535\",\"customerId\":\"1748736000002224\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"openingTimestamp\":\"2025-02-20T09:42:27.973898Z\",\"activationTimestamp\":\"2025-02-20T09:43:46.785844Z\",\"blockDetails\":null}",
+                "processTime": 14
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.110",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.11Z",
+            "@version": "1",
+            "message": "Received Card Registration request with requestId=5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "logger_name": "com.arbm.digibank.service.CardIssuanceService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    },
+    {
+        "@timestamp": "2025-04-14 07:32:37.100",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-14T07:32:37.1Z",
+            "@version": "1",
+            "message": "Received Card Registration request with id=5b978ccb-adb1-49e8-b6bf-12720bcd3ef3",
+            "logger_name": "com.arbm.digibank.controller.CardIssuanceController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67fcba15918e83526843a20574cb34d8",
+            "spanId": "6843a20574cb34d8",
+            "RequestId": "5b978ccb-adb1-49e8-b6bf-12720bcd3ef3"
+        }
+    }
+]

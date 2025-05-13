@@ -1,0 +1,2126 @@
+[
+    {
+        "@timestamp": "2024-09-19 02:24:18.102",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:18.102Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.PaymentProxyRepository.findByCustomerId(String)\n parameters: [1710203808292037]\n totalTime: 1 ms",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b5299e1873d79210843726f2110",
+            "spanId": "79210843726f2110",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.928",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:17.928] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"ddb9b299-9162-41b8-9dae-15466d966429\",\"type\":\"PROXY_ENQUIRY_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1710203808292037\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"U000_SUCCESS\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.928",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:17.928] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1710203808292037\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"U000_SUCCESS\\\"}\",\"requestId\":\"ddb9b299-9162-41b8-9dae-15466d966429\",\"type\":\"PROXY_ENQUIRY_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.566",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:17.566Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 24 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "e51ae843f97dcc51",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.542",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:17.541Z",
+            "@version": "1",
+            "message": "[ddb9b299-9162-41b8-9dae-15466d966429] Received NadProxyEnquiryRequestCompleted event for customer [1710203808292037]",
+            "logger_name": "com.arbm.digibank.consumer.NadProxyEnquiryRequestEventConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "e51ae843f97dcc51",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.542",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:17.542Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.PaymentProxyRepository.findByCustomerId(String)\n parameters: [1710203808292037]\n totalTime: 0 ms",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "e51ae843f97dcc51",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.542",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:17.542Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "e51ae843f97dcc51",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.175",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:17.174] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[],\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\",\"balance\":\"1012.22\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.140",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:17.139] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.140",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:17.140] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.130",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:17.130] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.060",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:17.06Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb8b508f1b2a1b639f773256e71a49",
+            "spanId": "639f773256e71a49",
+            "RequestId": "951e2dc8-820f-4c0e-a793-e80040a199b3",
+            "data": {
+                "requestId": "\"951e2dc8-820f-4c0e-a793-e80040a199b3\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"951e2dc8-820f-4c0e-a793-e80040a199b3\"",
+                    "customerId": "\"1710203808292037\"",
+                    "accountNumber": "\"912010110343247\""
+                },
+                "result": {
+                    "cardId": "745a3290-4a70-47f6-ad6f-c6f7ec1bc76f",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2024-03-22T08:26:29.748923Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "MUHAMMAD SALMAN BIN MO",
+                    "trackingNumber": "EG489940039MY",
+                    "cardDeliverOption": "RESIDENTIAL",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "NO 17LORONG CAKERA PURNAMA 12/13D",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "42300",
+                    "delivTown": "BANDAR PUNCAK ALAM",
+                    "delivState": "SELANGOR",
+                    "delivCountry": "MY"
+                },
+                "processTime": 184
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:17.060",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:17.06Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb8b508f1b2a1b639f773256e71a49",
+            "spanId": "639f773256e71a49",
+            "RequestId": "951e2dc8-820f-4c0e-a793-e80040a199b3",
+            "data": {
+                "requestId": "\"951e2dc8-820f-4c0e-a793-e80040a199b3\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"951e2dc8-820f-4c0e-a793-e80040a199b3\"",
+                    "customerId": "\"1710203808292037\"",
+                    "accountNumber": "\"912010110343247\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "745a3290-4a70-47f6-ad6f-c6f7ec1bc76f",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2024-03-22T08:26:29.748923Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "MUHAMMAD SALMAN BIN MO",
+                        "trackingNumber": "EG489940039MY",
+                        "cardDeliverOption": "RESIDENTIAL",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "NO 17LORONG CAKERA PURNAMA 12/13D",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "42300",
+                        "delivTown": "BANDAR PUNCAK ALAM",
+                        "delivState": "SELANGOR",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 185
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.914",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:16.913Z",
+            "@version": "1",
+            "message": "[ddb9b299-9162-41b8-9dae-15466d966429] Registering proxy enquiry request for fis-gateway-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.FisPaymentProxyRequestsService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "d65e5daadfdd5274",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.913",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:16.913Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 27 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "d65e5daadfdd5274",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.886",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:16.886Z",
+            "@version": "1",
+            "message": "[ddb9b299-9162-41b8-9dae-15466d966429] Received proxy enquiry trigger request for customer with id: 1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.PaymentProxyManagementController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "d65e5daadfdd5274",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.886",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:16.886Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b507743013fd65e5daadfdd5274",
+            "spanId": "d65e5daadfdd5274",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.879",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.879] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/proxy-enquiry {\"method\":\"POST\",\"headers\":{\"requestId\":\"ddb9b299-9162-41b8-9dae-15466d966429\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImRhMTU4NDc5LTNhZjktNGM2NS04NjMxLTM5YmEwYWU0ZmIxYiIsImlhdCI6MTcyNjcxMjY1NSwiZXhwIjoxNzI2NzEyOTU1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.ai4WZdW3TB9N2HGAoYa0fKEQZ_JcxGFbrKWZIZqZBq1bxC1T-hruVcnr4k9SJwNkrMvWUXOqVSwBoAzpAntF64xs6TWT4tF2ZkchpefxvKNmu0UQ58WkuQ9UTMJY9NCKjW55iBXZW1aPMHIArj8YtCeJbpoE07ds4nMlhQOVJ6ABVQjDKvGc6YukJvHNCNaOkLrgT88u92S0Wn0ESBrWKKw2DUvHGtGUlogl12gETTRNGY1suPZRovyFzum-qJVbQDB9umLGDRXOkSc3xvcmaxmIiufapxhEHDKD9IcNqL6Yk6D4sRHjHLPJCQ3g1zKk00Bt-szq-eEi7pNudavpGg\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.876",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:16.876Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1710203808292037 and accountNumber=912010110343247",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb8b508f1b2a1b639f773256e71a49",
+            "spanId": "639f773256e71a49",
+            "RequestId": "951e2dc8-820f-4c0e-a793-e80040a199b3"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.869",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.869] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.869",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.869] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1710203808292037&accountNumber=912010110343247 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"951e2dc8-820f-4c0e-a793-e80040a199b3\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.856",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.856] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.757",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:16.757Z",
+            "@version": "1",
+            "message": "Number of unread notification=32 from customerId=1710203808292037 with requestId=07e0a93b-3433-4f18-987c-40a08a922d57",
+            "logger_name": "com.arbm.digibank.service.NotificationService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66eb8b5088937c8de3dcd1175be31bcf",
+            "spanId": "e3dcd1175be31bcf",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.737",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.736",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.735",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.735] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.29549Z\",\"updatedAt\":\"2024-09-03T02:17:20.107776Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1995-08-21\",\"place_of_birth\":\"Malaysia\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":true},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":53440,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"EMPLOYER\",\"employmentSector\":\"PROFESSIONAL_SCIENTIFIC_AND_TECHNICAL_ACTIVITIES\",\"occupation\":\"SOFTWARE_DEVELOPERS\",\"annualIncomeBracket\":\"RM36000_RM47999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Financing, Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":79128,\"line1\":\"NO 17\",\"line2\":\"LORONG CAKERA PURNAMA 12/13D\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"}],\"iam\":{\"username\":\"msalmanshah26\",\"pingOneId\":\"4fb31ebb-0fa9-4a09-b76d-d7d336f5599c\"},\"accounts\":[{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.735",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.724",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.724] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.724",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.724] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1710203808292037/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.712",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.712] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getMoneyInOutTransactions\":{\"net\":\"+1000\",\"currencySymbol\":\"RM\",\"moneyOut\":\"-0\",\"moneyIn\":\"+1000\",\"transactions\":[{\"id\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\",\"type\":\"DUITNOW_ACCOUNT\",\"amount\":\"+1000\",\"currencySymbol\":\"RM\",\"date\":\"2024-09-18\",\"payer\":{\"name\":null,\"reference\":\"ARB Salary Credit -September24\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":null},\"recipient\":{\"name\":null,\"reference\":null,\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\"},\"status\":\"COMMITTED\",\"details\":null,\"moneyFlow\":\"IN\",\"categoryType\":\"PrimaryIncome\"}]}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.711",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.711] [INFO] [apollo-server,,] default - Microservice response: {\"yearMonth\":\"2024-09\",\"netCashflow\":1000,\"totalMoneyOut\":0,\"totalMoneyIn\":1000,\"moneyInTransactions\":[{\"id\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\",\"type\":\"DUITNOW_ACCOUNT\",\"amount\":1000,\"currency\":\"MYR\",\"creationTimestamp\":\"2024-09-18T01:50:33.644Z\",\"source\":{\"accountNumber\":\"*HIDDEN*\",\"name\":\"Al Rajhi Bank Payment Operations\"},\"destination\":{\"customerId\":\"1710203808292037\",\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"name\":\"MUHAMMAD SALMAN BIN MOHD SHAH\"},\"status\":\"COMMITTED\",\"recipientReference\":\"ARB Salary Credit -September24\",\"category\":\"PrimaryIncome\"}],\"moneyOutTransactions\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.709",
+        "kubernetes.container_name": "fpm",
+        "logBody": {
+            "timeMillis": 1726712656708,
+            "thread": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "loggerName": "c.m.s.r.l.LogHandler",
+            "message": "Customer 34278, Custom API script getwidgetmoneyoutmoneyin, Message: transactions:[{\"key\":\"hp4F3LQT4sBmEznFnjw=\",\"currency\":\"MYR\",\"amount\":1000,\"description\":\"DUITNOW_ACCOUNT Al Rajhi Bank Payment Operations MUHAMMAD SALMAN BIN MOHD SHAH ARB Salary Credit -September24\",\"date\":\"2024-09-18\",\"balance\":1012.22,\"movement\":\"credit\",\"original_category\":\"PrimaryIncome\",\"extraction\":\"2024-09-18T09:50:33.644+0800\",\"account_key\":\"hp4F3LQT4MRlHjvDnTk=\",\"account_name\":\"Savings Account\",\"custom_fields\":[{\"name\":\"transaction_id\",\"value\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\"},{\"name\":\"reference_id\",\"value\":\"0cf35602-e360-4288-864d-1849463b684e\"},{\"name\":\"status\",\"value\":\"COMMITTED\"},{\"name\":\"type\",\"value\":\"DUITNOW_ACCOUNT\"},{\"name\":\"sender_name\",\"value\":\"Al Rajhi Bank Payment Operations\"},{\"name\":\"src_account_number\",\"value\":\"101001061002750\"},{\"name\":\"recipient_name\",\"value\":\"MUHAMMAD SALMAN BIN MOHD SHAH\"},{\"name\":\"dst_account_number\",\"value\":\"912010110343247\"},{\"name\":\"dst_customer_id\",\"value\":\"1710203808292037\"},{\"name\":\"dst_account_id\",\"value\":\"a9914d2d-5985-49b3-b467-8430a9c50863\"},{\"name\":\"recipient_reference\",\"value\":\"ARB Salary Credit -September24\"},{\"name\":\"custom_description\",\"value\":\"#PrimaryIncome\"}]}]",
+            "endOfBatch": false,
+            "loggerFqcn": "org.apache.logging.slf4j.Log4jLogger",
+            "threadId": 45,
+            "threadPriority": 5,
+            "scope": "fpm"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.691",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.691] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.691",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.691] [INFO] [apollo-server,,] default - Microservice request:  http://transaction-service.transaction-service.svc.cluster.local:8080/transaction-service/v2/insights/money-in-vs-money-out?customerId=1710203808292037&yearMonth=2024-09 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.682",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.682] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.682",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.682] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"smes\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.675",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.675] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v2/customers/1710203808292037/smes {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImRhMTU4NDc5LTNhZjktNGM2NS04NjMxLTM5YmEwYWU0ZmIxYiIsImlhdCI6MTcyNjcxMjY1NSwiZXhwIjoxNzI2NzEyOTU1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.ai4WZdW3TB9N2HGAoYa0fKEQZ_JcxGFbrKWZIZqZBq1bxC1T-hruVcnr4k9SJwNkrMvWUXOqVSwBoAzpAntF64xs6TWT4tF2ZkchpefxvKNmu0UQ58WkuQ9UTMJY9NCKjW55iBXZW1aPMHIArj8YtCeJbpoE07ds4nMlhQOVJ6ABVQjDKvGc6YukJvHNCNaOkLrgT88u92S0Wn0ESBrWKKw2DUvHGtGUlogl12gETTRNGY1suPZRovyFzum-qJVbQDB9umLGDRXOkSc3xvcmaxmIiufapxhEHDKD9IcNqL6Yk6D4sRHjHLPJCQ3g1zKk00Bt-szq-eEi7pNudavpGg\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.648",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.647] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"smes\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.637",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.637] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v2/customers/1710203808292037/smes {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImRhMTU4NDc5LTNhZjktNGM2NS04NjMxLTM5YmEwYWU0ZmIxYiIsImlhdCI6MTcyNjcxMjY1NSwiZXhwIjoxNzI2NzEyOTU1LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.ai4WZdW3TB9N2HGAoYa0fKEQZ_JcxGFbrKWZIZqZBq1bxC1T-hruVcnr4k9SJwNkrMvWUXOqVSwBoAzpAntF64xs6TWT4tF2ZkchpefxvKNmu0UQ58WkuQ9UTMJY9NCKjW55iBXZW1aPMHIArj8YtCeJbpoE07ds4nMlhQOVJ6ABVQjDKvGc6YukJvHNCNaOkLrgT88u92S0Wn0ESBrWKKw2DUvHGtGUlogl12gETTRNGY1suPZRovyFzum-qJVbQDB9umLGDRXOkSc3xvcmaxmIiufapxhEHDKD9IcNqL6Yk6D4sRHjHLPJCQ3g1zKk00Bt-szq-eEi7pNudavpGg\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.371",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.370",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.369",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.369] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.29549Z\",\"updatedAt\":\"2024-09-03T02:17:20.107776Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1995-08-21\",\"place_of_birth\":\"Malaysia\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":true},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":53440,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"EMPLOYER\",\"employmentSector\":\"PROFESSIONAL_SCIENTIFIC_AND_TECHNICAL_ACTIVITIES\",\"occupation\":\"SOFTWARE_DEVELOPERS\",\"annualIncomeBracket\":\"RM36000_RM47999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Financing, Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":79128,\"line1\":\"NO 17\",\"line2\":\"LORONG CAKERA PURNAMA 12/13D\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"}],\"iam\":{\"username\":\"msalmanshah26\",\"pingOneId\":\"4fb31ebb-0fa9-4a09-b76d-d7d336f5599c\"},\"accounts\":[{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.369",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:16.357",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:16.357] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.907",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:15.906] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"deviceId\":\"214190\",\"sessionId\":\"de147c2d-d7f3-4818-93ce-aaa0eb34c347\"}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.907",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:15.907] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"generateSession\":{\"sessionId\":\"de147c2d-d7f3-4818-93ce-aaa0eb34c347\",\"customerId\":\"1710203808292037\"}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.896",
+        "kubernetes.container_name": "revelock-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:15.896Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 27 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "revelock-service",
+            "traceId": "66eb8b4f28b0154aaf8a962513bc8a31",
+            "spanId": "af8a962513bc8a31",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.869",
+        "kubernetes.container_name": "revelock-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:15.868Z",
+            "@version": "1",
+            "message": "Retrieving first device id of customer with customerId: 1710203808292037",
+            "logger_name": "com.arbm.digibank.service.client.CustomerServices",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "revelock-service",
+            "traceId": "66eb8b4f28b0154aaf8a962513bc8a31",
+            "spanId": "af8a962513bc8a31",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.854",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:15.854] [INFO] [apollo-server,,] default - Microservice request:  http://revelock-service.revelock-service.svc.cluster.local:8080/v1/sessions/generate-session?customerId=1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.481",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:15.481Z",
+            "@version": "1",
+            "message": "Updating customer device for customer=1710203808292037, and devices=[DeviceEntity(id=152642, os='iOS 17.3.1', model='iPhone16,1', installationId='4b69f6b9-95bb-4c4b-83a4-9b5deea50875', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:45:43.159170Z, lastUpdated=2024-03-12T00:46:07.160177Z, customer=1710203808292037), DeviceEntity(id=152643, os='iOS 17.5.1', model='iPhone16,1', installationId='dfc5828f-6c06-41d6-8c2a-8c2b755357b3', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:46:07.184235Z, lastUpdated=2024-09-03T02:17:20.099875Z, customer=1710203808292037), DeviceEntity(id=152640, os='iOS 17.3.1', model='iPhone16,1', installationId='10313158-667F-48FD-A5BB-C7746288FDB4', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:36:48.313797Z, lastUpdated=2024-03-12T00:45:43.137033Z, customer=1710203808292037), DeviceEntity(id=214190, os='iOS 18.0', model='iPhone16,1', installationId='c0e527b8-3399-42bc-b48a-1b9b3f7c5de4', status=ACTIVE_VERIFIED, createdOn=2024-09-03T02:17:20.106806Z, lastUpdated=null, customer=1710203808292037)]",
+            "logger_name": "com.arbm.digibank.service.RetailCustomerCommandService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb8b4f98f0c26092431f91f92519e6",
+            "spanId": "5baf1995d5ba3ee5",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.469",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:15.469] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.295Z\",\"updatedAt\":\"2024-09-03T02:17:20.107Z\",\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"mailingAddressSameAsResidence\":true}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.469",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:15.469] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1710203808292037/status {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.465",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:15.465Z",
+            "@version": "1",
+            "message": "Get customer lazy 1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb8b4f462d68a8d422daeee60584f6",
+            "spanId": "d422daeee60584f6",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.459",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:15.459Z",
+            "@version": "1",
+            "message": "Update device for customerId: 1710203808292037, deviceId: activeVerified, xRequestID: d66112a1-5dc1-9b8a-ad8e-9027ddde6b48, body: DeviceUpdateRequest(deviceOs=iOS 18.0, deviceModel=iPhone16,1, applicationVersion=1.7.2)",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb8b4f98f0c26092431f91f92519e6",
+            "spanId": "5baf1995d5ba3ee5",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.458",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:24:15.457] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerLazy/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:24:15.456",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:24:15.456Z",
+            "@version": "1",
+            "message": "Starting updateDevice customer: customerId=1710203808292037",
+            "logger_name": "com.arbm.digibank.service.AppVersionInfoService",
+            "thread_name": "task-538",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66eb8b4f98f0c26092431f91f92519e6",
+            "spanId": "411d8f4b3471f974",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.750",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.75Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1710203808292037, PAY_TO_QR, 2024-09-19T02:23:55.749572Z]\n totalTime: 1 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66eb8b3be031f7c8ced40c8281e9c5eb",
+            "spanId": "ced40c8281e9c5eb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.750",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.75Z",
+            "@version": "1",
+            "message": "Customer with id: [1710203808292037] is authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66eb8b3be031f7c8ced40c8281e9c5eb",
+            "spanId": "ced40c8281e9c5eb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.749",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.749Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1710203808292037] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66eb8b3be031f7c8ced40c8281e9c5eb",
+            "spanId": "ced40c8281e9c5eb",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.742",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:55.742] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1710203808292037/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImMwNmJmN2Q1LTlmMDctNDJmOC1hOGVkLTEwOWIyOGY3Y2E4ZSIsImlhdCI6MTcyNjcxMjYzMiwiZXhwIjoxNzI2NzEyOTMyLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.dmDrWSGG8LKR6dARzQwSOsniQC2oX4V9k8vLoaTpRJ4yJm28TgatjapvYvOKMHiMW8HVOFw6-sNOgQ7MZCsRZZcPvg6WH23i2UCB3B5Vz-BsLjzmSeQ42UZKd2HhovoJgTMH1VYyBNVgsEPrcvD7aFsJDDnMBU0yX-V-U1FDPfxrm1VyejouMo3p_F_5dsYYsLUCgZVxV880GAcVNJ56wNJ9MkgAsw6Z45ygkSUQMBIfNE8LHNByRTHsaq1npQuTAIRAPLKuB85l1FtyqDgQ5anNl2K9qDMeSr740XGeD8dab5JFXi1xlC9j-AXG-KWuQ3z40d31ON2zQXEzhVeo7Q\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.565",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.565Z",
+            "@version": "1",
+            "message": "Received customer Info RetailCustomerAccountForQr(customerId=1710203808292037, customerName=MUHAMMAD SALMAN BIN MOHD SHAH, nric=950821105133, city=BANDAR PUNCAK ALAM, phoneNumber=+60143210866, accountNumber=912010110343247)",
+            "logger_name": "com.arbm.digibank.service.qrcode.QRLookupService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b3bac6b504a979fc71a994cc49b",
+            "spanId": "979fc71a994cc49b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.565",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.565Z",
+            "@version": "1",
+            "message": "Return Info QRCodeInfo(responseCode=SUCCESS, responseDescription=SUCCESS, proxyId=1710203808292037, proxyType=CIC, proxyStatus=ACTIVE, financialInstitutionId=432134, accountNumber=912010110343247, accountType=SAVINGS_ACCOUNT, customerName=MUHAMMAD SALMAN BIN MOHD SHAH, acceptedPaymentsTypes=[CASA, WALLET, CREDIT_CARD], secondaryIdType=NRIC, secondaryId=, coolingOffDuration=0)",
+            "logger_name": "com.arbm.digibank.service.qrcode.QRLookupService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b3bac6b504a979fc71a994cc49b",
+            "spanId": "979fc71a994cc49b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.564",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.564Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 26 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b3bac6b504a979fc71a994cc49b",
+            "spanId": "979fc71a994cc49b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.538",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.537Z",
+            "@version": "1",
+            "message": "Retrieving customer information for QR from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b3bac6b504a979fc71a994cc49b",
+            "spanId": "979fc71a994cc49b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.537",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:55.537Z",
+            "@version": "1",
+            "message": "Received request to lookup QR code for customerId=1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.QRCodeManagementController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b3bac6b504a979fc71a994cc49b",
+            "spanId": "979fc71a994cc49b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:55.534",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:55.530] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/qr-lookup {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.589",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.589Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.PaymentProxyRepository.findByCustomerId(String)\n parameters: [1710203808292037]\n totalTime: 1 ms",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b3ac59bd434142a5f21d4bf40d1",
+            "spanId": "142a5f21d4bf40d1",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.583",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:54.583] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/payment-proxies {\"method\":\"GET\",\"headers\":{\"requestId\":\"f7e18bfa-ae92-415d-98a8-e61c5f24cbc8\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImMwNmJmN2Q1LTlmMDctNDJmOC1hOGVkLTEwOWIyOGY3Y2E4ZSIsImlhdCI6MTcyNjcxMjYzMiwiZXhwIjoxNzI2NzEyOTMyLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.dmDrWSGG8LKR6dARzQwSOsniQC2oX4V9k8vLoaTpRJ4yJm28TgatjapvYvOKMHiMW8HVOFw6-sNOgQ7MZCsRZZcPvg6WH23i2UCB3B5Vz-BsLjzmSeQ42UZKd2HhovoJgTMH1VYyBNVgsEPrcvD7aFsJDDnMBU0yX-V-U1FDPfxrm1VyejouMo3p_F_5dsYYsLUCgZVxV880GAcVNJ56wNJ9MkgAsw6Z45ygkSUQMBIfNE8LHNByRTHsaq1npQuTAIRAPLKuB85l1FtyqDgQ5anNl2K9qDMeSr740XGeD8dab5JFXi1xlC9j-AXG-KWuQ3z40d31ON2zQXEzhVeo7Q\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.214",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:54.214] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa\",\"type\":\"PROXY_ENQUIRY_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1710203808292037\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"U000_SUCCESS\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.214",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:54.214] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1710203808292037\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"U000_SUCCESS\\\"}\",\"requestId\":\"bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa\",\"type\":\"PROXY_ENQUIRY_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.213",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.213Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa, type=PROXY_ENQUIRY_COMPLETED, payload={\"customerId\":\"1710203808292037\",\"status\":\"SUCCESSFUL\",\"errorCode\":\"U000_SUCCESS\"}) after total DB calls: 1 and total time: 1 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.071",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.071Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa, type=PROXY_ENQUIRY_COMPLETED, payload={\"customerId\":\"1710203808292037\",\"status\":\"SUCCESSFUL\",\"errorCode\":\"U000_SUCCESS\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "05905995ca9623a2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.069",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.068Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 25 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "11d596b2a81c1718",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.043",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.042Z",
+            "@version": "1",
+            "message": "[bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa] Received NadProxyEnquiryRequestCompleted event for customer [1710203808292037]",
+            "logger_name": "com.arbm.digibank.consumer.NadProxyEnquiryRequestEventConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "11d596b2a81c1718",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.043",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.043Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.PaymentProxyRepository.findByCustomerId(String)\n parameters: [1710203808292037]\n totalTime: 1 ms",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "11d596b2a81c1718",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:54.043",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:54.043Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "11d596b2a81c1718",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.697",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.697] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[],\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\",\"balance\":\"1012.22\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.632",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.632] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.632",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.632] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.622",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.622] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.470",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.47Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb8b39d0903e35b66004e3bb77cf06",
+            "spanId": "b66004e3bb77cf06",
+            "RequestId": "ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46",
+            "data": {
+                "requestId": "\"ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46\"",
+                    "customerId": "\"1710203808292037\"",
+                    "accountNumber": "\"912010110343247\""
+                },
+                "result": {
+                    "cardId": "745a3290-4a70-47f6-ad6f-c6f7ec1bc76f",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2024-03-22T08:26:29.748923Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "MUHAMMAD SALMAN BIN MO",
+                    "trackingNumber": "EG489940039MY",
+                    "cardDeliverOption": "RESIDENTIAL",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "NO 17LORONG CAKERA PURNAMA 12/13D",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "42300",
+                    "delivTown": "BANDAR PUNCAK ALAM",
+                    "delivState": "SELANGOR",
+                    "delivCountry": "MY"
+                },
+                "processTime": 251
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.470",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.47Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb8b39d0903e35b66004e3bb77cf06",
+            "spanId": "b66004e3bb77cf06",
+            "RequestId": "ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46",
+            "data": {
+                "requestId": "\"ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46\"",
+                    "customerId": "\"1710203808292037\"",
+                    "accountNumber": "\"912010110343247\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "745a3290-4a70-47f6-ad6f-c6f7ec1bc76f",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2024-03-22T08:26:29.748923Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "MUHAMMAD SALMAN BIN MO",
+                        "trackingNumber": "EG489940039MY",
+                        "cardDeliverOption": "RESIDENTIAL",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "NO 17LORONG CAKERA PURNAMA 12/13D",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "42300",
+                        "delivTown": "BANDAR PUNCAK ALAM",
+                        "delivState": "SELANGOR",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 251
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.392",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.391Z",
+            "@version": "1",
+            "message": "[bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa] Registering proxy enquiry request for fis-gateway-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.FisPaymentProxyRequestsService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "4141876909727207",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.391",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.391Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 25 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "4141876909727207",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.366",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.366Z",
+            "@version": "1",
+            "message": "[bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa] Received proxy enquiry trigger request for customer with id: 1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.PaymentProxyManagementController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "4141876909727207",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.366",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.366Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb8b39947513214141876909727207",
+            "spanId": "4141876909727207",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.358",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.358] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/proxy-enquiry {\"method\":\"POST\",\"headers\":{\"requestId\":\"bfe470ea-1ead-4189-afdf-d9b4f6d2b8fa\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImMwNmJmN2Q1LTlmMDctNDJmOC1hOGVkLTEwOWIyOGY3Y2E4ZSIsImlhdCI6MTcyNjcxMjYzMiwiZXhwIjoxNzI2NzEyOTMyLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.dmDrWSGG8LKR6dARzQwSOsniQC2oX4V9k8vLoaTpRJ4yJm28TgatjapvYvOKMHiMW8HVOFw6-sNOgQ7MZCsRZZcPvg6WH23i2UCB3B5Vz-BsLjzmSeQ42UZKd2HhovoJgTMH1VYyBNVgsEPrcvD7aFsJDDnMBU0yX-V-U1FDPfxrm1VyejouMo3p_F_5dsYYsLUCgZVxV880GAcVNJ56wNJ9MkgAsw6Z45ygkSUQMBIfNE8LHNByRTHsaq1npQuTAIRAPLKuB85l1FtyqDgQ5anNl2K9qDMeSr740XGeD8dab5JFXi1xlC9j-AXG-KWuQ3z40d31ON2zQXEzhVeo7Q\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.268",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.268] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"smes\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.259",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.259] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v2/customers/1710203808292037/smes {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImMwNmJmN2Q1LTlmMDctNDJmOC1hOGVkLTEwOWIyOGY3Y2E4ZSIsImlhdCI6MTcyNjcxMjYzMiwiZXhwIjoxNzI2NzEyOTMyLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.dmDrWSGG8LKR6dARzQwSOsniQC2oX4V9k8vLoaTpRJ4yJm28TgatjapvYvOKMHiMW8HVOFw6-sNOgQ7MZCsRZZcPvg6WH23i2UCB3B5Vz-BsLjzmSeQ42UZKd2HhovoJgTMH1VYyBNVgsEPrcvD7aFsJDDnMBU0yX-V-U1FDPfxrm1VyejouMo3p_F_5dsYYsLUCgZVxV880GAcVNJ56wNJ9MkgAsw6Z45ygkSUQMBIfNE8LHNByRTHsaq1npQuTAIRAPLKuB85l1FtyqDgQ5anNl2K9qDMeSr740XGeD8dab5JFXi1xlC9j-AXG-KWuQ3z40d31ON2zQXEzhVeo7Q\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.237",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.236] [INFO] [apollo-server,,] default - Microservice response: {\"yearMonth\":\"2024-09\",\"netCashflow\":1000,\"totalMoneyOut\":0,\"totalMoneyIn\":1000,\"moneyInTransactions\":[{\"id\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\",\"type\":\"DUITNOW_ACCOUNT\",\"amount\":1000,\"currency\":\"MYR\",\"creationTimestamp\":\"2024-09-18T01:50:33.644Z\",\"source\":{\"accountNumber\":\"*HIDDEN*\",\"name\":\"Al Rajhi Bank Payment Operations\"},\"destination\":{\"customerId\":\"1710203808292037\",\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"name\":\"MUHAMMAD SALMAN BIN MOHD SHAH\"},\"status\":\"COMMITTED\",\"recipientReference\":\"ARB Salary Credit -September24\",\"category\":\"PrimaryIncome\"}],\"moneyOutTransactions\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.237",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.236] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getMoneyInOutTransactions\":{\"net\":\"+1000\",\"currencySymbol\":\"RM\",\"moneyOut\":\"-0\",\"moneyIn\":\"+1000\",\"transactions\":[{\"id\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\",\"type\":\"DUITNOW_ACCOUNT\",\"amount\":\"+1000\",\"currencySymbol\":\"RM\",\"date\":\"2024-09-18\",\"payer\":{\"name\":null,\"reference\":\"ARB Salary Credit -September24\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":null},\"recipient\":{\"name\":null,\"reference\":null,\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\"},\"status\":\"COMMITTED\",\"details\":null,\"moneyFlow\":\"IN\",\"categoryType\":\"PrimaryIncome\"}]}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.233",
+        "kubernetes.container_name": "fpm",
+        "logBody": {
+            "timeMillis": 1726712633233,
+            "thread": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "loggerName": "c.m.s.r.l.LogHandler",
+            "message": "Customer 34278, Custom API script getwidgetmoneyoutmoneyin, Message: transactions:[{\"key\":\"hp4F3LQT4sBmEznFnjw=\",\"currency\":\"MYR\",\"amount\":1000,\"description\":\"DUITNOW_ACCOUNT Al Rajhi Bank Payment Operations MUHAMMAD SALMAN BIN MOHD SHAH ARB Salary Credit -September24\",\"date\":\"2024-09-18\",\"balance\":1012.22,\"movement\":\"credit\",\"original_category\":\"PrimaryIncome\",\"extraction\":\"2024-09-18T09:50:33.644+0800\",\"account_key\":\"hp4F3LQT4MRlHjvDnTk=\",\"account_name\":\"Savings Account\",\"custom_fields\":[{\"name\":\"transaction_id\",\"value\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\"},{\"name\":\"reference_id\",\"value\":\"0cf35602-e360-4288-864d-1849463b684e\"},{\"name\":\"status\",\"value\":\"COMMITTED\"},{\"name\":\"type\",\"value\":\"DUITNOW_ACCOUNT\"},{\"name\":\"sender_name\",\"value\":\"Al Rajhi Bank Payment Operations\"},{\"name\":\"src_account_number\",\"value\":\"101001061002750\"},{\"name\":\"recipient_name\",\"value\":\"MUHAMMAD SALMAN BIN MOHD SHAH\"},{\"name\":\"dst_account_number\",\"value\":\"912010110343247\"},{\"name\":\"dst_customer_id\",\"value\":\"1710203808292037\"},{\"name\":\"dst_account_id\",\"value\":\"a9914d2d-5985-49b3-b467-8430a9c50863\"},{\"name\":\"recipient_reference\",\"value\":\"ARB Salary Credit -September24\"},{\"name\":\"custom_description\",\"value\":\"#PrimaryIncome\"}]}]",
+            "endOfBatch": false,
+            "loggerFqcn": "org.apache.logging.slf4j.Log4jLogger",
+            "threadId": 50,
+            "threadPriority": 5,
+            "scope": "fpm"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.228",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.227",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.226",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.225] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.29549Z\",\"updatedAt\":\"2024-09-03T02:17:20.107776Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1995-08-21\",\"place_of_birth\":\"Malaysia\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":true},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":53440,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"EMPLOYER\",\"employmentSector\":\"PROFESSIONAL_SCIENTIFIC_AND_TECHNICAL_ACTIVITIES\",\"occupation\":\"SOFTWARE_DEVELOPERS\",\"annualIncomeBracket\":\"RM36000_RM47999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Financing, Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":79128,\"line1\":\"NO 17\",\"line2\":\"LORONG CAKERA PURNAMA 12/13D\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"}],\"iam\":{\"username\":\"msalmanshah26\",\"pingOneId\":\"4fb31ebb-0fa9-4a09-b76d-d7d336f5599c\"},\"accounts\":[{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.226",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.226",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.226Z",
+            "@version": "1",
+            "message": "Number of unread notification=32 from customerId=1710203808292037 with requestId=cc4cdf73-6e42-461a-97ea-1a23ab569350",
+            "logger_name": "com.arbm.digibank.service.NotificationService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66eb8b391e053903f6fffe8eb144d4f8",
+            "spanId": "f6fffe8eb144d4f8",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.220",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:53.219Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1710203808292037 and accountNumber=912010110343247",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb8b39d0903e35b66004e3bb77cf06",
+            "spanId": "b66004e3bb77cf06",
+            "RequestId": "ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.215",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.215] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.215",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.215] [INFO] [apollo-server,,] default - Microservice request:  http://transaction-service.transaction-service.svc.cluster.local:8080/transaction-service/v2/insights/money-in-vs-money-out?customerId=1710203808292037&yearMonth=2024-09 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.214",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.213] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.214",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.214] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1710203808292037&accountNumber=912010110343247 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"ddeb2ce1-d597-40ea-bcbe-2cf48c12ea46\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.207",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.207] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1710203808292037/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.205",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.205] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.204",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.204] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:53.203",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:53.203] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.992",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.992] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"smes\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.983",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.983] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v2/customers/1710203808292037/smes {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6ImMwNmJmN2Q1LTlmMDctNDJmOC1hOGVkLTEwOWIyOGY3Y2E4ZSIsImlhdCI6MTcyNjcxMjYzMiwiZXhwIjoxNzI2NzEyOTMyLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.dmDrWSGG8LKR6dARzQwSOsniQC2oX4V9k8vLoaTpRJ4yJm28TgatjapvYvOKMHiMW8HVOFw6-sNOgQ7MZCsRZZcPvg6WH23i2UCB3B5Vz-BsLjzmSeQ42UZKd2HhovoJgTMH1VYyBNVgsEPrcvD7aFsJDDnMBU0yX-V-U1FDPfxrm1VyejouMo3p_F_5dsYYsLUCgZVxV880GAcVNJ56wNJ9MkgAsw6Z45ygkSUQMBIfNE8LHNByRTHsaq1npQuTAIRAPLKuB85l1FtyqDgQ5anNl2K9qDMeSr740XGeD8dab5JFXi1xlC9j-AXG-KWuQ3z40d31ON2zQXEzhVeo7Q\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.733",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.732",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.731",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.697] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.731",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.711] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.29549Z\",\"updatedAt\":\"2024-09-03T02:17:20.107776Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1995-08-21\",\"place_of_birth\":\"Malaysia\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":true},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":53440,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"EMPLOYER\",\"employmentSector\":\"PROFESSIONAL_SCIENTIFIC_AND_TECHNICAL_ACTIVITIES\",\"occupation\":\"SOFTWARE_DEVELOPERS\",\"annualIncomeBracket\":\"RM36000_RM47999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Financing, Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":79128,\"line1\":\"NO 17\",\"line2\":\"LORONG CAKERA PURNAMA 12/13D\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"}],\"iam\":{\"username\":\"msalmanshah26\",\"pingOneId\":\"4fb31ebb-0fa9-4a09-b76d-d7d336f5599c\"},\"accounts\":[{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.731",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.525",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.524] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"deviceId\":\"214190\",\"sessionId\":\"97399a85-acc7-4d64-9a53-363bfab94ca0\"}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.525",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.525] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"generateSession\":{\"sessionId\":\"97399a85-acc7-4d64-9a53-363bfab94ca0\",\"customerId\":\"1710203808292037\"}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.516",
+        "kubernetes.container_name": "revelock-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:52.515Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 26 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "revelock-service",
+            "traceId": "66eb8b38799a6c3554ea052013dc7325",
+            "spanId": "54ea052013dc7325",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.489",
+        "kubernetes.container_name": "revelock-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:52.489Z",
+            "@version": "1",
+            "message": "Retrieving first device id of customer with customerId: 1710203808292037",
+            "logger_name": "com.arbm.digibank.service.client.CustomerServices",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "revelock-service",
+            "traceId": "66eb8b38799a6c3554ea052013dc7325",
+            "spanId": "54ea052013dc7325",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.484",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.484] [INFO] [apollo-server,,] default - Microservice request:  http://revelock-service.revelock-service.svc.cluster.local:8080/v1/sessions/generate-session?customerId=1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.093",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:52.093Z",
+            "@version": "1",
+            "message": "Updating customer device for customer=1710203808292037, and devices=[DeviceEntity(id=152642, os='iOS 17.3.1', model='iPhone16,1', installationId='4b69f6b9-95bb-4c4b-83a4-9b5deea50875', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:45:43.159170Z, lastUpdated=2024-03-12T00:46:07.160177Z, customer=1710203808292037), DeviceEntity(id=152643, os='iOS 17.5.1', model='iPhone16,1', installationId='dfc5828f-6c06-41d6-8c2a-8c2b755357b3', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:46:07.184235Z, lastUpdated=2024-09-03T02:17:20.099875Z, customer=1710203808292037), DeviceEntity(id=152640, os='iOS 17.3.1', model='iPhone16,1', installationId='10313158-667F-48FD-A5BB-C7746288FDB4', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:36:48.313797Z, lastUpdated=2024-03-12T00:45:43.137033Z, customer=1710203808292037), DeviceEntity(id=214190, os='iOS 18.0', model='iPhone16,1', installationId='c0e527b8-3399-42bc-b48a-1b9b3f7c5de4', status=ACTIVE_VERIFIED, createdOn=2024-09-03T02:17:20.106806Z, lastUpdated=null, customer=1710203808292037)]",
+            "logger_name": "com.arbm.digibank.service.RetailCustomerCommandService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb8b3704a905473b10789cd9c31208",
+            "spanId": "0a56907abedbe353",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.083",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.082] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1710203808292037/status {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.082",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.082] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.295Z\",\"updatedAt\":\"2024-09-03T02:17:20.107Z\",\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"mailingAddressSameAsResidence\":true}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.078",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:52.077Z",
+            "@version": "1",
+            "message": "Get customer lazy 1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb8b38f08e99b20cf13c9197e12e2a",
+            "spanId": "0cf13c9197e12e2a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.071",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:52.071Z",
+            "@version": "1",
+            "message": "Update device for customerId: 1710203808292037, deviceId: activeVerified, xRequestID: 3e5dd1f2-c74e-9bd9-953e-6e6138946b38, body: DeviceUpdateRequest(deviceOs=iOS 18.0, deviceModel=iPhone16,1, applicationVersion=1.7.2)",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb8b3704a905473b10789cd9c31208",
+            "spanId": "0a56907abedbe353",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.071",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T02:23:52.070] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerLazy/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 02:23:52.069",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T02:23:52.069Z",
+            "@version": "1",
+            "message": "Starting updateDevice customer: customerId=1710203808292037",
+            "logger_name": "com.arbm.digibank.service.AppVersionInfoService",
+            "thread_name": "task-535",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66eb8b3704a905473b10789cd9c31208",
+            "spanId": "a8423ecbff64eb13",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.641",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.64Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1710203808292037, PAY_TO_QR, 2024-09-19T01:57:03.640449Z]\n totalTime: 0 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66eb84efefbb8d69355a95814aad2a59",
+            "spanId": "355a95814aad2a59",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.641",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.641Z",
+            "@version": "1",
+            "message": "Customer with id: [1710203808292037] is authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66eb84efefbb8d69355a95814aad2a59",
+            "spanId": "355a95814aad2a59",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.640",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.64Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1710203808292037] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66eb84efefbb8d69355a95814aad2a59",
+            "spanId": "355a95814aad2a59",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.633",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:03.633] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1710203808292037/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjdmYmU1ODE2LTMwYWQtNDU1Ny05MTZjLTVjMjM0ZjZiZjhjOCIsImlhdCI6MTcyNjcxMTAxOSwiZXhwIjoxNzI2NzExMzE5LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.MWbxIGk_Vr6mZmn5e0MWmElBAdd8YzdA7LHED_FfxGZXpMaRbGD9ws8K_CSi1_tHi-xnfpjW7-PiuA9lXJW8ZLr7vXVGm3XSxUIUh1AjvTbiC2javL0dn-IxB7rE6w6xqlv4qBHf6kvKZIRwsUKBo444B2zOzeLhxi5eGOYyiIX8rqRKXkdMW1UiTerAVAK3fxYqoeF8Fa3zwe-kK659suuttW3a6W2snpeRk6RexzDjNGiI1wPHWsEQCxOWfaHzihQjuVoiu8ByfBqfKhREpbbhPw96e6OQs0nF7X0MxlSYX6xjsY9PdUis1yx0AhU00Q_HBpGqsDLgaMt__EQ4Uw\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.244",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.243Z",
+            "@version": "1",
+            "message": "Return Info QRCodeInfo(responseCode=SUCCESS, responseDescription=SUCCESS, proxyId=1710203808292037, proxyType=CIC, proxyStatus=ACTIVE, financialInstitutionId=432134, accountNumber=912010110343247, accountType=SAVINGS_ACCOUNT, customerName=MUHAMMAD SALMAN BIN MOHD SHAH, acceptedPaymentsTypes=[CASA, WALLET, CREDIT_CARD], secondaryIdType=NRIC, secondaryId=, coolingOffDuration=0)",
+            "logger_name": "com.arbm.digibank.service.qrcode.QRLookupService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84efb45d178c3fdc5a01c280ebda",
+            "spanId": "3fdc5a01c280ebda",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.243",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.243Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 25 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84efb45d178c3fdc5a01c280ebda",
+            "spanId": "3fdc5a01c280ebda",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.243",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.243Z",
+            "@version": "1",
+            "message": "Received customer Info RetailCustomerAccountForQr(customerId=1710203808292037, customerName=MUHAMMAD SALMAN BIN MOHD SHAH, nric=950821105133, city=BANDAR PUNCAK ALAM, phoneNumber=+60143210866, accountNumber=912010110343247)",
+            "logger_name": "com.arbm.digibank.service.qrcode.QRLookupService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84efb45d178c3fdc5a01c280ebda",
+            "spanId": "3fdc5a01c280ebda",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.218",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.218Z",
+            "@version": "1",
+            "message": "Received request to lookup QR code for customerId=1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.QRCodeManagementController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84efb45d178c3fdc5a01c280ebda",
+            "spanId": "3fdc5a01c280ebda",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.218",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:03.218Z",
+            "@version": "1",
+            "message": "Retrieving customer information for QR from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84efb45d178c3fdc5a01c280ebda",
+            "spanId": "3fdc5a01c280ebda",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:03.212",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:03.212] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/qr-lookup {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:02.528",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:02.528Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.PaymentProxyRepository.findByCustomerId(String)\n parameters: [1710203808292037]\n totalTime: 2 ms",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84ee86c958dcf866a3929da8d428",
+            "spanId": "f866a3929da8d428",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:02.517",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:02.517] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/payment-proxies {\"method\":\"GET\",\"headers\":{\"requestId\":\"2bc3de7e-ce6e-4c76-aa37-51d9125148f2\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjdmYmU1ODE2LTMwYWQtNDU1Ny05MTZjLTVjMjM0ZjZiZjhjOCIsImlhdCI6MTcyNjcxMTAxOSwiZXhwIjoxNzI2NzExMzE5LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.MWbxIGk_Vr6mZmn5e0MWmElBAdd8YzdA7LHED_FfxGZXpMaRbGD9ws8K_CSi1_tHi-xnfpjW7-PiuA9lXJW8ZLr7vXVGm3XSxUIUh1AjvTbiC2javL0dn-IxB7rE6w6xqlv4qBHf6kvKZIRwsUKBo444B2zOzeLhxi5eGOYyiIX8rqRKXkdMW1UiTerAVAK3fxYqoeF8Fa3zwe-kK659suuttW3a6W2snpeRk6RexzDjNGiI1wPHWsEQCxOWfaHzihQjuVoiu8ByfBqfKhREpbbhPw96e6OQs0nF7X0MxlSYX6xjsY9PdUis1yx0AhU00Q_HBpGqsDLgaMt__EQ4Uw\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:02.164",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:02.163] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1710203808292037\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"U000_SUCCESS\\\"}\",\"requestId\":\"c840167a-0c82-4f0f-9370-b35944cbcdaf\",\"type\":\"PROXY_ENQUIRY_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:02.163",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:02.163] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"c840167a-0c82-4f0f-9370-b35944cbcdaf\",\"type\":\"PROXY_ENQUIRY_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1710203808292037\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"U000_SUCCESS\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:02.162",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:02.162Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=c840167a-0c82-4f0f-9370-b35944cbcdaf, type=PROXY_ENQUIRY_COMPLETED, payload={\"customerId\":\"1710203808292037\",\"status\":\"SUCCESSFUL\",\"errorCode\":\"U000_SUCCESS\"}) after total DB calls: 1 and total time: 2 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.985",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.985Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=c840167a-0c82-4f0f-9370-b35944cbcdaf, type=PROXY_ENQUIRY_COMPLETED, payload={\"customerId\":\"1710203808292037\",\"status\":\"SUCCESSFUL\",\"errorCode\":\"U000_SUCCESS\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "8436e228dfe37de0",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.982",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.982Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 27 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "725c39016c0809d2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.955",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.954Z",
+            "@version": "1",
+            "message": "[c840167a-0c82-4f0f-9370-b35944cbcdaf] Received NadProxyEnquiryRequestCompleted event for customer [1710203808292037]",
+            "logger_name": "com.arbm.digibank.consumer.NadProxyEnquiryRequestEventConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "725c39016c0809d2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.955",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.955Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.PaymentProxyRepository.findByCustomerId(String)\n parameters: [1710203808292037]\n totalTime: 1 ms",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "725c39016c0809d2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.955",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.955Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "725c39016c0809d2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.569",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.569] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[],\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\",\"balance\":\"1012.22\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.516",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.516] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.516",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.516] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.506",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.505] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.342",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.342Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb84ed01cd55e2fae5367b1c09e09d",
+            "spanId": "fae5367b1c09e09d",
+            "RequestId": "bd0fa322-1418-4da8-99a3-7c59b5f304fe",
+            "data": {
+                "requestId": "\"bd0fa322-1418-4da8-99a3-7c59b5f304fe\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"bd0fa322-1418-4da8-99a3-7c59b5f304fe\"",
+                    "customerId": "\"1710203808292037\"",
+                    "accountNumber": "\"912010110343247\""
+                },
+                "result": {
+                    "cardId": "745a3290-4a70-47f6-ad6f-c6f7ec1bc76f",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2024-03-22T08:26:29.748923Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "MUHAMMAD SALMAN BIN MO",
+                    "trackingNumber": "EG489940039MY",
+                    "cardDeliverOption": "RESIDENTIAL",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "NO 17LORONG CAKERA PURNAMA 12/13D",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "42300",
+                    "delivTown": "BANDAR PUNCAK ALAM",
+                    "delivState": "SELANGOR",
+                    "delivCountry": "MY"
+                },
+                "processTime": 208
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.342",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.342Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb84ed01cd55e2fae5367b1c09e09d",
+            "spanId": "fae5367b1c09e09d",
+            "RequestId": "bd0fa322-1418-4da8-99a3-7c59b5f304fe",
+            "data": {
+                "requestId": "\"bd0fa322-1418-4da8-99a3-7c59b5f304fe\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"bd0fa322-1418-4da8-99a3-7c59b5f304fe\"",
+                    "customerId": "\"1710203808292037\"",
+                    "accountNumber": "\"912010110343247\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "745a3290-4a70-47f6-ad6f-c6f7ec1bc76f",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2024-03-22T08:26:29.748923Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "MUHAMMAD SALMAN BIN MO",
+                        "trackingNumber": "EG489940039MY",
+                        "cardDeliverOption": "RESIDENTIAL",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "NO 17LORONG CAKERA PURNAMA 12/13D",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "42300",
+                        "delivTown": "BANDAR PUNCAK ALAM",
+                        "delivState": "SELANGOR",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 209
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.321",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.321Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 26 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "e0f2d22644514cf2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.321",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.321Z",
+            "@version": "1",
+            "message": "[c840167a-0c82-4f0f-9370-b35944cbcdaf] Registering proxy enquiry request for fis-gateway-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.FisPaymentProxyRequestsService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "e0f2d22644514cf2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.295",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.294Z",
+            "@version": "1",
+            "message": "[c840167a-0c82-4f0f-9370-b35944cbcdaf] Received proxy enquiry trigger request for customer with id: 1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.PaymentProxyManagementController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "e0f2d22644514cf2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.295",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.295Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1710203808292037]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "66eb84edb254ef49e0f2d22644514cf2",
+            "spanId": "e0f2d22644514cf2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.284",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.284] [INFO] [apollo-server,,] default - Microservice request:  http://payment-proxy-management-service.payment-proxy-management-service.svc.cluster.local:8080/payment-proxy-management-service/v1/customers/1710203808292037/proxy-enquiry {\"method\":\"POST\",\"headers\":{\"requestId\":\"c840167a-0c82-4f0f-9370-b35944cbcdaf\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjdmYmU1ODE2LTMwYWQtNDU1Ny05MTZjLTVjMjM0ZjZiZjhjOCIsImlhdCI6MTcyNjcxMTAxOSwiZXhwIjoxNzI2NzExMzE5LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.MWbxIGk_Vr6mZmn5e0MWmElBAdd8YzdA7LHED_FfxGZXpMaRbGD9ws8K_CSi1_tHi-xnfpjW7-PiuA9lXJW8ZLr7vXVGm3XSxUIUh1AjvTbiC2javL0dn-IxB7rE6w6xqlv4qBHf6kvKZIRwsUKBo444B2zOzeLhxi5eGOYyiIX8rqRKXkdMW1UiTerAVAK3fxYqoeF8Fa3zwe-kK659suuttW3a6W2snpeRk6RexzDjNGiI1wPHWsEQCxOWfaHzihQjuVoiu8ByfBqfKhREpbbhPw96e6OQs0nF7X0MxlSYX6xjsY9PdUis1yx0AhU00Q_HBpGqsDLgaMt__EQ4Uw\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.164",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.164] [INFO] [apollo-server,,] default - Microservice response: {\"yearMonth\":\"2024-09\",\"netCashflow\":1000,\"totalMoneyOut\":0,\"totalMoneyIn\":1000,\"moneyInTransactions\":[{\"id\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\",\"type\":\"DUITNOW_ACCOUNT\",\"amount\":1000,\"currency\":\"MYR\",\"creationTimestamp\":\"2024-09-18T01:50:33.644Z\",\"source\":{\"accountNumber\":\"*HIDDEN*\",\"name\":\"Al Rajhi Bank Payment Operations\"},\"destination\":{\"customerId\":\"1710203808292037\",\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"name\":\"MUHAMMAD SALMAN BIN MOHD SHAH\"},\"status\":\"COMMITTED\",\"recipientReference\":\"ARB Salary Credit -September24\",\"category\":\"PrimaryIncome\"}],\"moneyOutTransactions\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.164",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.164] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getMoneyInOutTransactions\":{\"net\":\"+1000\",\"currencySymbol\":\"RM\",\"moneyOut\":\"-0\",\"moneyIn\":\"+1000\",\"transactions\":[{\"id\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\",\"type\":\"DUITNOW_ACCOUNT\",\"amount\":\"+1000\",\"currencySymbol\":\"RM\",\"date\":\"2024-09-18\",\"payer\":{\"name\":null,\"reference\":\"ARB Salary Credit -September24\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":null},\"recipient\":{\"name\":null,\"reference\":null,\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\"},\"status\":\"COMMITTED\",\"details\":null,\"moneyFlow\":\"IN\",\"categoryType\":\"PrimaryIncome\"}]}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.161",
+        "kubernetes.container_name": "fpm",
+        "logBody": {
+            "timeMillis": 1726711021161,
+            "thread": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "loggerName": "c.m.s.r.l.LogHandler",
+            "message": "Customer 34278, Custom API script getwidgetmoneyoutmoneyin, Message: transactions:[{\"key\":\"hp4F3LQT4sBmEznFnjw=\",\"currency\":\"MYR\",\"amount\":1000,\"description\":\"DUITNOW_ACCOUNT Al Rajhi Bank Payment Operations MUHAMMAD SALMAN BIN MOHD SHAH ARB Salary Credit -September24\",\"date\":\"2024-09-18\",\"balance\":1012.22,\"movement\":\"credit\",\"original_category\":\"PrimaryIncome\",\"extraction\":\"2024-09-18T09:50:33.644+0800\",\"account_key\":\"hp4F3LQT4MRlHjvDnTk=\",\"account_name\":\"Savings Account\",\"custom_fields\":[{\"name\":\"transaction_id\",\"value\":\"2b3867aa-03a6-4e30-8351-5433ddf32c26\"},{\"name\":\"reference_id\",\"value\":\"0cf35602-e360-4288-864d-1849463b684e\"},{\"name\":\"status\",\"value\":\"COMMITTED\"},{\"name\":\"type\",\"value\":\"DUITNOW_ACCOUNT\"},{\"name\":\"sender_name\",\"value\":\"Al Rajhi Bank Payment Operations\"},{\"name\":\"src_account_number\",\"value\":\"101001061002750\"},{\"name\":\"recipient_name\",\"value\":\"MUHAMMAD SALMAN BIN MOHD SHAH\"},{\"name\":\"dst_account_number\",\"value\":\"912010110343247\"},{\"name\":\"dst_customer_id\",\"value\":\"1710203808292037\"},{\"name\":\"dst_account_id\",\"value\":\"a9914d2d-5985-49b3-b467-8430a9c50863\"},{\"name\":\"recipient_reference\",\"value\":\"ARB Salary Credit -September24\"},{\"name\":\"custom_description\",\"value\":\"#PrimaryIncome\"}]}]",
+            "endOfBatch": false,
+            "loggerFqcn": "org.apache.logging.slf4j.Log4jLogger",
+            "threadId": 54,
+            "threadPriority": 5,
+            "scope": "fpm"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.152",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.151",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.150",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.150] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.29549Z\",\"updatedAt\":\"2024-09-03T02:17:20.107776Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1995-08-21\",\"place_of_birth\":\"Malaysia\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":true},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":53440,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"EMPLOYER\",\"employmentSector\":\"PROFESSIONAL_SCIENTIFIC_AND_TECHNICAL_ACTIVITIES\",\"occupation\":\"SOFTWARE_DEVELOPERS\",\"annualIncomeBracket\":\"RM36000_RM47999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Financing, Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":79128,\"line1\":\"NO 17\",\"line2\":\"LORONG CAKERA PURNAMA 12/13D\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"}],\"iam\":{\"username\":\"msalmanshah26\",\"pingOneId\":\"4fb31ebb-0fa9-4a09-b76d-d7d336f5599c\"},\"accounts\":[{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.150",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.144",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.143] [INFO] [apollo-server,,] default - Microservice request:  http://transaction-service.transaction-service.svc.cluster.local:8080/transaction-service/v2/insights/money-in-vs-money-out?customerId=1710203808292037&yearMonth=2024-09 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.143",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.143] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.138",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.138] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.134",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:01.134Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1710203808292037 and accountNumber=912010110343247",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "66eb84ed01cd55e2fae5367b1c09e09d",
+            "spanId": "fae5367b1c09e09d",
+            "RequestId": "bd0fa322-1418-4da8-99a3-7c59b5f304fe"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.133",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.133] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.132",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.132] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"smes\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.131",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.131] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1710203808292037/required-documents {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.127",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.127] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1710203808292037\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-03-12T00:39:53.4682Z\",\"currency\":\"MYR\"},\"savingPots\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.127",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.127] [INFO] [apollo-server,,] default - Microservice request:  http://card-service.card-service.svc.cluster.local:8080/v1/mgmt/cards/get-card-info?customerId=1710203808292037&accountNumber=912010110343247 {\"method\":\"GET\",\"headers\":{\"Request-Id\":\"bd0fa322-1418-4da8-99a3-7c59b5f304fe\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.124",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.123] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v2/customers/1710203808292037/smes {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjdmYmU1ODE2LTMwYWQtNDU1Ny05MTZjLTVjMjM0ZjZiZjhjOCIsImlhdCI6MTcyNjcxMTAxOSwiZXhwIjoxNzI2NzExMzE5LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.MWbxIGk_Vr6mZmn5e0MWmElBAdd8YzdA7LHED_FfxGZXpMaRbGD9ws8K_CSi1_tHi-xnfpjW7-PiuA9lXJW8ZLr7vXVGm3XSxUIUh1AjvTbiC2javL0dn-IxB7rE6w6xqlv4qBHf6kvKZIRwsUKBo444B2zOzeLhxi5eGOYyiIX8rqRKXkdMW1UiTerAVAK3fxYqoeF8Fa3zwe-kK659suuttW3a6W2snpeRk6RexzDjNGiI1wPHWsEQCxOWfaHzihQjuVoiu8ByfBqfKhREpbbhPw96e6OQs0nF7X0MxlSYX6xjsY9PdUis1yx0AhU00Q_HBpGqsDLgaMt__EQ4Uw\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.116",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.116] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1710203808292037/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.101",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.100] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"smes\":[]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:01.092",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:01.092] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v2/customers/1710203808292037/smes {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjdmYmU1ODE2LTMwYWQtNDU1Ny05MTZjLTVjMjM0ZjZiZjhjOCIsImlhdCI6MTcyNjcxMTAxOSwiZXhwIjoxNzI2NzExMzE5LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoidzpjdXN0b21lcjpkZXZpY2Ugb3BlbmlkIHByb2ZpbGUiLCJzdWIiOiIxNzEwMjAzODA4MjkyMDM3Iiwic2lkIjoiYjRiZmUzMWEtYTFhMC00NTZhLWEzMzUtYjBkMjJjNTRiMGRhIiwiZW52IjoiNDRlNDM4YzktMWYxNi00MGVkLTk0ZmUtZTRhMThlMTljNTE3Iiwib3JnIjoiMGEyNzYyMDMtYzdiOC00ODY1LTgzYzctM2RjMDM5Zjc0YmNlIiwicDEudXNlcklkIjoiNGZiMzFlYmItMGZhOS00YTA5LWI3NmQtZDdkMzM2ZjU1OTljIn0.MWbxIGk_Vr6mZmn5e0MWmElBAdd8YzdA7LHED_FfxGZXpMaRbGD9ws8K_CSi1_tHi-xnfpjW7-PiuA9lXJW8ZLr7vXVGm3XSxUIUh1AjvTbiC2javL0dn-IxB7rE6w6xqlv4qBHf6kvKZIRwsUKBo444B2zOzeLhxi5eGOYyiIX8rqRKXkdMW1UiTerAVAK3fxYqoeF8Fa3zwe-kK659suuttW3a6W2snpeRk6RexzDjNGiI1wPHWsEQCxOWfaHzihQjuVoiu8ByfBqfKhREpbbhPw96e6OQs0nF7X0MxlSYX6xjsY9PdUis1yx0AhU00Q_HBpGqsDLgaMt__EQ4Uw\"}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.976",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:00.976Z",
+            "@version": "1",
+            "message": "Number of unread notification=32 from customerId=1710203808292037 with requestId=330b7348-233a-41f7-a297-739d0970c466",
+            "logger_name": "com.arbm.digibank.service.NotificationService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66eb84ec2c634121fc470dd3d2e722b9",
+            "spanId": "fc470dd3d2e722b9",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.713",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.713",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.711",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:00.711] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.29549Z\",\"updatedAt\":\"2024-09-03T02:17:20.107776Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1995-08-21\",\"place_of_birth\":\"Malaysia\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":true},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":true,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":true,\"marketingPushFlag\":true,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":53440,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"EMPLOYER\",\"employmentSector\":\"PROFESSIONAL_SCIENTIFIC_AND_TECHNICAL_ACTIVITIES\",\"occupation\":\"SOFTWARE_DEVELOPERS\",\"annualIncomeBracket\":\"RM36000_RM47999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Financing, Saving\"],\"bnmCcc\":\"Individual Non-Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":79128,\"line1\":\"NO 17\",\"line2\":\"LORONG CAKERA PURNAMA 12/13D\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"SELANGOR\",\"type\":\"RESIDENTIAL\"}],\"iam\":{\"username\":\"msalmanshah26\",\"pingOneId\":\"4fb31ebb-0fa9-4a09-b76d-d7d336f5599c\"},\"accounts\":[{\"accountId\":\"a9914d2d-5985-49b3-b467-8430a9c50863\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.711",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1710203808292037',"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.694",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:00.693] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.337",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:00.337] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"deviceId\":\"214190\",\"sessionId\":\"cccd6dda-d6e6-45cc-9096-41688f0597e5\"}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.337",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:00.337] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"generateSession\":{\"sessionId\":\"cccd6dda-d6e6-45cc-9096-41688f0597e5\",\"customerId\":\"1710203808292037\"}}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.328",
+        "kubernetes.container_name": "revelock-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:00.328Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1710203808292037 with method: GET succeeded with status code 200: OK in totalTime: 26 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "revelock-service",
+            "traceId": "66eb84ecbe72eb57e6a6d9a173af79dc",
+            "spanId": "e6a6d9a173af79dc",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.302",
+        "kubernetes.container_name": "revelock-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:57:00.302Z",
+            "@version": "1",
+            "message": "Retrieving first device id of customer with customerId: 1710203808292037",
+            "logger_name": "com.arbm.digibank.service.client.CustomerServices",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "revelock-service",
+            "traceId": "66eb84ecbe72eb57e6a6d9a173af79dc",
+            "spanId": "e6a6d9a173af79dc",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:57:00.283",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:57:00.282] [INFO] [apollo-server,,] default - Microservice request:  http://revelock-service.revelock-service.svc.cluster.local:8080/v1/sessions/generate-session?customerId=1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.861",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:56:59.86Z",
+            "@version": "1",
+            "message": "Updating customer device for customer=1710203808292037, and devices=[DeviceEntity(id=152642, os='iOS 17.3.1', model='iPhone16,1', installationId='4b69f6b9-95bb-4c4b-83a4-9b5deea50875', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:45:43.159170Z, lastUpdated=2024-03-12T00:46:07.160177Z, customer=1710203808292037), DeviceEntity(id=152643, os='iOS 17.5.1', model='iPhone16,1', installationId='dfc5828f-6c06-41d6-8c2a-8c2b755357b3', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:46:07.184235Z, lastUpdated=2024-09-03T02:17:20.099875Z, customer=1710203808292037), DeviceEntity(id=152640, os='iOS 17.3.1', model='iPhone16,1', installationId='10313158-667F-48FD-A5BB-C7746288FDB4', status=INACTIVE_VERIFIED, createdOn=2024-03-12T00:36:48.313797Z, lastUpdated=2024-03-12T00:45:43.137033Z, customer=1710203808292037), DeviceEntity(id=214190, os='iOS 18.0', model='iPhone16,1', installationId='c0e527b8-3399-42bc-b48a-1b9b3f7c5de4', status=ACTIVE_VERIFIED, createdOn=2024-09-03T02:17:20.106806Z, lastUpdated=null, customer=1710203808292037)]",
+            "logger_name": "com.arbm.digibank.service.RetailCustomerCommandService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb84eb59230780f3896e9e343eedfe",
+            "spanId": "9c77459c1a38c662",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.847",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:56:59.847] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1710203808292037\",\"createdAt\":\"2024-03-12T00:36:48.295Z\",\"updatedAt\":\"2024-09-03T02:17:20.107Z\",\"lastName\":\"MUHAMMAD SALMAN BIN MOHD SHAH\",\"nickname\":\"Salman\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"950821105133\",\"type\":\"EXTERNAL_CUSTOMER\",\"dateOfBirth\":\"*HIDDEN*\",\"placeOfBirth\":\"*HIDDEN*\",\"gender\":\"M\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"mailingAddressSameAsResidence\":true}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.847",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:56:59.847] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1710203808292037/status {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.844",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:56:59.844Z",
+            "@version": "1",
+            "message": "Get customer lazy 1710203808292037",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb84ebc6ab6f3a75f9537de064f18b",
+            "spanId": "75f9537de064f18b",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.837",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:56:59.837Z",
+            "@version": "1",
+            "message": "Update device for customerId: 1710203808292037, deviceId: activeVerified, xRequestID: 1eaeb621-7dd9-955d-8b71-5e559cd7be6d, body: DeviceUpdateRequest(deviceOs=iOS 18.0, deviceModel=iPhone16,1, applicationVersion=1.7.2)",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66eb84eb59230780f3896e9e343eedfe",
+            "spanId": "9c77459c1a38c662",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.836",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-09-19T01:56:59.836] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerLazy/1710203808292037 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-09-19 01:56:59.835",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-09-19T01:56:59.835Z",
+            "@version": "1",
+            "message": "Starting updateDevice customer: customerId=1710203808292037",
+            "logger_name": "com.arbm.digibank.service.AppVersionInfoService",
+            "thread_name": "task-439",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66eb84eb59230780f3896e9e343eedfe",
+            "spanId": "98b90842b087de35",
+            "bc": "iamcustomer"
+        }
+    }
+]

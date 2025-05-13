@@ -1,0 +1,845 @@
+[
+    {
+        "@timestamp": "2025-01-26 03:03:17.163",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.162Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 10790.016388 and headers request-id: SWTRA+202501261103062900632452\nrequest-id: SWTRA 202501261103062900632452\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json;version=1\ndate: Sun, 26 Jan 2025 03:03:17 GMT\nx-envoy-upstream-service-time: 10786\nserver: envoy\ntransfer-encoding: chunked\n with status 200, response okhttp3.internal.http.RealResponseBody@6048d395 and response=Response{protocol=http/1.1, code=200, message=OK, url=http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit} ",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.163",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.163Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 10790744588 ns; [1. paymentApi.doAtmDebitCredit - SWTRA 202501261103062900632452] took 10790744588 ns = 100%",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.163",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.163Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1",
+            "data": {
+                "requestId": "SWTRA 202501261103062900632452",
+                "functionId": "CardPaymentService.doATMSingleDebitCredit",
+                "input": {
+                    "requestId": "\"SWTRA 202501261103062900632452\"",
+                    "request": "{\"cicId\":\"1709793121346220\",\"transferType\":\"DEBIT\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110341084\",\"accountRelationType\":\"700\",\"amount\":45.0,\"startDate\":\"20250126\",\"rrn\":\"502603008295\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX1199\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":4500,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":4500.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTRA 202501261103062900632452\",\"posReadMethod\":\"0007\",\"mcc\":\"8011\",\"acceptorId\":\"CARD ACCEPTOR  SENMU\",\"acceptorName\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250126110306290\",\"posCond\":\"00\",\"terminalId\":\"51025343\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"feeAmount\":0.0,\"functionId\":\"MYDPU\",\"denomination\":\"MYR\"}"
+                },
+                "result": {
+                    "statusCode": "0",
+                    "statusSeverity": "INFO",
+                    "statusDescription": "Complete Response Without Errors",
+                    "transactionReferenceId": "",
+                    "ledgerBalanceDescription": "",
+                    "ledgerBalanceAmount": 52.41,
+                    "availableBalanceDescripiton": "",
+                    "availableBalanceAmount": 52.41
+                },
+                "processTime": 10791
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.163",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.163Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 10793010997 ns; [1. doATMSingleDebitCredit - SWTRA 202501261103062900632452] took 10793010997 ns = 100%",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.163",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.163Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1",
+            "data": {
+                "requestId": null,
+                "functionId": "CardPaymentController.doATMSingleDebitCredit",
+                "input": {
+                    "request": "{\"name\":\"{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq\",\"declaredType\":\"generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRqType\",\"scope\":\"javax.xml.bind.JAXBElement$GlobalScope\",\"value\":{\"rqUID\":\"SWTRA 202501261103062900632452\",\"msgRqHdr\":{\"asyncRqUID\":null,\"svcIdent\":null,\"credentialsRqHdr\":[{\"subjectRole\":\"SystemUser\",\"startSession\":null,\"partyRef\":null,\"seqNum\":null,\"secTokenCertOrSecTokenICCOrSecTokenMagCard\":[{\"secTokenOwner\":null,\"loginName\":\"CWS\",\"subjectPswd\":null,\"subjectPassCode\":null}],\"ovrdExceptionCode\":null}],\"contextRqHdr\":{\"fieldSelect\":[],\"clientTerminalSeqNum\":null,\"networkTrnData\":{\"networkOwner\":\"CWS\",\"originatorName\":null,\"originatorType\":null,\"terminalIdent\":null,\"terminalType\":null,\"postAddr\":null,\"desc\":null,\"name\":null,\"networkRefIdent\":null,\"acquirerIdent\":null,\"merchNum\":null,\"mcc\":null,\"fiidentType\":null,\"fiident\":null},\"pointOfServiceData\":null,\"msgAuthCode\":null,\"clientDt\":null,\"custLangPref\":\"en\",\"clearingLangCode\":null,\"clientApp\":null,\"proxyClient\":null,\"msgGroupReference\":null,\"emvrqData\":null},\"feeRqHdr\":[]},\"doATMSingleDebitCredit\":{\"accessCode\":null,\"internalReferenceNumber\":null,\"partyId\":\"1709793121346220\",\"transferType\":\"D\",\"accountBranchCodeFrom\":\"91201\",\"accountRelationTypeFrom\":\"700\",\"accountNumberFrom\":\"0110341084\",\"curAmt\":{\"amt\":45.00,\"curCode\":null},\"remarks\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"startDate\":\"20250126\",\"functionId\":\"MYDPU\",\"feeAmt\":{\"amt\":0,\"curCode\":null},\"rrn\":\"502603008295\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX1199\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":4500,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":4500,\"cardExpiry\":null,\"lifeCycleId\":\"SWTRA 202501261103062900632452\",\"mcc\":\"8011\",\"acceptorId\":null,\"acceptorName\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptorZip\":null,\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250126110306290\",\"terminalID\":\"51025343\",\"secure3DValStatus\":null,\"posreadMethod\":\"0007\",\"poscond\":null,\"cvvvalCode\":\"X\",\"poscardHolderVerMethod\":null}},\"nil\":false,\"globalScope\":true,\"typeSubstituted\":false}"
+                },
+                "result": {
+                    "name": "{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRs",
+                    "declaredType": "generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRsType",
+                    "scope": "javax.xml.bind.JAXBElement$GlobalScope",
+                    "value": {
+                        "status": {
+                            "statusCode": 0,
+                            "serverStatusCode": null,
+                            "severity": "INFO",
+                            "statusDesc": "Complete Response Without Errors",
+                            "subjectElement": [],
+                            "additionalStatus": [],
+                            "asyncRsData": null,
+                            "id": null
+                        },
+                        "rqUID": "SWTRA 202501261103062900632452",
+                        "msgRsHdr": null,
+                        "dualBalanceRs": {
+                            "internalReferenceNumber": null,
+                            "feeAmt": null,
+                            "ledgarAcctBal": {
+                                "balType": {
+                                    "balTypeSource": null,
+                                    "balTypeValues": "Ledger Balance"
+                                },
+                                "curAmt": {
+                                    "amt": 52.41,
+                                    "curCode": null
+                                },
+                                "expDt": null,
+                                "desc": null
+                            },
+                            "availableAcctBal": {
+                                "balType": {
+                                    "balTypeSource": null,
+                                    "balTypeValues": "Available Balance"
+                                },
+                                "curAmt": {
+                                    "amt": 52.41,
+                                    "curCode": null
+                                },
+                                "expDt": null,
+                                "desc": null
+                            }
+                        }
+                    },
+                    "nil": false,
+                    "globalScope": true,
+                    "typeSubstituted": false
+                },
+                "processTime": 10793
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.162",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.162Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 10790.016388 and headers request-id: SWTRA+202501261103062900632452\nrequest-id: SWTRA 202501261103062900632452\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json;version=1\ndate: Sun, 26 Jan 2025 03:03:17 GMT\nx-envoy-upstream-service-time: 10786\nserver: envoy\ntransfer-encoding: chunked\n with status 200",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.161",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.16Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": "\"SWTRA 202501261103062900632452\"",
+                "functionId": "UpdatedFramlService.saveUpdatedFramlFromDoatm",
+                "input": {
+                    "requestId": "\"SWTRA 202501261103062900632452\"",
+                    "remark": "{\"date\":\"26/01/2025\",\"time\":\"11:03:06\",\"txType\":\"MYDEBIT PURCHASE\",\"rrn\":\"502603008295\",\"terminalName\":null,\"merchantName\":\"PUBLIC BANK BER\",\"currencyCode\":\"MYR\",\"txAmount\":\"45.00\",\"origin\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"patternName\":\"MYDEBIT PURCHASE\",\"saleCurrencyCode\":null,\"saleTxAmount\":null,\"state\":null,\"countryCode\":null}",
+                    "request": "{\"cicId\":\"1709793121346220\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110341084\",\"accountRelationType\":\"700\",\"amount\":45.0,\"startDate\":\"20250126\",\"rrn\":\"502603008295\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX1199\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":4500,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":4500.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTRA 202501261103062900632452\",\"posReadMethod\":\"0007\",\"mcc\":\"8011\",\"acceptorId\":\"CARD ACCEPTOR  SENMU\",\"acceptorName\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250126110306290\",\"posCond\":\"00\",\"terminalId\":\"51025343\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"feeAmount\":0.0,\"functionId\":\"MYDPU\",\"denomination\":\"MYR\"}",
+                    "cardInfo": "{\"createdDate\":\"2024-03-22T09:32:40.585088Z\",\"updatedDate\":\"2024-03-26T13:03:39.116636Z\",\"cardId\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"accountNumber\":\"912010110341084\",\"cardStatus\":\"ACTIVATED\",\"trackingNumber\":\"EG489939945MY\",\"crn\":\"0\",\"urn\":\"0031082240132355\",\"last4Pan\":\"\",\"vendor\":\"cardwork\",\"pinLockTimestamp\":null,\"customerId\":1709793121346220,\"limitsLockTimestamp\":null,\"internalRefNumber\":\"032200015150\",\"cardIndex\":14568,\"casaInfo\":\"1709793121346220|912010110341084|P|MOHAMAD RIZWAN BIN RUSLY|Y|91201|700|MYR\",\"dob\":\"19890522\",\"accountId\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"cardDeliverOption\":\"MAILING\",\"delivCenterCode\":\"\",\"delivOffName\":\"\",\"delivOffDept\":\"\",\"delivAddress1\":\"D 554 Kampung PalohSungai Kiat\",\"delivAddress2\":\"\",\"delivAddress3\":\"\",\"delivAddress4\":\"\",\"delivPostCode\":\"20050\",\"delivTown\":\"Kuala Terengganu\",\"delivState\":\"Terengganu\",\"delivCountry\":\"MY\",\"embossName\":\"MOHAMAD RIZWAN BIN RUS\",\"reason\":null}"
+                },
+                "result": null,
+                "processTime": 0
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.161",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.16Z",
+            "@version": "1",
+            "message": "Successful doAtmDebitCredit - requestId: SWTRA 202501261103062900632452",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.161",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.161Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": "\"SWTRA 202501261103062900632452\"",
+                "functionId": "CardPaymentService.doAtmDebitCredit-gIAlu-s",
+                "input": {
+                    "requestId": "\"SWTRA 202501261103062900632452\"",
+                    "request": "{\"cicId\":\"1709793121346220\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110341084\",\"accountRelationType\":\"700\",\"amount\":45.0,\"startDate\":\"20250126\",\"rrn\":\"502603008295\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX1199\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":4500,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":4500.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTRA 202501261103062900632452\",\"posReadMethod\":\"0007\",\"mcc\":\"8011\",\"acceptorId\":\"CARD ACCEPTOR  SENMU\",\"acceptorName\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250126110306290\",\"posCond\":\"00\",\"terminalId\":\"51025343\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"feeAmount\":0.0,\"functionId\":\"MYDPU\",\"denomination\":\"MYR\"}"
+                },
+                "result": {
+                    "statusCode": "0",
+                    "statusSeverity": "Info",
+                    "statusDescription": "Complete Response Without Errors",
+                    "transactionReferenceId": "",
+                    "ledgerBalanceDescription": "",
+                    "ledgerBalanceAmount": 52.41,
+                    "availableBalanceDescripiton": "",
+                    "availableBalanceAmount": 52.41
+                },
+                "processTime": 10779
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.161",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.161Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": "\"SWTRA 202501261103062900632452\"",
+                "functionId": "PurchasingController.doAtmDebitCredit",
+                "input": {
+                    "requestId": "\"SWTRA 202501261103062900632452\"",
+                    "debitCreditRequest": "{\"cicId\":\"1709793121346220\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110341084\",\"accountRelationType\":\"700\",\"amount\":45.0,\"startDate\":\"20250126\",\"rrn\":\"502603008295\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX1199\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":4500,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":4500.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTRA 202501261103062900632452\",\"posReadMethod\":\"0007\",\"mcc\":\"8011\",\"acceptorId\":\"CARD ACCEPTOR  SENMU\",\"acceptorName\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250126110306290\",\"posCond\":\"00\",\"terminalId\":\"51025343\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"feeAmount\":0.0,\"functionId\":\"MYDPU\",\"denomination\":\"MYR\"}"
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "statusCode": "0",
+                        "statusSeverity": "Info",
+                        "statusDescription": "Complete Response Without Errors",
+                        "transactionReferenceId": "",
+                        "ledgerBalanceDescription": "",
+                        "ledgerBalanceAmount": 52.41,
+                        "availableBalanceDescripiton": "",
+                        "availableBalanceAmount": 52.41
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 10780
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.160",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.159Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": "SWTRA 202501261103062900632452",
+                "functionId": "https://core-api.cb.prod-arbm.com/v1/balances/live?account_ids=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede&page_size=100",
+                "input": "",
+                "result": "{\"balances\":[{\"id\":\"215061_912ef48e-ac13-4111-825f-35c1c6e84783\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"ACCRUED_PROFIT_PAYABLE\",\"phase\":\"POSTING_PHASE_COMMITTED\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"denomination\":\"MYR\",\"posting_instruction_batch_id\":\"912ef48e-ac13-4111-825f-35c1c6e84783\",\"update_posting_instruction_batch_id\":\"\",\"value_time\":\"2025-01-25T17:00:00Z\",\"amount\":\"0.2203\",\"total_debit\":\"1.22\",\"total_credit\":\"1.4403\"},{\"id\":\"215060_912ef48e-ac13-4111-825f-35c1c6e84783\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"INTERNAL_CONTRA\",\"phase\":\"POSTING_PHASE_COMMITTED\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"denomination\":\"MYR\",\"posting_instruction_batch_id\":\"912ef48e-ac13-4111-825f-35c1c6e84783\",\"update_posting_instruction_batch_id\":\"\",\"value_time\":\"2025-01-25T17:00:00Z\",\"amount\":\"-0.2203\",\"total_debit\":\"1.4403\",\"total_credit\":\"1.22\"},{\"id\":\"210441_\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"DEFAULT\",\"phase\":\"POSTING_PHASE_PENDING_OUTGOING\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"denomination\":\"MYR\",\"posting_instruction_batch_id\":\"\",\"update_posting_instruction_batch_id\":\"\",\"value_time\":\"1970-01-01T00:00:00Z\",\"amount\":\"0\",\"total_debit\":\"0\",\"total_credit\":\"0\"},{\"id\":\"210440_\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"DEFAULT\",\"phase\":\"POSTING_PHASE_PENDING_INCOMING\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"denomination\":\"MYR\",\"posting_instruction_batch_id\":\"\",\"update_posting_instruction_batch_id\":\"\",\"value_time\":\"1970-01-01T00:00:00Z\",\"amount\":\"0\",\"total_debit\":\"0\",\"total_credit\":\"0\"},{\"id\":\"210439_3f5c1ac0-4735-4ea7-ab10-10e174b95006\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"DEFAULT\",\"phase\":\"POSTING_PHASE_COMMITTED\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"denomination\":\"MYR\",\"posting_instruction_batch_id\":\"3f5c1ac0-4735-4ea7-ab10-10e174b95006\",\"update_posting_instruction_batch_id\":\"\",\"value_time\":\"2025-01-26T03:03:16.675299Z\",\"amount\":\"52.41\",\"total_debit\":\"2471.81\",\"total_credit\":\"2524.22\"}],\"previous_page_token\":\"\",\"next_page_token\":\"\"}",
+                "processTime": 36
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:17.123",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:17.123Z",
+            "@version": "1",
+            "message": "Added X-Auth-Token for request GET https://core-api.cb.prod-arbm.com/v1/balances/live?account_ids=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede&page_size=100",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpTmApiKeyInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.836",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.835Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#7-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5f47b4348d531921ef67ba47898",
+            "spanId": "cf47672379c6fcf7",
+            "data": {
+                "requestId": null,
+                "functionId": "KafkaConsumerService.consumeTmPostingResultFromDoAtm",
+                "input": {
+                    "message": "{\"id\":\"3f5c1ac0-4735-4ea7-ab10-10e174b95006\",\"create_request_id\":\"c6407612-8c10-4a18-bf4e-dfa45dc94d91\",\"client_id\":\"CardAsyncCreatePostingInstructionBatch\",\"client_batch_id\":\"a3255174-d4c2-414b-9170-ac24c1fff4c3\",\"posting_instructions\":[{\"id\":\"b60014ff-951d-4619-8bfa-287723614bbd\",\"client_transaction_id\":\"b1571c6d-d4a5-4290-9ad7-270f133da8bc\",\"pics\":[],\"instruction_details\":{\"PAYMENT_CATEGORY\":\"cat_debit_card_purchase\",\"PAYMENT_TYPE\":\"atm_arbm\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_number\":\"912010110341084\",\"batch_rquid\":\"\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"card_urn\":\"0031082240132355\",\"credit_or_debit\":\"debit\",\"customer_id\":\"1709793121346220\",\"func_id\":\"MYDPU\",\"mcc\":\"8011\",\"remark\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"rq_uid\":\"SWTRA 202501261103062900632452\",\"tx_type\":\"MYDEBIT PURCHASE\"},\"committed_postings\":[{\"credit\":false,\"amount\":\"45\",\"denomination\":\"MYR\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"},{\"credit\":true,\"amount\":\"45\",\"denomination\":\"MYR\",\"account_id\":\"CARD_PAYMENT_MYDEBIT_ACCOUNT\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"}],\"posting_violations\":[],\"account_violations\":[],\"restriction_violations\":[],\"contract_violations\":[],\"override\":{\"restrictions\":{\"all\":false,\"restriction_set_ids\":[]}},\"transaction_code\":null,\"outbound_authorisation\":null,\"inbound_authorisation\":null,\"authorisation_adjustment\":null,\"settlement\":null,\"release\":null,\"inbound_hard_settlement\":null,\"outbound_hard_settlement\":{\"amount\":\"45\",\"denomination\":\"MYR\",\"target_account\":{\"payment_device_token\":null,\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"},\"target_account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"advice\":false,\"internal_account_id\":\"CARD_PAYMENT_MYDEBIT_ACCOUNT\"},\"transfer\":null,\"custom_instruction\":null}],\"batch_details\":{},\"value_timestamp\":\"2025-01-26T03:03:16.675299Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"error\":null,\"insertion_timestamp\":\"2025-01-26T03:03:16.675299Z\",\"dry_run\":false}",
+                    "receivedTimeStamp": "1737860596693"
+                },
+                "result": null,
+                "processTime": 134
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.741",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.741Z",
+            "@version": "1",
+            "message": "[c6407612-8c10-4a18-bf4e-dfa45dc94d91] Received PostingInstructionBatch: {\"postingInstructionBatch\": {\"id\": \"3f5c1ac0-4735-4ea7-ab10-10e174b95006\", \"createRequestId\": \"c6407612-8c10-4a18-bf4e-dfa45dc94d91\", \"clientId\": \"CardAsyncCreatePostingInstructionBatch\", \"clientBatchId\": \"a3255174-d4c2-414b-9170-ac24c1fff4c3\", \"postingInstructions\": [{\"id\": \"b60014ff-951d-4619-8bfa-287723614bbd\", \"clientTransactionId\": \"b1571c6d-d4a5-4290-9ad7-270f133da8bc\", \"pics\": [], \"instructionDetails\": {\"account_number\": \"912010110341084\", \"card_urn\": \"0031082240132355\", \"func_id\": \"MYDPU\", \"remark\": \"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\", \"mcc\": \"8011\", \"card_id\": \"44d98475-457c-4522-98d4-4f6d87175e55\", \"PAYMENT_TYPE\": \"atm_arbm\", \"PAYMENT_CATEGORY\": \"cat_debit_card_purchase\", \"account_id\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\", \"credit_or_debit\": \"debit\", \"batch_rquid\": \"\", \"customer_id\": \"1709793121346220\", \"tx_type\": \"MYDEBIT PURCHASE\", \"rq_uid\": \"SWTRA 202501261103062900632452\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"45\", \"denomination\": \"MYR\", \"accountId\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110341084\", \"customerId\": \"1709793121346220\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": true, \"amount\": \"45\", \"denomination\": \"MYR\", \"accountId\": \"CARD_PAYMENT_MYDEBIT_ACCOUNT\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110341084\", \"customerId\": \"1709793121346220\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CARD_PAYMENT_MYDEBIT_ACCOUNT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": {\"amount\": \"45\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"CARD_PAYMENT_MYDEBIT_ACCOUNT\", \"advice\": false, \"targetAccountId\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"}, \"transfer\": null, \"glTransactionId\": \"250126xbgl9ayu\", \"glEvent\": \"MYDEBIT_PURCHASE_DEBIT\"}], \"batchDetails\": {}, \"valueTimestamp\": \"2025-01-26T03:03:16.675Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-01-26T03:03:16.675Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250126\"}, \"technicalMetadata\": {\"eventId\": \"event_3f5c1ac0-4735-4ea7-ab10-10e174b95006\", \"captureTimestamp\": \"2025-01-26T03:03:16.693Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "6795a5f45eb581bf9e2598b9b4bd14da",
+            "spanId": "ad1394771e72f0d8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.741",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.741Z",
+            "@version": "1",
+            "message": "Batch={\"postingInstructionBatch\": {\"id\": \"3f5c1ac0-4735-4ea7-ab10-10e174b95006\", \"createRequestId\": \"c6407612-8c10-4a18-bf4e-dfa45dc94d91\", \"clientId\": \"CardAsyncCreatePostingInstructionBatch\", \"clientBatchId\": \"a3255174-d4c2-414b-9170-ac24c1fff4c3\", \"postingInstructions\": [{\"id\": \"b60014ff-951d-4619-8bfa-287723614bbd\", \"clientTransactionId\": \"b1571c6d-d4a5-4290-9ad7-270f133da8bc\", \"pics\": [], \"instructionDetails\": {\"account_number\": \"912010110341084\", \"card_urn\": \"0031082240132355\", \"func_id\": \"MYDPU\", \"remark\": \"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\", \"mcc\": \"8011\", \"card_id\": \"44d98475-457c-4522-98d4-4f6d87175e55\", \"PAYMENT_TYPE\": \"atm_arbm\", \"PAYMENT_CATEGORY\": \"cat_debit_card_purchase\", \"account_id\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\", \"credit_or_debit\": \"debit\", \"batch_rquid\": \"\", \"customer_id\": \"1709793121346220\", \"tx_type\": \"MYDEBIT PURCHASE\", \"rq_uid\": \"SWTRA 202501261103062900632452\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"45\", \"denomination\": \"MYR\", \"accountId\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110341084\", \"customerId\": \"1709793121346220\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": true, \"amount\": \"45\", \"denomination\": \"MYR\", \"accountId\": \"CARD_PAYMENT_MYDEBIT_ACCOUNT\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110341084\", \"customerId\": \"1709793121346220\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CARD_PAYMENT_MYDEBIT_ACCOUNT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": {\"amount\": \"45\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"CARD_PAYMENT_MYDEBIT_ACCOUNT\", \"advice\": false, \"targetAccountId\": \"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"}, \"transfer\": null, \"glTransactionId\": \"250126xbgl9ayu\", \"glEvent\": \"MYDEBIT_PURCHASE_DEBIT\"}], \"batchDetails\": {}, \"valueTimestamp\": \"2025-01-26T03:03:16.675Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-01-26T03:03:16.675Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250126\"}, \"technicalMetadata\": {\"eventId\": \"event_3f5c1ac0-4735-4ea7-ab10-10e174b95006\", \"captureTimestamp\": \"2025-01-26T03:03:16.693Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "6795a5f45eb581bf9e2598b9b4bd14da",
+            "spanId": "ad1394771e72f0d8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.736",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.736Z",
+            "@version": "1",
+            "message": "Posting enriched, posting=PostingInstructionBatch(postingInstructionBatch=InstructionBatch(id=3f5c1ac0-4735-4ea7-ab10-10e174b95006, createRequestId=c6407612-8c10-4a18-bf4e-dfa45dc94d91, clientId=CardAsyncCreatePostingInstructionBatch, clientBatchId=a3255174-d4c2-414b-9170-ac24c1fff4c3, postingInstructions=[PostingInstructions(id=b60014ff-951d-4619-8bfa-287723614bbd, clientTransactionId=b1571c6d-d4a5-4290-9ad7-270f133da8bc, pics=[], instructionDetails=InstructionDetails(data={PAYMENT_CATEGORY=cat_debit_card_purchase, PAYMENT_TYPE=atm_arbm, account_id=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede, account_number=912010110341084, batch_rquid=, card_id=44d98475-457c-4522-98d4-4f6d87175e55, card_urn=0031082240132355, credit_or_debit=debit, customer_id=1709793121346220, func_id=MYDPU, mcc=8011, remark=26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00, rq_uid=SWTRA 202501261103062900632452, tx_type=MYDEBIT PURCHASE}), committedPostings=[CommittedPosting(credit=false, amount=45, denomination=MYR, accountId=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110341084, customerId=1709793121346220, accountType=SAVINGS_ACCOUNT, glAccount=CUSTOMER_CMSA), CommittedPosting(credit=true, amount=45, denomination=MYR, accountId=CARD_PAYMENT_MYDEBIT_ACCOUNT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110341084, customerId=1709793121346220, accountType=SAVINGS_ACCOUNT, glAccount=CARD_PAYMENT_MYDEBIT_ACCOUNT)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=null, outboundHardSettlement=OutboundHardSettlement(amount=45, denomination=MYR, targetAccount=TargetAccount(accountId=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede), accountId=null, internalAccountId=CARD_PAYMENT_MYDEBIT_ACCOUNT, advice=false, targetAccountId=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede), transfer=null, glTransactionId=250126xbgl9ayu, glEvent=MYDEBIT_PURCHASE_DEBIT)], batchDetails={}, valueTimestamp=2025-01-26T03:03:16.675299Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, insertionTimestamp=2025-01-26T03:03:16.675299Z, dryRun=false, error=null, glDate=20250126), technicalMetadata=TechnicalMetadata(eventId=event_3f5c1ac0-4735-4ea7-ab10-10e174b95006, captureTimestamp=2025-01-26T03:03:16.693738181Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=UpdateMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6795a5f4d1bc49052380de271fc69f6b",
+            "spanId": "9e61e355728ed803",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.707",
+        "kubernetes.container_name": "deposit-transfer-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.707Z",
+            "@version": "1",
+            "message": "Received event with posting instruction batch: PostingInstructionBatchCreatedEvent(postingInstructionBatch=PostingInstructionBatch(id=3f5c1ac0-4735-4ea7-ab10-10e174b95006, createRequestId=c6407612-8c10-4a18-bf4e-dfa45dc94d91, clientId=CardAsyncCreatePostingInstructionBatch, clientBatchId=a3255174-d4c2-414b-9170-ac24c1fff4c3, postingInstructions=[PostingInstruction(id=b60014ff-951d-4619-8bfa-287723614bbd, clientTransactionId=b1571c6d-d4a5-4290-9ad7-270f133da8bc, pics=[], instructionDetails={PAYMENT_CATEGORY=cat_debit_card_purchase, PAYMENT_TYPE=atm_arbm, account_id=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede, account_number=912010110341084, batch_rquid=, card_id=44d98475-457c-4522-98d4-4f6d87175e55, card_urn=0031082240132355, credit_or_debit=debit, customer_id=1709793121346220, func_id=MYDPU, mcc=8011, remark=26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00, rq_uid=SWTRA 202501261103062900632452, tx_type=MYDEBIT PURCHASE}, committedPostings=[Posting(credit=false, amount=45, denomination=MYR, accountId=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), Posting(credit=true, amount=45, denomination=MYR, accountId=CARD_PAYMENT_MYDEBIT_ACCOUNT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObj(restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=null, outboundHardSettlement=ExternalPostingInstruction(amount=45, denomination=MYR, targetAccount=Account(paymentDeviceToken=null, accountId=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede), internalAccountId=CARD_PAYMENT_MYDEBIT_ACCOUNT, advice=false), transfer=null, customInstruction=null)], batchDetails={}, valueTimestamp=2025-01-26T03:03:16.675299Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, error=null, insertionTimestamp=2025-01-26T03:03:16.675299Z, dryRun=false), technicalMetadata=TechnicalMetadata(eventId=event_3f5c1ac0-4735-4ea7-ab10-10e174b95006, timestamp=null, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=FieldMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.common.PostingEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-transfer-service",
+            "traceId": "6795a5f462bdb630cf1652457db0268c",
+            "spanId": "1d47831d2fbefad0",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.707",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.706Z",
+            "@version": "1",
+            "message": "Processing new posting, posting={\"posting_instruction_batch\":{\"id\":\"3f5c1ac0-4735-4ea7-ab10-10e174b95006\",\"create_request_id\":\"c6407612-8c10-4a18-bf4e-dfa45dc94d91\",\"client_id\":\"CardAsyncCreatePostingInstructionBatch\",\"client_batch_id\":\"a3255174-d4c2-414b-9170-ac24c1fff4c3\",\"posting_instructions\":[{\"id\":\"b60014ff-951d-4619-8bfa-287723614bbd\",\"client_transaction_id\":\"b1571c6d-d4a5-4290-9ad7-270f133da8bc\",\"pics\":[],\"instruction_details\":{\"PAYMENT_CATEGORY\":\"cat_debit_card_purchase\",\"PAYMENT_TYPE\":\"atm_arbm\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_number\":\"912010110341084\",\"batch_rquid\":\"\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"card_urn\":\"0031082240132355\",\"credit_or_debit\":\"debit\",\"customer_id\":\"1709793121346220\",\"func_id\":\"MYDPU\",\"mcc\":\"8011\",\"remark\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"rq_uid\":\"SWTRA 202501261103062900632452\",\"tx_type\":\"MYDEBIT PURCHASE\"},\"committed_postings\":[{\"credit\":false,\"amount\":\"45\",\"denomination\":\"MYR\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"},{\"credit\":true,\"amount\":\"45\",\"denomination\":\"MYR\",\"account_id\":\"CARD_PAYMENT_MYDEBIT_ACCOUNT\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"}],\"posting_violations\":[],\"account_violations\":[],\"restriction_violations\":[],\"contract_violations\":[],\"override\":{\"all\":false,\"restrictions\":{\"all\":false,\"restriction_set_ids\":[]}},\"transaction_code\":null,\"outbound_authorisation\":null,\"custom_instruction\":null,\"inbound_authorisation\":null,\"authorisation_adjustment\":null,\"settlement\":null,\"release\":null,\"inbound_hard_settlement\":null,\"outbound_hard_settlement\":{\"amount\":\"45\",\"denomination\":\"MYR\",\"target_account\":{\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"},\"account_id\":null,\"internal_account_id\":\"CARD_PAYMENT_MYDEBIT_ACCOUNT\",\"advice\":false,\"target_account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"},\"transfer\":null}],\"batch_details\":{},\"value_timestamp\":\"2025-01-26T03:03:16.675299Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"insertion_timestamp\":\"2025-01-26T03:03:16.675299Z\",\"dry_run\":false,\"error\":null},\"technical_metadata\":{\"event_id\":\"event_3f5c1ac0-4735-4ea7-ab10-10e174b95006\",\"capture_timestamp\":\"2025-01-26T03:03:16.693738181Z\",\"vault_version\":{\"major\":4,\"minor\":6,\"patch\":28,\"label\":\"\"},\"context\":{}},\"update_mask\":{\"paths\":[\"posting_instruction_batch\",\"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6795a5f4d1bc49052380de271fc69f6b",
+            "spanId": "9e61e355728ed803",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.626",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.574Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": "SWTRA 202501261103062900632452",
+                "functionId": "https://core-api.cb.prod-arbm.com/v1/posting-instruction-batches:asyncCreate",
+                "input": "{\"request_id\":\"c6407612-8c10-4a18-bf4e-dfa45dc94d91\",\"posting_instruction_batch\":{\"client_id\":\"CardAsyncCreatePostingInstructionBatch\",\"client_batch_id\":\"a3255174-d4c2-414b-9170-ac24c1fff4c3\",\"posting_instructions\":[{\"client_transaction_id\":\"b1571c6d-d4a5-4290-9ad7-270f133da8bc\",\"instruction_details\":{\"rq_uid\":\"SWTRA 202501261103062900632452\",\"func_id\":\"MYDPU\",\"remark\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"customer_id\":\"1709793121346220\",\"account_number\":\"912010110341084\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"card_urn\":\"0031082240132355\",\"mcc\":\"8011\",\"batch_rquid\":\"\",\"credit_or_debit\":\"debit\",\"PAYMENT_TYPE\":\"atm_arbm\",\"tx_type\":\"MYDEBIT PURCHASE\",\"PAYMENT_CATEGORY\":\"cat_debit_card_purchase\"},\"outbound_hard_settlement\":{\"amount\":\"45.0\",\"denomination\":\"MYR\",\"target_account\":{\"payment_device_token\":\"0110341084\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"},\"internal_account_id\":\"CARD_PAYMENT_MYDEBIT_ACCOUNT\"}}]}}",
+                "result": "{\"id\":\"69762179-af54-467d-9a7b-94ae43aabbdb\",\"metadata\":null,\"create_timestamp\":\"2025-01-26T03:03:16.556245Z\",\"done_timestamp\":null,\"done\":false}",
+                "processTime": 107
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.626",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.574Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": null,
+                "functionId": "VaultService.publishTmPostingRequest",
+                "input": {
+                    "postingRequest": "{\"request_id\":\"c6407612-8c10-4a18-bf4e-dfa45dc94d91\",\"api_type\":null,\"posting_instruction_batch\":{\"id\":null,\"create_request_id\":null,\"client_id\":\"CardAsyncCreatePostingInstructionBatch\",\"client_batch_id\":\"a3255174-d4c2-414b-9170-ac24c1fff4c3\",\"posting_instructions\":[{\"id\":null,\"client_transaction_id\":\"b1571c6d-d4a5-4290-9ad7-270f133da8bc\",\"pics\":null,\"instruction_details\":{\"rq_uid\":\"SWTRA 202501261103062900632452\",\"func_id\":\"MYDPU\",\"remark\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"customer_id\":\"1709793121346220\",\"account_number\":\"912010110341084\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"card_urn\":\"0031082240132355\",\"mcc\":\"8011\",\"batch_rquid\":\"\",\"credit_or_debit\":\"debit\",\"PAYMENT_TYPE\":\"atm_arbm\",\"tx_type\":\"MYDEBIT PURCHASE\",\"PAYMENT_CATEGORY\":\"cat_debit_card_purchase\"},\"committed_postings\":null,\"posting_violations\":null,\"account_violations\":null,\"restriction_violations\":null,\"contract_violations\":null,\"override\":null,\"transaction_code\":null,\"outbound_authorisation\":null,\"inbound_authorisation\":null,\"authorisation_adjustment\":null,\"settlement\":null,\"release\":null,\"inbound_hard_settlement\":null,\"outbound_hard_settlement\":{\"amount\":\"45.0\",\"denomination\":\"MYR\",\"target_account\":{\"payment_device_token\":\"0110341084\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\"},\"target_account_id\":null,\"advice\":null,\"internal_account_id\":\"CARD_PAYMENT_MYDEBIT_ACCOUNT\"},\"transfer\":null,\"custom_instruction\":null}],\"batch_details\":null,\"value_timestamp\":null,\"status\":null,\"error\":null,\"insertion_timestamp\":null,\"dry_run\":null}}",
+                    "partitionKey": "\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\""
+                },
+                "result": null,
+                "processTime": 107
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.467",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.467Z",
+            "@version": "1",
+            "message": "Posting requestId=c6407612-8c10-4a18-bf4e-dfa45dc94d91 to TM successfully.",
+            "logger_name": "com.arbm.digibank.service.tm.processor.TmPostingProcessTemplate",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.467",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.467Z",
+            "@version": "1",
+            "message": "Added X-Auth-Token for request POST https://core-api.cb.prod-arbm.com/v1/posting-instruction-batches:asyncCreate",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpTmApiKeyInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.466",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.466Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "data": {
+                "requestId": "SWTRA 202501261103062900632452",
+                "functionId": "http://card-monitoring-service.card-monitoring-service.svc.cluster.local:8080/v1/card/transaction",
+                "input": "{\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"lifecycle_id\":\"SWTRA 202501261103062900632452\",\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX1199\",\"card_bin\":\"432134\",\"ttc\":\"00\",\"currency_code\":\"458\",\"amount\":45.0,\"cardholder_bill_amount\":45.0,\"pos_card_read_method\":\"0007\",\"mcc\":\"8011\",\"action_code\":\"\",\"acceptor_id\":\"CARD ACCEPTOR  SENMU\",\"account_number\":\"912010110341084\",\"customer_id\":\"1709793121346220\",\"event_occurred_at\":1737860586290,\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"currency_unit\":2,\"acceptor_name\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptor_country_code\":\"458\",\"acceptor_zip\":\"KUL\",\"event_external_id\":\"\",\"card_expiration_date\":\"2904\",\"cvv_val_code\":\"X\",\"card_type\":\"DEBIT\",\"card_brand\":\"MYD\",\"card_presence_flag\":\"Y\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_id\":\"51025343\",\"card_category\":\"physical\",\"cardholder_bill_currency_code\":\"458\",\"recurring_payment\":\"00\",\"secure_3d_val_status\":\"\",\"terminal_zip\":\"\"}",
+                "result": "{\"code\":400,\"message\":\"Feedzai Service API: General error\"}",
+                "processTime": 10064
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.466",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.466Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "data": {
+                "requestId": "\"SWTRA 202501261103062900632452\"",
+                "functionId": "CardMonitoringService.checkFraml",
+                "input": {
+                    "requestId": "\"SWTRA 202501261103062900632452\"",
+                    "request": "{\"cicId\":\"1709793121346220\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110341084\",\"accountRelationType\":\"700\",\"amount\":45.0,\"startDate\":\"20250126\",\"rrn\":\"502603008295\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX1199\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":4500,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":4500.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTRA 202501261103062900632452\",\"posReadMethod\":\"0007\",\"mcc\":\"8011\",\"acceptorId\":\"CARD ACCEPTOR  SENMU\",\"acceptorName\":\"PUBLIC BANK BERHAD    K. TERENGGANU   MY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250126110306290\",\"posCond\":\"00\",\"terminalId\":\"51025343\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"26/01/2025 11:03:06 MYDEBIT PURCHASE 502603008295 PUBLIC BANK BER MYR 45.00\",\"feeAmount\":0.0,\"functionId\":\"MYDPU\",\"denomination\":\"MYR\"}",
+                    "savingAccount": "{\"accountId\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"accountNumber\":\"912010110341084\",\"customerId\":\"1709793121346220\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"openingTimestamp\":\"2024-03-08T02:04:40.625378Z\",\"blockDetails\":null}",
+                    "cardId": "\"44d98475-457c-4522-98d4-4f6d87175e55\""
+                },
+                "result": null,
+                "processTime": 10066
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:16.466",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:16.466Z",
+            "@version": "1",
+            "message": "Start posting TM for requestId=SWTRA 202501261103062900632452",
+            "logger_name": "com.arbm.digibank.service.tm.processor.TmPostingProcessTemplate",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.449",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.449Z",
+            "@version": "1",
+            "message": "FEEDZAI: 5.2 transfer request body {\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX1199\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":4500,\"cardholder_bill_amount\":4500,\"lifecycle_id\":\"SWTRA 202501261103062900632452\",\"pos_card_read_method\":\"0000\",\"mcc\":\"8011\",\"action_code\":\"\",\"acceptor_id\":\"CARD ACCEPTOR  SENMU\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1737860586290,\"card_bin\":\"432134\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_iban\":\"912010110341084\",\"customer_id\":\"1709793121346220\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"51025343\",\"acceptor_name\":\"PUBLIC BANK BERHAD\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"K. TERENGGANU\",\"acceptor_region\":\"   \",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"d83a7f0c-cdf0-4ce3-911f-da4937465055\",\"cvv_val_code\":\"X\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"MYD\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false}",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "6795a5eaaca4f2415603ec9b71f41a25",
+            "spanId": "5603ec9b71f41a25",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.449",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.449Z",
+            "@version": "1",
+            "message": "FEEDZAI: 6 print httpEntity: <{\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX1199\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":4500,\"cardholder_bill_amount\":4500,\"lifecycle_id\":\"SWTRA 202501261103062900632452\",\"pos_card_read_method\":\"0000\",\"mcc\":\"8011\",\"action_code\":\"\",\"acceptor_id\":\"CARD ACCEPTOR  SENMU\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1737860586290,\"card_bin\":\"432134\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_iban\":\"912010110341084\",\"customer_id\":\"1709793121346220\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"51025343\",\"acceptor_name\":\"PUBLIC BANK BERHAD\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"K. TERENGGANU\",\"acceptor_region\":\"   \",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"d83a7f0c-cdf0-4ce3-911f-da4937465055\",\"cvv_val_code\":\"X\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"MYD\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false},[user-agent:\"ReactorNetty/1.0.24\", accept:\"application/json\", content-type:\"application/json\", content-length:\"1031\", x-forwarded-proto:\"http\", x-request-id:\"2ae3cdfb-f76c-990c-8f6b-8d29e0239ade\", x-envoy-expected-rq-timeout-ms:\"200000\", Authorization:\"Bearer eyJ0eXAiOiJKV1QiLCJraWQiOiI2MWEzOTAxZC05NDdhLTQ0MjYtYjIzMy01NjE3NDFmNTE1ODIiLCJhbGciOiJSUzUxMiJ9.eyJleHAiOjE3NDA0NTI1ODYsIm5iZiI6MTczNzg2MDU4NiwiaXNzIjoiYXJibSIsInN1YiI6ImFyYm0iLCJqdGkiOiI2NmNjNzZkOC00MzExLTQ1MTMtYWYyMC03YjEzNGFiYTA5NzgifQ.a6I3T1-I7RVwaQBxpyAenkdGKapzNaCbxIVfq3nDo3pcD2Jv1aSnucp6kfmePXRY-XSZ2hKo-qn9PvMUTrGd_QJdrorXwdfmJcymoIAOQVvDBHeNFc75WfhmErEezIhApdL_cc0Ol1cXakRHIq9VXwA8zPFNaJvhrxs6S2MbSXU2pVCzSzm4M3yW0ghSC8-z7Qgle2VFrjHmSw0eI-92n6Pgqfnv32DCWmQ8yN6ZF4LR26JjBKPQuq1bR9aJArAZD5SguwoJRbPCScsqIpG26zCpbkZ5rUWkTk4Nj-4g_C02HAwEKdGKkSR-PDKk5oI-ULE2YKvdqW5TUEWBcw_cKsINLD5uUuhVCR0yC8DEhF1MZnvk7xCUpBL0Wd0cnQF3zy7Q1mKLw0k4OTK-edPofS_NIAUuzRzBqmXnPbXgDc-NISWUhisBUKiDfssiyCN_ps7LEJ8RaAR338_qm8mXthfXMBhbU_EbTvJLOaT9c-L5-XRkysIQ9LFzaFAn9JcJauEYm3MnPoXvwHgzgOVxxJlftIstPrAiOQGKGwRrsVbIBoKrvjbntvJKqpilbBH-_aY2U-P6d347SJQiXUGt3eCJ1CKIZPrHFw7X5U7aHYldZjSP-vpky37gWJL2ZwdyKVfNWmHmlT7leL-Jsw7GqC4IG2l4X9FKSgH9ligOREA\"]>, uri: https://alrajhi-private.feedzai.com/api/transactions/authorization, method: POST",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "6795a5eaaca4f2415603ec9b71f41a25",
+            "spanId": "5603ec9b71f41a25",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.421",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.421Z",
+            "@version": "1",
+            "message": "FEEDZAI: 0.1 Initial Crr header: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@2044ab7e , request: SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3d880475], method: POST ,body: {\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX1199\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":4500,\"cardholder_bill_amount\":4500,\"lifecycle_id\":\"SWTRA 202501261103062900632452\",\"pos_card_read_method\":\"0000\",\"mcc\":\"8011\",\"action_code\":\"\",\"acceptor_id\":\"CARD ACCEPTOR  SENMU\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1737860586290,\"card_bin\":\"432134\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_iban\":\"912010110341084\",\"customer_id\":\"1709793121346220\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"51025343\",\"acceptor_name\":\"PUBLIC BANK BERHAD\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"K. TERENGGANU\",\"acceptor_region\":\"   \",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"d83a7f0c-cdf0-4ce3-911f-da4937465055\",\"cvv_val_code\":\"X\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"MYD\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false}",
+            "logger_name": "com.arbm.digibank.controller.GatewayController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "6795a5eaaca4f2415603ec9b71f41a25",
+            "spanId": "5603ec9b71f41a25",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.419",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.419Z",
+            "@version": "1",
+            "message": "Post Card Authorization information: {\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX1199\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":4500,\"cardholder_bill_amount\":4500,\"lifecycle_id\":\"SWTRA 202501261103062900632452\",\"pos_card_read_method\":\"0000\",\"mcc\":\"8011\",\"action_code\":\"\",\"acceptor_id\":\"CARD ACCEPTOR  SENMU\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1737860586290,\"card_bin\":\"432134\",\"account_id\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"account_iban\":\"912010110341084\",\"customer_id\":\"1709793121346220\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"51025343\",\"acceptor_name\":\"PUBLIC BANK BERHAD\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"K. TERENGGANU\",\"acceptor_region\":\"   \",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"d83a7f0c-cdf0-4ce3-911f-da4937465055\",\"cvv_val_code\":\"X\",\"card_id\":\"44d98475-457c-4522-98d4-4f6d87175e55\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"MYD\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false}",
+            "logger_name": "com.arbm.digibank.service.client.FeedzaiClientService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "6795a5ea644a407a7d85c0c0cde47b1d",
+            "spanId": "7d85c0c0cde47b1d",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.408",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.408Z",
+            "@version": "1",
+            "message": "<<<<< Start Monitoring transaction for card CardTransactionRequestV1(lifecycleId=SWTRA 202501261103062900632452, accountId=d47b1a02-bb52-4cc5-82ae-c8fce8e7bede, mti=0200, cardPan=4321XXXXXXXX1199, cardBin=432134, ttc=00, currencyCode=458, amount=45.0, cardholderBillAmount=45.0, posCardReadMethod=0007, mcc=8011, actionCode=, acceptorId=CARD ACCEPTOR  SENMU, accountNumber=912010110341084, customerId=1709793121346220, eventOccurredAt=1737860586290, cardId=44d98475-457c-4522-98d4-4f6d87175e55, currencyUnit=2, acceptorName=PUBLIC BANK BERHAD    K. TERENGGANU   MY, acceptorCountryCode=458, acceptorZip=KUL, eventExternalId=, cardExpirationDate=2904, cvvValCode=X, cardType=DEBIT, cardBrand=MYD, cardPresenceFlag=Y, cardCountryCode=MY, accountType=savings, terminalCity=null, terminalId=51025343, terminalCountryCode=null, cardCategory=physical, cardholderBillCurrencyCode=458, recurringPayment=00, secure3dValStatus=, terminalZip=)",
+            "logger_name": "com.arbm.digibank.controller.CardMonitoringController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "6795a5ea644a407a7d85c0c0cde47b1d",
+            "spanId": "7d85c0c0cde47b1d",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.390",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.39Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452",
+            "data": {
+                "requestId": "SWTRA 202501261103062900632452",
+                "functionId": "http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/saving-accounts?account_number=912010110341084",
+                "input": "",
+                "result": "{\"accountId\":\"d47b1a02-bb52-4cc5-82ae-c8fce8e7bede\",\"accountNumber\":\"912010110341084\",\"customerId\":\"1709793121346220\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"openingTimestamp\":\"2024-03-08T02:04:40.625378Z\",\"activationTimestamp\":\"2024-03-18T02:31:59.947Z\",\"blockDetails\":null}",
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.390",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.39Z",
+            "@version": "1",
+            "message": "Found account with number=912010110341084, start checking account status",
+            "logger_name": "com.arbm.digibank.helper.TmPostingHelper",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.382",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.381Z",
+            "@version": "1",
+            "message": "Received request DEBIT with id=SWTRA 202501261103062900632452",
+            "logger_name": "com.arbm.digibank.controller.PurchasingController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.382",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.382Z",
+            "@version": "1",
+            "message": "Received request MYDEBIT PURCHASE with id=SWTRA 202501261103062900632452",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.382",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.382Z",
+            "@version": "1",
+            "message": "start doAtmDebitCreditSuspended",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.382",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.382Z",
+            "@version": "1",
+            "message": "Start finding account with number=912010110341084",
+            "logger_name": "com.arbm.digibank.helper.TmPostingHelper",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5eacd7d7ccb2e74cb5d90375b86",
+            "spanId": "2e74cb5d90375b86",
+            "RequestId": "SWTRA 202501261103062900632452"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.372",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.372Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTRA 202501261103062900632452",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.372",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.372Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTRA 202501261103062900632452\nContent-Type: application/json\nAccept: application/json\n",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.372",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.372Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTRA 202501261103062900632452\nContent-Type: application/json\nAccept: application/json\n and Body okhttp3.RequestBody$Companion$toRequestBody$2@77119430",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    },
+    {
+        "@timestamp": "2025-01-26 03:03:06.370",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-01-26T03:03:06.37Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTRA 202501261103062900632452",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6795a5ea5c0bf9b03f5b52107f0de733",
+            "spanId": "5a3edd61643b31f1"
+        }
+    }
+]

@@ -1,0 +1,862 @@
+[
+    {
+        "@timestamp": "2025-02-02 21:51:30.662",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:30.662Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Node 4 disconnected.",
+            "logger_name": "org.apache.kafka.clients.NetworkClient",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:27.660",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:27.66Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Node 2 disconnected.",
+            "logger_name": "org.apache.kafka.clients.NetworkClient",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.657",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.657Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Node 6 disconnected.",
+            "logger_name": "org.apache.kafka.clients.NetworkClient",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.656Z",
+            "@version": "1",
+            "message": "Error occurred while not processing records",
+            "logger_name": "org.springframework.kafka.listener.CommonLoggingErrorHandler",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.apache.kafka.clients.consumer.CommitFailedException: Offset commit cannot be completed since the consumer is not part of an active group for auto partition assignment; it is likely that the consumer was kicked out of the group.\n\tat org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.sendOffsetCommitRequest(ConsumerCoordinator.java:1180)\n\tat org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.commitOffsetsSync(ConsumerCoordinator.java:1045)\n\tat org.apache.kafka.clients.consumer.KafkaConsumer.commitSync(KafkaConsumer.java:1492)\n\tat brave.kafka.clients.TracingConsumer.commitSync(TracingConsumer.java:189)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doCommitSync(KafkaMessageListenerContainer.java:3064)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.commitSync(KafkaMessageListenerContainer.java:3059)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.commitIfNecessary(KafkaMessageListenerContainer.java:3045)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.processCommits(KafkaMessageListenerContainer.java:2837)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1331)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.656Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Giving away all assigned partitions as lost since generation has been reset,indicating that consumer is no longer part of the group",
+            "logger_name": "org.apache.kafka.clients.consumer.internals.ConsumerCoordinator",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.656Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Lost previously assigned partitions vault.core_api.v1.plans.plan_update.events-8, vault.core_api.v1.plans.plan_update.events-7, vault.core_api.v1.plans.plan_update.events-6, vault.core_api.v1.plans.plan_update.events-5, vault.core_api.v1.plans.plan_update.events-4, vault.core_api.v1.plans.plan_update.events-3, vault.core_api.v1.plans.plan_update.events-2, vault.core_api.v1.plans.plan_update.events-1, vault.core_api.v1.plans.plan_update.events-0, vault.core_api.v1.plans.plan_update.events-9",
+            "logger_name": "org.apache.kafka.clients.consumer.internals.ConsumerCoordinator",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.656Z",
+            "@version": "1",
+            "message": "deposit_portfolio_service_prod: partitions lost: [vault.core_api.v1.plans.plan_update.events-8, vault.core_api.v1.plans.plan_update.events-7, vault.core_api.v1.plans.plan_update.events-6, vault.core_api.v1.plans.plan_update.events-5, vault.core_api.v1.plans.plan_update.events-4, vault.core_api.v1.plans.plan_update.events-3, vault.core_api.v1.plans.plan_update.events-2, vault.core_api.v1.plans.plan_update.events-1, vault.core_api.v1.plans.plan_update.events-0, vault.core_api.v1.plans.plan_update.events-9]",
+            "logger_name": "org.springframework.kafka.listener.KafkaMessageListenerContainer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.656Z",
+            "@version": "1",
+            "message": "deposit_portfolio_service_prod: partitions revoked: [vault.core_api.v1.plans.plan_update.events-8, vault.core_api.v1.plans.plan_update.events-7, vault.core_api.v1.plans.plan_update.events-6, vault.core_api.v1.plans.plan_update.events-5, vault.core_api.v1.plans.plan_update.events-4, vault.core_api.v1.plans.plan_update.events-3, vault.core_api.v1.plans.plan_update.events-2, vault.core_api.v1.plans.plan_update.events-1, vault.core_api.v1.plans.plan_update.events-0, vault.core_api.v1.plans.plan_update.events-9]",
+            "logger_name": "org.springframework.kafka.listener.KafkaMessageListenerContainer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.656Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] (Re-)joining group",
+            "logger_name": "org.apache.kafka.clients.consumer.internals.ConsumerCoordinator",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.655",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.655Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Failing OffsetCommit request since the consumer is not part of an active group",
+            "logger_name": "org.apache.kafka.clients.consumer.internals.ConsumerCoordinator",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.655",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.655Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Node 5 disconnected.",
+            "logger_name": "org.apache.kafka.clients.NetworkClient",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.654",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.654Z",
+            "@version": "1",
+            "message": "Produced {\"portfolioId\": \"cd406be2-0d54-4a92-b907-407a342d3d5d\", \"accountId\": \"2f35d889-8cb6-4452-a469-f0ee1607ffee\"}",
+            "logger_name": "com.arbm.digibank.service.PortfolioService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "spanId": "0a2518642bc42824",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.651",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.651Z",
+            "@version": "1",
+            "message": "Portfolio link: 817e1978-c113-4b38-afa8-ce5ad168f9ad set to status ACTIVE",
+            "logger_name": "com.arbm.digibank.model.PortfolioLink",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "0a2518642bc42824",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.649",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.649Z",
+            "@version": "1",
+            "message": "Produced {\"portfolioId\": \"cd406be2-0d54-4a92-b907-407a342d3d5d\", \"accountId\": \"d63f8443-039e-4eb0-af9d-c1031bcdc52c\"}",
+            "logger_name": "com.arbm.digibank.service.PortfolioService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "spanId": "10f83fb54d01721b",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.649",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.649Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=830c1e59-4833-49b2-be09-d75312045b9d_2, timestamp=2025-02-02T18:18:36.139083Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=a388b1d6-8397-45df-8080-cbdc6e89369e, planId=cd406be2-0d54-4a92-b907-407a342d3d5d, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:18:35.883539Z, lastStatusUpdateTimestamp=2025-02-02T18:18:36.139083Z, failureReason=, associateAccountUpdate=Account(accountId=2f35d889-8cb6-4452-a469-f0ee1607ffee), disassociateAccountUpdate=null, activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "0a2518642bc42824",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.646",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.646Z",
+            "@version": "1",
+            "message": "Portfolio link: 6d5ce2ee-872a-48c1-b336-739a2a4cc1c5 set to status ACTIVE",
+            "logger_name": "com.arbm.digibank.model.PortfolioLink",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "10f83fb54d01721b",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.643",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.643Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=4f401652-943b-438f-a775-699d2e11dd08_2, timestamp=2025-02-02T18:18:36.139083Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=c7608eb8-9b05-49d5-ae25-a385b219b249, planId=cd406be2-0d54-4a92-b907-407a342d3d5d, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:18:35.845415Z, lastStatusUpdateTimestamp=2025-02-02T18:18:36.139083Z, failureReason=, associateAccountUpdate=Account(accountId=d63f8443-039e-4eb0-af9d-c1031bcdc52c), disassociateAccountUpdate=null, activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "10f83fb54d01721b",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.642",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.642Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=830c1e59-4833-49b2-be09-d75312045b9d, timestamp=2025-02-02T18:18:35.883539Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, planUpdateUpdated=null, planUpdateCreated=PlanUpdateCreatedEvent(planUpdate=PlanUpdate(id=a388b1d6-8397-45df-8080-cbdc6e89369e, planId=cd406be2-0d54-4a92-b907-407a342d3d5d, jobId=, status=PLAN_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-02T18:18:35.883539Z, lastStatusUpdateTimestamp=2025-02-02T18:18:35.883539Z, failureReason=, associateAccountUpdate=Account(accountId=2f35d889-8cb6-4452-a469-f0ee1607ffee), disassociateAccountUpdate=null, activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null)))",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "d0929220ed7ffa70",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.640",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.64Z",
+            "@version": "1",
+            "message": "Error occured while processing: vault.core_api.v1.plans.plan_update.events-9@43503",
+            "logger_name": "org.springframework.kafka.listener.CommonLoggingErrorHandler",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed; nested exception is org.springframework.kafka.KafkaException: Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43503\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2723)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2689)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.KafkaException: Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43503\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.verifySendResult(DeadLetterPublishingRecoverer.java:676)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.publish(DeadLetterPublishingRecoverer.java:659)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.send(DeadLetterPublishingRecoverer.java:555)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.sendOrThrow(DeadLetterPublishingRecoverer.java:520)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.accept(DeadLetterPublishingRecoverer.java:492)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:38)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:32)\n\tat com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration.vaultKafkaListenerContainerFactory$lambda$1$lambda$0(VaultKafkaConsumerConfiguration.kt:65)\n\tat org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:539)\n\tat org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:387)\n\tat org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:119)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:42)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$FastClassBySpringCGLIB$$a98718f8.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$EnhancerBySpringCGLIB$$ab76c214.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\t... 11 common frames omitted\n",
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.640",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.64Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=4f401652-943b-438f-a775-699d2e11dd08, timestamp=2025-02-02T18:18:35.845415Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, planUpdateUpdated=null, planUpdateCreated=PlanUpdateCreatedEvent(planUpdate=PlanUpdate(id=c7608eb8-9b05-49d5-ae25-a385b219b249, planId=cd406be2-0d54-4a92-b907-407a342d3d5d, jobId=, status=PLAN_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-02T18:18:35.845415Z, lastStatusUpdateTimestamp=2025-02-02T18:18:35.845415Z, failureReason=, associateAccountUpdate=Account(accountId=d63f8443-039e-4eb0-af9d-c1031bcdc52c), disassociateAccountUpdate=null, activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null)))",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "fddfef8f7f3e3991",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.639",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.639Z",
+            "@version": "1",
+            "message": "Exception thrown when sending a message with key='f3434157-4fd8-4432-8c8a-62a48e7f4cc5' and payload='{\"event_id\":\"9d33b08a-aaee-4920-a4d8-9932a997afa8_2\",\"timestamp\":\"2025-02-02T18:18:32.587536Z\",\"vaul...' to topic vault.core_api.v1.plans.plan_update.events.DLT and partition 9:",
+            "logger_name": "org.springframework.kafka.support.LoggingProducerListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n",
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:51:24.639",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:51:24.639Z",
+            "@version": "1",
+            "message": "Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43503",
+            "logger_name": "org.springframework.kafka.listener.DeadLetterPublishingRecoverer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Send failed; nested exception is org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n\tat org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:666)\n\tat org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:429)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.publish(DeadLetterPublishingRecoverer.java:647)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.send(DeadLetterPublishingRecoverer.java:555)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.sendOrThrow(DeadLetterPublishingRecoverer.java:520)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.accept(DeadLetterPublishingRecoverer.java:492)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:38)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:32)\n\tat com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration.vaultKafkaListenerContainerFactory$lambda$1$lambda$0(VaultKafkaConsumerConfiguration.kt:65)\n\tat org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:539)\n\tat org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:387)\n\tat org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:119)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:42)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$FastClassBySpringCGLIB$$a98718f8.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$EnhancerBySpringCGLIB$$ab76c214.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n",
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:50:24.638",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:50:24.637Z",
+            "@version": "1",
+            "message": "Exceeded retry attempts: 3\nwith cause: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.processor.PlanUpdateEventProcessor.consumeVaultPlanUpdateEvent(com.arbm.digibank.tm.model.coreapi.plan.update.PlanUpdateEvent)' threw exception; nested exception is com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED\nSending failed message to DLT",
+            "logger_name": "com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:50:24.637",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:50:24.637Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:50:24.633",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:50:24.633Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=9d33b08a-aaee-4920-a4d8-9932a997afa8_2, timestamp=2025-02-02T18:18:32.587536Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=f3434157-4fd8-4432-8c8a-62a48e7f4cc5, planId=cd406be2-0d54-4a92-b907-407a342d3d5d, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:18:32.237102Z, lastStatusUpdateTimestamp=2025-02-02T18:18:32.587536Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=a3187982-d293-1659-9590-4babf9c3f53b), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:50:18.632",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:50:18.632Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:50:18.628",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:50:18.628Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=9d33b08a-aaee-4920-a4d8-9932a997afa8_2, timestamp=2025-02-02T18:18:32.587536Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=f3434157-4fd8-4432-8c8a-62a48e7f4cc5, planId=cd406be2-0d54-4a92-b907-407a342d3d5d, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:18:32.237102Z, lastStatusUpdateTimestamp=2025-02-02T18:18:32.587536Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=a3187982-d293-1659-9590-4babf9c3f53b), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "caa0355ebe48b239",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:14.661",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:14.66Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:14.661",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:14.661Z",
+            "@version": "1",
+            "message": "Exceeded retry attempts: 3\nwith cause: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.processor.PlanUpdateEventProcessor.consumeVaultPlanUpdateEvent(com.arbm.digibank.tm.model.coreapi.plan.update.PlanUpdateEvent)' threw exception; nested exception is com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED\nSending failed message to DLT",
+            "logger_name": "com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:14.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:14.656Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=f70889b8-a50c-48f6-a53e-e1e1d4729657_2, timestamp=2025-02-02T18:15:17.927629Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=b191e42c-ee17-495d-b334-483d511a1fe4, planId=0d98c140-0c31-4a2a-886d-88b874a368b9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:15:17.602876Z, lastStatusUpdateTimestamp=2025-02-02T18:15:17.927629Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=ab3e5f55-1184-ff6c-f6ff-333857d589f7), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:08.656",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:08.655Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:08.648",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:08.647Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=f70889b8-a50c-48f6-a53e-e1e1d4729657_2, timestamp=2025-02-02T18:15:17.927629Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=b191e42c-ee17-495d-b334-483d511a1fe4, planId=0d98c140-0c31-4a2a-886d-88b874a368b9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:15:17.602876Z, lastStatusUpdateTimestamp=2025-02-02T18:15:17.927629Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=ab3e5f55-1184-ff6c-f6ff-333857d589f7), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.647",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.647Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.644",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.644Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=f70889b8-a50c-48f6-a53e-e1e1d4729657_2, timestamp=2025-02-02T18:15:17.927629Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=b191e42c-ee17-495d-b334-483d511a1fe4, planId=0d98c140-0c31-4a2a-886d-88b874a368b9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:15:17.602876Z, lastStatusUpdateTimestamp=2025-02-02T18:15:17.927629Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=ab3e5f55-1184-ff6c-f6ff-333857d589f7), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "12b8031d1f0c2b2d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.643",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.643Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=f70889b8-a50c-48f6-a53e-e1e1d4729657, timestamp=2025-02-02T18:15:17.602876Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, planUpdateUpdated=null, planUpdateCreated=PlanUpdateCreatedEvent(planUpdate=PlanUpdate(id=b191e42c-ee17-495d-b334-483d511a1fe4, planId=0d98c140-0c31-4a2a-886d-88b874a368b9, jobId=, status=PLAN_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-02T18:15:17.602876Z, lastStatusUpdateTimestamp=2025-02-02T18:15:17.602876Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=ab3e5f55-1184-ff6c-f6ff-333857d589f7), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null)))",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "898313da6bd672ac",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.642",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.642Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=889f0f60-d910-4e92-9221-a1d6c880885f_2, timestamp=2025-02-02T18:12:01.317155Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=6fc8622c-0522-4dc3-b0fd-c7faca26a8f3, planId=04d26069-20e6-40d6-8bbb-8768db6f20a9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:12:00.880962Z, lastStatusUpdateTimestamp=2025-02-02T18:12:01.317155Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=null, activationUpdate=null, supervisorContractVersionUpdate={supervisor_contract_version_id=ce9d0668-71eb-46eb-ab78-134be040b9f8, schedule_migration_type=SCHEDULE_MIGRATION_TYPE_PRESERVE_SCHEDULES_IF_NO_GROUP_CHANGES}, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "0af5c196814aa41b",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.640",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.639Z",
+            "@version": "1",
+            "message": "Error occured while processing: vault.core_api.v1.plans.plan_update.events-9@43495",
+            "logger_name": "org.springframework.kafka.listener.CommonLoggingErrorHandler",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed; nested exception is org.springframework.kafka.KafkaException: Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43495\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2723)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2689)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.KafkaException: Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43495\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.verifySendResult(DeadLetterPublishingRecoverer.java:676)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.publish(DeadLetterPublishingRecoverer.java:659)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.send(DeadLetterPublishingRecoverer.java:555)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.sendOrThrow(DeadLetterPublishingRecoverer.java:520)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.accept(DeadLetterPublishingRecoverer.java:492)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:38)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:32)\n\tat com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration.vaultKafkaListenerContainerFactory$lambda$1$lambda$0(VaultKafkaConsumerConfiguration.kt:65)\n\tat org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:539)\n\tat org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:387)\n\tat org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:119)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:42)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$FastClassBySpringCGLIB$$a98718f8.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$EnhancerBySpringCGLIB$$ab76c214.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\t... 11 common frames omitted\n",
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.640",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.64Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=889f0f60-d910-4e92-9221-a1d6c880885f, timestamp=2025-02-02T18:12:00.880962Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=0, planUpdateUpdated=null, planUpdateCreated=PlanUpdateCreatedEvent(planUpdate=PlanUpdate(id=6fc8622c-0522-4dc3-b0fd-c7faca26a8f3, planId=04d26069-20e6-40d6-8bbb-8768db6f20a9, jobId=, status=PLAN_UPDATE_STATUS_PENDING_EXECUTION, createTimestamp=2025-02-02T18:12:00.880962Z, lastStatusUpdateTimestamp=2025-02-02T18:12:00.880962Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=null, activationUpdate=null, supervisorContractVersionUpdate={supervisor_contract_version_id=ce9d0668-71eb-46eb-ab78-134be040b9f8, schedule_migration_type=SCHEDULE_MIGRATION_TYPE_PRESERVE_SCHEDULES_IF_NO_GROUP_CHANGES}, closureUpdate=null)))",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "07358c33005ffd42",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.639",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.639Z",
+            "@version": "1",
+            "message": "Exception thrown when sending a message with key='cec1527d-c63d-4dec-9848-789f29b87d85' and payload='{\"event_id\":\"3da00001-379f-4e93-9e01-d1b7fd676102_2\",\"timestamp\":\"2025-02-02T18:12:00.307645Z\",\"vaul...' to topic vault.core_api.v1.plans.plan_update.events.DLT and partition 9:",
+            "logger_name": "org.springframework.kafka.support.LoggingProducerListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n",
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:49:05.639",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:49:05.639Z",
+            "@version": "1",
+            "message": "Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43495",
+            "logger_name": "org.springframework.kafka.listener.DeadLetterPublishingRecoverer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Send failed; nested exception is org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n\tat org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:666)\n\tat org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:429)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.publish(DeadLetterPublishingRecoverer.java:647)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.send(DeadLetterPublishingRecoverer.java:555)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.sendOrThrow(DeadLetterPublishingRecoverer.java:520)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.accept(DeadLetterPublishingRecoverer.java:492)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:38)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:32)\n\tat com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration.vaultKafkaListenerContainerFactory$lambda$1$lambda$0(VaultKafkaConsumerConfiguration.kt:65)\n\tat org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:539)\n\tat org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:387)\n\tat org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:119)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:42)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$FastClassBySpringCGLIB$$a98718f8.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$EnhancerBySpringCGLIB$$ab76c214.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n",
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:48:05.638",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:48:05.637Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:48:05.638",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:48:05.638Z",
+            "@version": "1",
+            "message": "Exceeded retry attempts: 3\nwith cause: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'public void com.arbm.digibank.processor.PlanUpdateEventProcessor.consumeVaultPlanUpdateEvent(com.arbm.digibank.tm.model.coreapi.plan.update.PlanUpdateEvent)' threw exception; nested exception is com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED\nSending failed message to DLT",
+            "logger_name": "com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:48:05.633",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:48:05.633Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=3da00001-379f-4e93-9e01-d1b7fd676102_2, timestamp=2025-02-02T18:12:00.307645Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=cec1527d-c63d-4dec-9848-789f29b87d85, planId=04d26069-20e6-40d6-8bbb-8768db6f20a9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:11:59.701332Z, lastStatusUpdateTimestamp=2025-02-02T18:12:00.307645Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=04843943-53c6-212b-5159-6fbbef9428d6), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:48:02.735",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:48:02.734Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Disconnecting from node 5 due to request timeout.",
+            "logger_name": "org.apache.kafka.clients.NetworkClient",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:48:02.735",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:48:02.735Z",
+            "@version": "1",
+            "message": "[Consumer clientId=consumer-deposit_portfolio_service_prod-1, groupId=deposit_portfolio_service_prod] Cancelled in-flight METADATA request with correlation id 718 due to node 5 being disconnected (elapsed time since creation: 30021ms, elapsed time since send: 30021ms, request timeout: 30000ms)",
+            "logger_name": "org.apache.kafka.clients.NetworkClient",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:59.633",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:59.632Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:59.628",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:59.627Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=3da00001-379f-4e93-9e01-d1b7fd676102_2, timestamp=2025-02-02T18:12:00.307645Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=cec1527d-c63d-4dec-9848-789f29b87d85, planId=04d26069-20e6-40d6-8bbb-8768db6f20a9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:11:59.701332Z, lastStatusUpdateTimestamp=2025-02-02T18:12:00.307645Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=04843943-53c6-212b-5159-6fbbef9428d6), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:56.627",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:56.627Z",
+            "@version": "1",
+            "message": "Exception occurred during plan update event handling: com.arbm.digibank.exception.ChangePortfolioLinkStatusException: Illegal attempt to change portfolio link status ACTIVE to DELETED",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:56.623",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:56.623Z",
+            "@version": "1",
+            "message": "Received event: PlanUpdateEvent(eventId=3da00001-379f-4e93-9e01-d1b7fd676102_2, timestamp=2025-02-02T18:12:00.307645Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), changeId=1, planUpdateUpdated=PlanUpdateUpdatedEvent(planUpdate=PlanUpdate(id=cec1527d-c63d-4dec-9848-789f29b87d85, planId=04d26069-20e6-40d6-8bbb-8768db6f20a9, jobId=, status=PLAN_UPDATE_STATUS_COMPLETED, createTimestamp=2025-02-02T18:11:59.701332Z, lastStatusUpdateTimestamp=2025-02-02T18:12:00.307645Z, failureReason=, associateAccountUpdate=null, disassociateAccountUpdate=AccountPlanAssociation(accountPlanAssocId=04843943-53c6-212b-5159-6fbbef9428d6), activationUpdate=null, supervisorContractVersionUpdate=null, closureUpdate=null), updateMask=FieldMask(paths=[status, last_status_update_timestamp])), planUpdateCreated=null)",
+            "logger_name": "com.arbm.digibank.processor.PlanUpdateEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "64f3e33d57aa0cce",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:56.622",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:56.622Z",
+            "@version": "1",
+            "message": "Exception thrown when sending a message with key='8b248740-9b17-4c13-9109-228b737b9c4e' and payload='{\"event_id\":\"302da870-018a-41d5-9a75-43192cb155a3_2\",\"timestamp\":\"2025-02-02T18:12:00.183405Z\",\"vaul...' to topic vault.core_api.v1.plans.plan_update.events.DLT and partition 9:",
+            "logger_name": "org.springframework.kafka.support.LoggingProducerListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n",
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "04b7bc9cd5ffdff4",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:56.622",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:56.622Z",
+            "@version": "1",
+            "message": "Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43494",
+            "logger_name": "org.springframework.kafka.listener.DeadLetterPublishingRecoverer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.KafkaException: Send failed; nested exception is org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n\tat org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:666)\n\tat org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:429)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.publish(DeadLetterPublishingRecoverer.java:647)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.send(DeadLetterPublishingRecoverer.java:555)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.sendOrThrow(DeadLetterPublishingRecoverer.java:520)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.accept(DeadLetterPublishingRecoverer.java:492)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:38)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:32)\n\tat com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration.vaultKafkaListenerContainerFactory$lambda$1$lambda$0(VaultKafkaConsumerConfiguration.kt:65)\n\tat org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:539)\n\tat org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:387)\n\tat org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:119)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:42)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$FastClassBySpringCGLIB$$a98718f8.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$EnhancerBySpringCGLIB$$ab76c214.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.apache.kafka.common.errors.TimeoutException: Topic vault.core_api.v1.plans.plan_update.events.DLT not present in metadata after 60000 ms.\n",
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe00d5fe6bcc92b759183c0c9b9c6",
+            "spanId": "04b7bc9cd5ffdff4",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:47:56.622",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:47:56.622Z",
+            "@version": "1",
+            "message": "Error occured while processing: vault.core_api.v1.plans.plan_update.events-9@43494",
+            "logger_name": "org.springframework.kafka.listener.CommonLoggingErrorHandler",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed; nested exception is org.springframework.kafka.KafkaException: Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43494\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2723)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2689)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: org.springframework.kafka.KafkaException: Dead-letter publication to vault.core_api.v1.plans.plan_update.events.DLTfailed for: vault.core_api.v1.plans.plan_update.events-9@43494\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.verifySendResult(DeadLetterPublishingRecoverer.java:676)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.publish(DeadLetterPublishingRecoverer.java:659)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.send(DeadLetterPublishingRecoverer.java:555)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.sendOrThrow(DeadLetterPublishingRecoverer.java:520)\n\tat org.springframework.kafka.listener.DeadLetterPublishingRecoverer.accept(DeadLetterPublishingRecoverer.java:492)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:38)\n\tat org.springframework.kafka.listener.ConsumerAwareRecordRecoverer.accept(ConsumerAwareRecordRecoverer.java:32)\n\tat com.arbm.digibank.tm.kafka.configuration.VaultKafkaConsumerConfiguration.vaultKafkaListenerContainerFactory$lambda$1$lambda$0(VaultKafkaConsumerConfiguration.kt:65)\n\tat org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:539)\n\tat org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:387)\n\tat org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:255)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:119)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter.onMessage(RetryingMessageListenerAdapter.java:42)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$FastClassBySpringCGLIB$$a98718f8.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RetryingMessageListenerAdapter$$EnhancerBySpringCGLIB$$ab76c214.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\t... 11 common frames omitted\n",
+            "springAppName": "deposit-portfolio-service",
+            "bc": "deposits"
+        }
+    }
+]

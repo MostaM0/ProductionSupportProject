@@ -1,0 +1,53 @@
+[
+    {
+        "@timestamp": "2025-03-27 08:54:40.483",
+        "kubernetes.container_name": "customer-restriction-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:40.483Z",
+            "@version": "1",
+            "message": "Consume: {\"customerId\": \"1703586077381643\", \"productType\": null, \"productNumber\": null, \"batchId\": \"f882288d-8c4c-49af-86eb-e94cc8b8ab46\", \"action\": \"CONFIRM\", \"servicesCodes\": null}",
+            "logger_name": "com.arbm.digibank.consumer.RestrictionConfirmConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-restriction-service",
+            "traceId": "67e51208253d3fe1cea9d08ed520d1be",
+            "spanId": "2c0ba49bc2ce7080",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:53:04.919",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:53:04.918Z",
+            "@version": "1",
+            "message": "Consume: {\"timestamp\": \"2025-03-27T08:53:02.506Z\", \"scanReference\": \"b4dbc3c9-ff6a-4cbd-bb8e-86008b110cac\", \"document\": null, \"transaction\": {\"status\": null, \"source\": null, \"date\": \"2025-03-27T08:53:02.506Z\", \"clientIp\": null, \"customerId\": \"1703586077381643\", \"merchantScanReference\": \"b4dbc3c9-ff6a-4cbd-bb8e-86008b110cac\", \"merchantReportingCriteria\": null}, \"verification\": {\"mrzCheck\": null, \"rejectReason\": null, \"identityVerification\": null, \"additionalChecks\": {\"addressValidation\": null, \"proofOfResidency\": null, \"personalNumberValidation\": null, \"faceSearchFindings\": null, \"watchlistScreening\": null}}, \"facemap\": null, \"LivenessStatus\": \"APPROVED\"}",
+            "logger_name": "com.arbm.digibank.consumer.LivenessCheckCallbackConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "mfa-service",
+            "traceId": "67e511ef4df699c16323bf202b6f905f",
+            "spanId": "7e322f12e6611b9d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:50:55.249",
+        "kubernetes.container_name": "customer-restriction-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:50:55.249Z",
+            "@version": "1",
+            "message": "Consume: {\"customerId\": \"1703586077381643\", \"productType\": null, \"productNumber\": null, \"batchId\": \"2fcbcf85-0ffb-4f6f-8c48-4de0bb143088\", \"action\": \"CONFIRM\", \"servicesCodes\": [{\"originatingEventCode\": \"CHANGE_DEBIT_CARD_LIMIT\", \"affectedServiceCode\": \"CHANGE_DEBIT_CARD_LIMIT\"}]}",
+            "logger_name": "com.arbm.digibank.consumer.RestrictionConfirmConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-restriction-service",
+            "traceId": "67e5116d33201ed87d4cdb66172520ae",
+            "spanId": "aa4bedcc912015d5",
+            "bc": "customers"
+        }
+    }
+]

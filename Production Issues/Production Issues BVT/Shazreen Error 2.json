@@ -1,0 +1,223 @@
+[
+    {
+        "@timestamp": "2025-02-02 21:20:51.661",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.643Z",
+            "@version": "1",
+            "message": "Call to Payment Api fis-gateway endpoint: /fis-gateway/v1/nad-enquiry-requests with method: POST succeeded with status code 202: ACCEPTED in totalTime: 601 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.FisGatewayPaymentApiFilter",
+            "thread_name": "reactor-http-epoll-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "b35ae654aaa7380b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.649",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.649Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=64c180c6-410f-42fe-93da-0bf6b9b6af5b, type=PROXY_ENQUIRY_COMPLETED, payload={\"customerId\":\"1703586077381643\",\"status\":\"FAILED\",\"errorCode\":\"U122_UNKNOWN_ERROR_OCCURRED\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "c6704fde6350f6e2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.646",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.645Z",
+            "@version": "1",
+            "message": "Saving response under id 64c180c6-410f-42fe-93da-0bf6b9b6af5b",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "a81a4c8e4c1939b2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.645",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.645Z",
+            "@version": "1",
+            "message": "[64c180c6-410f-42fe-93da-0bf6b9b6af5b] Received NadProxyEnquiryRequestCompleted event for customer [1703586077381643]",
+            "logger_name": "com.arbm.digibank.consumer.NadProxyEnquiryRequestEventConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "a81a4c8e4c1939b2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.056",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.055Z",
+            "@version": "1",
+            "message": "[64c180c6-410f-42fe-93da-0bf6b9b6af5b] Saving FisRequestEntity for businessMessageId: [20250203RJHIMYKL62091000057].",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "816e0913d2322958",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.055",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.055Z",
+            "@version": "1",
+            "message": "BusinessMessageId saved in DB: 20250203RJHIMYKL62091000057. BusinessMessageIdExtended to be send out to FIS: 20250203RJHIMYKL620ORM91000057",
+            "logger_name": "com.arbm.digibank.service.BusinessMessageIdGenerator",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "816e0913d2322958",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.050",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.05Z",
+            "@version": "1",
+            "message": "Updating SequenceTrackerEntity for sequenceDate: [2025-02-03], sequenceNumber: [56].",
+            "logger_name": "com.arbm.digibank.service.SequenceTrackerService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "816e0913d2322958",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.047",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.046Z",
+            "@version": "1",
+            "message": "[64c180c6-410f-42fe-93da-0bf6b9b6af5b] Received proxy enquiry request",
+            "logger_name": "com.arbm.digibank.controller.rest.PaymentProxyController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "816e0913d2322958",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.047",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.046Z",
+            "@version": "1",
+            "message": "env",
+            "logger_name": "com.arbm.digibank.service.FisRequestService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "816e0913d2322958",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.042",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.042Z",
+            "@version": "1",
+            "message": "[64c180c6-410f-42fe-93da-0bf6b9b6af5b] Registering proxy enquiry request for fis-gateway-service. CustomerId: [1703586077381643]",
+            "logger_name": "com.arbm.digibank.service.client.FisPaymentProxyRequestsService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "b35ae654aaa7380b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:51.040",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:51.04Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1703586077381643 with method: GET succeeded with status code 200: OK in totalTime: 725 ms",
+            "logger_name": "com.arbm.digibank.filter.consumer.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "b35ae654aaa7380b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:50.315",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:50.315Z",
+            "@version": "1",
+            "message": "[64c180c6-410f-42fe-93da-0bf6b9b6af5b] Received proxy enquiry trigger request for customer with id: 1703586077381643",
+            "logger_name": "com.arbm.digibank.controller.PaymentProxyManagementController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "b35ae654aaa7380b",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:20:50.315",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:20:50.315Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1703586077381643]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "679fe1b2601f59f2b35ae654aaa7380b",
+            "spanId": "b35ae654aaa7380b",
+            "bc": "payments"
+        }
+    }
+]

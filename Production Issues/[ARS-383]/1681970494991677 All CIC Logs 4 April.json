@@ -1,0 +1,1703 @@
+[
+    {
+        "@timestamp": "2025-04-04 09:45:12.810",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.81Z",
+            "@version": "1",
+            "message": "Handle ExternalApiException",
+            "logger_name": "com.arbm.digibank.rest.error.ErrorHandler",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "WARN",
+            "level_value": 30000,
+            "stack_trace": "com.arbm.digibank.exception.ExternalApiException: External Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677\n\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\tSuppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: \nError has been observed at the following site(s):\n\t*__checkpoint ⇢ Request to POST http://customer-identity-service.customer-identity-service.svc.cluster.local:8080/cis-service/v2/id-verification/initiation/1681970494991677 [DefaultWebClient]\nOriginal Stack Trace:\n\t\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\t\tat reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)\n\t\tat reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)\n\t\tat reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onSubscribeInner(MonoFlatMapMany.java:150)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:189)\n\t\tat reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)\n\t\tat reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onNext(FluxRetryWhen.java:174)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)\n\t\tat reactor.netty.http.client.HttpClientConnect$HttpIOHandlerObserver.onStateChange(HttpClientConnect.java:431)\n\t\tat reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:677)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onStateChange(DefaultPooledConnectionProvider.java:187)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onStateChange(DefaultPooledConnectionProvider.java:444)\n\t\tat reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:637)\n\t\tat reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:336)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:323)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:444)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:280)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\n\t\tat io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)\n\t\tat io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)\n\t\tat io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)\n\t\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\t\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\t\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n\tSuppressed: java.lang.Exception: #block terminated with an error\n\t\tat reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)\n\t\tat reactor.core.publisher.Mono.block(Mono.java:1707)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService.initiateLivenessStep(MFALivenessService.kt:149)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$FastClassBySpringCGLIB$$57e8152a.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\n\t\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\t\tat com.arbm.digibank.datasource.DatasourceRouteInterceptor.proceed(DatasourceRouteInterceptor.kt:28)\n\t\tat jdk.internal.reflect.GeneratedMethodAccessor195.invoke(Unknown Source)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\t\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$EnhancerBySpringCGLIB$$5a307730.initiateLivenessStep(<generated>)\n\t\tat com.arbm.digibank.controller.MFAController.initiateLiveness(MFAController.kt:187)\n\t\tat com.arbm.digibank.controller.MFAController$$FastClassBySpringCGLIB$$246cbd38.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.controller.MFAController$$EnhancerBySpringCGLIB$$497e06b9.initiateLiveness(<generated>)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n\t\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\n\t\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\t\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:696)\n\t\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)\n\t\tat org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n\t\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\t\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n\t\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n\t\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\t\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\t\tat org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:103)\n\t\tat org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:769)\n\t\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n\t\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n\t\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\t\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n\t\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\n\t\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\t\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "mfa-service",
+            "traceId": "67efaa284b6ca61338fee7b04a25c17b",
+            "spanId": "c74fcfc8aff0b9e8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:12.808",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.807Z",
+            "@version": "1",
+            "message": "Call to CUSTOMER_IDENTITY_SERVICE Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677 with method: POST failed with status code 500: INTERNAL_SERVER_ERROR",
+            "logger_name": "com.arbm.digibank.rest.filter.ClientApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "mfa-service",
+            "traceId": "67efaa284b6ca61338fee7b04a25c17b",
+            "spanId": "c74fcfc8aff0b9e8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:12.638",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.638Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1681970494991677), for accountId(4190ff26-b911-4eed-a969-0a0fa08ce949), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa28cec6466c76c106396d67c9d2",
+            "spanId": "76c106396d67c9d2",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:12.638",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.638Z",
+            "@version": "1",
+            "message": "jumioAccountId is null for 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa28cec6466c76c106396d67c9d2",
+            "spanId": "76c106396d67c9d2",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:12.632",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.632Z",
+            "@version": "1",
+            "message": "Init verification for 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa28cec6466c76c106396d67c9d2",
+            "spanId": "76c106396d67c9d2",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:12.579",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.579Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa2852c018d005f0186bc92f2f20",
+            "spanId": "bcfd0aff7ae16280",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:12.579",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:12.579Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa2852c018d005f0186bc92f2f20",
+            "spanId": "bcfd0aff7ae16280",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:11.291",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:11.291Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa2786907e198f22a2785c4c2f24",
+            "spanId": "0e886a59a71ca71a",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:11.291",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:11.291Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa2786907e198f22a2785c4c2f24",
+            "spanId": "0e886a59a71ca71a",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:07.030",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:07.03Z",
+            "@version": "1",
+            "message": "cic: 1681970494991677, request=class InitialAuthorizationRequest {\n    usernameOrPingOneUserId: eca2cd8e-3df8-416b-8bd2-83d9300e2b1d\n    mobilePayload: eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJleHAiOjE3NDM3NjAwMjYsImp0aSI6ImEzNDczYWI0LTI4YTMtNDAxYS04ODQxLWFjMTA3Zjk0NjkyNyIsIm1ldGFkYXRhIjp7ImFwcGxpY2F0aW9uIjp7ImJ1bmRsZUlkIjoibXkuY29tLmFscmFqaGliYW5rLndpY2sifX0sImZucCI6IjQwMjVCNjE4LTI0N0YtNEQ4OC04MkRGLTcwNEUzMDA2RkRGQiIsImtpZCI6IjI2ZGI0NzIxLTYwNmMtNDRkMy04OTEzLWYxZmI4YTJhZmI2OSJ9.\n    acrValues: null\n    scopes: [profile, w:customer:device]\n    responseType: null\n    pingOneCookies: null\n    withoutMFA: null\n} response=class InitialAuthorizationResponse {\n    links: class Links {\n        self: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/095d6ea3-50b9-46de-9bf8-952fa885c136\n        }\n        environment: null\n        population: null\n        devices: null\n        roleAssignments: null\n        password: null\n        passwordReset: null\n        passwordSet: null\n        passwordCheck: null\n        passwordRecover: null\n        passwordValidate: null\n        passwordPolicy: null\n        linkedAccounts: null\n        accountSendVerificationCode: null\n        memberOfGroups: null\n        user: null\n        usernamePasswordCheck: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/095d6ea3-50b9-46de-9bf8-952fa885c136\n        }\n        otpCheck: null\n        deviceSelect: null\n        signOnPage: class Link {\n            href: https://apps.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/signon/?flowId=095d6ea3-50b9-46de-9bf8-952fa885c136\n        }\n        deviceReorder: null\n    }\n    embedded: class EmbeddedUserName {\n        devices: null\n        user: class UserName {\n            id: eca2cd8e-3df8-416b-8bd2-83d9300e2b1d\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    id: 095d6ea3-50b9-46de-9bf8-952fa885c136\n    environment: class ID {\n        id: 44e438c9-1f16-40ed-94fe-e4a18e19c517\n    }\n    resumeUrl: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/as/resume?flowId=095d6ea3-50b9-46de-9bf8-952fa885c136\n    status: PASSWORD_REQUIRED\n    createdAt: 2025-04-04T09:45:06.974Z\n    expiresAt: 2025-04-04T10:00:06.974Z\n    bypassAllowed: null\n    selectedDevice: null\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa2217ee519b64c9ac0c7835cb16",
+            "spanId": "89ba5189c6b9996c",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:06.596",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:06.596Z",
+            "@version": "1",
+            "message": "cic: 1681970494991677 | Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=eca2cd8e-3df8-416b-8bd2-83d9300e2b1d, customerId=1681970494991677, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa2217ee519b64c9ac0c7835cb16",
+            "spanId": "89ba5189c6b9996c",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:06.596",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:06.596Z",
+            "@version": "1",
+            "message": "cic: 1681970494991677 | [isDeviceBounded]: deviceBounded=false",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa2217ee519b64c9ac0c7835cb16",
+            "spanId": "89ba5189c6b9996c",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:45:06.596",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:45:06.596Z",
+            "@version": "1",
+            "message": "preparePairingAuthorizationRequest for cic: 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa2217ee519b64c9ac0c7835cb16",
+            "spanId": "89ba5189c6b9996c",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:56.485",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T09:44:56.484] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\"}"
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:56.485",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T09:44:56.485] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:56.481",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:56.481Z",
+            "@version": "1",
+            "message": "Get customer lazy 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67efaa189e775a479a50bc539bbca3b9",
+            "spanId": "d30b51753380c146",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:46.488",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:46.487Z",
+            "@version": "1",
+            "message": "Handle ExternalApiException",
+            "logger_name": "com.arbm.digibank.rest.error.ErrorHandler",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "WARN",
+            "level_value": 30000,
+            "stack_trace": "com.arbm.digibank.exception.ExternalApiException: External Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677\n\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\tSuppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: \nError has been observed at the following site(s):\n\t*__checkpoint ⇢ Request to POST http://customer-identity-service.customer-identity-service.svc.cluster.local:8080/cis-service/v2/id-verification/initiation/1681970494991677 [DefaultWebClient]\nOriginal Stack Trace:\n\t\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\t\tat reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)\n\t\tat reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)\n\t\tat reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onSubscribeInner(MonoFlatMapMany.java:150)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:189)\n\t\tat reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)\n\t\tat reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onNext(FluxRetryWhen.java:174)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)\n\t\tat reactor.netty.http.client.HttpClientConnect$HttpIOHandlerObserver.onStateChange(HttpClientConnect.java:431)\n\t\tat reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:677)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onStateChange(DefaultPooledConnectionProvider.java:187)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onStateChange(DefaultPooledConnectionProvider.java:444)\n\t\tat reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:637)\n\t\tat reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:336)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:323)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:444)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:280)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\n\t\tat io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)\n\t\tat io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)\n\t\tat io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)\n\t\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\t\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\t\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n\tSuppressed: java.lang.Exception: #block terminated with an error\n\t\tat reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)\n\t\tat reactor.core.publisher.Mono.block(Mono.java:1707)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService.initiateLivenessStep(MFALivenessService.kt:149)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$FastClassBySpringCGLIB$$57e8152a.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\n\t\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\t\tat com.arbm.digibank.datasource.DatasourceRouteInterceptor.proceed(DatasourceRouteInterceptor.kt:28)\n\t\tat jdk.internal.reflect.GeneratedMethodAccessor178.invoke(Unknown Source)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\t\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$EnhancerBySpringCGLIB$$ad22c485.initiateLivenessStep(<generated>)\n\t\tat com.arbm.digibank.controller.MFAController.initiateLiveness(MFAController.kt:187)\n\t\tat com.arbm.digibank.controller.MFAController$$FastClassBySpringCGLIB$$246cbd38.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.controller.MFAController$$EnhancerBySpringCGLIB$$2e963df2.initiateLiveness(<generated>)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n\t\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\n\t\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\t\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:696)\n\t\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)\n\t\tat org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n\t\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\t\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n\t\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n\t\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\t\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\t\tat org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:103)\n\t\tat org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:769)\n\t\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n\t\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n\t\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\t\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n\t\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\n\t\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\t\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "mfa-service",
+            "traceId": "67efaa0d6f93560d359980f61c487e62",
+            "spanId": "af0ff55209e2e39c",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:46.485",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:46.485Z",
+            "@version": "1",
+            "message": "Call to CUSTOMER_IDENTITY_SERVICE Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677 with method: POST failed with status code 500: INTERNAL_SERVER_ERROR",
+            "logger_name": "com.arbm.digibank.rest.filter.ClientApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "mfa-service",
+            "traceId": "67efaa0d6f93560d359980f61c487e62",
+            "spanId": "af0ff55209e2e39c",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.767",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.767Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1681970494991677), for accountId(4190ff26-b911-4eed-a969-0a0fa08ce949), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.767",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.767Z",
+            "@version": "1",
+            "message": "jumioAccountId is null for 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.765",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.764Z",
+            "@version": "1",
+            "message": "Init verification for 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.750",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.75Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa0d00deed8c836b5ea504370eff",
+            "spanId": "aadb5c795e503a47",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.750",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.75Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa0d00deed8c836b5ea504370eff",
+            "spanId": "aadb5c795e503a47",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.507",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.506Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1681970494991677, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "67efaa0d70b3a0c36f5b42295f632bd9",
+            "spanId": "acf756e236480f0f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.457",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.457Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1681970494991677, loginFlow:LOGIN_NEW_DEVICE, isSwitchDevice:false",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "67efaa0d70b3a0c36f5b42295f632bd9",
+            "spanId": "acf756e236480f0f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.095",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.094Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa0daed6339054e29b33e386c1d0",
+            "spanId": "b8003356219bcacc",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.095",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.094Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efaa0daed6339054e29b33e386c1d0",
+            "spanId": "b8003356219bcacc",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:35.750",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:35.75Z",
+            "@version": "1",
+            "message": "saving OTP status for cic 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa02651619d3759b05f7291686c6",
+            "spanId": "378ba2afc81ceece",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:35.739",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:35.738Z",
+            "@version": "1",
+            "message": "PASSWORD_REQUIRED: cic= 1681970494991677, request=class VerifyUsernamePasswordRequest {\n    flowId: 09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n    username: null\n    password: Susan@5390\n}, response=class FlowStatusResponse {\n    links: null\n    id: 09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n    resumeUrl: null\n    status: OTP_REQUIRED\n    createdAt: 2025-04-04T09:44:35.372Z\n    expiresAt: 2025-04-04T09:59:35.683Z\n    bypassAllowed: false\n    embedded: class EmbeddedUserName {\n        devices: [class Device {\n            links: null\n            id: 52455ef7-69c8-4b90-b69f-ff3221f3d105\n            environment: null\n            user: null\n            type: SMS\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: *******08\n            os: null\n            model: null\n            application: null\n            pushEnabled: null\n            manufacturer: null\n            apiVersion: null\n            sdkVersion: null\n            rooted: null\n            lockEnabled: null\n            locale: null\n            notification: null\n            background: null\n            allowPushNotification: null\n            otpEnabled: null\n        }]\n        user: class UserName {\n            id: eca2cd8e-3df8-416b-8bd2-83d9300e2b1d\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    pingOneCookies: {ST=60024500-03b1-456b-a9a9-4b007ca1f678, ST-NO-SS=60024500-03b1-456b-a9a9-4b007ca1f678}\n    selectedDevice: class ID {\n        id: 52455ef7-69c8-4b90-b69f-ff3221f3d105\n    }\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa02651619d3759b05f7291686c6",
+            "spanId": "378ba2afc81ceece",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:35.430",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:35.43Z",
+            "@version": "1",
+            "message": "cic: 1681970494991677, request=class InitialAuthorizationRequest {\n    usernameOrPingOneUserId: eca2cd8e-3df8-416b-8bd2-83d9300e2b1d\n    mobilePayload: eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJqdGkiOiJlNTZmMWQyMC0xNzJiLTRhNTctYTkyZC03Y2VlOGRkZDk4M2YiLCJleHAiOjE3NDM3NTk5OTQsImtpZCI6IjFiZmVjYTg5LTkyZTktNDhhMC1hMzc1LTAyZTQyOTJiOWU2MSIsImZucCI6IjQwMjVCNjE4LTI0N0YtNEQ4OC04MkRGLTcwNEUzMDA2RkRGQiIsIm1ldGFkYXRhIjp7ImFwcGxpY2F0aW9uIjp7ImJ1bmRsZUlkIjoibXkuY29tLmFscmFqaGliYW5rLndpY2sifX19.\n    acrValues: null\n    scopes: [profile, w:customer:device]\n    responseType: null\n    pingOneCookies: null\n    withoutMFA: null\n} response=class InitialAuthorizationResponse {\n    links: class Links {\n        self: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n        }\n        environment: null\n        population: null\n        devices: null\n        roleAssignments: null\n        password: null\n        passwordReset: null\n        passwordSet: null\n        passwordCheck: null\n        passwordRecover: null\n        passwordValidate: null\n        passwordPolicy: null\n        linkedAccounts: null\n        accountSendVerificationCode: null\n        memberOfGroups: null\n        user: null\n        usernamePasswordCheck: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n        }\n        otpCheck: null\n        deviceSelect: null\n        signOnPage: class Link {\n            href: https://apps.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/signon/?flowId=09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n        }\n        deviceReorder: null\n    }\n    embedded: class EmbeddedUserName {\n        devices: null\n        user: class UserName {\n            id: eca2cd8e-3df8-416b-8bd2-83d9300e2b1d\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    id: 09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n    environment: class ID {\n        id: 44e438c9-1f16-40ed-94fe-e4a18e19c517\n    }\n    resumeUrl: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/as/resume?flowId=09dcde07-7a5f-49dc-9ff1-f7e1b824c00b\n    status: PASSWORD_REQUIRED\n    createdAt: 2025-04-04T09:44:35.372Z\n    expiresAt: 2025-04-04T09:59:35.372Z\n    bypassAllowed: null\n    selectedDevice: null\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa02651619d3759b05f7291686c6",
+            "spanId": "378ba2afc81ceece",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:35.083",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:35.083Z",
+            "@version": "1",
+            "message": "cic: 1681970494991677 | Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=eca2cd8e-3df8-416b-8bd2-83d9300e2b1d, customerId=1681970494991677, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa02651619d3759b05f7291686c6",
+            "spanId": "378ba2afc81ceece",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:35.083",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:35.083Z",
+            "@version": "1",
+            "message": "cic: 1681970494991677 | [isDeviceBounded]: deviceBounded=false",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa02651619d3759b05f7291686c6",
+            "spanId": "378ba2afc81ceece",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:35.083",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:35.083Z",
+            "@version": "1",
+            "message": "preparePairingAuthorizationRequest for cic: 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "67efaa02651619d3759b05f7291686c6",
+            "spanId": "378ba2afc81ceece",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:25.480",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T09:44:25.480] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\"}"
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:25.480",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T09:44:25.480] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:25.473",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:25.473Z",
+            "@version": "1",
+            "message": "Get customer lazy 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67efa9f9e1053441669dd723724379ff",
+            "spanId": "96c6d492f87f1698",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:14:30.118",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:14:30.118Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efa2f6079ce9be276979392106f80e",
+            "spanId": "43de355d9be4fe5f",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:14:30.118",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:14:30.118Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67efa2f6079ce9be276979392106f80e",
+            "spanId": "43de355d9be4fe5f",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:51:49.809",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:51:49.809Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef9da53827ce9f30a27f6576d3b75a",
+            "spanId": "20716f2f7ccbe52c",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:51:49.809",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:51:49.809Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef9da53827ce9f30a27f6576d3b75a",
+            "spanId": "20716f2f7ccbe52c",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:32.563",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:32.56Z",
+            "@version": "1",
+            "message": "Handle ExternalApiException",
+            "logger_name": "com.arbm.digibank.rest.error.ErrorHandler",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "WARN",
+            "level_value": 30000,
+            "stack_trace": "com.arbm.digibank.exception.ExternalApiException: External Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677\n\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\tSuppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: \nError has been observed at the following site(s):\n\t*__checkpoint ⇢ Request to POST http://customer-identity-service.customer-identity-service.svc.cluster.local:8080/cis-service/v2/id-verification/initiation/1681970494991677 [DefaultWebClient]\nOriginal Stack Trace:\n\t\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\t\tat reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)\n\t\tat reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)\n\t\tat reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onSubscribeInner(MonoFlatMapMany.java:150)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:189)\n\t\tat reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)\n\t\tat reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onNext(FluxRetryWhen.java:174)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)\n\t\tat reactor.netty.http.client.HttpClientConnect$HttpIOHandlerObserver.onStateChange(HttpClientConnect.java:431)\n\t\tat reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:677)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onStateChange(DefaultPooledConnectionProvider.java:187)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onStateChange(DefaultPooledConnectionProvider.java:444)\n\t\tat reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:637)\n\t\tat reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:336)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:323)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:444)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:280)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\n\t\tat io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)\n\t\tat io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)\n\t\tat io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)\n\t\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\t\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\t\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n\tSuppressed: java.lang.Exception: #block terminated with an error\n\t\tat reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)\n\t\tat reactor.core.publisher.Mono.block(Mono.java:1707)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService.initiateLivenessStep(MFALivenessService.kt:149)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$FastClassBySpringCGLIB$$57e8152a.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\n\t\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\t\tat com.arbm.digibank.datasource.DatasourceRouteInterceptor.proceed(DatasourceRouteInterceptor.kt:28)\n\t\tat jdk.internal.reflect.GeneratedMethodAccessor179.invoke(Unknown Source)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\t\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$EnhancerBySpringCGLIB$$f61781fd.initiateLivenessStep(<generated>)\n\t\tat com.arbm.digibank.controller.MFAController.initiateLiveness(MFAController.kt:187)\n\t\tat com.arbm.digibank.controller.MFAController$$FastClassBySpringCGLIB$$246cbd38.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.controller.MFAController$$EnhancerBySpringCGLIB$$837da343.initiateLiveness(<generated>)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n\t\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\n\t\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\t\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:696)\n\t\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)\n\t\tat org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n\t\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\t\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n\t\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n\t\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\t\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\t\tat org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:103)\n\t\tat org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:769)\n\t\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n\t\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n\t\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\t\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n\t\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\n\t\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\t\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "mfa-service",
+            "traceId": "67ef9a4b5cbf9e1263e208b5073ea01d",
+            "spanId": "83bd4f593fa36aca",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:32.551",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:32.551Z",
+            "@version": "1",
+            "message": "Call to CUSTOMER_IDENTITY_SERVICE Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677 with method: POST failed with status code 500: INTERNAL_SERVER_ERROR",
+            "logger_name": "com.arbm.digibank.rest.filter.ClientApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "mfa-service",
+            "traceId": "67ef9a4b5cbf9e1263e208b5073ea01d",
+            "spanId": "83bd4f593fa36aca",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.913",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.913Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1681970494991677), for accountId(4190ff26-b911-4eed-a969-0a0fa08ce949), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67ef9a4bcb77b16af9ca3ef775d3df36",
+            "spanId": "f9ca3ef775d3df36",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.913",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.913Z",
+            "@version": "1",
+            "message": "jumioAccountId is null for 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67ef9a4bcb77b16af9ca3ef775d3df36",
+            "spanId": "f9ca3ef775d3df36",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.909",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.909Z",
+            "@version": "1",
+            "message": "Init verification for 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67ef9a4bcb77b16af9ca3ef775d3df36",
+            "spanId": "f9ca3ef775d3df36",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.885",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.885Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef9a4b68f6f7f9f1e0346223f3a67e",
+            "spanId": "fa8fa1f0fcdfc511",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 6
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.885",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.885Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef9a4b68f6f7f9f1e0346223f3a67e",
+            "spanId": "fa8fa1f0fcdfc511",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 6
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.017",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.017Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef9a4a17d5ddb1c58a16b36b5321f4",
+            "spanId": "4ab9e8e1f26853bb",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 6
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:31.017",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:37:31.017Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef9a4a17d5ddb1c58a16b36b5321f4",
+            "spanId": "4ab9e8e1f26853bb",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:24.003",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T08:37:24.002] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\"}"
+    },
+    {
+        "@timestamp": "2025-04-04 08:37:24.003",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T08:37:24.003] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-04-04 08:35:22.534",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:35:22.534Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef99ca63514aa765a03ece23073c62",
+            "spanId": "1b851551b3cb7ba6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 11
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:35:22.534",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:35:22.534Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef99ca63514aa765a03ece23073c62",
+            "spanId": "1b851551b3cb7ba6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 11
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:31:11.077",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:31:11.077Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef98cf77e7bd824eb161af3504f2ea",
+            "spanId": "087ec18b5660a3f4",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 08:31:11.077",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T08:31:11.077Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef98cf77e7bd824eb161af3504f2ea",
+            "spanId": "087ec18b5660a3f4",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:56.426",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:56.425Z",
+            "@version": "1",
+            "message": "Handle ExternalApiException",
+            "logger_name": "com.arbm.digibank.rest.error.ErrorHandler",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "WARN",
+            "level_value": 30000,
+            "stack_trace": "com.arbm.digibank.exception.ExternalApiException: External Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677\n\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\tSuppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: \nError has been observed at the following site(s):\n\t*__checkpoint ⇢ Request to POST http://customer-identity-service.customer-identity-service.svc.cluster.local:8080/cis-service/v2/id-verification/initiation/1681970494991677 [DefaultWebClient]\nOriginal Stack Trace:\n\t\tat com.arbm.digibank.rest.filter.ClientApiFilter.exchangeFilterFunction$lambda$2(ClientApiFilter.kt:30)\n\t\tat reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)\n\t\tat reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)\n\t\tat reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200)\n\t\tat reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onSubscribeInner(MonoFlatMapMany.java:150)\n\t\tat reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:189)\n\t\tat reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)\n\t\tat reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onNext(FluxRetryWhen.java:174)\n\t\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onNext(ScopePassingSpanSubscriber.java:89)\n\t\tat reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:172)\n\t\tat reactor.netty.http.client.HttpClientConnect$HttpIOHandlerObserver.onStateChange(HttpClientConnect.java:431)\n\t\tat reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:677)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onStateChange(DefaultPooledConnectionProvider.java:187)\n\t\tat reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnection.onStateChange(DefaultPooledConnectionProvider.java:444)\n\t\tat reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:637)\n\t\tat reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:336)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:323)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:444)\n\t\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:280)\n\t\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\t\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\t\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\t\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\n\t\tat io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)\n\t\tat io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)\n\t\tat io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)\n\t\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\t\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\t\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n\tSuppressed: java.lang.Exception: #block terminated with an error\n\t\tat reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)\n\t\tat reactor.core.publisher.Mono.block(Mono.java:1707)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService.initiateLivenessStep(MFALivenessService.kt:149)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$FastClassBySpringCGLIB$$57e8152a.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\n\t\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\n\t\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\t\tat com.arbm.digibank.datasource.DatasourceRouteInterceptor.proceed(DatasourceRouteInterceptor.kt:28)\n\t\tat jdk.internal.reflect.GeneratedMethodAccessor175.invoke(Unknown Source)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\t\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\t\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.service.mfa.handlers.MFALivenessService$$EnhancerBySpringCGLIB$$28f90382.initiateLivenessStep(<generated>)\n\t\tat com.arbm.digibank.controller.MFAController.initiateLiveness(MFAController.kt:187)\n\t\tat com.arbm.digibank.controller.MFAController$$FastClassBySpringCGLIB$$246cbd38.invoke(<generated>)\n\t\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)\n\t\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\t\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\t\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\t\tat com.arbm.digibank.controller.MFAController$$EnhancerBySpringCGLIB$$c15e2b15.initiateLiveness(<generated>)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\t\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\t\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\t\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\n\t\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\n\t\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\n\t\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\n\t\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\n\t\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\t\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:696)\n\t\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\t\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)\n\t\tat org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\t\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\t\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\t\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\n\t\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\t\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\n\t\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\n\t\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\t\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\t\tat org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:103)\n\t\tat org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:769)\n\t\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\n\t\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\n\t\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\t\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n\t\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\n\t\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\t\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\t\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\t\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "mfa-service",
+            "traceId": "67ef755b423aa37c20cab69e629bd1d1",
+            "spanId": "9a9e44afe8e01378",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:56.423",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:56.423Z",
+            "@version": "1",
+            "message": "Call to CUSTOMER_IDENTITY_SERVICE Api endpoint: /cis-service/v2/id-verification/initiation/1681970494991677 with method: POST failed with status code 500: INTERNAL_SERVER_ERROR",
+            "logger_name": "com.arbm.digibank.rest.filter.ClientApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "mfa-service",
+            "traceId": "67ef755b423aa37c20cab69e629bd1d1",
+            "spanId": "9a9e44afe8e01378",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:55.682",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:55.682Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1681970494991677), for accountId(4190ff26-b911-4eed-a969-0a0fa08ce949), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67ef755b64c15473079ad5d5a9982a91",
+            "spanId": "079ad5d5a9982a91",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:55.682",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:55.682Z",
+            "@version": "1",
+            "message": "jumioAccountId is null for 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67ef755b64c15473079ad5d5a9982a91",
+            "spanId": "079ad5d5a9982a91",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:55.679",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:55.679Z",
+            "@version": "1",
+            "message": "Init verification for 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67ef755b64c15473079ad5d5a9982a91",
+            "spanId": "079ad5d5a9982a91",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:55.641",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:55.64Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef755bedd4aa860ba9ad853ab67bb6",
+            "spanId": "f6ea2e6a1da69f39",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:55.641",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:55.64Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef755bedd4aa860ba9ad853ab67bb6",
+            "spanId": "f6ea2e6a1da69f39",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:54.395",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:54.394Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef755a08692a604a4257b2a7ad7827",
+            "spanId": "e0d05c315201fccc",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 6
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:54.395",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:54.394Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef755a08692a604a4257b2a7ad7827",
+            "spanId": "e0d05c315201fccc",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:47.715",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T05:59:47.715] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\"}"
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:47.715",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-04-04T05:59:47.715] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"Susan Wou\",\"cic\":\"1681970494991677\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-04-04 05:59:47.710",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T05:59:47.71Z",
+            "@version": "1",
+            "message": "Get customer lazy 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "67ef7553448eeab1f62e72cba22e3bc8",
+            "spanId": "f1d63d8ea663259a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 00:58:45.438",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T00:58:45.437Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef2ec539d6ec5f04a8309b5fd1f9ce",
+            "spanId": "096afc9c2b530192",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1681970494991677]"
+                },
+                "result": [
+                    {
+                        "cardCount": 1,
+                        "customerId": 1681970494991677
+                    }
+                ],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 00:58:45.438",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T00:58:45.438Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67ef2ec539d6ec5f04a8309b5fd1f9ce",
+            "spanId": "096afc9c2b530192",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1681970494991677\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [
+                        {
+                            "cardCount": 1,
+                            "customerId": 1681970494991677
+                        }
+                    ],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 23:12:48.138",
+        "kubernetes.container_name": "deposit-commodity-trading-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T23:12:48.138Z",
+            "@version": "1",
+            "message": "Calculated Customer Murabaha for customer [Customer(customerId=1681970494991677, customerType=RETAIL)] :  [CustomerMurabaha(murabahaSalePrice=0E-8, purchasePrice=0.00, agencyFee=0.00, remainingDays=273, customerProfit=0E-8, effectiveProfitRate=0.00750000, date=2025-04-03)]",
+            "logger_name": "com.arbm.digibank.service.TieredCustomerMurabahaCalculator",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-commodity-trading-service",
+            "traceId": "67ef12f017f8b6120fd8cbfbdba8cb39",
+            "spanId": "27b8cbe8e9845990",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 23:12:48.129",
+        "kubernetes.container_name": "deposit-commodity-trading-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T23:12:48.129Z",
+            "@version": "1",
+            "message": "Received command: {\"customerId\": \"1681970494991677\", \"customerType\": \"RETAIL\", \"processId\": \"5dab36bd-f6c3-4688-aeac-f915ce7fb8a0\", \"numberOfCustomers\": 43249, \"tradingDate\": \"2025-04-04\", \"balanceDate\": \"2025-04-03\"}",
+            "logger_name": "com.arbm.digibank.processor.MurabahaCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-commodity-trading-service",
+            "traceId": "67ef12f017f8b6120fd8cbfbdba8cb39",
+            "spanId": "27b8cbe8e9845990",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 18:25:48.824",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-03T18:25:48.824Z",
+            "@version": "1",
+            "message": "Posting sent, request={\"postingInstructionBatch\":{\"postingInstructions\":[{\"glTransactionId\":\"250403nk2lp809\",\"glEvent\":\"ACCRUE_PROFIT\",\"committedPostings\":[{\"credit\":false,\"amount\":\"0.44396\",\"denomination\":\"MYR\",\"accountNumber\":\"912010110041023\",\"customerId\":\"1681970494991677\",\"glAccount\":\"PROFIT_PAID_SA\"},{\"credit\":true,\"amount\":\"0.44396\",\"denomination\":\"MYR\",\"accountNumber\":\"912010110041023\",\"customerId\":\"1681970494991677\",\"glAccount\":\"ACCRUED_PROFIT_PAYABLE_SA\"}]}],\"valueTimestamp\":\"2025-04-03T17:00:00.000Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"insertionTimestamp\":\"2025-04-03T17:03:33.592Z\",\"glDate\":\"20250403\",\"error\":null}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "67eed2a757ead445dd6049ccdc5b0e4a",
+            "spanId": "48c59c63b4593c3a",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 18:25:48.571",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-03T18:25:48.571Z",
+            "@version": "1",
+            "message": "[e64bd5c6-f9cc-571c-8b93-11a32c672314] Received PostingInstructionBatch: {\"postingInstructionBatch\": {\"id\": \"9c6004b3-8b9f-4bb2-875f-920e53904797\", \"createRequestId\": \"e64bd5c6-f9cc-571c-8b93-11a32c672314\", \"clientId\": \"CoreContracts\", \"clientBatchId\": \"ACCRUE_PROFIT-25ff519a-a29a-4a58-becc-ddbd04c63c8e_5_ACCRUE_PROFIT_1743699600000000000\", \"postingInstructions\": [{\"id\": \"f563c307-a65e-4ef4-a1cf-98923bcf52fc\", \"clientTransactionId\": \"INTERNAL_POSTING_ACCRUE_PROFIT_11dee064-490b-42e6-a4b9-5545f4c57fd0_5_ACCRUE_PROFIT_1743699600000000000_INTERNAL\", \"pics\": [], \"instructionDetails\": {\"description\": \"Daily profit accrued at 0.00904% on balance of 4910.53\", \"account_type\": \"MURABAHAH\", \"event\": \"ACCRUE_PROFIT\", \"originating_account_id\": \"11dee064-490b-42e6-a4b9-5545f4c57fd0\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110041023\", \"customerId\": \"1681970494991677\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"PROFIT_PAID_SA\"}, {\"credit\": true, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110041023\", \"customerId\": \"1681970494991677\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"ACCRUED_PROFIT_PAYABLE_SA\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": {\"postings\": [{\"credit\": false, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}, {\"credit\": true, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}]}, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"250403nk2lp809\", \"glEvent\": \"ACCRUE_PROFIT\"}], \"batchDetails\": {\"event\": \"ACCRUE_PROFIT\"}, \"valueTimestamp\": \"2025-04-03T17:00:00Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-04-03T17:03:33.592Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250403\"}, \"technicalMetadata\": {\"eventId\": \"event_9c6004b3-8b9f-4bb2-875f-920e53904797\", \"captureTimestamp\": \"2025-04-03T17:03:33.640Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "67eed2a757ead445dd6049ccdc5b0e4a",
+            "spanId": "48c59c63b4593c3a",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 18:25:48.571",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-04-03T18:25:48.571Z",
+            "@version": "1",
+            "message": "Batch={\"postingInstructionBatch\": {\"id\": \"9c6004b3-8b9f-4bb2-875f-920e53904797\", \"createRequestId\": \"e64bd5c6-f9cc-571c-8b93-11a32c672314\", \"clientId\": \"CoreContracts\", \"clientBatchId\": \"ACCRUE_PROFIT-25ff519a-a29a-4a58-becc-ddbd04c63c8e_5_ACCRUE_PROFIT_1743699600000000000\", \"postingInstructions\": [{\"id\": \"f563c307-a65e-4ef4-a1cf-98923bcf52fc\", \"clientTransactionId\": \"INTERNAL_POSTING_ACCRUE_PROFIT_11dee064-490b-42e6-a4b9-5545f4c57fd0_5_ACCRUE_PROFIT_1743699600000000000_INTERNAL\", \"pics\": [], \"instructionDetails\": {\"description\": \"Daily profit accrued at 0.00904% on balance of 4910.53\", \"account_type\": \"MURABAHAH\", \"event\": \"ACCRUE_PROFIT\", \"originating_account_id\": \"11dee064-490b-42e6-a4b9-5545f4c57fd0\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110041023\", \"customerId\": \"1681970494991677\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"PROFIT_PAID_SA\"}, {\"credit\": true, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110041023\", \"customerId\": \"1681970494991677\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"ACCRUED_PROFIT_PAYABLE_SA\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": {\"postings\": [{\"credit\": false, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}, {\"credit\": true, \"amount\": \"0.44396\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}]}, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"250403nk2lp809\", \"glEvent\": \"ACCRUE_PROFIT\"}], \"batchDetails\": {\"event\": \"ACCRUE_PROFIT\"}, \"valueTimestamp\": \"2025-04-03T17:00:00Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-04-03T17:03:33.592Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250403\"}, \"technicalMetadata\": {\"eventId\": \"event_9c6004b3-8b9f-4bb2-875f-920e53904797\", \"captureTimestamp\": \"2025-04-03T17:03:33.640Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "67eed2a757ead445dd6049ccdc5b0e4a",
+            "spanId": "48c59c63b4593c3a",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:14:09.417",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:14:09.417Z",
+            "@version": "1",
+            "message": "Posting enriched, posting=PostingInstructionBatch(postingInstructionBatch=InstructionBatch(id=9c6004b3-8b9f-4bb2-875f-920e53904797, createRequestId=e64bd5c6-f9cc-571c-8b93-11a32c672314, clientId=CoreContracts, clientBatchId=ACCRUE_PROFIT-25ff519a-a29a-4a58-becc-ddbd04c63c8e_5_ACCRUE_PROFIT_1743699600000000000, postingInstructions=[PostingInstructions(id=f563c307-a65e-4ef4-a1cf-98923bcf52fc, clientTransactionId=INTERNAL_POSTING_ACCRUE_PROFIT_11dee064-490b-42e6-a4b9-5545f4c57fd0_5_ACCRUE_PROFIT_1743699600000000000_INTERNAL, pics=[], instructionDetails=InstructionDetails(data={account_type=MURABAHAH, description=Daily profit accrued at 0.00904% on balance of 4910.53, event=ACCRUE_PROFIT, originating_account_id=11dee064-490b-42e6-a4b9-5545f4c57fd0}), committedPostings=[CommittedPosting(credit=false, amount=0.44396, denomination=MYR, accountId=PROFIT_PAID, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110041023, customerId=1681970494991677, accountType=SAVINGS_ACCOUNT, glAccount=PROFIT_PAID_SA), CommittedPosting(credit=true, amount=0.44396, denomination=MYR, accountId=ACCRUED_PROFIT_PAYABLE, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110041023, customerId=1681970494991677, accountType=SAVINGS_ACCOUNT, glAccount=ACCRUED_PROFIT_PAYABLE_SA)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=CustomInstruction(postings=[CustomInstructionPosting(credit=false, amount=0.44396, denomination=MYR, accountId=PROFIT_PAID, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), CustomInstructionPosting(credit=true, amount=0.44396, denomination=MYR, accountId=ACCRUED_PROFIT_PAYABLE, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)]), inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=null, outboundHardSettlement=null, transfer=null, glTransactionId=250403nk2lp809, glEvent=ACCRUE_PROFIT)], batchDetails={event=ACCRUE_PROFIT}, valueTimestamp=2025-04-03T17:00:00Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, insertionTimestamp=2025-04-03T17:03:33.592667Z, dryRun=false, error=null, glDate=20250403), technicalMetadata=TechnicalMetadata(eventId=event_9c6004b3-8b9f-4bb2-875f-920e53904797, captureTimestamp=2025-04-03T17:03:33.640476232Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=UpdateMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67eec1de4820332932b4f7af2e82d092",
+            "spanId": "f759c303f4f501e8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:14:09.399",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:14:09.399Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=false, amount=0.44396, denomination=MYR, accountId=11dee064-490b-42e6-a4b9-5545f4c57fd0, accountAddress=INTERNAL_CONTRA, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110041023, customerId=1681970494991677, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67eec1de4820332932b4f7af2e82d092",
+            "spanId": "f759c303f4f501e8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:14:09.399",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:14:09.399Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=true, amount=0.44396, denomination=MYR, accountId=11dee064-490b-42e6-a4b9-5545f4c57fd0, accountAddress=ACCRUED_PROFIT_PAYABLE, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110041023, customerId=1681970494991677, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67eec1de4820332932b4f7af2e82d092",
+            "spanId": "f759c303f4f501e8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:14:09.398",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:14:09.398Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=true, amount=0.44396, denomination=MYR, accountId=ACCRUED_PROFIT_PAYABLE, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110041023, customerId=1681970494991677, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67eec1de4820332932b4f7af2e82d092",
+            "spanId": "f759c303f4f501e8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:14:09.397",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:14:09.397Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=false, amount=0.44396, denomination=MYR, accountId=PROFIT_PAID, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110041023, customerId=1681970494991677, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67eec1de4820332932b4f7af2e82d092",
+            "spanId": "f759c303f4f501e8",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:03:55.601",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:03:55.601Z",
+            "@version": "1",
+            "message": "Event doesn't inform about cleared saving pot or cleared saving account: {\"eventId\": \"11dee064-490b-42e6-a4b9-5545f4c57fd0_9c6004b3-8b9f-4bb2-875f-920e53904797\", \"valueTimestamp\": \"2025-04-03T17:03:33.592Z\", \"accountId\": \"11dee064-490b-42e6-a4b9-5545f4c57fd0\", \"customerId\": \"1681970494991677\", \"availableBalance\": 4910.53, \"settledBalance\": 4910.53}",
+            "logger_name": "com.arbm.digibank.offboarding.service.OffboardingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67eebf65651c3dfbffef83a2407de951",
+            "spanId": "69334736c96d9188",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-04-03 17:03:55.596",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-04-03T17:03:55.596Z",
+            "@version": "1",
+            "message": "Consume DepositBalanceEvent: {\"eventId\": \"11dee064-490b-42e6-a4b9-5545f4c57fd0_9c6004b3-8b9f-4bb2-875f-920e53904797\", \"valueTimestamp\": \"2025-04-03T17:03:33.592Z\", \"accountId\": \"11dee064-490b-42e6-a4b9-5545f4c57fd0\", \"customerId\": \"1681970494991677\", \"availableBalance\": 4910.53, \"settledBalance\": 4910.53}",
+            "logger_name": "com.arbm.digibank.offboarding.OffboardingProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67eebf65651c3dfbffef83a2407de951",
+            "spanId": "69334736c96d9188",
+            "bc": "deposits"
+        }
+    }
+]

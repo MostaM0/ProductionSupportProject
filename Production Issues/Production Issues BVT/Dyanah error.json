@@ -1,0 +1,503 @@
+[
+    {
+        "@timestamp": "2025-02-02 21:37:02.639",
+        "kubernetes.container_name": "deposit-portfolio-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:37:02.638Z",
+            "@version": "1",
+            "message": "Received AccountLinkRequest(accountId=2234d244-93c3-48c6-a847-50bf7f225502, customerId=1707355016613363)",
+            "logger_name": "com.arbm.digibank.controller.PortfolioController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-portfolio-service",
+            "traceId": "679fe57e09b98606db2bba61fd93bf04",
+            "spanId": "9c6fe7446c29ebc7",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:02.025",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:02.024] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test\",\"openingTimestamp\":\"2024-06-30T18:30:17.041857Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.5\"},{\"id\":\"115bf018-927e-40c4-a387-33330b2602e0\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test saving pot \",\"openingTimestamp\":\"2024-06-30T18:31:12.248930Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.91\"}],\"savingAccount\":{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1707355016613363\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-02-08T01:21:23.599972Z\",\"currency\":\"MYR\",\"balance\":\"11.18\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.975",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:01.974] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1707355016613363\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-02-08T01:21:23.599972Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test\",\"openingTimestamp\":\"2024-06-30T18:30:17.041857Z\",\"targetedSavingsGoal\":10,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"115bf018-927e-40c4-a387-33330b2602e0\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test saving pot \",\"openingTimestamp\":\"2024-06-30T18:31:12.248930Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.975",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:01.975] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.966",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:01.966] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1707355016613363/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.599",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:01.599] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"createSavingPot\":{\"requestId\":\"2234d244-93c3-48c6-a847-50bf7f225502\",\"savingPot\":{\"id\":\"2234d244-93c3-48c6-a847-50bf7f225502\",\"customerId\":\"1707355016613363\",\"category\":\"House\",\"name\":\"Tesr\",\"openingTimestamp\":\"2025-02-02T21:37:01.303736Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"house4\",\"status\":\"INITIATED\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1,\"balance\":\"0\"}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.598",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:01.598] [INFO] [apollo-server,,] default - Microservice response: {\"id\":\"2234d244-93c3-48c6-a847-50bf7f225502\",\"customerId\":\"1707355016613363\",\"category\":\"House\",\"name\":\"Tesr\",\"openingTimestamp\":\"2025-02-02T21:37:01.303736Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"house4\",\"status\":\"INITIATED\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.398",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:37:01.397Z",
+            "@version": "1",
+            "message": "Details of account to be created: CreateAccountRequest(requestId=d276dfa3-c18d-4501-97d3-24f9f45f386e, account=Account(id=2234d244-93c3-48c6-a847-50bf7f225502, productId=null, stakeholderIds=[1707355016613363], status=ACCOUNT_STATUS_OPEN, openingTimestamp=null, instanceParamVals={main_account=977948eb-2a17-4a9b-add0-2051070eecd4, profit_application_day=1, account_tier_names=[\"standard\"], tiered_profit_rates={\"standard\": { \"tier1\": \"0.033\"} }, balance_tier_ranges={\"tier1\": { \"min\": \"0\" } }, tiered_minimum_balance_threshold={\"standard\": \"0\" }, minimum_deposit=0.01, maximum_deposit=1e+08, maximum_daily_deposit=1e+08, maximum_withdrawal=250000, maximum_daily_withdrawal=500000, maximum_balance=1e+08}, derivedInstanceParamVals={}, details={}, accounting=null, productVersionId=135))",
+            "logger_name": "com.arbm.digibank.tm.rest.coreapi.account.AccountService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "679fe57dc9d055f9c1f8378179325feb",
+            "spanId": "c1f8378179325feb",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.303",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:37:01.303Z",
+            "@version": "1",
+            "message": "Received SavingPotCreationRequest(customerId=1707355016613363, category=House, name=Tesr, targetedSavingsGoal=1000, targetedContribution=null, autoContribution=null, imageId=house4)",
+            "logger_name": "com.arbm.digibank.accounts.savingpot.controller.SavingPotControllerV1",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "679fe57dc9d055f9c1f8378179325feb",
+            "spanId": "c1f8378179325feb",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:37:01.296",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:37:01.296] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/saving-pots {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"customerId\\\":\\\"1707355016613363\\\",\\\"category\\\":\\\"House\\\",\\\"name\\\":\\\"Tesr\\\",\\\"targetedSavingsGoal\\\":1000,\\\"imageId\\\":\\\"house4\\\"}\"}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:47.772",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:36:47.771] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test\",\"openingTimestamp\":\"2024-06-30T18:30:17.041857Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.5\"},{\"id\":\"115bf018-927e-40c4-a387-33330b2602e0\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test saving pot \",\"openingTimestamp\":\"2024-06-30T18:31:12.248930Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.91\"}],\"savingAccount\":{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1707355016613363\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-02-08T01:21:23.599972Z\",\"currency\":\"MYR\",\"balance\":\"11.18\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:47.663",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:36:47.663] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1707355016613363\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-02-08T01:21:23.599972Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test\",\"openingTimestamp\":\"2024-06-30T18:30:17.041857Z\",\"targetedSavingsGoal\":10,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"115bf018-927e-40c4-a387-33330b2602e0\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test saving pot \",\"openingTimestamp\":\"2024-06-30T18:31:12.248930Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:47.663",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:36:47.663] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:47.653",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:36:47.653] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1707355016613363/accounts {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:39.002",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:36:39.001Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=6a1c1cc2-1dca-4969-b38a-a33258686d9c, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1707355016613363\",\"savingPotId\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fdee1dbc9f54e100325ac6eb8f761",
+            "spanId": "38d6095e3e286013",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:34.978",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:36:34.978Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=6a1c1cc2-1dca-4969-b38a-a33258686d9c, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1707355016613363\",\"savingPotId\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fdee1dbc9f54e100325ac6eb8f761",
+            "spanId": "f1179276aa5594e1",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:32.958",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:36:32.958Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=6a1c1cc2-1dca-4969-b38a-a33258686d9c, type=SAVINGS_POT_CREATION, payload={\"customerId\":\"1707355016613363\",\"savingPotId\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"status\":\"ACTIVE\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "679fdee1dbc9f54e100325ac6eb8f761",
+            "spanId": "6ad16e566e29b74e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:00.018",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:36:00.018Z",
+            "@version": "1",
+            "message": "Customer with id: [1707355016613363] not authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe54069b643573d7b5686667fd464",
+            "spanId": "3d7b5686667fd464",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:00.017",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:36:00.017Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1707355016613363, PAY_TO_QR, 2025-02-02T21:36:00.014763Z]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe54069b643573d7b5686667fd464",
+            "spanId": "3d7b5686667fd464",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:00.014",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:36:00.013Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1707355016613363] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe54069b643573d7b5686667fd464",
+            "spanId": "3d7b5686667fd464",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:36:00.006",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:36:00.006] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1707355016613363/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjFmNDY1YWNkLTVlYWItNGY1Mi1hY2U5LWM5NTA2MTlkOTkyYyIsImlhdCI6MTczODUzMTk1NCwiZXhwIjoxNzM4NTMyMjU0LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MDczNTUwMTY2MTMzNjMiLCJzaWQiOiIwOWJhYTEyYy0wMTk4LTQzMGUtYjc3Yy0xMzE1NDE2Y2FjNzkiLCJhdXRoX3RpbWUiOjE3MzgzMjM3NjYsImFjciI6Im1vYmlsZV9vdHBfYXBwcm92YWwiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiJjMGRhMWY1NC1mYWM4LTRmMDQtYmQyZi05Zjg2ODQwZTg0ZTgifQ.WNcjP1Ci7GGVZtSQ3_iClfKfoKT1jcZgS97d0uGNDpZtiPeEPGVMjwDdmwu1FVddmGCuG9ih2UtTe62L8-Sm_ZoOZkqgaQsezkA-OFadmCE6dQfLfCkYz9iaMaETiwhDTcZ9QgEAn3LYH4GoTSOwxejafltczxQauu2brO8jUqgpIL8flqRyUYqibhLuIJ_j3E8GUsvhTNH5oxrPl1gY5Jp504uByeC_mWTyCmVa-03QkAYFHV1paimmvgJSZjv0vUS1Q0zPTC3g0uh_Q2e1CokpMq0aC1phjAs_Hwt3gXip5U12ACBv83Him2C6Rr-BkNXgJ_PZIHnfDsq8W8pc1g\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:59.681",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:59.679",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:59.678",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:59.678] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1707355016613363\",\"createdAt\":\"2024-02-08T01:16:56.624287Z\",\"updatedAt\":\"2025-02-02T21:05:24.902219Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"DIYANAH DALILAH BINTI MOHD HALIEMY\",\"nickname\":\"Didi prod\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"920920055066\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1992-09-20\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":false,\"marketingPushFlag\":false,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":49748,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"ENGINEERING_PROFESSIONALS_INCLUDING_ELECTROTECHNOLOGY\",\"annualIncomeBracket\":\"RM96000_RM119999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Financing\"],\"bnmCcc\":\"Individual Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":73663,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"RESIDENTIAL\"},{\"id\":120946,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"diyanah1992\",\"pingOneId\":\"c0da1f54-fac8-4f04-bd2f-9f86840e84e8\"},\"accounts\":[{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:59.678",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:59.662",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:59.661] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:50.201",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:50.201Z",
+            "@version": "1",
+            "message": "Customer with id: [1707355016613363] not authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe53663309ed3ad9f4907ec4d6df4",
+            "spanId": "ad9f4907ec4d6df4",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:50.200",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:50.2Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1707355016613363, PAY_TO_QR, 2025-02-02T21:35:50.198123Z]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe53663309ed3ad9f4907ec4d6df4",
+            "spanId": "ad9f4907ec4d6df4",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:50.196",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:50.196Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1707355016613363] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe53663309ed3ad9f4907ec4d6df4",
+            "spanId": "ad9f4907ec4d6df4",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:50.189",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:50.189] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1707355016613363/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjFmNDY1YWNkLTVlYWItNGY1Mi1hY2U5LWM5NTA2MTlkOTkyYyIsImlhdCI6MTczODUzMTk1NCwiZXhwIjoxNzM4NTMyMjU0LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MDczNTUwMTY2MTMzNjMiLCJzaWQiOiIwOWJhYTEyYy0wMTk4LTQzMGUtYjc3Yy0xMzE1NDE2Y2FjNzkiLCJhdXRoX3RpbWUiOjE3MzgzMjM3NjYsImFjciI6Im1vYmlsZV9vdHBfYXBwcm92YWwiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiJjMGRhMWY1NC1mYWM4LTRmMDQtYmQyZi05Zjg2ODQwZTg0ZTgifQ.WNcjP1Ci7GGVZtSQ3_iClfKfoKT1jcZgS97d0uGNDpZtiPeEPGVMjwDdmwu1FVddmGCuG9ih2UtTe62L8-Sm_ZoOZkqgaQsezkA-OFadmCE6dQfLfCkYz9iaMaETiwhDTcZ9QgEAn3LYH4GoTSOwxejafltczxQauu2brO8jUqgpIL8flqRyUYqibhLuIJ_j3E8GUsvhTNH5oxrPl1gY5Jp504uByeC_mWTyCmVa-03QkAYFHV1paimmvgJSZjv0vUS1Q0zPTC3g0uh_Q2e1CokpMq0aC1phjAs_Hwt3gXip5U12ACBv83Him2C6Rr-BkNXgJ_PZIHnfDsq8W8pc1g\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:49.668",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:49.666",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:49.665",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:49.664",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:49.664] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1707355016613363\",\"createdAt\":\"2024-02-08T01:16:56.624287Z\",\"updatedAt\":\"2025-02-02T21:05:24.902219Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"DIYANAH DALILAH BINTI MOHD HALIEMY\",\"nickname\":\"Didi prod\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"920920055066\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1992-09-20\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":false,\"marketingPushFlag\":false,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":49748,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"ENGINEERING_PROFESSIONALS_INCLUDING_ELECTROTECHNOLOGY\",\"annualIncomeBracket\":\"RM96000_RM119999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Financing\"],\"bnmCcc\":\"Individual Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":73663,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"RESIDENTIAL\"},{\"id\":120946,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"diyanah1992\",\"pingOneId\":\"c0da1f54-fac8-4f04-bd2f-9f86840e84e8\"},\"accounts\":[{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:49.621",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:49.621] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.889",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:44.889Z",
+            "@version": "1",
+            "message": "Customer with id: [1707355016613363] not authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe530de98ec854f614baa77198783",
+            "spanId": "4f614baa77198783",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.888",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:44.888Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1707355016613363, PAY_TO_QR, 2025-02-02T21:35:44.886110Z]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe530de98ec854f614baa77198783",
+            "spanId": "4f614baa77198783",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.884",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:44.884Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1707355016613363] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe530de98ec854f614baa77198783",
+            "spanId": "4f614baa77198783",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.878",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:44.878] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1707355016613363/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjFmNDY1YWNkLTVlYWItNGY1Mi1hY2U5LWM5NTA2MTlkOTkyYyIsImlhdCI6MTczODUzMTk1NCwiZXhwIjoxNzM4NTMyMjU0LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MDczNTUwMTY2MTMzNjMiLCJzaWQiOiIwOWJhYTEyYy0wMTk4LTQzMGUtYjc3Yy0xMzE1NDE2Y2FjNzkiLCJhdXRoX3RpbWUiOjE3MzgzMjM3NjYsImFjciI6Im1vYmlsZV9vdHBfYXBwcm92YWwiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiJjMGRhMWY1NC1mYWM4LTRmMDQtYmQyZi05Zjg2ODQwZTg0ZTgifQ.WNcjP1Ci7GGVZtSQ3_iClfKfoKT1jcZgS97d0uGNDpZtiPeEPGVMjwDdmwu1FVddmGCuG9ih2UtTe62L8-Sm_ZoOZkqgaQsezkA-OFadmCE6dQfLfCkYz9iaMaETiwhDTcZ9QgEAn3LYH4GoTSOwxejafltczxQauu2brO8jUqgpIL8flqRyUYqibhLuIJ_j3E8GUsvhTNH5oxrPl1gY5Jp504uByeC_mWTyCmVa-03QkAYFHV1paimmvgJSZjv0vUS1Q0zPTC3g0uh_Q2e1CokpMq0aC1phjAs_Hwt3gXip5U12ACBv83Him2C6Rr-BkNXgJ_PZIHnfDsq8W8pc1g\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.350",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.349",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.348",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:44.348] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1707355016613363\",\"createdAt\":\"2024-02-08T01:16:56.624287Z\",\"updatedAt\":\"2025-02-02T21:05:24.902219Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"DIYANAH DALILAH BINTI MOHD HALIEMY\",\"nickname\":\"Didi prod\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"920920055066\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1992-09-20\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":false,\"marketingPushFlag\":false,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":49748,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"ENGINEERING_PROFESSIONALS_INCLUDING_ELECTROTECHNOLOGY\",\"annualIncomeBracket\":\"RM96000_RM119999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Financing\"],\"bnmCcc\":\"Individual Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":73663,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"RESIDENTIAL\"},{\"id\":120946,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"diyanah1992\",\"pingOneId\":\"c0da1f54-fac8-4f04-bd2f-9f86840e84e8\"},\"accounts\":[{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.348",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:44.331",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:44.331] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.354",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:42.353Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1707355016613363, PAY_TO_QR, 2025-02-02T21:35:42.351742Z]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe52eec8c403df3b7bcb1163cc14e",
+            "spanId": "f3b7bcb1163cc14e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.354",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:42.354Z",
+            "@version": "1",
+            "message": "Customer with id: [1707355016613363] not authorized over transaction type 'PAY_TO_QR'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe52eec8c403df3b7bcb1163cc14e",
+            "spanId": "f3b7bcb1163cc14e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.350",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-02-02T21:35:42.35Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1707355016613363] over transactionType: PAY_TO_QR",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "679fe52eec8c403df3b7bcb1163cc14e",
+            "spanId": "f3b7bcb1163cc14e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.345",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:42.344] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1707355016613363/authorizations/transaction-types/PAY_TO_QR?bankCode=&accountNumber= {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJjNDVlYmZlYy1mOTViLTQxNDMtYmZmNy0zNGMxZTZkYWMwODgiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzQ0ZTQzOGM5LTFmMTYtNDBlZC05NGZlLWU0YTE4ZTE5YzUxNy9hcyIsImp0aSI6IjFmNDY1YWNkLTVlYWItNGY1Mi1hY2U5LWM5NTA2MTlkOTkyYyIsImlhdCI6MTczODUzMTk1NCwiZXhwIjoxNzM4NTMyMjU0LCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MDczNTUwMTY2MTMzNjMiLCJzaWQiOiIwOWJhYTEyYy0wMTk4LTQzMGUtYjc3Yy0xMzE1NDE2Y2FjNzkiLCJhdXRoX3RpbWUiOjE3MzgzMjM3NjYsImFjciI6Im1vYmlsZV9vdHBfYXBwcm92YWwiLCJlbnYiOiI0NGU0MzhjOS0xZjE2LTQwZWQtOTRmZS1lNGExOGUxOWM1MTciLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiJjMGRhMWY1NC1mYWM4LTRmMDQtYmQyZi05Zjg2ODQwZTg0ZTgifQ.WNcjP1Ci7GGVZtSQ3_iClfKfoKT1jcZgS97d0uGNDpZtiPeEPGVMjwDdmwu1FVddmGCuG9ih2UtTe62L8-Sm_ZoOZkqgaQsezkA-OFadmCE6dQfLfCkYz9iaMaETiwhDTcZ9QgEAn3LYH4GoTSOwxejafltczxQauu2brO8jUqgpIL8flqRyUYqibhLuIJ_j3E8GUsvhTNH5oxrPl1gY5Jp504uByeC_mWTyCmVa-03QkAYFHV1paimmvgJSZjv0vUS1Q0zPTC3g0uh_Q2e1CokpMq0aC1phjAs_Hwt3gXip5U12ACBv83Him2C6Rr-BkNXgJ_PZIHnfDsq8W8pc1g\"}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.022",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.022",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "  id: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.020",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:42.020] [INFO] [apollo-server,,] default - Microservice response: {\"customerDetails\":{\"customerId\":\"1707355016613363\",\"createdAt\":\"2024-02-08T01:16:56.624287Z\",\"updatedAt\":\"2025-02-02T21:05:24.902219Z\",\"offboardingStartDate\":null,\"offboardingEndDate\":null,\"firstName\":null,\"lastName\":\"DIYANAH DALILAH BINTI MOHD HALIEMY\",\"nickname\":\"Didi prod\",\"phoneNumber\":\"*HIDDEN*\",\"email\":\"*HIDDEN*\",\"nric\":\"920920055066\",\"type\":\"EXTERNAL_CUSTOMER\",\"date_of_birth\":\"1992-09-20\",\"place_of_birth\":\"Malaysia\",\"gender\":\"F\",\"nationality\":\"MYS\",\"hasRetailAccount\":true,\"hasSmeAccount\":false,\"overallStatus\":\"ACTIVE\",\"mailingAddressSameAsResidence\":false},\"statuses\":{\"eligibility\":\"PASSED\",\"identityVerifiaction\":\"PASSED\",\"crr\":\"PASSED\",\"cbs\":\"PASSED\",\"coolingOff\":\"PASSED\",\"depositAccounts\":\"ACTIVE\",\"overall\":\"ACTIVE\"},\"mobilePreferences\":{\"pushNotificationsAllowed\":true,\"marketingEmailFlag\":false,\"marketingPhoneCallFlag\":false,\"marketingSmsFlag\":false,\"marketingPushFlag\":false,\"marketingThirdPartyFlag\":false},\"employments\":[{\"id\":49748,\"employer\":\"Al Rajhi Bank\",\"employmentType\":\"PRIVATE_EMPLOYEE\",\"employmentSector\":\"FINANCIAL_AND_INSURANCE_TAKAFUL_ACTIVITIES\",\"occupation\":\"ENGINEERING_PROFESSIONALS_INCLUDING_ELECTROTECHNOLOGY\",\"annualIncomeBracket\":\"RM96000_RM119999\"}],\"profiles\":{\"maritalStatus\":\"*HIDDEN*\",\"ethnicity\":\"*HIDDEN*\",\"accountSettingUpReasons\":[\"Daily spending, Financing\"],\"bnmCcc\":\"Individual Bumi\",\"residencyStatus\":\"*HIDDEN*\",\"entityType\":11,\"religion\":\"*HIDDEN*\"},\"addresses\":[{\"id\":73663,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"RESIDENTIAL\"},{\"id\":120946,\"line1\":\"G-12-21 RESIDENSI SERI WAHYU\",\"line2\":\"NO 68 JALAN SIBU\",\"line3\":\"TAMAN WAHYU\",\"countryCode\":\"MYS\",\"city\":\"*HIDDEN*\",\"postalCode\":\"*HIDDEN*\",\"subdivision\":\"Wilayah Persekutuan Kuala Lumpur\",\"type\":\"MAILING\"}],\"iam\":{\"username\":\"diyanah1992\",\"pingOneId\":\"c0da1f54-fac8-4f04-bd2f-9f86840e84e8\"},\"accounts\":[{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"status\":\"ACTIVE\"}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.020",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "    customerId: '1707355016613363',"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:42.001",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:42.001] [INFO] [apollo-server,,] default - Microservice request:  http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customerProfileDetails/1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:25.747",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:25.747] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getCustomerAccounts\":{\"accounts\":{\"savingPots\":[{\"id\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test\",\"openingTimestamp\":\"2024-06-30T18:30:17.041857Z\",\"targetedSavingsGoal\":10,\"targetedContribution\":null,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.5\"},{\"id\":\"115bf018-927e-40c4-a387-33330b2602e0\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test saving pot \",\"openingTimestamp\":\"2024-06-30T18:31:12.248930Z\",\"targetedSavingsGoal\":1000,\"targetedContribution\":null,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"balance\":\"1.91\"}],\"savingAccount\":{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1707355016613363\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-02-08T01:21:23.599972Z\",\"currency\":\"MYR\",\"balance\":\"11.18\"},\"currentAccount\":null}}}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:25.639",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:25.638] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-balance-service.deposit-balance-service.svc.cluster.local:8080/accounts-balances?customerId=1707355016613363 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:25.638",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:25.638] [INFO] [apollo-server,,] default - Microservice response: {\"savingAccount\":{\"accountId\":\"977948eb-2a17-4a9b-add0-2051070eecd4\",\"accountNumber\":\"*HIDDEN*\",\"customerId\":\"1707355016613363\",\"status\":\"ACTIVE\",\"openingTimestamp\":\"2024-02-08T01:21:23.599972Z\",\"currency\":\"MYR\"},\"savingPots\":[{\"id\":\"6a1c1cc2-1dca-4969-b38a-a33258686d9c\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test\",\"openingTimestamp\":\"2024-06-30T18:30:17.041857Z\",\"targetedSavingsGoal\":10,\"imageId\":\"others2\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1},{\"id\":\"115bf018-927e-40c4-a387-33330b2602e0\",\"customerId\":\"1707355016613363\",\"category\":\"Others\",\"name\":\"Test saving pot \",\"openingTimestamp\":\"2024-06-30T18:31:12.248930Z\",\"targetedSavingsGoal\":1000,\"imageId\":\"others1\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"autoContribution\":false,\"frequency\":\"MONTHLY\",\"contributionDay\":1}]}"
+    },
+    {
+        "@timestamp": "2025-02-02 21:35:25.625",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-02-02T21:35:25.625] [INFO] [apollo-server,,] default - Microservice request:  http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1707355016613363/accounts {\"method\":\"GET\",\"headers\":{}}"
+    }
+]

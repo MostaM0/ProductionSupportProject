@@ -1,0 +1,75 @@
+[
+    {
+        "@timestamp": "2025-04-04 09:44:46.483",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "tp11.Http11Processor.service(Http11Processor.java:399)\\n\\t\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\t\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\t\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\\n\\t\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\t\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\t\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\t\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\t\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.module.kotlin.MissingKotlinParameterException: Instantiation of [simple type, class com.arbm.digibank.external.jumioV4.model.MigrateResponse] value failed for JSON property account due to missing (therefore NULL) value for creator parameter account which is a non-nullable type\\n at [Source: (io.netty.buffer.ByteBufInputStream); line: 1, column: 187] (through reference chain: com.arbm.digibank.external.jumioV4.model.MigrateResponse[\\\"account\\\"])\\n\\tat com.fasterxml.jackson.module.kotlin.KotlinValueInstantiator.createFromObjectWith(KotlinValueInstantiator.kt:84)\\n\\tat com.fasterxml.jackson.databind.deser.impl.PropertyBasedCreator.build(PropertyBasedCreator.java:202)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:519)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1405)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2051)\\n\\tat com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1427)\\n\\tat org.springframework.http.codec.json.AbstractJackson2Decoder.decode(AbstractJackson2Decoder.java:193)\\n\\tat org.springframework.http.codec.json.AbstractJackson2Decoder.lambda$decodeToMono$1(AbstractJackson2Decoder.java:179)\\n\\tat reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:125)\\n\\tat reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)\\n\\tat reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299)\\n\\tat reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)\\n\\tat reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)\\n\\tat reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:160)\\n\\tat reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)\\n\\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onComplete(ScopePassingSpanSubscriber.java:103)\\n\\tat reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)\\n\\tat org.springframework.cloud.sleuth.instrument.reactor.ScopePassingSpanSubscriber.onComplete(ScopePassingSpanSubscriber.java:103)\\n\\tat reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)\\n\\tat reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:400)\\n\\tat reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:419)\\n\\tat reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:473)\\n\\tat reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:703)\\n\\tat reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:93)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)\\n\\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)\\n\\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:336)\\n\\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:308)\\n\\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)\\n\\tat io.netty.handler.logging.LoggingHandler.channelRead(LoggingHandler.java:280)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)\\n\\tat io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1373)\\n\\tat io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1236)\\n\\tat io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1285)\\n\\tat io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:519)\\n\\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:458)\\n\\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:280)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)\\n\\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)\\n\\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)\\n\\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\\n\\tat io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)\\n\\tat io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)\\n\\tat io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)\\n\\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\\n\\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\\n\\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\"springAppName\":\"customer-identity-service\",\"traceId\":\"67efaa0dd94b8913e2d60b1b91f82530\",\"spanId\":\"e2d60b1b91f82530\",\"bc\":\"customers\"}"
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.767",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.767Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1681970494991677), for accountId(4190ff26-b911-4eed-a969-0a0fa08ce949), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.767",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.767Z",
+            "@version": "1",
+            "message": "jumioAccountId is null for 1681970494991677",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.765",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.764Z",
+            "@version": "1",
+            "message": "Init verification for 1681970494991677",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-04-04 09:44:45.765",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-04-04T09:44:45.764Z",
+            "@version": "1",
+            "message": "Init workflow for serviceId  LIVENESS",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "67efaa0dd94b8913e2d60b1b91f82530",
+            "spanId": "e2d60b1b91f82530",
+            "bc": "customers"
+        }
+    }
+]

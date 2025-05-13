@@ -1,0 +1,222 @@
+[
+    {
+        "@timestamp": "2025-03-27 08:54:39.925",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:39.924Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=bffc6621-55f0-9ab4-b6a4-ca42eaced4ff, type=CHANGE_PHONE_NUMBER_PROGRESSED, payload={\"type\":\"CHANGE_NUMBER_PROCESS\",\"status\":\"FINISHED\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e51208253d3fe1cea9d08ed520d1be",
+            "spanId": "a32d9816c92f76f6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:39.922",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:39.922Z",
+            "@version": "1",
+            "message": "Saving response under id bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "spanId": "35bf9de622052c12",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:37.578",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:37.578Z",
+            "@version": "1",
+            "message": "Processing retrieval of Async Result timed out 408 Request Timeout from GET http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.exception.asyncresult.AsynResultExceptionHandler",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "mfa-service",
+            "traceId": "67e5122f761694b73d85e4011b1c5b7a",
+            "spanId": "05d6ecd25e45b5ee",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:37.557",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:37.556Z",
+            "@version": "1",
+            "message": "Processing retrieval of Async Result with requestID: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "async-response-service",
+            "traceId": "67e5122fb3171c5d668bfadae475043e",
+            "spanId": "668bfadae475043e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:37.557",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:37.556Z",
+            "@version": "1",
+            "message": "Error occurred: Processing timeout, detail: Processing retrieval of Async Result with requestID: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "async-response-service",
+            "traceId": "67e5122fb3171c5d668bfadae475043e",
+            "spanId": "668bfadae475043e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:07.659",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:07.659Z",
+            "@version": "1",
+            "message": "Processing retrieval of Async Result timed out 408 Request Timeout from GET http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.exception.asyncresult.AsynResultExceptionHandler",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "mfa-service",
+            "traceId": "67e512116e8521337857e6274a24a085",
+            "spanId": "090b730dfeb2da22",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:07.637",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:07.637Z",
+            "@version": "1",
+            "message": "Processing retrieval of Async Result with requestID: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "async-response-service",
+            "traceId": "67e5121170e1117d48f31f3e6fb69acd",
+            "spanId": "48f31f3e6fb69acd",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:07.637",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:07.637Z",
+            "@version": "1",
+            "message": "Error occurred: Processing timeout, detail: Processing retrieval of Async Result with requestID: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "async-response-service",
+            "traceId": "67e5121170e1117d48f31f3e6fb69acd",
+            "spanId": "48f31f3e6fb69acd",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:07.555",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:07.555Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e5122fb3171c5d668bfadae475043e",
+            "spanId": "668bfadae475043e",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:54:07.552",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:54:07.552Z",
+            "@version": "1",
+            "message": "Fetching async result for requestId: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.service.asyncresult.AsyncResultService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "mfa-service",
+            "traceId": "67e5122f761694b73d85e4011b1c5b7a",
+            "spanId": "05d6ecd25e45b5ee",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:53:37.636",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:53:37.636Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "67e5121170e1117d48f31f3e6fb69acd",
+            "spanId": "48f31f3e6fb69acd",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:53:37.634",
+        "kubernetes.container_name": "mfa-service",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:53:37.633Z",
+            "@version": "1",
+            "message": "Fetching async result for requestId: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff",
+            "logger_name": "com.arbm.digibank.service.asyncresult.AsyncResultService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "mfa-service",
+            "traceId": "67e512116e8521337857e6274a24a085",
+            "spanId": "090b730dfeb2da22",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-03-27 08:53:36.305",
+        "kubernetes.container_name": "bff-customer-management",
+        "logBody": {
+            "@timestamp": "2025-03-27T08:53:36.305Z",
+            "@version": "1",
+            "message": "trigger change number for customer 1703586077381643 returns class ChangeNumberRs {\n    checklistId: 1559\n    requestId: bffc6621-55f0-9ab4-b6a4-ca42eaced4ff\n}",
+            "logger_name": "com.arbm.digibank.service.mfa.handler.MobileNumberHandlerService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-customer-management",
+            "traceId": "67e5120614a7ab737b00749f23071b9b",
+            "spanId": "545c59880e5aba82",
+            "bc": "customers"
+        }
+    }
+]

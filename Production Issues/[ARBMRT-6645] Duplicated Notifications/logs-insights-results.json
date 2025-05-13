@@ -1,0 +1,1146 @@
+[
+    {
+        "@timestamp": "2024-11-21 04:57:14.272",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:57:14.272Z",
+            "@version": "1",
+            "message": "Customer 48f7053f-47de-4dfa-a2e1-8652b57a4f39 CRR status will be updated with using {\"customerId\": \"48f7053f-47de-4dfa-a2e1-8652b57a4f39\", \"searchId\": \"2045795890\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T04:57:11.533Z\", \"updatedAt\": \"2024-11-21T04:57:11.533Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673ebda6d07afe533137eaac3a1d3c74",
+            "spanId": "064dff6506843902",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:57:14.272",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:57:14.272Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"48f7053f-47de-4dfa-a2e1-8652b57a4f39\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673ebda6d07afe533137eaac3a1d3c74",
+            "spanId": "064dff6506843902",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:57:11.583",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:57:11.582Z",
+            "@version": "1",
+            "message": "prospect customer with id( 48f7053f-47de-4dfa-a2e1-8652b57a4f39) CRR status will be updated with using {\"customerId\": \"48f7053f-47de-4dfa-a2e1-8652b57a4f39\", \"searchId\": \"2045795890\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T04:57:11.533Z\", \"updatedAt\": \"2024-11-21T04:57:11.533Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673ebda6d07afe533137eaac3a1d3c74",
+            "spanId": "2364045acc788727",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:41:28.543",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:41:28.543Z",
+            "@version": "1",
+            "message": "prospect customer with id( 17aefe42-605e-4192-a8e7-96561b1f7731) CRR status will be updated with using {\"customerId\": \"17aefe42-605e-4192-a8e7-96561b1f7731\", \"searchId\": \"2045784578\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T04:41:28.514Z\", \"updatedAt\": \"2024-11-21T04:41:28.514Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673eb9f30bd9bb5b7ed48f9aa643cf8d",
+            "spanId": "502780ea4fcdef61",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:41:28.535",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:41:28.535Z",
+            "@version": "1",
+            "message": "Customer 17aefe42-605e-4192-a8e7-96561b1f7731 CRR status will be updated with using {\"customerId\": \"17aefe42-605e-4192-a8e7-96561b1f7731\", \"searchId\": \"2045784578\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T04:41:28.514Z\", \"updatedAt\": \"2024-11-21T04:41:28.514Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673eb9f30bd9bb5b7ed48f9aa643cf8d",
+            "spanId": "7987e43d1d61fb30",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:41:28.535",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:41:28.535Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"17aefe42-605e-4192-a8e7-96561b1f7731\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673eb9f30bd9bb5b7ed48f9aa643cf8d",
+            "spanId": "7987e43d1d61fb30",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:31:53.293",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:31:53.292Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"8816231b-2dfc-4b19-8b5a-0bdf9218adbc\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673eb7b548b75663fbb61445089d3ee8",
+            "spanId": "d55d9f60624b567a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:31:53.292",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:31:53.292Z",
+            "@version": "1",
+            "message": "Customer 8816231b-2dfc-4b19-8b5a-0bdf9218adbc CRR status will be updated with using {\"customerId\": \"8816231b-2dfc-4b19-8b5a-0bdf9218adbc\", \"searchId\": \"2044905874\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T04:31:50.397Z\", \"updatedAt\": \"2024-11-21T04:31:50.397Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673eb7b548b75663fbb61445089d3ee8",
+            "spanId": "d55d9f60624b567a",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:31:50.439",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:31:50.439Z",
+            "@version": "1",
+            "message": "prospect customer with id( 8816231b-2dfc-4b19-8b5a-0bdf9218adbc) CRR status will be updated with using {\"customerId\": \"8816231b-2dfc-4b19-8b5a-0bdf9218adbc\", \"searchId\": \"2044905874\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T04:31:50.397Z\", \"updatedAt\": \"2024-11-21T04:31:50.397Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673eb7b548b75663fbb61445089d3ee8",
+            "spanId": "bdeceaa43057d538",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:06:48.789",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:06:48.789Z",
+            "@version": "1",
+            "message": "prospect customer with id( 9e8fdbad-2bfd-4c96-ad93-4664567bbcde) CRR status will be updated with using {\"customerId\": \"9e8fdbad-2bfd-4c96-ad93-4664567bbcde\", \"searchId\": \"2045764749\", \"type\": \"CRR_RESULT\", \"score\": 152, \"rating\": \"HIGH\", \"onboardingData\": null, \"caData\": [], \"decision\": \"REJECT\", \"createdAt\": \"2024-11-21T04:06:35.444Z\", \"updatedAt\": \"2024-11-21T04:06:35.444Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673eb1c6039b147bd0d931033f725824",
+            "spanId": "bf594c4664c00654",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:06:45.320",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:06:45.319Z",
+            "@version": "1",
+            "message": "Customer 9e8fdbad-2bfd-4c96-ad93-4664567bbcde CRR status will be updated with using {\"customerId\": \"9e8fdbad-2bfd-4c96-ad93-4664567bbcde\", \"searchId\": \"2045764749\", \"type\": \"CRR_RESULT\", \"score\": 152, \"rating\": \"HIGH\", \"onboardingData\": null, \"caData\": [], \"decision\": \"REJECT\", \"createdAt\": \"2024-11-21T04:06:35.444Z\", \"updatedAt\": \"2024-11-21T04:06:35.444Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673eb1c6039b147bd0d931033f725824",
+            "spanId": "229b393423e577d6",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 04:06:45.320",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T04:06:45.32Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"9e8fdbad-2bfd-4c96-ad93-4664567bbcde\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673eb1c6039b147bd0d931033f725824",
+            "spanId": "229b393423e577d6",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 02:59:31.430",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T02:59:31.43Z",
+            "@version": "1",
+            "message": "prospect customer with id( c00ae799-d449-44ae-867e-02b6f7df8dfe) CRR status will be updated with using {\"customerId\": \"c00ae799-d449-44ae-867e-02b6f7df8dfe\", \"searchId\": \"2045690957\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T02:59:31.379Z\", \"updatedAt\": \"2024-11-21T02:59:31.379Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673ea20fba07d3cc83effcd853bc98b5",
+            "spanId": "4e0be6f36e24b432",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 02:59:31.414",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T02:59:31.413Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"c00ae799-d449-44ae-867e-02b6f7df8dfe\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673ea20fba07d3cc83effcd853bc98b5",
+            "spanId": "85b865f9bef50cee",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 02:59:31.413",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T02:59:31.413Z",
+            "@version": "1",
+            "message": "Customer c00ae799-d449-44ae-867e-02b6f7df8dfe CRR status will be updated with using {\"customerId\": \"c00ae799-d449-44ae-867e-02b6f7df8dfe\", \"searchId\": \"2045690957\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T02:59:31.379Z\", \"updatedAt\": \"2024-11-21T02:59:31.379Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673ea20fba07d3cc83effcd853bc98b5",
+            "spanId": "85b865f9bef50cee",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 02:23:27.258",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T02:23:27.258Z",
+            "@version": "1",
+            "message": "Customer 69ce1775-1932-4423-8fc7-0a77f902c016 CRR status will be updated with using {\"customerId\": \"69ce1775-1932-4423-8fc7-0a77f902c016\", \"searchId\": \"2045708216\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T02:23:24.396Z\", \"updatedAt\": \"2024-11-21T02:23:24.396Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e99926e074a37ce4dd320c67776b0",
+            "spanId": "6aa6c8f2271dbcd9",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 02:23:27.258",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T02:23:27.258Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"69ce1775-1932-4423-8fc7-0a77f902c016\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673e99926e074a37ce4dd320c67776b0",
+            "spanId": "6aa6c8f2271dbcd9",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 02:23:24.436",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T02:23:24.436Z",
+            "@version": "1",
+            "message": "prospect customer with id( 69ce1775-1932-4423-8fc7-0a77f902c016) CRR status will be updated with using {\"customerId\": \"69ce1775-1932-4423-8fc7-0a77f902c016\", \"searchId\": \"2045708216\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T02:23:24.396Z\", \"updatedAt\": \"2024-11-21T02:23:24.396Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e99926e074a37ce4dd320c67776b0",
+            "spanId": "96aad95c11dabd58",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 01:28:10.858",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T01:28:10.857Z",
+            "@version": "1",
+            "message": "Customer eef8a2f6-aa03-4d35-b349-09e97ccd0df6 CRR status will be updated with using {\"customerId\": \"eef8a2f6-aa03-4d35-b349-09e97ccd0df6\", \"searchId\": \"2044790431\", \"type\": \"CRR_RESULT\", \"score\": 152, \"rating\": \"HIGH\", \"onboardingData\": null, \"caData\": [], \"decision\": \"REJECT\", \"createdAt\": \"2024-11-21T01:28:08.537Z\", \"updatedAt\": \"2024-11-21T01:28:08.537Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e8c9e3d461c6e35c1b7e542ec1647",
+            "spanId": "adb96d4b8c299e73",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 01:28:10.858",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T01:28:10.858Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"eef8a2f6-aa03-4d35-b349-09e97ccd0df6\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673e8c9e3d461c6e35c1b7e542ec1647",
+            "spanId": "adb96d4b8c299e73",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 01:28:08.569",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T01:28:08.569Z",
+            "@version": "1",
+            "message": "prospect customer with id( eef8a2f6-aa03-4d35-b349-09e97ccd0df6) CRR status will be updated with using {\"customerId\": \"eef8a2f6-aa03-4d35-b349-09e97ccd0df6\", \"searchId\": \"2044790431\", \"type\": \"CRR_RESULT\", \"score\": 152, \"rating\": \"HIGH\", \"onboardingData\": null, \"caData\": [], \"decision\": \"REJECT\", \"createdAt\": \"2024-11-21T01:28:08.537Z\", \"updatedAt\": \"2024-11-21T01:28:08.537Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e8c9e3d461c6e35c1b7e542ec1647",
+            "spanId": "2b261eda23b1b2b9",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 00:13:45.617",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T00:13:45.616Z",
+            "@version": "1",
+            "message": "Customer ee2b92da-34d8-4016-a513-4c1a3a73f733 CRR status will be updated with using {\"customerId\": \"ee2b92da-34d8-4016-a513-4c1a3a73f733\", \"searchId\": \"2045455417\", \"type\": \"CRR_RESULT\", \"score\": 14, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T00:13:43.290Z\", \"updatedAt\": \"2024-11-21T00:13:43.290Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e7b36d9057b70a089064b082ab05a",
+            "spanId": "c519eaac640c4bad",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 00:13:45.617",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T00:13:45.616Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"ee2b92da-34d8-4016-a513-4c1a3a73f733\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673e7b36d9057b70a089064b082ab05a",
+            "spanId": "c519eaac640c4bad",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-21 00:13:43.318",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-21T00:13:43.317Z",
+            "@version": "1",
+            "message": "prospect customer with id( ee2b92da-34d8-4016-a513-4c1a3a73f733) CRR status will be updated with using {\"customerId\": \"ee2b92da-34d8-4016-a513-4c1a3a73f733\", \"searchId\": \"2045455417\", \"type\": \"CRR_RESULT\", \"score\": 14, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-21T00:13:43.290Z\", \"updatedAt\": \"2024-11-21T00:13:43.290Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e7b36d9057b70a089064b082ab05a",
+            "spanId": "6a3bec07e5ff37f1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 23:40:33.156",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T23:40:33.156Z",
+            "@version": "1",
+            "message": "prospect customer with id( a6c3982e-a699-4956-b7d1-e55cfc384061) CRR status will be updated with using {\"customerId\": \"a6c3982e-a699-4956-b7d1-e55cfc384061\", \"searchId\": \"2045617494\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T23:40:33.123Z\", \"updatedAt\": \"2024-11-20T23:40:33.123Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e736d79b623f98fb9bfe54d2828d0",
+            "spanId": "dce381fa6390e905",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 23:40:33.146",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T23:40:33.145Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"a6c3982e-a699-4956-b7d1-e55cfc384061\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673e736d79b623f98fb9bfe54d2828d0",
+            "spanId": "bf6479c5ed514e1d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 23:40:33.145",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T23:40:33.145Z",
+            "@version": "1",
+            "message": "Customer a6c3982e-a699-4956-b7d1-e55cfc384061 CRR status will be updated with using {\"customerId\": \"a6c3982e-a699-4956-b7d1-e55cfc384061\", \"searchId\": \"2045617494\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T23:40:33.123Z\", \"updatedAt\": \"2024-11-20T23:40:33.123Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e736d79b623f98fb9bfe54d2828d0",
+            "spanId": "bf6479c5ed514e1d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 23:09:49.868",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T23:09:49.868Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"a9a93b89-79ae-4997-b964-3edff64507ba\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$bc77ac61.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673e6c2be2ae979f1e62f8f2c8f17d59",
+            "spanId": "f05bc81085ec9bfa",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 23:09:49.865",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T23:09:49.864Z",
+            "@version": "1",
+            "message": "Customer a9a93b89-79ae-4997-b964-3edff64507ba CRR status will be updated with using {\"customerId\": \"a9a93b89-79ae-4997-b964-3edff64507ba\", \"searchId\": \"2044680456\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T23:09:46.184Z\", \"updatedAt\": \"2024-11-20T23:09:46.184Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e6c2be2ae979f1e62f8f2c8f17d59",
+            "spanId": "f05bc81085ec9bfa",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 23:09:48.748",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T23:09:48.748Z",
+            "@version": "1",
+            "message": "prospect customer with id( a9a93b89-79ae-4997-b964-3edff64507ba) CRR status will be updated with using {\"customerId\": \"a9a93b89-79ae-4997-b964-3edff64507ba\", \"searchId\": \"2044680456\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T23:09:46.184Z\", \"updatedAt\": \"2024-11-20T23:09:46.184Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e6c2be2ae979f1e62f8f2c8f17d59",
+            "spanId": "d224bb8de6d26652",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 17:15:21.942",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T17:15:21.916Z",
+            "@version": "1",
+            "message": "Customer ab7439f4-2d89-4ba1-8ec6-893b20eddefc CRR status will be updated with using {\"customerId\": \"ab7439f4-2d89-4ba1-8ec6-893b20eddefc\", \"searchId\": \"2045212530\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T17:15:19.138Z\", \"updatedAt\": \"2024-11-20T17:15:19.138Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e1922bf6190e24ff844dd05eb0b3d",
+            "spanId": "3adc66b0bb3c07f4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 17:15:21.942",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T17:15:21.917Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"ab7439f4-2d89-4ba1-8ec6-893b20eddefc\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673e1922bf6190e24ff844dd05eb0b3d",
+            "spanId": "3adc66b0bb3c07f4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 17:15:19.182",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T17:15:19.181Z",
+            "@version": "1",
+            "message": "prospect customer with id( ab7439f4-2d89-4ba1-8ec6-893b20eddefc) CRR status will be updated with using {\"customerId\": \"ab7439f4-2d89-4ba1-8ec6-893b20eddefc\", \"searchId\": \"2045212530\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T17:15:19.138Z\", \"updatedAt\": \"2024-11-20T17:15:19.138Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673e1922bf6190e24ff844dd05eb0b3d",
+            "spanId": "1bb7307a8725441d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:23:06.222",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:23:06.221Z",
+            "@version": "1",
+            "message": "Customer 8f8c8735-78b7-447b-a23a-779506c90ecf CRR status will be updated with using {\"customerId\": \"8f8c8735-78b7-447b-a23a-779506c90ecf\", \"searchId\": \"2044705741\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T14:23:05.094Z\", \"updatedAt\": \"2024-11-20T14:23:05.094Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673df0c8ac44998f6cbca35bf61a3b40",
+            "spanId": "d82f1b5657747fcc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:23:06.222",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:23:06.222Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"8f8c8735-78b7-447b-a23a-779506c90ecf\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673df0c8ac44998f6cbca35bf61a3b40",
+            "spanId": "d82f1b5657747fcc",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:23:06.191",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:23:06.191Z",
+            "@version": "1",
+            "message": "prospect customer with id( 8f8c8735-78b7-447b-a23a-779506c90ecf) CRR status will be updated with using {\"customerId\": \"8f8c8735-78b7-447b-a23a-779506c90ecf\", \"searchId\": \"2044705741\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T14:23:05.094Z\", \"updatedAt\": \"2024-11-20T14:23:05.094Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673df0c8ac44998f6cbca35bf61a3b40",
+            "spanId": "7bc44eef01103703",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:17:24.186",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:17:24.186Z",
+            "@version": "1",
+            "message": "prospect customer with id( a1f4dbc7-0987-4f0c-bb21-03a8bca66bcd) CRR status will be updated with using {\"customerId\": \"a1f4dbc7-0987-4f0c-bb21-03a8bca66bcd\", \"searchId\": \"2044709464\", \"type\": \"CRR_RESULT\", \"score\": 14, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T14:17:24.168Z\", \"updatedAt\": \"2024-11-20T14:17:24.168Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673def73cfc8d3575a2c328d9bb0cf1b",
+            "spanId": "32904113ad487be8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:17:24.184",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:17:24.184Z",
+            "@version": "1",
+            "message": "Customer a1f4dbc7-0987-4f0c-bb21-03a8bca66bcd CRR status will be updated with using {\"customerId\": \"a1f4dbc7-0987-4f0c-bb21-03a8bca66bcd\", \"searchId\": \"2044709464\", \"type\": \"CRR_RESULT\", \"score\": 14, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T14:17:24.168Z\", \"updatedAt\": \"2024-11-20T14:17:24.168Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673def73cfc8d3575a2c328d9bb0cf1b",
+            "spanId": "e61b0febaad3697f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:17:24.184",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:17:24.184Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"a1f4dbc7-0987-4f0c-bb21-03a8bca66bcd\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673def73cfc8d3575a2c328d9bb0cf1b",
+            "spanId": "e61b0febaad3697f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:16:21.754",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:16:21.754Z",
+            "@version": "1",
+            "message": "prospect customer with id( 279e7102-5c79-44aa-8930-a4c95ef28a79) CRR status will be updated with using {\"customerId\": \"279e7102-5c79-44aa-8930-a4c95ef28a79\", \"searchId\": \"2044693953\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T14:16:16.673Z\", \"updatedAt\": \"2024-11-20T14:16:16.673Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673def2f1f6a42595c8ef301f2586e92",
+            "spanId": "07b711d81b9ee396",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:16:16.710",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:16:16.709Z",
+            "@version": "1",
+            "message": "Customer 279e7102-5c79-44aa-8930-a4c95ef28a79 CRR status will be updated with using {\"customerId\": \"279e7102-5c79-44aa-8930-a4c95ef28a79\", \"searchId\": \"2044693953\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T14:16:16.673Z\", \"updatedAt\": \"2024-11-20T14:16:16.673Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673def2f1f6a42595c8ef301f2586e92",
+            "spanId": "ea54dd5c6f5656b7",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 14:16:16.710",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T14:16:16.71Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"279e7102-5c79-44aa-8930-a4c95ef28a79\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673def2f1f6a42595c8ef301f2586e92",
+            "spanId": "ea54dd5c6f5656b7",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 13:23:19.781",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T13:23:19.78Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"9537d0a9-7667-4e8d-b276-a81407a02ebd\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673de2c0d5393dae203daadb898f543d",
+            "spanId": "bbc35350e655c4c4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 13:23:19.780",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T13:23:19.78Z",
+            "@version": "1",
+            "message": "Customer 9537d0a9-7667-4e8d-b276-a81407a02ebd CRR status will be updated with using {\"customerId\": \"9537d0a9-7667-4e8d-b276-a81407a02ebd\", \"searchId\": \"2044594997\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T13:23:13.342Z\", \"updatedAt\": \"2024-11-20T13:23:13.342Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673de2c0d5393dae203daadb898f543d",
+            "spanId": "bbc35350e655c4c4",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 13:23:17.483",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T13:23:17.483Z",
+            "@version": "1",
+            "message": "prospect customer with id( 9537d0a9-7667-4e8d-b276-a81407a02ebd) CRR status will be updated with using {\"customerId\": \"9537d0a9-7667-4e8d-b276-a81407a02ebd\", \"searchId\": \"2044594997\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T13:23:13.342Z\", \"updatedAt\": \"2024-11-20T13:23:13.342Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673de2c0d5393dae203daadb898f543d",
+            "spanId": "d7c6e927c405d9ea",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 12:17:14.749",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T12:17:14.748Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"2ed60dff-e32f-4f66-a450-b46263715e3c\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673dd3465f687e47cf359cc9d7b0e712",
+            "spanId": "34c12012ca4f2256",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 12:17:14.748",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T12:17:14.748Z",
+            "@version": "1",
+            "message": "Customer 2ed60dff-e32f-4f66-a450-b46263715e3c CRR status will be updated with using {\"customerId\": \"2ed60dff-e32f-4f66-a450-b46263715e3c\", \"searchId\": \"2044473168\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T12:17:11.720Z\", \"updatedAt\": \"2024-11-20T12:17:11.720Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673dd3465f687e47cf359cc9d7b0e712",
+            "spanId": "34c12012ca4f2256",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 12:17:14.701",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T12:17:14.701Z",
+            "@version": "1",
+            "message": "prospect customer with id( 2ed60dff-e32f-4f66-a450-b46263715e3c) CRR status will be updated with using {\"customerId\": \"2ed60dff-e32f-4f66-a450-b46263715e3c\", \"searchId\": \"2044473168\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T12:17:11.720Z\", \"updatedAt\": \"2024-11-20T12:17:11.720Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673dd3465f687e47cf359cc9d7b0e712",
+            "spanId": "7f9524b1ab872972",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 12:10:44.794",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T12:10:44.794Z",
+            "@version": "1",
+            "message": "prospect customer with id( dd3fcf99-75f4-42a8-9cfe-d0acfb097697) CRR status will be updated with using {\"customerId\": \"dd3fcf99-75f4-42a8-9cfe-d0acfb097697\", \"searchId\": \"2038736815\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T12:10:39.547Z\", \"updatedAt\": \"2024-11-20T12:10:39.547Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673dd1beb77d0c1687df1497c7e67c39",
+            "spanId": "35ec3cb0428ac098",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 12:10:39.587",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T12:10:39.587Z",
+            "@version": "1",
+            "message": "Customer dd3fcf99-75f4-42a8-9cfe-d0acfb097697 CRR status will be updated with using {\"customerId\": \"dd3fcf99-75f4-42a8-9cfe-d0acfb097697\", \"searchId\": \"2038736815\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T12:10:39.547Z\", \"updatedAt\": \"2024-11-20T12:10:39.547Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673dd1beb77d0c1687df1497c7e67c39",
+            "spanId": "767999e12c6298f7",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 12:10:39.587",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T12:10:39.587Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"dd3fcf99-75f4-42a8-9cfe-d0acfb097697\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673dd1beb77d0c1687df1497c7e67c39",
+            "spanId": "767999e12c6298f7",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 11:46:51.970",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T11:46:51.97Z",
+            "@version": "1",
+            "message": "Customer bba61210-ed0c-4db9-8029-bca4fd61c4a0 CRR status will be updated with using {\"customerId\": \"bba61210-ed0c-4db9-8029-bca4fd61c4a0\", \"searchId\": \"2044356313\", \"type\": \"CRR_RESULT\", \"score\": 14, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T11:46:48.934Z\", \"updatedAt\": \"2024-11-20T11:46:48.934Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673dcc27948886d29b06f62d11d7d79a",
+            "spanId": "34e4a426d543f3f5",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 11:46:51.970",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T11:46:51.97Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"bba61210-ed0c-4db9-8029-bca4fd61c4a0\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673dcc27948886d29b06f62d11d7d79a",
+            "spanId": "34e4a426d543f3f5",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 11:46:48.976",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T11:46:48.976Z",
+            "@version": "1",
+            "message": "prospect customer with id( bba61210-ed0c-4db9-8029-bca4fd61c4a0) CRR status will be updated with using {\"customerId\": \"bba61210-ed0c-4db9-8029-bca4fd61c4a0\", \"searchId\": \"2044356313\", \"type\": \"CRR_RESULT\", \"score\": 14, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T11:46:48.934Z\", \"updatedAt\": \"2024-11-20T11:46:48.934Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673dcc27948886d29b06f62d11d7d79a",
+            "spanId": "c1a9ab50e922d334",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 09:23:16.784",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T09:23:16.783Z",
+            "@version": "1",
+            "message": "prospect customer with id( fae6a3e2-5b9c-48e7-bea4-584a89435a96) CRR status will be updated with using {\"customerId\": \"fae6a3e2-5b9c-48e7-bea4-584a89435a96\", \"searchId\": \"2044194599\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T09:23:09.082Z\", \"updatedAt\": \"2024-11-20T09:23:09.082Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673daa7b930b56ac90186f4f22e80bc2",
+            "spanId": "d6c71b8d33e630f0",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 09:23:12.196",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T09:23:12.195Z",
+            "@version": "1",
+            "message": "Customer fae6a3e2-5b9c-48e7-bea4-584a89435a96 CRR status will be updated with using {\"customerId\": \"fae6a3e2-5b9c-48e7-bea4-584a89435a96\", \"searchId\": \"2044194599\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T09:23:09.082Z\", \"updatedAt\": \"2024-11-20T09:23:09.082Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673daa7b930b56ac90186f4f22e80bc2",
+            "spanId": "584ff1b95c52f37e",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 09:23:12.196",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T09:23:12.196Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"fae6a3e2-5b9c-48e7-bea4-584a89435a96\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673daa7b930b56ac90186f4f22e80bc2",
+            "spanId": "584ff1b95c52f37e",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:50:43.493",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:50:43.493Z",
+            "@version": "1",
+            "message": "prospect customer with id( f1984201-b5d1-4c88-bc45-b3a043e8deb9) CRR status will be updated with using {\"customerId\": \"f1984201-b5d1-4c88-bc45-b3a043e8deb9\", \"searchId\": \"2044130655\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T08:50:43.456Z\", \"updatedAt\": \"2024-11-20T08:50:43.456Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673da2df6ad60826ea4cdc68edc1ded6",
+            "spanId": "a7d40c377fd593ff",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:50:43.479",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:50:43.479Z",
+            "@version": "1",
+            "message": "Customer f1984201-b5d1-4c88-bc45-b3a043e8deb9 CRR status will be updated with using {\"customerId\": \"f1984201-b5d1-4c88-bc45-b3a043e8deb9\", \"searchId\": \"2044130655\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T08:50:43.456Z\", \"updatedAt\": \"2024-11-20T08:50:43.456Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673da2df6ad60826ea4cdc68edc1ded6",
+            "spanId": "3cad06e9859812f6",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:50:43.479",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:50:43.479Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"f1984201-b5d1-4c88-bc45-b3a043e8deb9\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673da2df6ad60826ea4cdc68edc1ded6",
+            "spanId": "3cad06e9859812f6",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:25:33.751",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:25:33.751Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"eb676c0f-af7a-4587-86a0-4dd91835fff0\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673d9cf837c5cbe2451879514ce01728",
+            "spanId": "77a6899d60627d8d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:25:33.750",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:25:33.75Z",
+            "@version": "1",
+            "message": "Customer eb676c0f-af7a-4587-86a0-4dd91835fff0 CRR status will be updated with using {\"customerId\": \"eb676c0f-af7a-4587-86a0-4dd91835fff0\", \"searchId\": \"2043930884\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T08:25:30.992Z\", \"updatedAt\": \"2024-11-20T08:25:30.992Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673d9cf837c5cbe2451879514ce01728",
+            "spanId": "77a6899d60627d8d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:25:33.708",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:25:33.708Z",
+            "@version": "1",
+            "message": "prospect customer with id( eb676c0f-af7a-4587-86a0-4dd91835fff0) CRR status will be updated with using {\"customerId\": \"eb676c0f-af7a-4587-86a0-4dd91835fff0\", \"searchId\": \"2043930884\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T08:25:30.992Z\", \"updatedAt\": \"2024-11-20T08:25:30.992Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673d9cf837c5cbe2451879514ce01728",
+            "spanId": "4e6658279ae5ec43",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:00:47.073",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:00:47.073Z",
+            "@version": "1",
+            "message": "prospect customer with id( d3ff094b-8c76-46c7-9f83-6463edf29a02) CRR status will be updated with using {\"customerId\": \"d3ff094b-8c76-46c7-9f83-6463edf29a02\", \"searchId\": \"2044081816\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T08:00:42.623Z\", \"updatedAt\": \"2024-11-20T08:00:42.623Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673d971b87e8a9701d72f9d2c51955a3",
+            "spanId": "1cb0045a0243864b",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:00:47.066",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:00:47.066Z",
+            "@version": "1",
+            "message": "Error when consuming consumer crr result command",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "java.lang.NumberFormatException: For input string: \"d3ff094b-8c76-46c7-9f83-6463edf29a02\"\n\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.base/java.lang.Long.parseLong(Long.java:692)\n\tat java.base/java.lang.Long.parseLong(Long.java:817)\n\tat com.arbm.digibank.service.CrrService.updateCustomerCRRStatus(CrrService.kt:46)\n\tat com.arbm.digibank.consumer.CRRResultCommandConsumer.consumeCRRResultCommand(CRRResultCommandConsumer.kt:23)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)\n\tat org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)\n\tat org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)\n\tat org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:347)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$FastClassBySpringCGLIB$$cde8c01d.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.cloud.sleuth.brave.instrument.messaging.MessageListenerMethodInterceptor.invoke(MessageListenerMethodInterceptor.java:58)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter$$EnhancerBySpringCGLIB$$c79ab3ed.onMessage(<generated>)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2669)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2649)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2576)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2456)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2334)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2005)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1375)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1366)\n\tat org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n",
+            "springAppName": "onboarding-service",
+            "traceId": "673d971b87e8a9701d72f9d2c51955a3",
+            "spanId": "b4921f73db9bff44",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-11-20 08:00:47.065",
+        "kubernetes.container_name": "onboarding-service",
+        "logBody": {
+            "@timestamp": "2024-11-20T08:00:47.065Z",
+            "@version": "1",
+            "message": "Customer d3ff094b-8c76-46c7-9f83-6463edf29a02 CRR status will be updated with using {\"customerId\": \"d3ff094b-8c76-46c7-9f83-6463edf29a02\", \"searchId\": \"2044081816\", \"type\": \"CRR_RESULT\", \"score\": 15, \"rating\": \"LOW\", \"onboardingData\": null, \"caData\": [], \"decision\": \"APPROVE\", \"createdAt\": \"2024-11-20T08:00:42.623Z\", \"updatedAt\": \"2024-11-20T08:00:42.623Z\"}",
+            "logger_name": "com.arbm.digibank.consumer.CRRResultCommandConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "onboarding-service",
+            "traceId": "673d971b87e8a9701d72f9d2c51955a3",
+            "spanId": "b4921f73db9bff44",
+            "bc": "customers"
+        }
+    }
+]

@@ -1,0 +1,65 @@
+PostingInstructionBatch(
+    id = "812ad9b1-078b-4070-9868-2a4b46370599",
+    createRequestId = "O20250401RJHIMYKL040OQR91000003",
+    clientId = "payments",
+    clientBatchId = "O20250401RJHIMYKL040OQR91000003",
+    postingInstructions = listOf(
+        PostingInstruction(
+            id = "7ce27165-6343-4381-8a4c-6a7b140dba09",
+            clientTransactionId = "4dabd0d3-0dcf-4734-8441-6ff92b7c5ff4",
+            pics = emptyList(),
+            instructionDetails = mapOf(
+                "PAYMENT_TYPE" to "duitnow_qr",
+                "busMsgId" to "20250401RJHIMYKL04091000003",
+                "cdtracctTpPrtry" to "",
+                "dbtracctTpPrtry" to "SVGS",
+                "paymentType" to "DUITNOW_QR_P2P",
+                "transferType" to "6"
+            ),
+            committedPostings = emptyList(),
+            postingViolations = emptyList(),
+            accountViolations = emptyList(),
+            restrictionViolations = emptyList(),
+            contractViolations = listOf(
+                ContractViolation(
+                    accountId = "c076e017-1a89-4edc-8e44-1f6a7e8062c2",
+                    type = "CONTRACT_VIOLATION_BREACH_TERMS_AND_CONDITIONS",
+                    reason = "Transaction would cause the maximum duitnow_qr payment limit of 2000.00 MYR to be exceeded."
+                )
+            ),
+            override = OverrideObj(
+                restrictions = Restrictions(
+                    all = false,
+                    restrictionSetIds = emptyList()
+                )
+            ),
+            transactionCode = null,
+            outboundAuthorisation = null,
+            inboundAuthorisation = null,
+            authorisationAdjustment = null,
+            settlement = null,
+            release = null,
+            inboundHardSettlement = null,
+            outboundHardSettlement = ExternalPostingInstruction(
+                amount = 100,
+                denomination = "MYR",
+                targetAccount = Account(
+                    paymentDeviceToken = null,
+                    accountId = "c076e017-1a89-4edc-8e44-1f6a7e8062c2"
+                ),
+                internalAccountId = "PAYNET_RPP_SETTLEMENT",
+                advice = false
+            ),
+            transfer = null,
+            customInstruction = null
+        )
+    ),
+    batchDetails = mapOf(
+        "original_posting_client_batch_id" to "O20250401RJHIMYKL040OQR91000003"
+    ),
+    valueTimestamp = "2025-04-01T13:53:59.728405Z",
+    status = "POSTING_INSTRUCTION_BATCH_STATUS_REJECTED",
+    error = null,
+    insertionTimestamp = "2025-04-01T13:53:59.728405Z",
+    dryRun = false
+)

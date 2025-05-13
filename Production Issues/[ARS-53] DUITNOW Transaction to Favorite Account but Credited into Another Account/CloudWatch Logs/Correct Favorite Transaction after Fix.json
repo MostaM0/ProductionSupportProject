@@ -1,0 +1,1167 @@
+[
+    {
+        "@timestamp": "2024-08-13 04:53:33.651",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:33.651Z",
+            "@version": "1",
+            "message": "Notification Entity:  NotificationsEntity(notificationId=05e627a9-8c13-4b2e-89a8-1432d66e67b3, customerId=1720148758274979, content=DigiBank. DuitNow Transfer RM 5.00 to ***8194 on 13 Aug 2024 12:53:27. Call 1800 81 9149 if you did not perform this transaction., header=DuitNow Transfer to , isRead=false, internalNotifId=cb6518bd-1079-45b0-8fef-b9cc7e4f7785, isDeleted=false) ",
+            "logger_name": "com.arbm.digibank.service.NotificationOnesignalService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:33.650",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:33.65Z",
+            "@version": "1",
+            "message": "Get the notification template name CREDIT_TRANSFER_SENT, for customer 1720148758274979",
+            "logger_name": "com.arbm.digibank.service.NotificationTemplateService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "1b4965eb5620a1dd",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:33.570",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:33.565Z",
+            "@version": "1",
+            "message": "Retrieving DeviceId from customer-service. CustomerId: [1720148758274979]",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "1b4965eb5620a1dd",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:33.569",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:33.569Z",
+            "@version": "1",
+            "message": " Getting devices for customer=1720148758274979 and status=ACTIVE_VERIFIED",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66bae6cdd79661f0234d10e7cf3a1c83",
+            "spanId": "234d10e7cf3a1c83",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:33.486",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:33.486Z",
+            "@version": "1",
+            "message": "consumeCreateNotificationCommand, notificationId: cb6518bd-1079-45b0-8fef-b9cc7e4f7785, customerId: 1720148758274979, templateName: CREDIT_TRANSFER_SENT",
+            "logger_name": "com.arbm.digibank.processor.CreateNotificationCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "1b4965eb5620a1dd",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:33.486",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:33.486Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1720148758274979]",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "1b4965eb5620a1dd",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:31.944",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:31.943Z",
+            "@version": "1",
+            "message": "Posting sent, request={\"postingInstructionBatch\":{\"postingInstructions\":[{\"glTransactionId\":\"240813ktg8dnus\",\"glEvent\":\"ON_US_DIGI_SA_SA_QR_P2P\",\"committedPostings\":[{\"credit\":false,\"amount\":\"5\",\"denomination\":\"MYR\",\"accountNumber\":\"912010119038699\",\"customerId\":\"1720148758274979\",\"glAccount\":\"CUSTOMER_CMSA\"},{\"credit\":true,\"amount\":\"5\",\"denomination\":\"MYR\",\"accountNumber\":\"912010119038699\",\"customerId\":\"1720148758274979\",\"glAccount\":\"DBS_INTERBRANCH_ACCOUNT\"}]},{\"glTransactionId\":\"240813zydp3la8\",\"glEvent\":\"ON_US_DIGI_SA_SA_QR_P2P\",\"committedPostings\":[{\"credit\":true,\"amount\":\"5\",\"denomination\":\"MYR\",\"accountNumber\":\"912010119038194\",\"customerId\":\"1718978101330503\",\"glAccount\":\"CUSTOMER_CMSA\"},{\"credit\":false,\"amount\":\"5\",\"denomination\":\"MYR\",\"accountNumber\":\"912010119038194\",\"customerId\":\"1718978101330503\",\"glAccount\":\"DBS_INTERBRANCH_ACCOUNT\"}]}],\"valueTimestamp\":\"2024-08-13T04:53:27.055Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"insertionTimestamp\":\"2024-08-13T04:53:27.055Z\",\"glDate\":\"20240813\",\"error\":null}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "66bae6ca048d4894d334abf34c9e9224",
+            "spanId": "b51469c768abe361",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:31.849",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": "10, 105, 116, 111, 114, 105, 110, 103, 83, 101, 114, 118, 105, 99, 101, 46, 107, 116, 58, 53, 53, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 97, 118, 97, 46, 117, 116, 105, 108, 46, 79, 112, 116, 105, 111, 110, 97, 108, 46, 111, 114, 69, 108, 115, 101, 84, 104, 114, 111, 119, 40, 79, 112, 116, 105, 111, 110, 97, 108, 46, 106, 97, 118, 97, 58, 52, 48, 56, 41, 10, 9, 97, 116, 32, 99, 111, 109, 46, 97, 114, 98, 109, 46, 100, 105, 103, 105, 98, 97, 110, 107, 46, 115, 101, 114, 118, 105, 99, 101, 115, 46, 80, 97, 121, 109, 101, 110, 116, 84, 114, 97, 110, 115, 102, 101, 114, 77, 111, 110, 105, 116, 111, 114, 105, 110, 103, 83, 101, 114, 118, 105, 99, 101, 73, 109, 112, 108, 46, 102, 101, 101, 100, 122, 97, 105, 80, 97, 121, 109, 101, 110, 116, 84, 114, 97, 110, 115, 102, 101, 114, 40, 80, 97, 121, 109, 101, 110, 116, 84, 114, 97, 110, 115, 102, 101, 114, 77, 111, 110, 105, 116, 111, 114, 105, 110, 103, 83, 101, 114, 118, 105, 99, 101, 46, 107, 116, 58, 53, 53, 41, 10, 9, 97, 116, 32, 99, 111, 109, 46, 97, 114, 98, 109, 46, 100, 105, 103, 105, 98, 97, 110, 107, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 80, 97, 121, 109, 101, 110, 116, 69, 118, 101, 110, 116, 80, 114, 111, 99, 101, 115, 115, 111, 114, 46, 104, 97, 110, 100, 108, 101, 67, 111, 109, 112, 108, 101, 116, 101, 80, 97, 121, 109, 101, 110, 116, 73, 110, 99, 111, 109, 105, 110, 103, 84, 114, 97, 110, 115, 102, 101, 114, 40, 80, 97, 121, 109, 101, 110, 116, 69, 118, 101, 110, 116, 80, 114, 111, 99, 101, 115, 115, 111, 114, 46, 107, 116, 58, 51, 56, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 100, 107, 46, 105, 110, 116, 101, 114, 110, 97, 108, 46, 114, 101, 102, 108, 101, 99, 116, 46, 78, 97, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 105, 110, 118, 111, 107, 101, 48, 40, 78, 97, 116, 105, 118, 101, 32, 77, 101, 116, 104, 111, 100, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 100, 107, 46, 105, 110, 116, 101, 114, 110, 97, 108, 46, 114, 101, 102, 108, 101, 99, 116, 46, 78, 97, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 105, 110, 118, 111, 107, 101, 40, 78, 97, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 106, 97, 118, 97, 58, 54, 50, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 100, 107, 46, 105, 110, 116, 101, 114, 110, 97, 108, 46, 114, 101, 102, 108, 101, 99, 116, 46, 68, 101, 108, 101, 103, 97, 116, 105, 110, 103, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 105, 110, 118, 111, 107, 101, 40, 68, 101, 108, 101, 103, 97, 116, 105, 110, 103, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 106, 97, 118, 97, 58, 52, 51, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 114, 101, 102, 108, 101, 99, 116, 46, 77, 101, 116, 104, 111, 100, 46, 105, 110, 118, 111, 107, 101, 40, 77, 101, 116, 104, 111, 100, 46, 106, 97, 118, 97, 58, 53, 54, 54, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 104, 97, 110, 100, 108, 101, 114, 46, 105, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 100, 111, 73, 110, 118, 111, 107, 101, 40, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 106, 97, 118, 97, 58, 49, 54, 57, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 104, 97, 110, 100, 108, 101, 114, 46, 105, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 105, 110, 118, 111, 107, 101, 40, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 106, 97, 118, 97, 58, 49, 49, 57, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 72, 97, 110, 100, 108, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 105, 110, 118, 111, 107, 101, 40, 72, 97, 110, 100, 108, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 53, 54, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 105, 110, 118, 111, 107, 101, 72, 97, 110, 100, 108, 101, 114, 40, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 51, 52, 55, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 111, 110, 77, 101, 115, 115, 97, 103, 101, 40, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 57, 50, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 111, 110, 77, 101, 115, 115, 97, 103, 101, 40, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 53, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 36, 36, 70, 97, 115, 116, 67, 108, 97, 115, 115, 66, 121, 83, 112, 114, 105, 110, 103, 67, 71, 76, 73, 66, 36, 36, 99, 100, 101, 56, 99, 48, 49, 100, 46, 105, 110, 118, 111, 107, 101, 40, 60, 103, 101, 110, 101, 114, 97, 116, 101, 100, 62, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 99, 103, 108, 105, 98, 46, 112, 114, 111, 120, 121, 46, 77, 101, 116, 104, 111, 100, 80, 114, 111, 120, 121, 46, 105, 110, 118, 111, 107, 101, 40, 77, 101, 116, 104, 111, 100, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 50, 49, 56, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 67, 103, 108, 105, 98, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 105, 110, 118, 111, 107, 101, 74, 111, 105, 110, 112, 111, 105, 110, 116, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 57, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 106, 97, 118, 97, 58, 49, 54, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 67, 103, 108, 105, 98, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 54, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 99, 108, 111, 117, 100, 46, 115, 108, 101, 117, 116, 104, 46, 98, 114, 97, 118, 101, 46, 105, 110, 115, 116, 114, 117, 109, 101, 110, 116, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 77, 101, 116, 104, 111, 100, 73, 110, 116, 101, 114, 99, 101, 112, 116, 111, 114, 46, 105, 110, 118, 111, 107, 101, 40, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 77, 101, 116, 104, 111, 100, 73, 110, 116, 101, 114, 99, 101, 112, 116, 111, 114, 46, 106, 97, 118, 97, 58, 53, 56, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 106, 97, 118, 97, 58, 49, 56, 54, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 67, 103, 108, 105, 98, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 54, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 68, 121, 110, 97, 109, 105, 99, 65, 100, 118, 105, 115, 101, 100, 73, 110, 116, 101, 114, 99, 101, 112, 116, 111, 114, 46, 105, 110, 116, 101, 114, 99, 101, 112, 116, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 48, 56, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 36, 36, 69, 110, 104, 97, 110, 99, 101, 114, 66, 121, 83, 112, 114, 105, 110, 103, 67, 71, 76, 73, 66, 36, 36, 98, 99, 49, 102, 51, 98, 99, 49, 46, 111, 110, 77, 101, 115, 115, 97, 103, 101, 40, 60, 103, 101, 110, 101, 114, 97, 116, 101, 100, 62, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 75, 97, 102, 107, 97, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 67, 111, 110, 116, 97, 105, 110, 101, 114, 36, 76, 105, 115, 116, 101, 110, 101, 114, 67, 111, 110, 115, 117, 109, 101, 114, 46, 100, 111, 73, 110, 118, 111, 107, 101, 79, 110, 77, 101, 115, 115, 97, 103, 101, 40, 75, 97, 102, 107, 97, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 67, 111, 110, 116, 97, 105, 110, 101, 114, 46, 106, 97, 118, 97, 58, 50, 54, 54, 55, 41, 10, 9, 46, 46, 46, 32, 49, 49, 32, 109, 111, 114, 101, 10]), RecordHeader(key = kafka_dlt-original-topic, value = [112, 97, 121, 109, 101, 110, 116, 115, 46, 116, 114, 97, 110, 115, 102, 101, 114, 46, 105, 110, 98, 111, 117, 110, 100, 46, 99, 111, 109, 112, 108, 101, 116, 101, 100, 46, 118, 49]), RecordHeader(key = kafka_dlt-original-partition, value = [0, 0, 0, 0]), RecordHeader(key = kafka_dlt-original-offset, value = [0, 0, 0, 0, 0, 0, 64, 3]), RecordHeader(key = kafka_dlt-original-timestamp, value = [0, 0, 1, -111, 74, 21, -122, 58]), RecordHeader(key = kafka_dlt-original-timestamp-type, value = [67, 114, 101, 97, 116, 101, 84, 105, 109, 101]), RecordHeader(key = kafka_dlt-original-consumer-group, value = [112, 97, 121, 109, 101, 110, 116, 115, 46, 116, 114, 97, 110, 115, 102, 101, 114, 46, 105, 110, 98, 111, 117, 110, 100, 46, 99, 111, 109, 112, 108, 101, 116, 101, 100, 46, 118, 49, 46, 103, 114, 111, 117, 112, 45, 105, 100]), RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 98, 45, 57, 50, 97, 56, 55, 56, 50, 54, 48, 55, 49, 53, 56, 50, 49, 48, 57, 98, 53, 48, 100, 49, 52, 98, 59, 80, 97, 114, 101, 110, 116, 61, 48, 55, 49, 53, 56, 50, 49, 48, 57, 98, 53, 48, 100, 49, 52, 98, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, payload: {{\\\"transactionId\\\": \\\"a864b713-9452-4cb5-9b75-711e7d0d2dc7\\\", \\\"lifecycleId\\\": \\\"0e53e893-c385-4eb2-b762-0925715c0e24\\\", \\\"customerAccountId\\\": \\\"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\\\", \\\"customerId\\\": \\\"1718978101330503\\\", \\\"smeId\\\": null, \\\"customerName\\\": \\\"\\\", \\\"customerAccountType\\\": \\\"SVGS\\\", \\\"customerAccountNumber\\\": \\\"912010119038194\\\", \\\"transferType\\\": \\\"CREDIT\\\", \\\"paymentType\\\": \\\"PAY2ACCOUNT\\\", \\\"amount\\\": 5.00, \\\"currency\\\": \\\"MYR\\\", \\\"paymentStatus\\\": \\\"COMPLETED\\\", \\\"tmCreatedAt\\\": \\\"2024-08-13T04:53:27.055Z\\\", \\\"createdAt\\\": \\\"2024-08-13T04:53:16.929Z\\\", \\\"updatedAt\\\": \\\"2024-08-13T04:53:27.344Z\\\", \\\"otherSideFullName\\\": \\\" Mostafa Mohamed Abdallah\\\", \\\"otherSideExternalId\\\": \\\"1720148758274979\\\", \\\"otherSideSmeId\\\": null, \\\"otherSideAccountNumber\\\": \\\"912010119038699\\\", \\\"otherSideBankCode\\\": \\\"RJHIMYKL\\\", \\\"otherSideAccountType\\\": \\\"SVGS\\\", \\\"recipientReference\\\": \\\"We\\\", \\\"paymentDetails\\\": \\\"\\\", \\\"proxyRegistrationNumber\\\": null, \\\"errorCode\\\": null}}\",\"logger_name\":\"com.arbm.digibank.messaging.interceptor.KafkaLoggingProducerInterceptor\",\"thread_name\":\"org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"springAppName\":\"transfer-monitoring-service\",\"bc\":\"framl\"}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:31.343",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:31.343Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {payments.transfer.inbound.completed.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 55, 45, 98, 97, 101, 97, 52, 51, 97, 54, 52, 57, 48, 100, 51, 51, 101, 56, 101, 100, 55, 97, 98, 57, 97, 53, 59, 80, 97, 114, 101, 110, 116, 61, 49, 50, 102, 54, 55, 55, 52, 53, 50, 49, 54, 99, 98, 54, 101, 53, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {16387}, payload: {{\"transactionId\": \"a864b713-9452-4cb5-9b75-711e7d0d2dc7\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"customerId\": \"1718978101330503\", \"smeId\": null, \"customerName\": \"\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038194\", \"transferType\": \"CREDIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \" Mostafa Mohamed Abdallah\", \"otherSideExternalId\": \"1720148758274979\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038699\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transfer-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:31.215",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:31.213] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1720148758274979\\\",\\\"referenceId\\\":\\\"0e53e893-c385-4eb2-b762-0925715c0e24\\\",\\\"customerAccountId\\\":\\\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\\\",\\\"amount\\\":\\\"5.00\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2024-08-13T04:53:23.773\\\",\\\"otherSideFullName\\\":\\\"\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"SUCCESSFUL_ON_US_PAYMENT\\\"}\",\"requestId\":\"fcca7647-9e23-4441-a4fe-6b004e4453cb\",\"type\":\"ACCOUNT_CREDIT_TRANSFER_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:31.214",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:31.213] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"fcca7647-9e23-4441-a4fe-6b004e4453cb\",\"type\":\"ACCOUNT_CREDIT_TRANSFER_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1720148758274979\\\",\\\"referenceId\\\":\\\"0e53e893-c385-4eb2-b762-0925715c0e24\\\",\\\"customerAccountId\\\":\\\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\\\",\\\"amount\\\":\\\"5.00\\\",\\\"currency\\\":\\\"MYR\\\",\\\"date\\\":\\\"2024-08-13T04:53:23.773\\\",\\\"otherSideFullName\\\":\\\"\\\",\\\"status\\\":\\\"SUCCESSFUL\\\",\\\"errorCode\\\":\\\"SUCCESSFUL_ON_US_PAYMENT\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:31.208",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:31.208Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=fcca7647-9e23-4441-a4fe-6b004e4453cb, type=ACCOUNT_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1720148758274979\",\"referenceId\":\"0e53e893-c385-4eb2-b762-0925715c0e24\",\"customerAccountId\":\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\",\"amount\":\"5.00\",\"currency\":\"MYR\",\"date\":\"2024-08-13T04:53:23.773\",\"otherSideFullName\":\"\",\"status\":\"SUCCESSFUL\",\"errorCode\":\"SUCCESSFUL_ON_US_PAYMENT\"}) after total DB calls: 20 and total time: 8304 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.840",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.84Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {payments.transfer.inbound.completed.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 55, 45, 98, 97, 101, 97, 52, 51, 97, 54, 52, 57, 48, 100, 51, 51, 101, 56, 101, 100, 55, 97, 98, 57, 97, 53, 59, 80, 97, 114, 101, 110, 116, 61, 56, 100, 101, 102, 48, 55, 49, 54, 56, 53, 54, 55, 51, 54, 56, 55, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {16387}, payload: {{\"transactionId\": \"a864b713-9452-4cb5-9b75-711e7d0d2dc7\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"customerId\": \"1718978101330503\", \"smeId\": null, \"customerName\": \"\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038194\", \"transferType\": \"CREDIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \" Mostafa Mohamed Abdallah\", \"otherSideExternalId\": \"1720148758274979\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038699\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transfer-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.708",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.705Z",
+            "@version": "1",
+            "message": "Batch={\"postingInstructionBatch\": {\"id\": \"8d2fdc01-f031-483a-bc8f-af49b1688106\", \"createRequestId\": \"fcca7647-9e23-4441-a4fe-6b004e4453cb\", \"clientId\": \"intrabank_payments\", \"clientBatchId\": \"fcca7647-9e23-4441-a4fe-6b004e4453cb\", \"postingInstructions\": [{\"id\": \"559370c6-d96f-49ee-b730-4ed7d7369986\", \"clientTransactionId\": \"936fe7ad-606f-4897-ba22-0ecf969c4181\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_acc_intrabank\", \"dbtracctTpPrtry\": \"SVGS\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_ACC\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038699\", \"customerId\": \"1720148758274979\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": true, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"DBS_INTERBRANCH\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038699\", \"customerId\": \"1720148758274979\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DBS_INTERBRANCH_ACCOUNT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": {\"amount\": \"5\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"DBS_INTERBRANCH\", \"advice\": false, \"targetAccountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\"}, \"transfer\": null, \"glTransactionId\": \"240813ktg8dnus\", \"glEvent\": \"ON_US_DIGI_SA_SA_QR_P2P\"}, {\"id\": \"bc18ace7-a80c-4ab0-ae9b-4ae9a2d89c30\", \"clientTransactionId\": \"a864b713-9452-4cb5-9b75-711e7d0d2dc7\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_acc_intrabank\", \"dbtracctTpPrtry\": \"SVGS\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_ACC\"}, \"committedPostings\": [{\"credit\": true, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038194\", \"customerId\": \"1718978101330503\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": false, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"DBS_INTERBRANCH\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038194\", \"customerId\": \"1718978101330503\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DBS_INTERBRANCH_ACCOUNT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": {\"amount\": \"5\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"DBS_INTERBRANCH\", \"advice\": false, \"targetAccountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\"}, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"240813zydp3la8\", \"glEvent\": \"ON_US_DIGI_SA_SA_QR_P2P\"}], \"batchDetails\": {\"original_posting_client_batch_id\": \"fcca7647-9e23-4441-a4fe-6b004e4453cb\"}, \"valueTimestamp\": \"2024-08-13T04:53:27.055Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2024-08-13T04:53:27.055Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20240813\"}, \"technicalMetadata\": {\"eventId\": \"event_8d2fdc01-f031-483a-bc8f-af49b1688106\", \"captureTimestamp\": \"2024-08-13T04:53:27.099Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 12, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "66bae6ca048d4894d334abf34c9e9224",
+            "spanId": "b51469c768abe361",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.705",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.705Z",
+            "@version": "1",
+            "message": "[fcca7647-9e23-4441-a4fe-6b004e4453cb] Received PostingInstructionBatch: {\"postingInstructionBatch\": {\"id\": \"8d2fdc01-f031-483a-bc8f-af49b1688106\", \"createRequestId\": \"fcca7647-9e23-4441-a4fe-6b004e4453cb\", \"clientId\": \"intrabank_payments\", \"clientBatchId\": \"fcca7647-9e23-4441-a4fe-6b004e4453cb\", \"postingInstructions\": [{\"id\": \"559370c6-d96f-49ee-b730-4ed7d7369986\", \"clientTransactionId\": \"936fe7ad-606f-4897-ba22-0ecf969c4181\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_acc_intrabank\", \"dbtracctTpPrtry\": \"SVGS\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_ACC\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038699\", \"customerId\": \"1720148758274979\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": true, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"DBS_INTERBRANCH\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038699\", \"customerId\": \"1720148758274979\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DBS_INTERBRANCH_ACCOUNT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": {\"amount\": \"5\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"DBS_INTERBRANCH\", \"advice\": false, \"targetAccountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\"}, \"transfer\": null, \"glTransactionId\": \"240813ktg8dnus\", \"glEvent\": \"ON_US_DIGI_SA_SA_QR_P2P\"}, {\"id\": \"bc18ace7-a80c-4ab0-ae9b-4ae9a2d89c30\", \"clientTransactionId\": \"a864b713-9452-4cb5-9b75-711e7d0d2dc7\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_acc_intrabank\", \"dbtracctTpPrtry\": \"SVGS\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_ACC\"}, \"committedPostings\": [{\"credit\": true, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038194\", \"customerId\": \"1718978101330503\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": false, \"amount\": \"5\", \"denomination\": \"MYR\", \"accountId\": \"DBS_INTERBRANCH\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010119038194\", \"customerId\": \"1718978101330503\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DBS_INTERBRANCH_ACCOUNT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": {\"amount\": \"5\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"DBS_INTERBRANCH\", \"advice\": false, \"targetAccountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\"}, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"240813zydp3la8\", \"glEvent\": \"ON_US_DIGI_SA_SA_QR_P2P\"}], \"batchDetails\": {\"original_posting_client_batch_id\": \"fcca7647-9e23-4441-a4fe-6b004e4453cb\"}, \"valueTimestamp\": \"2024-08-13T04:53:27.055Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2024-08-13T04:53:27.055Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20240813\"}, \"technicalMetadata\": {\"eventId\": \"event_8d2fdc01-f031-483a-bc8f-af49b1688106\", \"captureTimestamp\": \"2024-08-13T04:53:27.099Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 12, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "66bae6ca048d4894d334abf34c9e9224",
+            "spanId": "b51469c768abe361",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.348",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.348Z",
+            "@version": "1",
+            "message": "Published CreateTransactionCommand with referenceId: {\"referenceId\": \"8d2fdc01-f031-483a-bc8f-af49b1688106\", \"type\": \"DUITNOW_ACCOUNT\", \"amount\": 5, \"currency\": \"MYR\", \"creationTimestamp\": \"2024-08-13T04:53:27.055Z\", \"source\": {\"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"accountNumber\": \"912010119038699\", \"name\": \"Mostafa Mohamed Abdallah\", \"smeId\": null}, \"destination\": {\"accountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"customerId\": \"1718978101330503\", \"accountNumber\": \"912010119038194\", \"name\": \"\", \"smeId\": null}, \"status\": \"COMMITTED\", \"otherDetails\": \"\", \"recipientReference\": \"We\", \"merchantCode\": null, \"isInitialPayment\": null}",
+            "logger_name": "com.arbm.digibank.producer.CreateTransactionCommandProducer",
+            "thread_name": "kafka-producer-network-thread | producer-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "42f0000dbd9cf2c7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.338",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.337Z",
+            "@version": "1",
+            "message": "Published CreateNotificationCommand with referenceId: {\"customerId\": \"1720148758274979\", \"notificationId\": \"cb6518bd-1079-45b0-8fef-b9cc7e4f7785\", \"templateName\": \"CREDIT_TRANSFER_SENT\", \"placeholders\": [{\"name\": \"amount\", \"value\": \"5.00\"}, {\"name\": \"recipientBankAccount\", \"value\": \"8194\"}, {\"name\": \"timestamp\", \"value\": \"13 Aug 2024 12:53:27\"}, {\"name\": \"supportPhone\", \"value\": \"1800 81 9149\"}, {\"name\": \"recipientName\", \"value\": \"\"}, {\"name\": \"accountNumberSuffix\", \"value\": \"8699\"}]}",
+            "logger_name": "com.arbm.digibank.producer.NotificationProducer",
+            "thread_name": "kafka-producer-network-thread | producer-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "818bdcfccf0137b2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.338",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.338Z",
+            "@version": "1",
+            "message": "Requesting PaymentEvent for customerId: {\"transactionId\": \"a864b713-9452-4cb5-9b75-711e7d0d2dc7\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"customerId\": \"1718978101330503\", \"smeId\": null, \"customerName\": \"\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038194\", \"transferType\": \"CREDIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055599Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \" Mostafa Mohamed Abdallah\", \"otherSideExternalId\": \"1720148758274979\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038699\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "fd2a1c223cbf2bdf",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.337",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.337Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {payments.transfer.inbound.completed.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 55, 45, 98, 97, 101, 97, 52, 51, 97, 54, 52, 57, 48, 100, 51, 51, 101, 56, 101, 100, 55, 97, 98, 57, 97, 53, 59, 80, 97, 114, 101, 110, 116, 61, 56, 50, 51, 54, 49, 51, 97, 50, 99, 49, 53, 49, 101, 52, 52, 98, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {16387}, payload: {{\"transactionId\": \"a864b713-9452-4cb5-9b75-711e7d0d2dc7\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e8f9b065-a90d-4246-90dd-6f9f7f4027f4\", \"customerId\": \"1718978101330503\", \"smeId\": null, \"customerName\": \"\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038194\", \"transferType\": \"CREDIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \" Mostafa Mohamed Abdallah\", \"otherSideExternalId\": \"1720148758274979\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038699\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transfer-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.308",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.308Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=fcca7647-9e23-4441-a4fe-6b004e4453cb, type=ACCOUNT_CREDIT_TRANSFER_COMPLETED, payload={\"customerId\":\"1720148758274979\",\"referenceId\":\"0e53e893-c385-4eb2-b762-0925715c0e24\",\"customerAccountId\":\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\",\"amount\":\"5.00\",\"currency\":\"MYR\",\"date\":\"2024-08-13T04:53:23.773\",\"otherSideFullName\":\"\",\"status\":\"SUCCESSFUL\",\"errorCode\":\"SUCCESSFUL_ON_US_PAYMENT\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "2fd99f3241b5c6ab",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:30.305",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:30.297Z",
+            "@version": "1",
+            "message": "Requesting PaymentEvent for customerId: {\"transactionId\": \"936fe7ad-606f-4897-ba22-0ecf969c4181\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"smeId\": null, \"customerName\": \" Mostafa Mohamed Abdallah\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038699\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055599Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \"\", \"otherSideExternalId\": \"1718978101330503\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038194\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6c7baea43a6490d33e8ed7ab9a5",
+            "spanId": "7e5829bd754c9a39",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:28.412",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": ", 111, 110, 105, 116, 111, 114, 105, 110, 103, 83, 101, 114, 118, 105, 99, 101, 46, 107, 116, 58, 53, 53, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 97, 118, 97, 46, 117, 116, 105, 108, 46, 79, 112, 116, 105, 111, 110, 97, 108, 46, 111, 114, 69, 108, 115, 101, 84, 104, 114, 111, 119, 40, 79, 112, 116, 105, 111, 110, 97, 108, 46, 106, 97, 118, 97, 58, 52, 48, 56, 41, 10, 9, 97, 116, 32, 99, 111, 109, 46, 97, 114, 98, 109, 46, 100, 105, 103, 105, 98, 97, 110, 107, 46, 115, 101, 114, 118, 105, 99, 101, 115, 46, 80, 97, 121, 109, 101, 110, 116, 84, 114, 97, 110, 115, 102, 101, 114, 77, 111, 110, 105, 116, 111, 114, 105, 110, 103, 83, 101, 114, 118, 105, 99, 101, 73, 109, 112, 108, 46, 102, 101, 101, 100, 122, 97, 105, 80, 97, 121, 109, 101, 110, 116, 84, 114, 97, 110, 115, 102, 101, 114, 40, 80, 97, 121, 109, 101, 110, 116, 84, 114, 97, 110, 115, 102, 101, 114, 77, 111, 110, 105, 116, 111, 114, 105, 110, 103, 83, 101, 114, 118, 105, 99, 101, 46, 107, 116, 58, 53, 53, 41, 10, 9, 97, 116, 32, 99, 111, 109, 46, 97, 114, 98, 109, 46, 100, 105, 103, 105, 98, 97, 110, 107, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 80, 97, 121, 109, 101, 110, 116, 69, 118, 101, 110, 116, 80, 114, 111, 99, 101, 115, 115, 111, 114, 46, 104, 97, 110, 100, 108, 101, 67, 111, 109, 112, 108, 101, 116, 101, 80, 97, 121, 109, 101, 110, 116, 79, 117, 116, 103, 111, 105, 110, 103, 84, 114, 97, 110, 115, 102, 101, 114, 40, 80, 97, 121, 109, 101, 110, 116, 69, 118, 101, 110, 116, 80, 114, 111, 99, 101, 115, 115, 111, 114, 46, 107, 116, 58, 50, 51, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 100, 107, 46, 105, 110, 116, 101, 114, 110, 97, 108, 46, 114, 101, 102, 108, 101, 99, 116, 46, 78, 97, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 105, 110, 118, 111, 107, 101, 48, 40, 78, 97, 116, 105, 118, 101, 32, 77, 101, 116, 104, 111, 100, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 100, 107, 46, 105, 110, 116, 101, 114, 110, 97, 108, 46, 114, 101, 102, 108, 101, 99, 116, 46, 78, 97, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 105, 110, 118, 111, 107, 101, 40, 78, 97, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 106, 97, 118, 97, 58, 54, 50, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 100, 107, 46, 105, 110, 116, 101, 114, 110, 97, 108, 46, 114, 101, 102, 108, 101, 99, 116, 46, 68, 101, 108, 101, 103, 97, 116, 105, 110, 103, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 105, 110, 118, 111, 107, 101, 40, 68, 101, 108, 101, 103, 97, 116, 105, 110, 103, 77, 101, 116, 104, 111, 100, 65, 99, 99, 101, 115, 115, 111, 114, 73, 109, 112, 108, 46, 106, 97, 118, 97, 58, 52, 51, 41, 10, 9, 97, 116, 32, 106, 97, 118, 97, 46, 98, 97, 115, 101, 47, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 114, 101, 102, 108, 101, 99, 116, 46, 77, 101, 116, 104, 111, 100, 46, 105, 110, 118, 111, 107, 101, 40, 77, 101, 116, 104, 111, 100, 46, 106, 97, 118, 97, 58, 53, 54, 54, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 104, 97, 110, 100, 108, 101, 114, 46, 105, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 100, 111, 73, 110, 118, 111, 107, 101, 40, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 106, 97, 118, 97, 58, 49, 54, 57, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 104, 97, 110, 100, 108, 101, 114, 46, 105, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 105, 110, 118, 111, 107, 101, 40, 73, 110, 118, 111, 99, 97, 98, 108, 101, 72, 97, 110, 100, 108, 101, 114, 77, 101, 116, 104, 111, 100, 46, 106, 97, 118, 97, 58, 49, 49, 57, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 72, 97, 110, 100, 108, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 105, 110, 118, 111, 107, 101, 40, 72, 97, 110, 100, 108, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 53, 54, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 105, 110, 118, 111, 107, 101, 72, 97, 110, 100, 108, 101, 114, 40, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 51, 52, 55, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 111, 110, 77, 101, 115, 115, 97, 103, 101, 40, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 57, 50, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 111, 110, 77, 101, 115, 115, 97, 103, 101, 40, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 46, 106, 97, 118, 97, 58, 53, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 36, 36, 70, 97, 115, 116, 67, 108, 97, 115, 115, 66, 121, 83, 112, 114, 105, 110, 103, 67, 71, 76, 73, 66, 36, 36, 99, 100, 101, 56, 99, 48, 49, 100, 46, 105, 110, 118, 111, 107, 101, 40, 60, 103, 101, 110, 101, 114, 97, 116, 101, 100, 62, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 99, 103, 108, 105, 98, 46, 112, 114, 111, 120, 121, 46, 77, 101, 116, 104, 111, 100, 80, 114, 111, 120, 121, 46, 105, 110, 118, 111, 107, 101, 40, 77, 101, 116, 104, 111, 100, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 50, 49, 56, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 67, 103, 108, 105, 98, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 105, 110, 118, 111, 107, 101, 74, 111, 105, 110, 112, 111, 105, 110, 116, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 57, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 106, 97, 118, 97, 58, 49, 54, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 67, 103, 108, 105, 98, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 54, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 99, 108, 111, 117, 100, 46, 115, 108, 101, 117, 116, 104, 46, 98, 114, 97, 118, 101, 46, 105, 110, 115, 116, 114, 117, 109, 101, 110, 116, 46, 109, 101, 115, 115, 97, 103, 105, 110, 103, 46, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 77, 101, 116, 104, 111, 100, 73, 110, 116, 101, 114, 99, 101, 112, 116, 111, 114, 46, 105, 110, 118, 111, 107, 101, 40, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 77, 101, 116, 104, 111, 100, 73, 110, 116, 101, 114, 99, 101, 112, 116, 111, 114, 46, 106, 97, 118, 97, 58, 53, 56, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 82, 101, 102, 108, 101, 99, 116, 105, 118, 101, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 106, 97, 118, 97, 58, 49, 56, 54, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 67, 103, 108, 105, 98, 77, 101, 116, 104, 111, 100, 73, 110, 118, 111, 99, 97, 116, 105, 111, 110, 46, 112, 114, 111, 99, 101, 101, 100, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 54, 51, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 97, 111, 112, 46, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 36, 68, 121, 110, 97, 109, 105, 99, 65, 100, 118, 105, 115, 101, 100, 73, 110, 116, 101, 114, 99, 101, 112, 116, 111, 114, 46, 105, 110, 116, 101, 114, 99, 101, 112, 116, 40, 67, 103, 108, 105, 98, 65, 111, 112, 80, 114, 111, 120, 121, 46, 106, 97, 118, 97, 58, 55, 48, 56, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 97, 100, 97, 112, 116, 101, 114, 46, 82, 101, 99, 111, 114, 100, 77, 101, 115, 115, 97, 103, 105, 110, 103, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 65, 100, 97, 112, 116, 101, 114, 36, 36, 69, 110, 104, 97, 110, 99, 101, 114, 66, 121, 83, 112, 114, 105, 110, 103, 67, 71, 76, 73, 66, 36, 36, 50, 98, 53, 51, 48, 53, 100, 52, 46, 111, 110, 77, 101, 115, 115, 97, 103, 101, 40, 60, 103, 101, 110, 101, 114, 97, 116, 101, 100, 62, 41, 10, 9, 97, 116, 32, 111, 114, 103, 46, 115, 112, 114, 105, 110, 103, 102, 114, 97, 109, 101, 119, 111, 114, 107, 46, 107, 97, 102, 107, 97, 46, 108, 105, 115, 116, 101, 110, 101, 114, 46, 75, 97, 102, 107, 97, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 67, 111, 110, 116, 97, 105, 110, 101, 114, 36, 76, 105, 115, 116, 101, 110, 101, 114, 67, 111, 110, 115, 117, 109, 101, 114, 46, 100, 111, 73, 110, 118, 111, 107, 101, 79, 110, 77, 101, 115, 115, 97, 103, 101, 40, 75, 97, 102, 107, 97, 77, 101, 115, 115, 97, 103, 101, 76, 105, 115, 116, 101, 110, 101, 114, 67, 111, 110, 116, 97, 105, 110, 101, 114, 46, 106, 97, 118, 97, 58, 50, 54, 54, 55, 41, 10, 9, 46, 46, 46, 32, 49, 49, 32, 109, 111, 114, 101, 10]), RecordHeader(key = kafka_dlt-original-topic, value = [112, 97, 121, 109, 101, 110, 116, 115, 46, 116, 114, 97, 110, 115, 102, 101, 114, 46, 111, 117, 116, 98, 111, 117, 110, 100, 46, 99, 111, 109, 112, 108, 101, 116, 101, 100, 46, 118, 49]), RecordHeader(key = kafka_dlt-original-partition, value = [0, 0, 0, 0]), RecordHeader(key = kafka_dlt-original-offset, value = [0, 0, 0, 0, 0, 0, 31, -72]), RecordHeader(key = kafka_dlt-original-timestamp, value = [0, 0, 1, -111, 74, 21, 122, -48]), RecordHeader(key = kafka_dlt-original-timestamp-type, value = [67, 114, 101, 97, 116, 101, 84, 105, 109, 101]), RecordHeader(key = kafka_dlt-original-consumer-group, value = [112, 97, 121, 109, 101, 110, 116, 115, 46, 116, 114, 97, 110, 115, 102, 101, 114, 46, 111, 117, 116, 98, 111, 117, 110, 100, 46, 99, 111, 109, 112, 108, 101, 116, 101, 100, 46, 118, 49, 46, 103, 114, 111, 117, 112, 45, 105, 100]), RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 56, 45, 98, 101, 102, 49, 52, 55, 97, 100, 51, 55, 101, 54, 98, 57, 54, 102, 102, 99, 98, 100, 56, 54, 52, 48, 59, 80, 97, 114, 101, 110, 116, 61, 51, 55, 101, 54, 98, 57, 54, 102, 102, 99, 98, 100, 56, 54, 52, 48, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, payload: {{\\\"transactionId\\\": \\\"936fe7ad-606f-4897-ba22-0ecf969c4181\\\", \\\"lifecycleId\\\": \\\"0e53e893-c385-4eb2-b762-0925715c0e24\\\", \\\"customerAccountId\\\": \\\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\\\", \\\"customerId\\\": \\\"1720148758274979\\\", \\\"smeId\\\": null, \\\"customerName\\\": \\\" Mostafa Mohamed Abdallah\\\", \\\"customerAccountType\\\": \\\"SVGS\\\", \\\"customerAccountNumber\\\": \\\"912010119038699\\\", \\\"transferType\\\": \\\"DEBIT\\\", \\\"paymentType\\\": \\\"PAY2ACCOUNT\\\", \\\"amount\\\": 5.00, \\\"currency\\\": \\\"MYR\\\", \\\"paymentStatus\\\": \\\"COMPLETED\\\", \\\"tmCreatedAt\\\": \\\"2024-08-13T04:53:27.055Z\\\", \\\"createdAt\\\": \\\"2024-08-13T04:53:16.929Z\\\", \\\"updatedAt\\\": \\\"2024-08-13T04:53:27.344Z\\\", \\\"otherSideFullName\\\": \\\"\\\", \\\"otherSideExternalId\\\": \\\"1718978101330503\\\", \\\"otherSideSmeId\\\": null, \\\"otherSideAccountNumber\\\": \\\"912010119038194\\\", \\\"otherSideBankCode\\\": \\\"RJHIMYKL\\\", \\\"otherSideAccountType\\\": \\\"SVGS\\\", \\\"recipientReference\\\": \\\"We\\\", \\\"paymentDetails\\\": \\\"\\\", \\\"proxyRegistrationNumber\\\": null, \\\"errorCode\\\": null}}\",\"logger_name\":\"com.arbm.digibank.messaging.interceptor.KafkaLoggingProducerInterceptor\",\"thread_name\":\"org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1\",\"level\":\"DEBUG\",\"level_value\":10000,\"springAppName\":\"transfer-monitoring-service\",\"bc\":\"framl\"}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:28.403",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:28.402Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {payments.transfer.outbound.completed.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 55, 45, 98, 97, 101, 97, 52, 51, 97, 54, 52, 57, 48, 100, 51, 51, 101, 56, 101, 100, 55, 97, 98, 57, 97, 53, 59, 80, 97, 114, 101, 110, 116, 61, 100, 97, 54, 53, 55, 48, 98, 56, 98, 49, 100, 51, 49, 56, 53, 51, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {8120}, payload: {{\"transactionId\": \"936fe7ad-606f-4897-ba22-0ecf969c4181\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"smeId\": null, \"customerName\": \" Mostafa Mohamed Abdallah\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038699\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \"\", \"otherSideExternalId\": \"1718978101330503\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038194\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transfer-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.894",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.894Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {payments.transfer.outbound.completed.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 55, 45, 98, 97, 101, 97, 52, 51, 97, 54, 52, 57, 48, 100, 51, 51, 101, 56, 101, 100, 55, 97, 98, 57, 97, 53, 59, 80, 97, 114, 101, 110, 116, 61, 102, 51, 48, 57, 55, 57, 53, 48, 98, 51, 54, 57, 101, 102, 48, 57, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {8120}, payload: {{\"transactionId\": \"936fe7ad-606f-4897-ba22-0ecf969c4181\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"smeId\": null, \"customerName\": \" Mostafa Mohamed Abdallah\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038699\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \"\", \"otherSideExternalId\": \"1718978101330503\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038194\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transfer-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.690",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.689Z",
+            "@version": "1",
+            "message": "Posting enriched, posting=PostingInstructionBatch(postingInstructionBatch=InstructionBatch(id=8d2fdc01-f031-483a-bc8f-af49b1688106, createRequestId=fcca7647-9e23-4441-a4fe-6b004e4453cb, clientId=intrabank_payments, clientBatchId=fcca7647-9e23-4441-a4fe-6b004e4453cb, postingInstructions=[PostingInstructions(id=559370c6-d96f-49ee-b730-4ed7d7369986, clientTransactionId=936fe7ad-606f-4897-ba22-0ecf969c4181, pics=[], instructionDetails=InstructionDetails(data={PAYMENT_TYPE=duitnow_acc_intrabank, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=SVGS, paymentType=DUITNOW_ACC}), committedPostings=[CommittedPosting(credit=false, amount=5, denomination=MYR, accountId=e4ded858-9fdc-4fb6-8be2-d98151c89b49, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010119038699, customerId=1720148758274979, accountType=SAVINGS_ACCOUNT, glAccount=CUSTOMER_CMSA), CommittedPosting(credit=true, amount=5, denomination=MYR, accountId=DBS_INTERBRANCH, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010119038699, customerId=1720148758274979, accountType=SAVINGS_ACCOUNT, glAccount=DBS_INTERBRANCH_ACCOUNT)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=null, outboundHardSettlement=OutboundHardSettlement(amount=5, denomination=MYR, targetAccount=TargetAccount(accountId=e4ded858-9fdc-4fb6-8be2-d98151c89b49), accountId=null, internalAccountId=DBS_INTERBRANCH, advice=false, targetAccountId=e4ded858-9fdc-4fb6-8be2-d98151c89b49), transfer=null, glTransactionId=240813ktg8dnus, glEvent=ON_US_DIGI_SA_SA_QR_P2P), PostingInstructions(id=bc18ace7-a80c-4ab0-ae9b-4ae9a2d89c30, clientTransactionId=a864b713-9452-4cb5-9b75-711e7d0d2dc7, pics=[], instructionDetails=InstructionDetails(data={PAYMENT_TYPE=duitnow_acc_intrabank, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=SVGS, paymentType=DUITNOW_ACC}), committedPostings=[CommittedPosting(credit=true, amount=5, denomination=MYR, accountId=e8f9b065-a90d-4246-90dd-6f9f7f4027f4, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010119038194, customerId=1718978101330503, accountType=SAVINGS_ACCOUNT, glAccount=CUSTOMER_CMSA), CommittedPosting(credit=false, amount=5, denomination=MYR, accountId=DBS_INTERBRANCH, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010119038194, customerId=1718978101330503, accountType=SAVINGS_ACCOUNT, glAccount=DBS_INTERBRANCH_ACCOUNT)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=InboundHardSettlement(amount=5, denomination=MYR, targetAccount=TargetAccount(accountId=e8f9b065-a90d-4246-90dd-6f9f7f4027f4), accountId=null, internalAccountId=DBS_INTERBRANCH, advice=false, targetAccountId=e8f9b065-a90d-4246-90dd-6f9f7f4027f4), outboundHardSettlement=null, transfer=null, glTransactionId=240813zydp3la8, glEvent=ON_US_DIGI_SA_SA_QR_P2P)], batchDetails={original_posting_client_batch_id=fcca7647-9e23-4441-a4fe-6b004e4453cb}, valueTimestamp=2024-08-13T04:53:27.055599Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, insertionTimestamp=2024-08-13T04:53:27.055599Z, dryRun=false, error=null, glDate=20240813), technicalMetadata=TechnicalMetadata(eventId=event_8d2fdc01-f031-483a-bc8f-af49b1688106, captureTimestamp=2024-08-13T04:53:27.099088771Z, vaultVersion=VaultVersion(major=4, minor=6, patch=12, label=), context={}), updateMask=UpdateMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "66bae6c7e499ae2001ae81bb6ca0d1d5",
+            "spanId": "bc733d920d21aa8a",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.649",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.647Z",
+            "@version": "1",
+            "message": "upsertFeedzaiAccountReference: accountInfo: DepositSavingAccountDTO(accountId=e4ded858-9fdc-4fb6-8be2-d98151c89b49, accountNumber=912010119038699, customerId=1720148758274979, status=ACTIVE, currency=MYR, openingTimestamp=2024-07-05T03:11:56.183888Z)",
+            "logger_name": "com.arbm.digibank.service.FeedzaiReferenceAccountService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66bae6c761ba823d8d0812d84d1c561c",
+            "spanId": "8c90001f37ef1ade",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.626",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.625Z",
+            "@version": "1",
+            "message": "Event doesn't inform about cleared saving pot or cleared saving account: {\"eventId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49_8d2fdc01-f031-483a-bc8f-af49b1688106\", \"valueTimestamp\": \"2024-08-13T04:53:27.055Z\", \"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"availableBalance\": 9698.84, \"settledBalance\": 9698.84}",
+            "logger_name": "com.arbm.digibank.offboarding.service.OffboardingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "66bae6c761ba823d8d0812d84d1c561c",
+            "spanId": "a5bd3e80b0659255",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.625",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.624Z",
+            "@version": "1",
+            "message": "DepositBalanceEvent Snapshot detail: {\"eventId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49_8d2fdc01-f031-483a-bc8f-af49b1688106\", \"valueTimestamp\": \"2024-08-13T04:53:27.055Z\", \"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"availableBalance\": 9698.84, \"settledBalance\": 9698.84} ",
+            "logger_name": "com.arbm.digibank.consumer.ReferenceAccountConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "66bae6c761ba823d8d0812d84d1c561c",
+            "spanId": "8c90001f37ef1ade",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.622",
+        "kubernetes.container_name": "deposit-commodity-trading-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.622Z",
+            "@version": "1",
+            "message": "Received Retail event: {\"eventId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49_8d2fdc01-f031-483a-bc8f-af49b1688106\", \"valueTimestamp\": \"2024-08-13T04:53:27.055Z\", \"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"availableBalance\": 9698.84, \"settledBalance\": 9698.84}",
+            "logger_name": "com.arbm.digibank.processor.BalanceEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-commodity-trading-service",
+            "traceId": "66bae6c761ba823d8d0812d84d1c561c",
+            "spanId": "0fa24bed784472e0",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.622",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.622Z",
+            "@version": "1",
+            "message": "Consume DepositBalanceEvent: {\"eventId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49_8d2fdc01-f031-483a-bc8f-af49b1688106\", \"valueTimestamp\": \"2024-08-13T04:53:27.055Z\", \"accountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"availableBalance\": 9698.84, \"settledBalance\": 9698.84}",
+            "logger_name": "com.arbm.digibank.offboarding.OffboardingProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#8-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "66bae6c761ba823d8d0812d84d1c561c",
+            "spanId": "a5bd3e80b0659255",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.503",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.498Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=true, amount=5, denomination=MYR, accountId=DBS_INTERBRANCH, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010119038699, customerId=1720148758274979, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "66bae6c7e499ae2001ae81bb6ca0d1d5",
+            "spanId": "bc733d920d21aa8a",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.495",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.494Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=false, amount=5, denomination=MYR, accountId=e4ded858-9fdc-4fb6-8be2-d98151c89b49, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010119038699, customerId=1720148758274979, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "66bae6c7e499ae2001ae81bb6ca0d1d5",
+            "spanId": "bc733d920d21aa8a",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.387",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.387Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {payments.transfer.outbound.completed.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 54, 98, 97, 101, 54, 99, 55, 45, 98, 97, 101, 97, 52, 51, 97, 54, 52, 57, 48, 100, 51, 51, 101, 56, 101, 100, 55, 97, 98, 57, 97, 53, 59, 80, 97, 114, 101, 110, 116, 61, 55, 101, 99, 99, 100, 56, 50, 54, 101, 57, 98, 98, 50, 99, 102, 50, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {8120}, payload: {{\"transactionId\": \"936fe7ad-606f-4897-ba22-0ecf969c4181\", \"lifecycleId\": \"0e53e893-c385-4eb2-b762-0925715c0e24\", \"customerAccountId\": \"e4ded858-9fdc-4fb6-8be2-d98151c89b49\", \"customerId\": \"1720148758274979\", \"smeId\": null, \"customerName\": \" Mostafa Mohamed Abdallah\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010119038699\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"amount\": 5.00, \"currency\": \"MYR\", \"paymentStatus\": \"COMPLETED\", \"tmCreatedAt\": \"2024-08-13T04:53:27.055Z\", \"createdAt\": \"2024-08-13T04:53:16.929Z\", \"updatedAt\": \"2024-08-13T04:53:27.344Z\", \"otherSideFullName\": \"\", \"otherSideExternalId\": \"1718978101330503\", \"otherSideSmeId\": null, \"otherSideAccountNumber\": \"912010119038194\", \"otherSideBankCode\": \"RJHIMYKL\", \"otherSideAccountType\": \"SVGS\", \"recipientReference\": \"We\", \"paymentDetails\": \"\", \"proxyRegistrationNumber\": null, \"errorCode\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transfer-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.367",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.365Z",
+            "@version": "1",
+            "message": "sending notification with template {\"customerId\": \"1720148758274979\", \"notificationId\": \"cb6518bd-1079-45b0-8fef-b9cc7e4f7785\", \"templateName\": \"CREDIT_TRANSFER_SENT\", \"placeholders\": [{\"name\": \"amount\", \"value\": \"5.00\"}, {\"name\": \"recipientBankAccount\", \"value\": \"8194\"}, {\"name\": \"timestamp\", \"value\": \"13 Aug 2024 12:53:27\"}, {\"name\": \"supportPhone\", \"value\": \"1800 81 9149\"}, {\"name\": \"recipientName\", \"value\": \"\"}, {\"name\": \"accountNumberSuffix\", \"value\": \"8699\"}]}.",
+            "logger_name": "com.arbm.digibank.producer.NotificationProducer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#7-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0b67687def34dde7",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:27.366",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:27.366Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [RetailTransactionEntity(customerId=1720148758274979, transactionId=936fe7ad-606f-4897-ba22-0ecf969c4181, tmCreatedAt=2024-08-13T04:53:27.055599Z, amount=5, limitType=DUITNOW_ACC_INTRABANK)]\n totalTime: 9 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#3-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "66bae6c7dfb1c22cc372d4b3fa47b375",
+            "spanId": "e1f1def3a3d7cd55",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:17.403",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:17.403Z",
+            "@version": "1",
+            "message": "Incoming request data: POST /payment-service/v1/account-payments/reviewable-payment-prospects, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", content-length:\"365\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"96158bb7-a3e4-945a-86d9-2f00532fd496\", x-envoy-expected-rq-timeout-ms:\"200000\", Content-Type:\"application/json;charset=UTF-8\"], payload={\"creditorAccountNumber\":\"912010119038194\",\"creditorBankCode\":\"RJHIMYKL\",\"creditorAccountType\":\"SVGS\",\"requestId\":\"fcca7647-9e23-4441-a4fe-6b004e4453cb\",\"customerId\":\"1720148758274979\",\"amount\":5,\"denomination\":\"MYR\",\"creditorName\":\"\",\"debtorAccountId\":\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\",\"debtorAccountType\":\"SVGS\",\"recipientReference\":\"We\",\"paymentDetails\":\"\"}]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.962",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.962Z",
+            "@version": "1",
+            "message": "PaymentFraml Request: class TransferInitiationRequestV1 {\n    lifecycleId: 0e53e893-c385-4eb2-b762-0925715c0e24\n    paymentType: fps\n    channelType: mobile\n    paymentSubType: instant_transfer\n    paymentStatus: PROSPECT\n    createdAt: 1723524796929\n    numberOfPayments: 1\n    senderId: 1720148758274979\n    senderSmeId: null\n    receiverId: 1718978101330503\n    receiverSmeId: null\n    senderSegment: retail\n    senderAccountType: svgs\n    receiverAccountType: \n    senderTransactionAmount: 5\n    senderTransactionCurrency: MYR\n    senderTransactionBankAccountNumber: 912010119038699\n    senderTransactionNotes: We\n    senderBankBic: RJHIMYKL\n    receiverTransactionAmount: 5\n    receiverTransactionCurrency: MYR\n    receiverTransactionBankAccountNumber: 912010119038194\n    receiverSegment: retail\n    receiverName: \n    otherSideName:  Mostafa Mohamed Abdallah\n    direction: outgoing\n    eventOccurredAt: 1723524796929\n    textForReceiver: \n    productCode: PAY2ACCOUNT\n    receiverBankBic: RJHIMYKL\n    receiverBankCountryCode: MY\n    receiverCountryCode: MY\n    senderBankCountryCode: MY\n    senderCountryCode: MY\n    receiverTransactionForeignExchangeRate: 1\n    receiverAlias: \n    receiverAliasType: \n    senderAlias: \n    eventExternalId: \n    receiverAliasLastUpdateTime: null\n    senderAliasLastUpdateTime: null\n    senderAliasRegistrationTime: null\n}",
+            "logger_name": "com.arbm.digibank.service.client.FramlTransfersService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.853",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.853Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1720148758274979/customerIft with method: GET succeeded with status code 200: OK in totalTime: 77 ms",
+            "logger_name": "com.arbm.digibank.filter.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.834",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.828Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1720148758274979, customerName= Mostafa Mohamed Abdallah, customerDPName=SpaceMonke)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "ed09019a43a2a0ad",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.829",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.825Z",
+            "@version": "1",
+            "message": "Call to Account Deposit API endpoint: /customer-accounts/1720148758274979/accounts with method: GET succeeded with status code 200: OK in totalTime: 76 ms",
+            "logger_name": "com.arbm.digibank.filter.AccountDepositApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.829",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.819Z",
+            "@version": "1",
+            "message": "Customer Id: 1720148758274979",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "ed09019a43a2a0ad",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.815",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.81Z",
+            "@version": "1",
+            "message": "[ea34cf07-1, L:/172.21.47.137:56750 - R:customer-service.customer-service.svc.cluster.local/10.100.84.214:8080] Handler is being applied: {uri=http://customer-service.customer-service.svc.cluster.local:8080/customer-service/v1/customers/1720148758274979/customerIft, method=GET}",
+            "logger_name": "reactor.netty.http.client.HttpClientConnect",
+            "thread_name": "reactor-http-epoll-3",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.769",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.768Z",
+            "@version": "1",
+            "message": "[ee6adb5a-1, L:/172.21.47.137:37214 - R:deposit-account-service.deposit-account-service.svc.cluster.local/10.100.198.221:8080] Handler is being applied: {uri=http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/customer-accounts/1720148758274979/accounts, method=GET}",
+            "logger_name": "reactor.netty.http.client.HttpClientConnect",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.757",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.752Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1720148758274979]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.737",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.735Z",
+            "@version": "1",
+            "message": "Retrieving account information from saving-account-service. Customer ID: 1720148758274979",
+            "logger_name": "com.arbm.digibank.service.client.DepositAccountInfoService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.698",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:16.697Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1720148758274979, PAY_TO_RIZE_ACCOUNT, 2024-08-13T04:53:16.693886Z]\n totalTime: 4 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6bc200be876830d6e2fdd0d851c",
+            "spanId": "830d6e2fdd0d851c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:16.528",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:16.528] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/account-payments/reviewable-payment-prospects {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\"},\"body\":\"{\\\"creditorAccountNumber\\\":\\\"912010119038194\\\",\\\"creditorBankCode\\\":\\\"RJHIMYKL\\\",\\\"creditorAccountType\\\":\\\"SVGS\\\",\\\"requestId\\\":\\\"fcca7647-9e23-4441-a4fe-6b004e4453cb\\\",\\\"customerId\\\":\\\"1720148758274979\\\",\\\"amount\\\":5,\\\"denomination\\\":\\\"MYR\\\",\\\"creditorName\\\":\\\"\\\",\\\"debtorAccountId\\\":\\\"e4ded858-9fdc-4fb6-8be2-d98151c89b49\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\",\\\"recipientReference\\\":\\\"We\\\",\\\"paymentDetails\\\":\\\"\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.636",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:07.636] [INFO] [apollo-server,,] default - Microservice response: {\"customerId\":\"1720148758274979\",\"duitnowAccOrProxy\":{\"min\":1,\"max\":50000,\"value\":1000},\"duitnowQr\":{\"min\":1,\"max\":50000,\"value\":1000},\"duitnowAccIntrabank\":{\"min\":1,\"max\":50000,\"value\":1000}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.632",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:07.632Z",
+            "@version": "1",
+            "message": "Incoming request data: GET /transaction-limit-service/v1/limits/retail/1720148758274979, client=127.0.0.1, headers=[host:\"transaction-limit-service.transaction-limit-service.svc.cluster.local:8080\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"720c1a3d-9f74-94eb-9047-289e69ac0310\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "66bae6b34c086fb5f351c744571688a9",
+            "spanId": "f351c744571688a9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.630",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:07.629Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: CustomerLimitsEntity com.arbm.digibank.repository.limits.CustomerLimitsRepository.findByCustomerId(String)\n parameters: [1720148758274979]\n totalTime: 6 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "66bae6b34c086fb5f351c744571688a9",
+            "spanId": "f351c744571688a9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.620",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:07.62Z",
+            "@version": "1",
+            "message": "Received request to get transaction limits for customer [1720148758274979] ...",
+            "logger_name": "com.arbm.digibank.controller.limit.CustomerTransactionLimitsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "66bae6b34c086fb5f351c744571688a9",
+            "spanId": "f351c744571688a9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.612",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:07.611Z",
+            "@version": "1",
+            "message": "Before request [GET /transaction-limit-service/v1/limits/retail/1720148758274979, client=127.0.0.1, headers=[host:\"transaction-limit-service.transaction-limit-service.svc.cluster.local:8080\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"720c1a3d-9f74-94eb-9047-289e69ac0310\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "66bae6b34c086fb5f351c744571688a9",
+            "spanId": "f351c744571688a9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.605",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:07.604] [INFO] [apollo-server,,] default - Microservice request:  http://transaction-limit-service.transaction-limit-service.svc.cluster.local:8080/transaction-limit-service/v1/limits/retail/1720148758274979 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.137",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:07.137] [INFO] [apollo-server,,] default - Microservice response: {\"requestId\":\"94ab9a73-0859-41e8-b736-56b0d8bfaef3\",\"type\":\"ACCOUNT_ENQUIRY_COMPLETED\",\"payload\":\"{\\\"customerId\\\":\\\"1720148758274979\\\",\\\"requestStatus\\\":\\\"SUCCESSFUL\\\",\\\"mappedErrorCode\\\":\\\"SUCCESS\\\",\\\"creditorName\\\":\\\" Sopan Wa\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.137",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:07.137] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getAsyncResultLongPolling\":{\"payload\":\"{\\\"customerId\\\":\\\"1720148758274979\\\",\\\"requestStatus\\\":\\\"SUCCESSFUL\\\",\\\"mappedErrorCode\\\":\\\"SUCCESS\\\",\\\"creditorName\\\":\\\" Sopan Wa\\\"}\",\"requestId\":\"94ab9a73-0859-41e8-b736-56b0d8bfaef3\",\"type\":\"ACCOUNT_ENQUIRY_COMPLETED\"}}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:07.132",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:07.131Z",
+            "@version": "1",
+            "message": "Found Async Result Entity: AsyncResultEntity(requestId=94ab9a73-0859-41e8-b736-56b0d8bfaef3, type=ACCOUNT_ENQUIRY_COMPLETED, payload={\"customerId\":\"1720148758274979\",\"requestStatus\":\"SUCCESSFUL\",\"mappedErrorCode\":\"SUCCESS\",\"creditorName\":\" Sopan Wa\"}) after total DB calls: 1 and total time: 5 millis, backOffStrategy: EXPONENTIAL, initialDelay: 200, delayFactor: 1.5",
+            "logger_name": "com.arbm.digibank.service.AsyncResultService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:06.653",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:06.651Z",
+            "@version": "1",
+            "message": "Incoming request data: POST /payment-service/v1/account-payments/creditor-details-requests, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", content-length:\"233\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"35ce02af-3984-940c-9de0-f3374bd9a938\", x-envoy-expected-rq-timeout-ms:\"200000\", Content-Type:\"application/json;charset=UTF-8\"], payload={\"requestId\":\"94ab9a73-0859-41e8-b736-56b0d8bfaef3\",\"customerId\":\"1720148758274979\",\"creditorAccountNumber\":\"912010119038194\",\"creditorBankCode\":\"RJHIMYKL\",\"creditorAccountType\":\"SVGS\",\"denomination\":\"MYR\",\"debtorAccountType\":\"SVGS\"}]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6b188a90d1b276f97124ae18c1d",
+            "spanId": "276f97124ae18c1d",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:06.635",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:06.634Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=94ab9a73-0859-41e8-b736-56b0d8bfaef3, type=ACCOUNT_ENQUIRY_COMPLETED, payload={\"customerId\":\"1720148758274979\",\"requestStatus\":\"SUCCESSFUL\",\"mappedErrorCode\":\"SUCCESS\",\"creditorName\":\" Sopan Wa\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "66bae6b188a90d1b276f97124ae18c1d",
+            "spanId": "1918ca0872c7d492",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:06.188",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:06.187Z",
+            "@version": "1",
+            "message": "getting killswitch for customerId 1720148758274979 , pingoneId 142407c6-eff6-4440-9ad0-68820c11ed75",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66bae6b188a90d1b276f97124ae18c1d",
+            "spanId": "1e51bc3fc8a605fc",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.834",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.833Z",
+            "@version": "1",
+            "message": "Fetching user by customerId: customerId=1720148758274979",
+            "logger_name": "com.arbm.digibank.service.iamgateway.GatewayUserFetchServiceImpl",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "66bae6b188a90d1b276f97124ae18c1d",
+            "spanId": "1e51bc3fc8a605fc",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.817",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.816Z",
+            "@version": "1",
+            "message": "[ca10f8a1-1, L:/172.21.44.127:38062 - R:customer-iam-service.customer-iam-service.svc.cluster.local/10.100.230.137:8080] Handler is being applied: {uri=http://customer-iam-service.customer-iam-service.svc.cluster.local:8080/customer-iam-service/v1/login/killswitchStatus?customerId=1720148758274979, method=POST}",
+            "logger_name": "reactor.netty.http.client.HttpClientConnect",
+            "thread_name": "reactor-http-epoll-4",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.577",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:05.577] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/account-payments/creditor-details-requests {\"method\":\"POST\",\"headers\":{\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\"},\"body\":\"{\\\"requestId\\\":\\\"94ab9a73-0859-41e8-b736-56b0d8bfaef3\\\",\\\"customerId\\\":\\\"1720148758274979\\\",\\\"creditorAccountNumber\\\":\\\"912010119038194\\\",\\\"creditorBankCode\\\":\\\"RJHIMYKL\\\",\\\"creditorAccountType\\\":\\\"SVGS\\\",\\\"denomination\\\":\\\"MYR\\\",\\\"debtorAccountType\\\":\\\"SVGS\\\"}\"}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.140",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.137Z",
+            "@version": "1",
+            "message": "Incoming request data: GET /payment-service/v1/customers/1720148758274979/authorizations/transaction-types/PAY_TO_ACCOUNT?bankCode=RJHIMYKL&accountNumber=912010119038194, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"07022b98-d51c-959f-91bd-763403c6af98\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6b1ede7635e280751c836234c44",
+            "spanId": "280751c836234c44",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.121",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.119Z",
+            "@version": "1",
+            "message": "Customer with id: [1720148758274979] is authorized over transaction type 'PAY_TO_ACCOUNT'",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6b1ede7635e280751c836234c44",
+            "spanId": "280751c836234c44",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.115",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.114Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1720148758274979, PAY_TO_RIZE_ACCOUNT, 2024-08-13T04:53:05.096014Z]\n totalTime: 17 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6b1ede7635e280751c836234c44",
+            "spanId": "280751c836234c44",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.104",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.085Z",
+            "@version": "1",
+            "message": "Received request to check authorization for customer with id: [1720148758274979] over transactionType: PAY_TO_ACCOUNT",
+            "logger_name": "com.arbm.digibank.controller.CustomerAuthorizationController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6b1ede7635e280751c836234c44",
+            "spanId": "280751c836234c44",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:05.013",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:53:05.008Z",
+            "@version": "1",
+            "message": "Before request [GET /payment-service/v1/customers/1720148758274979/authorizations/transaction-types/PAY_TO_ACCOUNT?bankCode=RJHIMYKL&accountNumber=912010119038194, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"07022b98-d51c-959f-91bd-763403c6af98\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae6b1ede7635e280751c836234c44",
+            "spanId": "280751c836234c44",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:53:04.995",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:53:04.994] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1720148758274979/authorizations/transaction-types/PAY_TO_ACCOUNT?bankCode=RJHIMYKL&accountNumber=912010119038194 {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\"}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.631",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:52:44.630] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"favRecipientsPayToAccount\":{\"favRecipientPayToAccountInfo\":[{\"id\":\"3060c379-43b8-4b7b-9ce6-9ef02bcfb9cd\",\"customerId\":\"1720148758274979\",\"accountNumber\":\"*HIDDEN*\",\"nickName\":\"Test\",\"fullName\":\"\",\"bicCode\":\"RJHIMYKL\",\"accountTypeCode\":\"SVGS\",\"accountTypeName\":\"Savings\",\"bankName\":\"Al Rajhi Bank / Rize powered by Al Rajhi\"}]}}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.619",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:52:44.616] [INFO] [apollo-server,,] default - Microservice response: [{\"id\":\"3060c379-43b8-4b7b-9ce6-9ef02bcfb9cd\",\"customerId\":\"1720148758274979\",\"accountNumber\":\"*HIDDEN*\",\"nickName\":\"Test\",\"fullName\":\"\",\"bicCode\":\"RJHIMYKL\",\"accountTypeCode\":\"SVGS\",\"accountTypeName\":\"Savings\"}]"
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.614",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:44.613Z",
+            "@version": "1",
+            "message": "Incoming request data: GET /payment-service/v1/customers/1720148758274979/fav-recipients/pay-to-account, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"cac023ed-f749-9ac6-a6ba-af6152472c20\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69c363999d6a3999a25e72f774c",
+            "spanId": "a3999a25e72f774c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.611",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:44.611Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.favourite.PayToAccountFavouriteRepository.findAllByCustomerId(String)\n parameters: [1720148758274979]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69c363999d6a3999a25e72f774c",
+            "spanId": "a3999a25e72f774c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.606",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:44.605Z",
+            "@version": "1",
+            "message": "Received request to get favorite pay to account recipients for customerId: 1720148758274979",
+            "logger_name": "com.arbm.digibank.controller.PayToAccountFavouritesController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69c363999d6a3999a25e72f774c",
+            "spanId": "a3999a25e72f774c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.605",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:44.604Z",
+            "@version": "1",
+            "message": "Before request [GET /payment-service/v1/customers/1720148758274979/fav-recipients/pay-to-account, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"cac023ed-f749-9ac6-a6ba-af6152472c20\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69c363999d6a3999a25e72f774c",
+            "spanId": "a3999a25e72f774c",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:44.595",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:52:44.595] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1720148758274979/fav-recipients/pay-to-account {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\"}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:42.035",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:52:42.035] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"favRecipientsPayToAccount\":{\"favRecipientPayToAccountInfo\":[{\"id\":\"3060c379-43b8-4b7b-9ce6-9ef02bcfb9cd\",\"customerId\":\"1720148758274979\",\"accountNumber\":\"*HIDDEN*\",\"nickName\":\"Test\",\"fullName\":\"\",\"bicCode\":\"RJHIMYKL\",\"accountTypeCode\":\"SVGS\",\"accountTypeName\":\"Savings\",\"bankName\":\"Al Rajhi Bank / Rize powered by Al Rajhi\"}]}}}"
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:42.022",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:52:42.021] [INFO] [apollo-server,,] default - Microservice response: [{\"id\":\"3060c379-43b8-4b7b-9ce6-9ef02bcfb9cd\",\"customerId\":\"1720148758274979\",\"accountNumber\":\"*HIDDEN*\",\"nickName\":\"Test\",\"fullName\":\"\",\"bicCode\":\"RJHIMYKL\",\"accountTypeCode\":\"SVGS\",\"accountTypeName\":\"Savings\"}]"
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:42.020",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:42.019Z",
+            "@version": "1",
+            "message": "Incoming request data: GET /payment-service/v1/customers/1720148758274979/fav-recipients/pay-to-account, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"1827bf92-b79e-9444-8b5e-12148e3a6298\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69a9a9963936dfb4f6471c7e703",
+            "spanId": "6dfb4f6471c7e703",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:42.017",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:42.017Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.favourite.PayToAccountFavouriteRepository.findAllByCustomerId(String)\n parameters: [1720148758274979]\n totalTime: 5 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69a9a9963936dfb4f6471c7e703",
+            "spanId": "6dfb4f6471c7e703",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:42.009",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:42.009Z",
+            "@version": "1",
+            "message": "Received request to get favorite pay to account recipients for customerId: 1720148758274979",
+            "logger_name": "com.arbm.digibank.controller.PayToAccountFavouritesController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69a9a9963936dfb4f6471c7e703",
+            "spanId": "6dfb4f6471c7e703",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:42.008",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2024-08-13T04:52:42.008Z",
+            "@version": "1",
+            "message": "Before request [GET /payment-service/v1/customers/1720148758274979/fav-recipients/pay-to-account, client=127.0.0.1, headers=[host:\"payment-service.payment-service.svc.cluster.local:8080\", authorization:\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\", accept:\"*/*\", user-agent:\"node-fetch/1.0 (+https://github.com/bitinn/node-fetch)\", accept-encoding:\"gzip,deflate\", x-forwarded-proto:\"http\", x-request-id:\"1827bf92-b79e-9444-8b5e-12148e3a6298\", x-envoy-expected-rq-timeout-ms:\"200000\"]]",
+            "logger_name": "org.springframework.web.filter.CommonsRequestLoggingFilter",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "payment-service",
+            "traceId": "66bae69a9a9963936dfb4f6471c7e703",
+            "spanId": "6dfb4f6471c7e703",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2024-08-13 04:52:41.995",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2024-08-13T04:52:41.995] [INFO] [apollo-server,,] default - Microservice request:  http://payment-service.payment-service.svc.cluster.local:8080/payment-service/v1/customers/1720148758274979/fav-recipients/pay-to-account {\"method\":\"GET\",\"headers\":{\"Authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRlZmF1bHQifQ.eyJjbGllbnRfaWQiOiJkZjUxMDgzMi05Y2I5LTQ3NTUtOTZiNi1iMmQyZDZkY2Q0NGUiLCJpc3MiOiJodHRwczovL2F1dGgucGluZ29uZS5hc2lhLzMyMjgyYWFkLWE0ZjItNDZhZS1hODJkLTlkZDkxNzM5YTk2Ni9hcyIsImp0aSI6ImNhMGZhMmQzLTljNGItNDE2OS1iZTA3LTVlMmU1YjZlNWM2OSIsImlhdCI6MTcyMzUyNDY4MywiZXhwIjoxNzIzNTI0OTgzLCJhdWQiOlsiYXJiIl0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgY3VzdG9tZXJpZCIsInN1YiI6IjE3MjAxNDg3NTgyNzQ5NzkiLCJzaWQiOiJlZTAyYjJmNi1lZGQxLTQ5MjMtYjg0NS1kYTdlNzVhNTMxNTYiLCJlbnYiOiIzMjI4MmFhZC1hNGYyLTQ2YWUtYTgyZC05ZGQ5MTczOWE5NjYiLCJvcmciOiIwYTI3NjIwMy1jN2I4LTQ4NjUtODNjNy0zZGMwMzlmNzRiY2UiLCJwMS51c2VySWQiOiIxNDI0MDdjNi1lZmY2LTQ0NDAtOWFkMC02ODgyMGMxMWVkNzUifQ.jIqPs2uDvt5dqTAUFBiOeYr2jw0vuX-q6zyHVuNPosDTVM-mxKJw97kXb7voFJb_NLIxzLeREpUrvmXhOElazSyBUwQfrY3MA5ri8LvNAhZm5fmRkWXhb1cIHM9PWjJjXJYb-NuOWjJKpzKPvjnjnK1aVu5ov9pjEj8v204oaHTbHhiveFDMYPoaerogvUG19dMNukeumPG9iWqNjz9y90-D8CF3hGeyj48BiYNDWR9_KiNEpqZhOsCdmsC1lerWKxUuk1WG2pTcuYPb0Def8o3yDjjkAmyJ3X0x3HJqm0WQADfTn5fFf9STbrkpqzkzHfcLsyOhOA5wOnZ7T91ZZA\"}}"
+    }
+]

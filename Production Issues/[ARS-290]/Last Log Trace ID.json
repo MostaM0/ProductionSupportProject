@@ -1,0 +1,450 @@
+[
+    {
+        "@timestamp": "2025-02-07 05:17:47.626",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.625Z",
+            "@version": "1",
+            "message": "Completed 200 OK",
+            "logger_name": "org.springframework.ws.transport.http.MessageDispatcherServlet",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.625",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.625Z",
+            "@version": "1",
+            "message": "XML validation error on response: cvc-complex-type.2.4.a: Invalid content was found starting with element '{\"http://www.ifxforum.org/IFX_2X\":StatusDesc}'. One of '{\"http://www.ifxforum.org/IFX_2X\":ServerStatusCode, \"http://www.ifxforum.org/IFX_2X\":Severity}' is expected.",
+            "logger_name": "org.springframework.ws.soap.server.endpoint.interceptor.PayloadValidatingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "ERROR",
+            "level_value": 40000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.625",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.625Z",
+            "@version": "1",
+            "message": "XML validation error on response: cvc-complex-type.2.4.b: The content of element 'ns3:DoATMSingleDebitCreditMsgRs' is not complete. One of '{\"http://www.ifxforum.org/IFX_2X\":MsgRsHdr, \"http://finmeccanica.com/services/rcm/objectsIFX\":DualBalanceRs}' is expected.",
+            "logger_name": "org.springframework.ws.soap.server.endpoint.interceptor.PayloadValidatingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "ERROR",
+            "level_value": 40000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.625",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.625Z",
+            "@version": "1",
+            "message": "Sent response [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRs] for request [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq]",
+            "logger_name": "org.springframework.ws.server.MessageTracing.sent",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.624",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f",
+            "data": {
+                "requestId": null,
+                "functionId": "CardPaymentController.doATMSingleDebitCredit",
+                "input": {
+                    "request": "{\"name\":\"{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq\",\"declaredType\":\"generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRqType\",\"scope\":\"javax.xml.bind.JAXBElement$GlobalScope\",\"value\":{\"rqUID\":\"SWTRA 202502071317471740676494\",\"msgRqHdr\":{\"asyncRqUID\":null,\"svcIdent\":null,\"credentialsRqHdr\":[{\"subjectRole\":\"SystemUser\",\"startSession\":null,\"partyRef\":null,\"seqNum\":null,\"secTokenCertOrSecTokenICCOrSecTokenMagCard\":[{\"secTokenOwner\":null,\"loginName\":\"CWS\",\"subjectPswd\":null,\"subjectPassCode\":null}],\"ovrdExceptionCode\":null}],\"contextRqHdr\":{\"fieldSelect\":[],\"clientTerminalSeqNum\":null,\"networkTrnData\":{\"networkOwner\":\"CWS\",\"originatorName\":null,\"originatorType\":null,\"terminalIdent\":null,\"terminalType\":null,\"postAddr\":null,\"desc\":null,\"name\":null,\"networkRefIdent\":null,\"acquirerIdent\":null,\"merchNum\":null,\"mcc\":null,\"fiidentType\":null,\"fiident\":null},\"pointOfServiceData\":null,\"msgAuthCode\":null,\"clientDt\":null,\"custLangPref\":\"en\",\"clearingLangCode\":null,\"clientApp\":null,\"proxyClient\":null,\"msgGroupReference\":null,\"emvrqData\":null},\"feeRqHdr\":[]},\"doATMSingleDebitCredit\":{\"accessCode\":null,\"internalReferenceNumber\":null,\"partyId\":\"0000000000418733\",\"transferType\":\"D\",\"accountBranchCodeFrom\":\"91201\",\"accountRelationTypeFrom\":\"700\",\"accountNumberFrom\":\"0110000193\",\"curAmt\":{\"amt\":107.90,\"curCode\":null},\"remarks\":\"07/02/2025 13:17:45 MYDEBIT PURCHASE 503805066502 PUBLIC BANK BER MYR 107.90\",\"startDate\":\"20250207\",\"functionId\":\"MYDPU\",\"feeAmt\":{\"amt\":0,\"curCode\":null},\"rrn\":\"503805066502\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX2271\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":10790,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":10790,\"cardExpiry\":null,\"lifeCycleId\":\"SWTRA 202502071317471740676494\",\"mcc\":\"5812\",\"acceptorId\":null,\"acceptorName\":\"PUBLIC BANK BERHAD    KUALA LUMPUR    MY\",\"acceptorZip\":null,\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250207131747174\",\"terminalID\":\"41023483\",\"secure3DValStatus\":null,\"posreadMethod\":\"0007\",\"poscond\":null,\"cvvvalCode\":\"X\",\"poscardHolderVerMethod\":null}},\"nil\":false,\"globalScope\":true,\"typeSubstituted\":false}"
+                },
+                "result": {
+                    "name": "{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRs",
+                    "declaredType": "generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRsType",
+                    "scope": "javax.xml.bind.JAXBElement$GlobalScope",
+                    "value": {
+                        "status": {
+                            "statusCode": 2401,
+                            "serverStatusCode": null,
+                            "severity": null,
+                            "statusDesc": "Account not available",
+                            "subjectElement": [],
+                            "additionalStatus": [],
+                            "asyncRsData": null,
+                            "id": null
+                        },
+                        "rqUID": "SWTRA 202502071317471740676494",
+                        "msgRsHdr": null,
+                        "dualBalanceRs": null
+                    },
+                    "nil": false,
+                    "globalScope": true,
+                    "typeSubstituted": false
+                },
+                "processTime": 411
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.624",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.624Z",
+            "@version": "1",
+            "message": "Marshalling [javax.xml.bind.JAXBElement@2397ddc7] to response payload",
+            "logger_name": "org.springframework.ws.server.endpoint.adapter.method.jaxb.JaxbElementPayloadMethodProcessor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.623",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 411.101055 and headers request-id: SWTRA+202502071317471740676494\nrequest-id: SWTRA 202502071317471740676494\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json\ndate: Fri, 07 Feb 2025 05:17:46 GMT\nx-envoy-upstream-service-time: 409\nserver: envoy\ntransfer-encoding: chunked\n with status 200",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.623",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 411.101055 and headers request-id: SWTRA+202502071317471740676494\nrequest-id: SWTRA 202502071317471740676494\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json\ndate: Fri, 07 Feb 2025 05:17:46 GMT\nx-envoy-upstream-service-time: 409\nserver: envoy\ntransfer-encoding: chunked\n with status 200, response okhttp3.internal.http.RealResponseBody@5e5727a2 and response=Response{protocol=http/1.1, code=200, message=OK, url=http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit} ",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.623",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 411605563 ns; [1. paymentApi.doAtmDebitCredit - SWTRA 202502071317471740676494] took 411605563 ns = 100%",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.623",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 411660377 ns; [1. SignMessageInterceptor.interceptServiceCall - service.*.*] took 411660377 ns = 100%",
+            "logger_name": "com.arbm.digibank.interceptor.SignMessageInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.623",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f",
+            "data": {
+                "requestId": "SWTRA 202502071317471740676494",
+                "functionId": "CardPaymentService.doATMSingleDebitCredit",
+                "input": {
+                    "requestId": "\"SWTRA 202502071317471740676494\"",
+                    "request": "{\"cicId\":\"0000000000418733\",\"transferType\":\"DEBIT\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110000193\",\"accountRelationType\":\"700\",\"amount\":107.9,\"startDate\":\"20250207\",\"rrn\":\"503805066502\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX2271\",\"tcc\":\"00\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":10790,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":10790.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTRA 202502071317471740676494\",\"posReadMethod\":\"0007\",\"mcc\":\"5812\",\"acceptorId\":\"CARD ACCEPTOR  SENMU\",\"acceptorName\":\"PUBLIC BANK BERHAD    KUALA LUMPUR    MY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"MYD\",\"occurredAt\":\"20250207131747174\",\"posCond\":\"00\",\"terminalId\":\"41023483\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"07/02/2025 13:17:45 MYDEBIT PURCHASE 503805066502 PUBLIC BANK BER MYR 107.90\",\"feeAmount\":0.0,\"functionId\":\"MYDPU\",\"denomination\":\"MYR\"}"
+                },
+                "result": {
+                    "statusCode": "2401",
+                    "statusSeverity": null,
+                    "statusDescription": "Account not available",
+                    "transactionReferenceId": null,
+                    "ledgerBalanceDescription": null,
+                    "ledgerBalanceAmount": null,
+                    "availableBalanceDescripiton": null,
+                    "availableBalanceAmount": null
+                },
+                "processTime": 411
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.623",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.623Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 411834366 ns; [1. doATMSingleDebitCredit - SWTRA 202502071317471740676494] took 411834366 ns = 100%",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.212",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.212Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTRA 202502071317471740676494",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.212",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.212Z",
+            "@version": "1",
+            "message": "Retrieving REST request for sign message configurations!!!.....",
+            "logger_name": "com.arbm.digibank.interceptor.SignMessageInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.212",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.212Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTRA 202502071317471740676494",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.212",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.212Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTRA 202502071317471740676494\nContent-Type: application/json\nAccept: application/json\n",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.212",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.212Z",
+            "@version": "1",
+            "message": "Body okhttp3.RequestBody$Companion$toRequestBody$2@3f0c6056",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.212",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.212Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTRA 202502071317471740676494\nContent-Type: application/json\nAccept: application/json\n and Body okhttp3.RequestBody$Companion$toRequestBody$2@3f0c6056",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.211",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.211Z",
+            "@version": "1",
+            "message": "Request message validated",
+            "logger_name": "org.springframework.ws.soap.server.endpoint.interceptor.PayloadValidatingInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.211",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.211Z",
+            "@version": "1",
+            "message": "Testing endpoint adapter [org.springframework.ws.server.endpoint.adapter.DefaultMethodEndpointAdapter@34d6a6e]",
+            "logger_name": "org.springframework.ws.soap.server.SoapMessageDispatcher",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.211",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.211Z",
+            "@version": "1",
+            "message": "Unmarshalled payload request to [javax.xml.bind.JAXBElement@7ab99693]",
+            "logger_name": "org.springframework.ws.server.endpoint.adapter.method.jaxb.JaxbElementPayloadMethodProcessor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.210",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.21Z",
+            "@version": "1",
+            "message": "Received request [SaajSoapMessage {http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq]",
+            "logger_name": "org.springframework.ws.server.MessageTracing.received",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.210",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.21Z",
+            "@version": "1",
+            "message": "Looking up endpoint for [{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq]",
+            "logger_name": "org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.210",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.21Z",
+            "@version": "1",
+            "message": "Endpoint mapping [org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping@414a7d5] maps request to endpoint [public javax.xml.bind.JAXBElement<generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRsType> com.arbm.digibank.controller.CardPaymentController.doATMSingleDebitCredit(javax.xml.bind.JAXBElement<generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRqType>)]",
+            "logger_name": "org.springframework.ws.soap.server.SoapMessageDispatcher",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    },
+    {
+        "@timestamp": "2025-02-07 05:17:47.209",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-02-07T05:17:47.209Z",
+            "@version": "1",
+            "message": "Accepting incoming [org.springframework.ws.transport.http.HttpServletConnection@5dfa06d6] at [https://finexus-gateway.api.prod-arbm.com:443/ws]",
+            "logger_name": "org.springframework.ws.transport.http.WebServiceMessageReceiverHandlerAdapter",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "67a5977b4c6c7d744c56b37b4cc1a11a",
+            "spanId": "d4644935867f522f"
+        }
+    }
+]

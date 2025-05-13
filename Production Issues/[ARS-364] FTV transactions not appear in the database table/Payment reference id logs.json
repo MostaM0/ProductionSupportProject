@@ -1,0 +1,342 @@
+[
+    {
+        "@timestamp": "2025-03-17 04:03:51.906",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:51.906Z",
+            "@version": "1",
+            "message": "[I20250317MBBEMYKL040OQR70914370] Received PostingInstructionBatch: {\"postingInstructionBatch\": {\"id\": \"6cafd301-b337-4bda-98d4-19147433c8fc\", \"createRequestId\": \"I20250317MBBEMYKL040OQR70914370\", \"clientId\": \"payments\", \"clientBatchId\": \"I20250317MBBEMYKL040OQR70914370\", \"postingInstructions\": [{\"id\": \"26fc4e05-46bb-4669-b7df-51812c9e7983\", \"clientTransactionId\": \"53420441-c9ec-4efb-8ff9-7036eea926e1\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_qr\", \"busMsgId\": \"20250317MBBEMYKL04070914370\", \"transferType\": \"7\", \"dbtracctTpPrtry\": \"CACC\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_QR_P2P\"}, \"committedPostings\": [{\"credit\": true, \"amount\": \"180\", \"denomination\": \"MYR\", \"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110330020\", \"customerId\": \"1708757193629814\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": false, \"amount\": \"180\", \"denomination\": \"MYR\", \"accountId\": \"PAYNET_RPP_SETTLEMENT\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110330020\", \"customerId\": \"1708757193629814\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DUITNOW_DUMMY_SETTLEMENT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": {\"amount\": \"180\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"PAYNET_RPP_SETTLEMENT\", \"advice\": false, \"targetAccountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\"}, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"250317k4k6kkjp\", \"glEvent\": \"DUITNOW_IN_QR\"}], \"batchDetails\": {\"original_posting_client_batch_id\": \"I20250317MBBEMYKL040OQR70914370\"}, \"valueTimestamp\": \"2025-03-17T04:03:50.822Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-03-17T04:03:50.822Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250317\"}, \"technicalMetadata\": {\"eventId\": \"event_6cafd301-b337-4bda-98d4-19147433c8fc\", \"captureTimestamp\": \"2025-03-17T04:03:50.880Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "67d79f27de966a380eb504e7eef3d009",
+            "spanId": "593c1d62f4495043",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:51.906",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:51.906Z",
+            "@version": "1",
+            "message": "Batch={\"postingInstructionBatch\": {\"id\": \"6cafd301-b337-4bda-98d4-19147433c8fc\", \"createRequestId\": \"I20250317MBBEMYKL040OQR70914370\", \"clientId\": \"payments\", \"clientBatchId\": \"I20250317MBBEMYKL040OQR70914370\", \"postingInstructions\": [{\"id\": \"26fc4e05-46bb-4669-b7df-51812c9e7983\", \"clientTransactionId\": \"53420441-c9ec-4efb-8ff9-7036eea926e1\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_qr\", \"busMsgId\": \"20250317MBBEMYKL04070914370\", \"transferType\": \"7\", \"dbtracctTpPrtry\": \"CACC\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_QR_P2P\"}, \"committedPostings\": [{\"credit\": true, \"amount\": \"180\", \"denomination\": \"MYR\", \"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110330020\", \"customerId\": \"1708757193629814\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": false, \"amount\": \"180\", \"denomination\": \"MYR\", \"accountId\": \"PAYNET_RPP_SETTLEMENT\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110330020\", \"customerId\": \"1708757193629814\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DUITNOW_DUMMY_SETTLEMENT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": {\"amount\": \"180\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"PAYNET_RPP_SETTLEMENT\", \"advice\": false, \"targetAccountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\"}, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"250317k4k6kkjp\", \"glEvent\": \"DUITNOW_IN_QR\"}], \"batchDetails\": {\"original_posting_client_batch_id\": \"I20250317MBBEMYKL040OQR70914370\"}, \"valueTimestamp\": \"2025-03-17T04:03:50.822Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-03-17T04:03:50.822Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250317\"}, \"technicalMetadata\": {\"eventId\": \"event_6cafd301-b337-4bda-98d4-19147433c8fc\", \"captureTimestamp\": \"2025-03-17T04:03:50.880Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "67d79f27de966a380eb504e7eef3d009",
+            "spanId": "593c1d62f4495043",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.925",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.925Z",
+            "@version": "1",
+            "message": "Event doesn't inform about cleared saving pot or cleared saving account: {\"eventId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3_6cafd301-b337-4bda-98d4-19147433c8fc\", \"valueTimestamp\": \"2025-03-17T04:03:50.822Z\", \"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\", \"customerId\": \"1708757193629814\", \"availableBalance\": 230.00, \"settledBalance\": 230.00}",
+            "logger_name": "com.arbm.digibank.offboarding.service.OffboardingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "38f4ad330d6b926f",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.923",
+        "kubernetes.container_name": "reference-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.923Z",
+            "@version": "1",
+            "message": "DepositBalanceEvent 791b9d94-f2c6-436b-bd0a-6103c5e70df3_6cafd301-b337-4bda-98d4-19147433c8fc ",
+            "logger_name": "com.arbm.digibank.consumer.ReferenceAccountConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#6-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "reference-monitoring-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d1ab642d892cfcf3",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.923",
+        "kubernetes.container_name": "deposit-commodity-trading-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.923Z",
+            "@version": "1",
+            "message": "Received Retail event: {\"eventId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3_6cafd301-b337-4bda-98d4-19147433c8fc\", \"valueTimestamp\": \"2025-03-17T04:03:50.822Z\", \"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\", \"customerId\": \"1708757193629814\", \"availableBalance\": 230.00, \"settledBalance\": 230.00}",
+            "logger_name": "com.arbm.digibank.processor.BalanceEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-commodity-trading-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "0a3cbea4dee89c40",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.923",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.923Z",
+            "@version": "1",
+            "message": "Consume DepositBalanceEvent: {\"eventId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3_6cafd301-b337-4bda-98d4-19147433c8fc\", \"valueTimestamp\": \"2025-03-17T04:03:50.822Z\", \"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\", \"customerId\": \"1708757193629814\", \"availableBalance\": 230.00, \"settledBalance\": 230.00}",
+            "logger_name": "com.arbm.digibank.offboarding.OffboardingProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "38f4ad330d6b926f",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.921",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.921Z",
+            "@version": "1",
+            "message": "Posting enriched, posting=PostingInstructionBatch(postingInstructionBatch=InstructionBatch(id=6cafd301-b337-4bda-98d4-19147433c8fc, createRequestId=I20250317MBBEMYKL040OQR70914370, clientId=payments, clientBatchId=I20250317MBBEMYKL040OQR70914370, postingInstructions=[PostingInstructions(id=26fc4e05-46bb-4669-b7df-51812c9e7983, clientTransactionId=53420441-c9ec-4efb-8ff9-7036eea926e1, pics=[], instructionDetails=InstructionDetails(data={PAYMENT_TYPE=duitnow_qr, busMsgId=20250317MBBEMYKL04070914370, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=CACC, paymentType=DUITNOW_QR_P2P, transferType=7}), committedPostings=[CommittedPosting(credit=true, amount=180, denomination=MYR, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110330020, customerId=1708757193629814, accountType=SAVINGS_ACCOUNT, glAccount=CUSTOMER_CMSA), CommittedPosting(credit=false, amount=180, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110330020, customerId=1708757193629814, accountType=SAVINGS_ACCOUNT, glAccount=DUITNOW_DUMMY_SETTLEMENT)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=InboundHardSettlement(amount=180, denomination=MYR, targetAccount=TargetAccount(accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3), accountId=null, internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false, targetAccountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3), outboundHardSettlement=null, transfer=null, glTransactionId=250317k4k6kkjp, glEvent=DUITNOW_IN_QR)], batchDetails={original_posting_client_batch_id=I20250317MBBEMYKL040OQR70914370}, valueTimestamp=2025-03-17T04:03:50.822214Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, insertionTimestamp=2025-03-17T04:03:50.822214Z, dryRun=false, error=null, glDate=20250317), technicalMetadata=TechnicalMetadata(eventId=event_6cafd301-b337-4bda-98d4-19147433c8fc, captureTimestamp=2025-03-17T04:03:50.880039627Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=UpdateMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67d79f26ae2bc8e1c93be4a276f36b09",
+            "spanId": "bf9de7045aa09906",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.920",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.92Z",
+            "@version": "1",
+            "message": "balances: [Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230), Balance(id=202311_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_INCOMING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0), Balance(id=202312_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_OUTGOING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0)]",
+            "logger_name": "com.arbm.digibank.balance.AccountBalanceMapper",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.920",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.92Z",
+            "@version": "1",
+            "message": "balance:1 'phaseBalances collection' [Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230)] , 'phase' POSTING_PHASE_COMMITTED ",
+            "logger_name": "com.arbm.digibank.balance.AccountBalanceMapper",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.920",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.92Z",
+            "@version": "1",
+            "message": "balance:1.1 balanceCollection<VaultBalance> [Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230), Balance(id=202311_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_INCOMING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0), Balance(id=202312_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_OUTGOING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0)]",
+            "logger_name": "com.arbm.digibank.balance.AccountBalanceMapper",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.920",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.92Z",
+            "@version": "1",
+            "message": "balance:1.2 'maxBalance' Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230)",
+            "logger_name": "com.arbm.digibank.balance.AccountBalanceMapper",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.920",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.92Z",
+            "@version": "1",
+            "message": "balance:2 'committed (2) for calculate account balance: getBalanceOfPhase': Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230) ",
+            "logger_name": "com.arbm.digibank.balance.AccountBalanceMapper",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.920",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.92Z",
+            "@version": "1",
+            "message": "balance:1.1 balanceCollection<VaultBalance> [Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230), Balance(id=202311_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_INCOMING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0), Balance(id=202312_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_OUTGOING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0)]",
+            "logger_name": "com.arbm.digibank.balance.AccountBalanceMapper",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.916",
+        "kubernetes.container_name": "deposit-balance-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.915Z",
+            "@version": "1",
+            "message": "Consume VaultAccountBalanceEvent: VaultAccountBalanceEvent(eventId=791b9d94-f2c6-436b-bd0a-6103c5e70df3_6cafd301-b337-4bda-98d4-19147433c8fc, timestamp=2025-03-17T04:03:50.822214Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, balances=[Balance(id=202310_6cafd301-b337-4bda-98d4-19147433c8fc, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_COMMITTED, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=6cafd301-b337-4bda-98d4-19147433c8fc, updatePostingInstructionBatchId=, valueTime=2025-03-17T04:03:50.822214, amount=230, totalDebit=0, totalCredit=230), Balance(id=202311_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_INCOMING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0), Balance(id=202312_, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, phase=POSTING_PHASE_PENDING_OUTGOING, asset=COMMERCIAL_BANK_MONEY, denomination=MYR, postingInstructionBatchId=, updatePostingInstructionBatchId=, valueTime=1970-01-01T00:00, amount=0, totalDebit=0, totalCredit=0)])",
+            "logger_name": "com.arbm.digibank.balance.BalanceEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-balance-service",
+            "traceId": "67d79f26599757d8160c59502f95676f",
+            "spanId": "d2883c4d4f2159dc",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.915",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.914Z",
+            "@version": "1",
+            "message": "Enriching posting instructions with gl account data with postingInstructionBatchId:6cafd301-b337-4bda-98d4-19147433c8fc",
+            "logger_name": "com.arbm.digibank.enrichment.GlAccountEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67d79f26ae2bc8e1c93be4a276f36b09",
+            "spanId": "bf9de7045aa09906",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.893",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.893Z",
+            "@version": "1",
+            "message": "Processing new posting, posting={\"posting_instruction_batch\":{\"id\":\"6cafd301-b337-4bda-98d4-19147433c8fc\",\"create_request_id\":\"I20250317MBBEMYKL040OQR70914370\",\"client_id\":\"payments\",\"client_batch_id\":\"I20250317MBBEMYKL040OQR70914370\",\"posting_instructions\":[{\"id\":\"26fc4e05-46bb-4669-b7df-51812c9e7983\",\"client_transaction_id\":\"53420441-c9ec-4efb-8ff9-7036eea926e1\",\"pics\":[],\"instruction_details\":{\"PAYMENT_TYPE\":\"duitnow_qr\",\"busMsgId\":\"20250317MBBEMYKL04070914370\",\"cdtracctTpPrtry\":\"SVGS\",\"dbtracctTpPrtry\":\"CACC\",\"paymentType\":\"DUITNOW_QR_P2P\",\"transferType\":\"7\"},\"committed_postings\":[{\"credit\":true,\"amount\":\"180\",\"denomination\":\"MYR\",\"account_id\":\"791b9d94-f2c6-436b-bd0a-6103c5e70df3\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"},{\"credit\":false,\"amount\":\"180\",\"denomination\":\"MYR\",\"account_id\":\"PAYNET_RPP_SETTLEMENT\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"}],\"posting_violations\":[],\"account_violations\":[],\"restriction_violations\":[],\"contract_violations\":[],\"override\":{\"all\":false,\"restrictions\":{\"all\":false,\"restriction_set_ids\":[]}},\"transaction_code\":null,\"outbound_authorisation\":null,\"custom_instruction\":null,\"inbound_authorisation\":null,\"authorisation_adjustment\":null,\"settlement\":null,\"release\":null,\"inbound_hard_settlement\":{\"amount\":\"180\",\"denomination\":\"MYR\",\"target_account\":{\"account_id\":\"791b9d94-f2c6-436b-bd0a-6103c5e70df3\"},\"account_id\":null,\"internal_account_id\":\"PAYNET_RPP_SETTLEMENT\",\"advice\":false,\"target_account_id\":\"791b9d94-f2c6-436b-bd0a-6103c5e70df3\"},\"outbound_hard_settlement\":null,\"transfer\":null}],\"batch_details\":{\"original_posting_client_batch_id\":\"I20250317MBBEMYKL040OQR70914370\"},\"value_timestamp\":\"2025-03-17T04:03:50.822214Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"insertion_timestamp\":\"2025-03-17T04:03:50.822214Z\",\"dry_run\":false,\"error\":null},\"technical_metadata\":{\"event_id\":\"event_6cafd301-b337-4bda-98d4-19147433c8fc\",\"capture_timestamp\":\"2025-03-17T04:03:50.880039627Z\",\"vault_version\":{\"major\":4,\"minor\":6,\"patch\":28,\"label\":\"\"},\"context\":{}},\"update_mask\":{\"paths\":[\"posting_instruction_batch\",\"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "67d79f26ae2bc8e1c93be4a276f36b09",
+            "spanId": "bf9de7045aa09906",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.893",
+        "kubernetes.container_name": "deposit-transfer-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.893Z",
+            "@version": "1",
+            "message": "Received event with posting instruction batch: PostingInstructionBatchCreatedEvent(postingInstructionBatch=PostingInstructionBatch(id=6cafd301-b337-4bda-98d4-19147433c8fc, createRequestId=I20250317MBBEMYKL040OQR70914370, clientId=payments, clientBatchId=I20250317MBBEMYKL040OQR70914370, postingInstructions=[PostingInstruction(id=26fc4e05-46bb-4669-b7df-51812c9e7983, clientTransactionId=53420441-c9ec-4efb-8ff9-7036eea926e1, pics=[], instructionDetails={PAYMENT_TYPE=duitnow_qr, busMsgId=20250317MBBEMYKL04070914370, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=CACC, paymentType=DUITNOW_QR_P2P, transferType=7}, committedPostings=[Posting(credit=true, amount=180, denomination=MYR, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), Posting(credit=false, amount=180, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObj(restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=ExternalPostingInstruction(amount=180, denomination=MYR, targetAccount=Account(paymentDeviceToken=null, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3), internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false), outboundHardSettlement=null, transfer=null, customInstruction=null)], batchDetails={original_posting_client_batch_id=I20250317MBBEMYKL040OQR70914370}, valueTimestamp=2025-03-17T04:03:50.822214Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, error=null, insertionTimestamp=2025-03-17T04:03:50.822214Z, dryRun=false), technicalMetadata=TechnicalMetadata(eventId=event_6cafd301-b337-4bda-98d4-19147433c8fc, timestamp=null, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=FieldMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.common.PostingEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-transfer-service",
+            "traceId": "67d79f266fad5583fc6a1d1469f3c6c7",
+            "spanId": "3d03cf3ccf3edd3d",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.891",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.891Z",
+            "@version": "1",
+            "message": "Published CreateTransactionCommand with referenceId: {\"referenceId\": \"6cafd301-b337-4bda-98d4-19147433c8fc\", \"type\": \"DUITNOW_QR_P2P\", \"amount\": 180, \"currency\": \"MYR\", \"creationTimestamp\": \"2025-03-17T04:03:50.822Z\", \"source\": {\"accountId\": null, \"customerId\": null, \"accountNumber\": \"912010110330020\", \"name\": \"NEXTRIGITY SOLUTION\", \"smeId\": null}, \"destination\": {\"accountId\": \"791b9d94-f2c6-436b-bd0a-6103c5e70df3\", \"customerId\": \"1708757193629814\", \"accountNumber\": \"912010110330020\", \"name\": \"MUHAMAD IHTHESHAM BIN AKBAR BATCHA\", \"smeId\": null}, \"status\": \"COMMITTED\", \"otherDetails\": \"DuitQR P2P Transfer\", \"recipientReference\": \"70914370\", \"merchantCode\": null, \"merchantId\": null, \"isInitialPayment\": false}",
+            "logger_name": "com.arbm.digibank.producer.CreateTransactionCommandProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "a66366d229a9aaf9",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.887",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.887Z",
+            "@version": "1",
+            "message": "Received TM Posting Instruction Batch history event: PostingInstructionBatch(id=6cafd301-b337-4bda-98d4-19147433c8fc, createRequestId=I20250317MBBEMYKL040OQR70914370, clientId=payments, clientBatchId=I20250317MBBEMYKL040OQR70914370, postingInstructions=[PostingInstruction(id=26fc4e05-46bb-4669-b7df-51812c9e7983, clientTransactionId=53420441-c9ec-4efb-8ff9-7036eea926e1, pics=[], instructionDetails={PAYMENT_TYPE=duitnow_qr, busMsgId=20250317MBBEMYKL04070914370, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=CACC, paymentType=DUITNOW_QR_P2P, transferType=7}, committedPostings=[Posting(credit=true, amount=180, denomination=MYR, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), Posting(credit=false, amount=180, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObj(restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=ExternalPostingInstruction(amount=180, denomination=MYR, targetAccount=Account(paymentDeviceToken=null, accountId=791b9d94-f2c6-436b-bd0a-6103c5e70df3), internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false), outboundHardSettlement=null, transfer=null, customInstruction=null)], batchDetails={original_posting_client_batch_id=I20250317MBBEMYKL040OQR70914370}, valueTimestamp=2025-03-17T04:03:50.822214Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, error=null, insertionTimestamp=2025-03-17T04:03:50.822214Z, dryRun=false)",
+            "logger_name": "com.arbm.digibank.consumer.PaymentVaultPostingConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "917867ce58df59dd",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-03-17 04:03:50.887",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-03-17T04:03:50.887Z",
+            "@version": "1",
+            "message": "Preparing posting history kafka event with postingInstructionBatch id: 6cafd301-b337-4bda-98d4-19147433c8fc",
+            "logger_name": "com.arbm.digibank.service.PostingHistoryService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#5-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "67d79f2685b846c0d6bb13581357af83",
+            "spanId": "917867ce58df59dd",
+            "bc": "payments"
+        }
+    }
+]

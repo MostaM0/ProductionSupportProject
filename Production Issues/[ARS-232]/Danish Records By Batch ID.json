@@ -1,0 +1,284 @@
+[
+    {
+        "@timestamp": "2025-01-17 09:30:25.299",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.298Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result: AsyncResultRequest(requestId=388060ce-dcc1-44dc-8187-05d100177a13, type=CUSTOMER_LIMITS_UPDATE_COMPLETED, payload={\"customerId\":\"1695265981606325\",\"duitnowAccOrProxy\":\"2000.00\",\"duitnowQr\":\"1999.50\",\"duitnowAccIntrabank\":\"1000.00\",\"status\":\"SUCCESS\",\"date\":\"2025-01-17T09:30:25.293\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "d50088644c669102",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.296",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.296Z",
+            "@version": "1",
+            "message": "Saving response under id 388060ce-dcc1-44dc-8187-05d100177a13",
+            "logger_name": "com.arbm.digibank.service.client.asyncresponse.AsyncResponseServiceImpl",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "54b071ed058e1b35",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.291",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.291Z",
+            "@version": "1",
+            "message": "for request id: 388060ce-dcc1-44dc-8187-05d100177a13and customer id: 1695265981606325currentLimits: CustomerLimitsEntity(customerId=1695265981606325, duitnowAccOrProxy=2000.00, duitnowQr=2000.00, duitnowAccIntrabank=1000.00)",
+            "logger_name": "com.arbm.digibank.service.limits.CustomerLimitsService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "54b071ed058e1b35",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.291",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.291Z",
+            "@version": "1",
+            "message": "for request id: 388060ce-dcc1-44dc-8187-05d100177a13and customer id: 1695265981606325updatedLimits: ProperlyUpdatedLimits(duitnowAccOrProxy=2000.00, duitnowQr=1999.50, duitnowAccIntrabank=1000.00)",
+            "logger_name": "com.arbm.digibank.service.limits.CustomerLimitsService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "54b071ed058e1b35",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.288",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.287Z",
+            "@version": "1",
+            "message": "finding if there is increased limits for request id: 388060ce-dcc1-44dc-8187-05d100177a13and customer id: 1695265981606325SuccessfulCustomerTransactionLimitsUpdate: SuccessfulCustomerTransactionLimitsUpdate(requestId=388060ce-dcc1-44dc-8187-05d100177a13, customerId=1695265981606325, updateResult=ProperlyUpdatedLimits(duitnowAccOrProxy=2000.00, duitnowQr=1999.50, duitnowAccIntrabank=1000.00))",
+            "logger_name": "com.arbm.digibank.service.limits.CustomerLimitsService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "54b071ed058e1b35",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.287",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.287Z",
+            "@version": "1",
+            "message": "[388060ce-dcc1-44dc-8187-05d100177a13] Received CustomerAccountLimitsUpdatedEvent' for customer [1695265981606325] with status [SUCCESS]event: {\"requestId\": \"388060ce-dcc1-44dc-8187-05d100177a13\", \"customerId\": \"1695265981606325\", \"paymentTypeLimits\": {\"duitnow_acc_intrabank\": \"1000.00\", \"duitnow_qr\": \"1999.50\"}, \"categoryTypeLimits\": {\"cat_duitnow_acc_proxy\": \"2000.00\"}, \"status\": \"SUCCESS\"}",
+            "logger_name": "com.arbm.digibank.consumer.CustomerAccountLimitsUpdatedConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "54b071ed058e1b35",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.281",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.281Z",
+            "@version": "1",
+            "message": "Produced: {\"requestId\": \"388060ce-dcc1-44dc-8187-05d100177a13\", \"customerId\": \"1695265981606325\", \"paymentTypeLimits\": {\"duitnow_acc_intrabank\": \"1000.00\", \"duitnow_qr\": \"1999.50\"}, \"categoryTypeLimits\": {\"cat_duitnow_acc_proxy\": \"2000.00\"}, \"status\": \"SUCCESS\"}",
+            "logger_name": "com.arbm.digibank.accounts.savingaccount.service.SavingAccountParameterService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "spanId": "036bc70b49ecfb2f",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:30:25.259",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:30:25.259Z",
+            "@version": "1",
+            "message": "Batch update with id: 388060ce-dcc1-44dc-8187-05d100177a13 has succeeded",
+            "logger_name": "com.arbm.digibank.accounts.savingaccount.service.SavingAccountParameterService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "678a23318701203c31ce1905526f8c62",
+            "spanId": "036bc70b49ecfb2f",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.921",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "handle-api-request error info    2-  : {\"httpCode\":408,\"message\":\"Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000\",\"requestId\":\"\",\"originalException\":{\"title\":\"Processing timeout\",\"detail\":\"Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000\"},\"retryAfter\":\"0\"}"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.921",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-01-17T09:00:47.920] [WARN] [apollo-server,,] default - [{\"message\":\"Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000\",\"locations\":[{\"line\":2,\"column\":3}],\"path\":[\"getAsyncResultLongPolling\"],\"extensions\":{\"httpCode\":408,\"originalException\":{\"title\":\"Processing timeout\",\"detail\":\"Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000\"},\"requestId\":\"\",\"retryAfter\":0,\"code\":\"MICROSERVICE_ERROR\"}}]"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.921",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-01-17T09:00:47.920] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"errors\":[{\"message\":\"Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000\",\"locations\":[{\"line\":2,\"column\":3}],\"path\":[\"getAsyncResultLongPolling\"],\"extensions\":{\"httpCode\":408,\"originalException\":{\"title\":\"Processing timeout\",\"detail\":\"Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000\"},\"requestId\":\"\",\"retryAfter\":0,\"code\":\"MICROSERVICE_ERROR\"}}],\"data\":null}"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.920",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "      url: 'http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/388060ce-dcc1-44dc-8187-05d100177a13',"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.920",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "      url: 'http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/388060ce-dcc1-44dc-8187-05d100177a13',"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.918",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:00:47.918Z",
+            "@version": "1",
+            "message": "Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "async-response-service",
+            "traceId": "678a1c2128ac22ec0c7bec9b075b48a3",
+            "spanId": "0c7bec9b075b48a3",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:47.918",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:00:47.918Z",
+            "@version": "1",
+            "message": "Error occurred: Processing timeout, detail: Processing retrieval of Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13 timed out, timeout: 30000",
+            "logger_name": "com.arbm.digibank.exception.ExceptionAdvisor",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "springAppName": "async-response-service",
+            "traceId": "678a1c2128ac22ec0c7bec9b075b48a3",
+            "spanId": "0c7bec9b075b48a3",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:19.542",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-01-17T09:00:17.367] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"updateTransactionLimits\":{\"message\":\"Please await async response\",\"requestId\":\"388060ce-dcc1-44dc-8187-05d100177a13\"}}}"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:19.542",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-01-17T09:00:17.912] [INFO] [apollo-server,,] default - {\"requestId\":\"388060ce-dcc1-44dc-8187-05d100177a13\"}"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:19.542",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-01-17T09:00:17.913] [INFO] [apollo-server,,] default - Microservice request:  http://async-response-service.async-response-service.svc.cluster.local:8080/async-response-service/v1/responses/long-polling/388060ce-dcc1-44dc-8187-05d100177a13 {\"method\":\"GET\",\"headers\":{}}"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:19.541",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-01-17T09:00:17.224] [INFO] [apollo-server,,] default - Microservice request:  http://transaction-limit-service.transaction-limit-service.svc.cluster.local:8080/transaction-limit-service/v1/limits/retail/1695265981606325 {\"method\":\"PUT\",\"headers\":{\"Content-Type\":\"application/json\"},\"body\":\"{\\\"requestId\\\":\\\"388060ce-dcc1-44dc-8187-05d100177a13\\\",\\\"duitnowAccOrProxy\\\":2000,\\\"duitnowQr\\\":1999.5,\\\"duitnowAccIntrabank\\\":1000}\"}"
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:17.917",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:00:17.916Z",
+            "@version": "1",
+            "message": "Received request for retrieving long-polling Async Result with requestID: 388060ce-dcc1-44dc-8187-05d100177a13",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "678a1c2128ac22ec0c7bec9b075b48a3",
+            "spanId": "0c7bec9b075b48a3",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:17.525",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:00:17.525Z",
+            "@version": "1",
+            "message": "Batch update with id: 388060ce-dcc1-44dc-8187-05d100177a13 ignored due to neither success nor failed status.",
+            "logger_name": "com.arbm.digibank.accounts.savingaccount.service.SavingAccountParameterService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "678a1c213616ce70b3d9e2c2e69797cb",
+            "spanId": "1f8780626fe05ace",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:17.246",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:00:17.246Z",
+            "@version": "1",
+            "message": "Registering a request for an account batch update to be created and executed asynchronously with following details: CreateAccountUpdateBatchRequest(requestId=388060ce-dcc1-44dc-8187-05d100177a13, accountUpdateBatch=AccountUpdateBatch(id=388060ce-dcc1-44dc-8187-05d100177a13, accountUpdates=[AccountUpdateRequest(id=null, accountId=f3f3e359-aaf3-4c58-809b-ffc54fb209af, instanceParamValsUpdate=InstanceParamValsUpdate(instanceParamVals={maximum_payment_type_withdrawal={\"duitnow_qr\":\"1999.50\",\"duitnow_acc_intrabank\":\"1000.00\"}, maximum_daily_payment_type_withdrawal={\"duitnow_qr\":\"1999.50\",\"duitnow_acc_intrabank\":\"1000.00\"}, maximum_daily_payment_category_withdrawal={\"cat_duitnow_acc_proxy\":\"2000.00\"}}), productVersionUpdate=null, activationUpdate=null, closureUpdate=null)]), createOptions=null)",
+            "logger_name": "com.arbm.digibank.tm.rest.coreapi.accountupdatebatch.AccountUpdateBatchService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "678a1c21423b58e34f06926dd1ac16c4",
+            "spanId": "eeda3d375c2a2277",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-01-17 09:00:17.233",
+        "kubernetes.container_name": "transaction-limit-service",
+        "logBody": {
+            "@timestamp": "2025-01-17T09:00:17.233Z",
+            "@version": "1",
+            "message": "[388060ce-dcc1-44dc-8187-05d100177a13] Sending update transaction limits request to deposit-account-service for customer: [1695265981606325]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerAccountLimitsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transaction-limit-service",
+            "traceId": "678a1c21423b58e34f06926dd1ac16c4",
+            "spanId": "4f06926dd1ac16c4",
+            "bc": "payments"
+        }
+    }
+]

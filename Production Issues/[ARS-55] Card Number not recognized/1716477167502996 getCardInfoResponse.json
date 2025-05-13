@@ -1,0 +1,177 @@
+[
+    {
+        "@timestamp": "2024-10-12 14:17:27.460",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-10-12T14:17:27.46Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "670a84f7007d36af23841f48e3a222b9",
+            "spanId": "23841f48e3a222b9",
+            "RequestId": "89dded15-c533-42ad-8f59-699b4042b080",
+            "data": {
+                "requestId": "\"89dded15-c533-42ad-8f59-699b4042b080\"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": "\"89dded15-c533-42ad-8f59-699b4042b080\"",
+                    "customerId": "\"1716477167502996\"",
+                    "accountNumber": "\"912010110413123\""
+                },
+                "result": {
+                    "cardId": "76a9f8a1-b1dc-409c-845f-08646ddb0ae0",
+                    "expiryDate": "****",
+                    "cardStatus": "DELIVERED",
+                    "createdDate": "2024-06-02T01:35:26.726102Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "PHOO KAI YING",
+                    "trackingNumber": "BC000009804MY",
+                    "cardDeliverOption": "MAILING",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "116,LaluanMeruPermai1",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "30020",
+                    "delivTown": "Ipoh",
+                    "delivState": "Perak",
+                    "delivCountry": "MY"
+                },
+                "processTime": 181
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-10-12 14:17:27.460",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-10-12T14:17:27.46Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "670a84f7007d36af23841f48e3a222b9",
+            "spanId": "23841f48e3a222b9",
+            "RequestId": "89dded15-c533-42ad-8f59-699b4042b080",
+            "data": {
+                "requestId": "\"89dded15-c533-42ad-8f59-699b4042b080\"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": "\"89dded15-c533-42ad-8f59-699b4042b080\"",
+                    "customerId": "\"1716477167502996\"",
+                    "accountNumber": "\"912010110413123\""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "76a9f8a1-b1dc-409c-845f-08646ddb0ae0",
+                        "expiryDate": "****",
+                        "cardStatus": "DELIVERED",
+                        "createdDate": "2024-06-02T01:35:26.726102Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "PHOO KAI YING",
+                        "trackingNumber": "BC000009804MY",
+                        "cardDeliverOption": "MAILING",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "116,LaluanMeruPermai1",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "30020",
+                        "delivTown": "Ipoh",
+                        "delivState": "Perak",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 181
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-10-12 14:17:27.458",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-10-12T14:17:27.458Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "670a84f7007d36af23841f48e3a222b9",
+            "spanId": "23841f48e3a222b9",
+            "RequestId": "89dded15-c533-42ad-8f59-699b4042b080",
+            "data": {
+                "requestId": "89dded15-c533-42ad-8f59-699b4042b080",
+                "functionId": "http://finexus-gateway.finexus-gateway.svc.cluster.local:8080/v1/mgmt/get-card-info",
+                "input": "{\"accountIndicator\":\"2\",\"pan\":\"0031154240137220\",\"actionIndicator\":\"C\",\"sequenceNo\":\"6688077068101000\",\"fi\":\"432134\",\"sourceSystem\":\"DGB\"}",
+                "result": "{\"responseCode\":\"000\",\"responseDescription\":\"Complete Response Without Errors\",\"fi\":\"432134\",\"panInfo\":\"kgs7Fc2p8dcquV/rrOm0JA5Bp11ezPaSHOFT0H/fPMEz6zYDK5m5x3QCJcUMoB9i1jFKVamhbR+osBtRIFqxrpZVdykTlw/hzShKG1jjGQMAtemjsoJdRj1kvhQ/i2LyRaPr30QSuUidEWrw+FRayrmPtx6C5eZpcDtFa+FrgLnNIjJiFg4DI5fO7dK41Y6E9LwrYhQIZnSEKJVrNxkiOMUZBoZ64RoFD/JoWpyKbjfsufEMqgsUTRbXCS1++EAusWD8sDqJWKLLYVJHpU2FoTyU8x+X0w1MDmOokHT/YJ8hPuEtrMbuRyBpF0zwjOTzhPg6pRwvanGa8FmafQryLw==\",\"signedMessage\":\"jdMSX71FJ2G8NbVvluf6UzKRHkctcYBGhAVfRz/s5vpNlQLsI6877X1EwXqj0N1eNXvgn5D7Xl4KWJYAQY+SUVHUO4XblnqWcPXTU1JVYWkYxXvrfqopjwXhkWT9Emo2NRZkGvIg07Xg8VNyLLiXmObfzqA8MyR9SEW+Qh+VdwkenS/f4J7lg0BBoxraX/sAVEpDPSqiP4nXGDr5zMhZ7vkgXVHBA1x5nqRh65cu6No2n627ERP8drJ1arH4lQrkZTiJtuq1XW4OdMpCrwtc6yoYGzwc3p6jipbzQik43FsqvxXfUwFVjlHySNQ6hmLicB3HP+YGzCbTYey0AjaRwNc4S8FoXGi2Ahflf/eoGUES8iqXEU8f7sd/XG7dcqB70ZKEUpy++3fgPel+GN4m91ujeq2XBQxLohGE1msgjcImAYGQuDbgT49H/g02UdKtPx+zGTU/1P7Ypl/1fObjp+ikqo/zL6cJBxhULUF3f2iuMGcDxP8IGJrBQBmRpSukB/AC4cXiZUs8xywoUzLIrSP8T+/ZlxRSjC6uLOQQUwF45gi7CqJT8AEPpeWyxlgU3EKUJ5VGoJmgQA3XoXotQfgDsydQaTQBUSe3lnJJPPhci0rdSefFIvxVfNCHUnbBNnraqYMBU50AQt3+3oOkwoMvfD9a1meZd02kw8okZFU=\",\"sequenceNo\":\"6688077068101000\"}",
+                "processTime": 170
+            }
+        }
+    },
+    {
+        "@timestamp": "2024-10-12 14:17:27.288",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-10-12T14:17:27.288Z",
+            "@version": "1",
+            "message": "Retryable function com.arbm.digibank.utils.RetrierModel@4c642b37.label has been executed 1 times",
+            "logger_name": "com.arbm.digibank.utils.Retrier",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "WARN",
+            "level_value": 30000,
+            "bc": "cards",
+            "traceId": "670a84f7007d36af23841f48e3a222b9",
+            "spanId": "23841f48e3a222b9",
+            "RequestId": "89dded15-c533-42ad-8f59-699b4042b080"
+        }
+    },
+    {
+        "@timestamp": "2024-10-12 14:17:27.279",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-10-12T14:17:27.279Z",
+            "@version": "1",
+            "message": "Getting card info with requestId=89dded15-c533-42ad-8f59-699b4042b080",
+            "logger_name": "com.arbm.digibank.controller.CardMgmtController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "670a84f7007d36af23841f48e3a222b9",
+            "spanId": "23841f48e3a222b9",
+            "RequestId": "89dded15-c533-42ad-8f59-699b4042b080"
+        }
+    },
+    {
+        "@timestamp": "2024-10-12 14:17:27.279",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2024-10-12T14:17:27.279Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1716477167502996 and accountNumber=912010110413123",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "670a84f7007d36af23841f48e3a222b9",
+            "spanId": "23841f48e3a222b9",
+            "RequestId": "89dded15-c533-42ad-8f59-699b4042b080"
+        }
+    }
+]
