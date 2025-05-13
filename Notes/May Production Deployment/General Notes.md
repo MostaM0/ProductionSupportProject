@@ -14,7 +14,7 @@
 
 - CRS contains: **addresses, profile data (phone number, martial status, nickname .. etc)**.
 
-- Customer service: **preferences, email in rize (there is an email in RBs but they raised an issue fro the email to be from Rize isntead) , Pingone data, scan reference for Jumio**.
+- Customer service: **preferences, email in rize (there is an email in RBs but they raised an issue for the email to be from Rize isntead) , Pingone data, scan reference for Jumio**.
 
 - Spending balance is the balance without the money in the savings pot while Current balance is the total amount of money you have.
 
@@ -37,7 +37,7 @@
 
 ## Financial Enquiry (PF, HF, AF)
 
-- We don't apply for any financing aplications through Rize, **we only observe the details of an already existing application**.
+- We don't apply for any financing application through Rize, **we only observe the details of an already existing application**.
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -61,7 +61,7 @@
 
 - You don't specify the biller amount when you add a favourite, **instead the biller amount is taken from the user in the transaction details screen for each biller**.
 
-- The "Schedule These Payments" switch is not there at the moment with the whole functionality.
+- The "Schedule These Payments" switch is not there at the moment with the whole functionality, will be up with Sprint 3.
 
 - When you choose to pay to multiple billers, **you show the result for each payment in the results screen and the receipt shows the same screen**.
 
@@ -71,7 +71,7 @@
 
 - You can edit a favourite and you can delete a favourite.
 
-- We currently call the inquire API two times for Jompay, one with the account screen and on the amount screen, there is a debat on the bank currently for a change request to make a single inquiry after the amount screen.
+- We currently call the inquire API two times for Jompay, one with the account screen and on the amount screen, there is a debate on the bank currently for a change request to make a single inquiry after the amount screen.
 
 
 
@@ -82,7 +82,7 @@
 
 - These are limits for the following:
 
-	1- Trasnaction Type Limit
+	1- Transaction Type Limit
 
 	2- Transaction Group Limit 
 
@@ -90,7 +90,7 @@
 
 - Transaction Type Limit = Account, Proxy or QR.
 
-- Transaction Type Limit = Any number of trasnaction types bundled together, it can be configured from the Backoffice as well.
+- Transaction Type Limit = Any number of transaction types bundled together, it can be configured from the Backoffice as well.
 
 - User Segment Limit = for each customer based on their income and job, they are inserted into a certain segment.
 
@@ -116,13 +116,13 @@
 
 - An important issue: There is a value called default limit for each payment group, including the "DuitNow to Account/Proxy, DuitNow QR" group, it takes this value from one of the payment type limits in the group, this happens only for the first time. The problem arises when you change the limit of one of the transaction types that won't reflect on the default limit. If the user changed the limit one (transaction group limit), then there will be no issue.
 
-
+- There is no cooling-off screen now, it will always display as you exceeded the limit screen error.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## FCY Account Enquiry & Monthly Statements
 
-- The foreign currnies accounts are located in a separated tab inside the Account bottom tab.
+- The foreign currencies accounts are located in a separated tab inside the Account bottom tab.
 
 - Like the normal account transactions, clicking on a transaction record in the transaction history list will show you the details page allowing you to print it.
 

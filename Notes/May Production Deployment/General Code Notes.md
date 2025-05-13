@@ -41,7 +41,7 @@
 
 - It was required that only this function is used to inquire about accounts, here are some important notes:
   
-  1- When the customerId = * this means that who asked to inquire is using the account number not the customer Id, but the customerId was requried to be on the path so it can't be null.
+  1- When the customerId = * this means that who asked to inquire is using the account number not the customer Id, but the customerId was required to be on the path so it can't be null.
   2- accountNumber is a query parameter so it can be null.
   3- There can also be includeSavingPots field.
 
@@ -132,7 +132,7 @@
 
 - Inside customer-service in the CustomerIntegrationService.kt, you can find the caching functions that fetch data from RBS or CRS in case we can't find the data inside the database table, then insert it in the database.
 
-- **Every two minutes, any cache record is invalidated so that when we try to fetch it, it won't be found and we will have to call RBS or CRS again to get the corresponding data (code from customer-service):**
+- **Every two minutes, any cache record is invalidated so that when we try to fetch it, it won't be found, and we will have to call RBS or CRS again to get the corresponding data (code from customer-service):**
 
 ```Kotlin
 @Value("\${cache.ttl}")
@@ -169,8 +169,6 @@ The cache.ttl flag is found at the application.yaml files
 - In pay to proxy, the payment service sends fees to the FIS gateway in the payment details field separated by "||||".
 
 - In pay to QR, it is being sent in the recpient reference field also separated by "||||".
-
-- there is no cooling-off screen now, it will always display as you exceeded the limit screen error.
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
