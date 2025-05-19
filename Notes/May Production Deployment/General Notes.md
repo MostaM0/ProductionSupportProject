@@ -27,7 +27,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Term Deposit-i
 - You choose a term (e.g., 1 month, 6 months, 1 year, 5 years, etc. You cannot withdraw the money before the term ends without a penalty. The bank pays you interest on your deposit — usually higher than a regular savings account. At the end of the term (called maturity), you get back your original deposit plus the interest earned.
-- You can withdraw the term deposit money from the applciation directly.
+- You can withdraw the term deposit money from the application directly.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 # Sprint 2
 ## JomPAY

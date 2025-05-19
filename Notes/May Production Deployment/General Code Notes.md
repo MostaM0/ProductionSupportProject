@@ -103,6 +103,12 @@
 ```
 - **In the customer service, there is a very important flag called: digibank.migration-check-flag inside MigrationUtils.kt, this flag should be flipped to false when we are sure that every single customer was migrated to avoid all the checks being made.**
 - Inside MigrationHandler.kt interface, you can see multiple functions with different implementations based on if this customer is migrated or not. You can find the implementations on MigratedCustomerHandler.kt or NotMigratedCustomerHandler.kt.
+- The account number is not sent and received from RBS as a whole, **it is divided into: Account ID, Account Type and Branch Code and Currency Code.**.
+- The logic of mapping the account number to these four values can be found in RCM components in AccountUtil.kt file, it's important to know how to construct and deconstruct these values to be used to get logs.
+- Inside the "May Production Deployment" you can find "Assemble Account Number Code" this is a kotlin function I wrote you can use to assemble account number based on the four parts.
+- You can notice any RBS request log always starts with "AXIS Request" and similarly RBS response start with "AXIS Response". You will also find "Response Retrieved from Method: xxxx with rqUID: xxxxx" log, very useful.
+- In account inquiry, you can see the balance in both "ledgarAcctBal" and "availableAcctBal" fields.
+
 
 ## Caching System
 - Data being cached: Customer Accounts and Customer Details because fetching data from RCM was so slow.
@@ -119,7 +125,7 @@ The cache.ttl flag is found at the application.yaml files
 ## JomPAY
 - We call RBS to validate the biller info with the code, rrn (retrieval reference number) and rrn2 (secondary retrieval reference number).
 - The favourite data is located inside favourite_bill table, inside the staging_table table you can find records for **only batch bill payments, not individual payments**.
-- **How batch payments work ?** (very important: always check the action column inside the JomPAY_API_SHEET_V4):
+- **How batch payments work ?** (very important: always check the action column inside the JomPAY_API_SHEET_V4, updated api sheetcan always be found on TFS):
   1. We store every payment in the batch inside the staging_table.
   2. We send one-by-one to a kafka topic for processing, and change it's status in the database to FINISHED.
   3. In the end of every bill processing, check that all the bills with the same batch are not of PENDING status, if so then send to the async service the result, even if one of them is REJECTED.
@@ -135,8 +141,6 @@ The cache.ttl flag is found at the application.yaml files
     JWTUtilService.Secrets.JOMPAY_BILL_PAYMENT_SECRET_KEY.getValue(),
     jwtProperties.getValidateTokenInMsec());
 ```
-- Any kind of 
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Limits and Fees Management
 - The limits algorithm is located in both the transaction-service and the transaction-limit-service.
