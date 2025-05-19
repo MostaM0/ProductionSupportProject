@@ -119,7 +119,7 @@ The cache.ttl flag is found at the application.yaml files
 ## JomPAY
 - We call RBS to validate the biller info with the code, rrn (retrieval reference number) and rrn2 (secondary retrieval reference number).
 - The favourite data is located inside favourite_bill table, inside the staging_table table you can find records for **only batch bill payments, not individual payments**.
-- **How batch payments work ?** :
+- **How batch payments work ?** (very important: always check the action column inside the JomPAY_API_SHEET_V4):
   1. We store every payment in the batch inside the staging_table.
   2. We send one-by-one to a kafka topic for processing, and change it's status in the database to FINISHED.
   3. In the end of every bill processing, check that all the bills with the same batch are not of PENDING status, if so then send to the async service the result, even if one of them is REJECTED.

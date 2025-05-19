@@ -40,6 +40,8 @@
 - You can edit a favourite and you can delete a favourite.
 - We currently call the inquire API two times for Jompay, one with the account screen and on the amount screen, there is a debate on the bank currently for a change request to make a single inquiry after the amount screen.
 - All you need to get biller info is biller code, rnn and rnn2 optionally.
+- JomPAY multi billers can be done only on favourites.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Limits and Fees Management
 - These are limits for the following:
@@ -70,44 +72,24 @@
 - An important issue: There is a value called default limit for each payment group, including the "DuitNow to Account/Proxy, DuitNow QR" group, it takes this value from one of the payment type limits in the group, this happens only for the first time. The problem arises when you change the limit of one of the transaction types that won't reflect on the default limit. If the user changed the limit one (transaction group limit), then there will be no issue.
 - There is no cooling-off screen now, it will always display as you exceeded the limit screen error.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## FCY Account Enquiry & Monthly Statements
-
 - The foreign currencies accounts are located in a separated tab inside the Account bottom tab.
-
 - Like the normal account transactions, clicking on a transaction record in the transaction history list will show you the details page allowing you to print it.
-
 - Currency exchange is out of scope, currently we can inquire about a foreign currency account, see its details, see transaction history with filtering and statements.
-
 - The statements can be accessed from the account details page, customers can then switch the account to view various statements for each account including the FC account.
-
 - Statements are fully generated from RBS side.
-
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## Savings Pot
-
 - The savings pot behaviour will be as per production, only changes are: Editing Savings pot name and image.
-
 - Savings pots are now managed by RBS, it just a normal savings account tied to the main Rize savings account with a special label attached.
-
 - At the time of writing, as the savings pot is a saving account, it comes with -10 Ringgits by default, they are still discussing this issue.
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## Onboarding (Branch ETB with NRIC)
-
 - All customers that are currently prospect will not be able to continue their onboarding journey after the production deployment because the steps now are different.
-
 - ETB = Existing To Bank customer means they already have an account on Alrajhi bank, NTB = Non-existing To Bank customer.
-
 - For the NTB flow, it's the same from the frontend side, for ETB it exists only on the new app.
-
 - ّ**Inside the onboarding microservice there is an Excel file showing all the different scenarios for the onboarding, this is very important**.
-
 - The back office does not decide if a customer is Rize or RBS or anything. They only check if the data extracted from the MyKad scan is equivalent to MyKad data in the MyKad image.
-
 - Notes for every onboarding scenario (names according to excel sheet, for every scenario, try to amp it to figma):
 
 	1- **ETB_Mod_ETB**: 
@@ -158,26 +140,14 @@
 	- The ETB elligibility found the prospect existing in the bank.
 	
 - The steps are generated dynamically, for example when we tried to bypass jumio on the onboarding we needed to delete steps for them to be generated gain.
-
 - There was an issue in case of ETB mobile mismatsh, when they fail Jumio liveness check it never changes to FAIL, keep an eye for that (this was solved, now it displays as FAILED).
-
-
-	
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
 ## Online Banking e-Wallet (OBW-CA)
-
 - We display a list of banks the user can use to top up their account, and depending on the chosen bank, it opens in-app browser for this bank where you enter the data required to proceed with debiting the customer account in that bank.
-
 - For non-personal (top-up account name is different, different KAD .. etc), e-wallet and joint account top-up, the transaction is reviewed and has to be approved in order for the customer to proceed.
-
 - Top-up unsuccessful if: User clicks on the back button, debiting agent has system error or insufficient account balance in the customer's bank.
-
 - When user finishes topping-up using their other account portal, a special screen of "We're processing yor payment" gets displayed, it's time out only redirects customers to the home page, but it does not fail the topping-up.
-
-- Most probably won't go to production.
-
-
+- Most probably won't go to production on release 1.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
