@@ -125,7 +125,7 @@ The cache.ttl flag is found at the application.yaml files
 ## JomPAY
 - We call RBS to validate the biller info with the code, rrn (retrieval reference number) and rrn2 (secondary retrieval reference number).
 - The favourite data is located inside favourite_bill table, inside the staging_table table you can find records for **only batch bill payments, not individual payments**.
-- **How batch payments work ?** (very important: always check the action column inside the JomPAY_API_SHEET_V4, updated api sheetcan always be found on TFS):
+- **How batch payments work ?** (very important: always check the action column inside the JomPAY_API_SHEET_V4, updated api sheet can always be found on TFS):
   1. We store every payment in the batch inside the staging_table.
   2. We send one-by-one to a kafka topic for processing, and change it's status in the database to FINISHED.
   3. In the end of every bill processing, check that all the bills with the same batch are not of PENDING status, if so then send to the async service the result, even if one of them is REJECTED.
@@ -148,8 +148,25 @@ The cache.ttl flag is found at the application.yaml files
 - In the image there is two paths starting from number 4, the normal RBS path for RBS accounts (IBK) and internal Rize accounts (DGB).
 - In pay to proxy, the payment service sends fees to the FIS gateway in the payment details field separated by "||||".
 - In pay to QR, it is being sent in the recipient reference field also separated by "||||".
+- The normal cooling-off record for changing the limit can be found on the customer-restriction-service blocks table, but the new kind of cooling-off, the one related to using the effective limit, is in a table in customer-limit-service.
+- We saw the customer segment is fetched from the customers table in the customer-service database, with values AFFLUENT_RESIDENT, MASS_RESIDENT and MASS_NON_RESIDENT.
+- The "validateTransaction" function in the transaction-service is a huge function that goes throw all the limit validation process done on a transaction, you will find all the validation logic there with different exceptions thrown if any validation failed.
+- Our microservices don't communicate directly with the backoffice when it comes to fetching fees or anything else, instead, any change from the backoffice reflects on the Rize Database, this is why some database scripts skipped the deployment of the backoffice all together.
+- Inside the customer_consumption table inside the transaction-service database you can find the cumulative consumption of a customer in a certain transaction type.
+- There are no logs inside the function but if any kind of limit validation was violated it will throw it's corresponding exception.
+- There are fees calculated for every transaction based on customerSegment, transactionType, transactionAmount and the currency. There is also vat value but currently this vat is set to zero by default.
+- The sequence diagram "Account-Payment-Approval-MFA + Cooling_Off v1.1" is wrong in the part where we decide the "byPassSecureTransactionLimit" based on the response of validatePayment, instead it has it's dedicated API that is called in the payment initiation of account or proxy payment.
+- **How the communication between Backoffice, transaction-service and transaction limit service works out ?** :
+
+  1- When BO changes any kind of configuration, its is published for both transaction-service and transaction limit service, the kafka listeners are found in consumer > backoffice.
+
+  2- 
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-## FCY Account Enquiry & Monthly Statements
+## Onboarding (Branch ETB with NRIC)
+
+- There was a critical issue during regression where during syncing the prospect customer data with the customer service data in the very end, the Rize email was not saved in the database before sending the Kafka message that syncs the data. This means the email will always be null on the customer database and any other flow that depends on it will always fail.
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
