@@ -148,7 +148,6 @@ The cache.ttl flag is found at the application.yaml files
 - In the image there is two paths starting from number 4, the normal RBS path for RBS accounts (IBK) and internal Rize accounts (DGB).
 - In pay to proxy, the payment service sends fees to the FIS gateway in the payment details field separated by "||||".
 - In pay to QR, it is being sent in the recipient reference field also separated by "||||".
-- The normal cooling-off record for changing the limit can be found on the customer-restriction-service blocks table, but the new kind of cooling-off, the one related to using the effective limit, is in a table in customer-limit-service.
 - We saw the customer segment is fetched from the customers table in the customer-service database, with values AFFLUENT_RESIDENT, MASS_RESIDENT and MASS_NON_RESIDENT.
 - The "validateTransaction" function in the transaction-service is a huge function that goes throw all the limit validation process done on a transaction, you will find all the validation logic there with different exceptions thrown if any validation failed.
 - Our microservices don't communicate directly with the backoffice when it comes to fetching fees or anything else, instead, any change from the backoffice reflects on the Rize Database, this is why some database scripts skipped the deployment of the backoffice all together.
@@ -160,7 +159,9 @@ The cache.ttl flag is found at the application.yaml files
 
   1- When BO changes any kind of configuration, its is published for both transaction-service and transaction limit service, the kafka listeners are found in consumer > backoffice.
 
-  2- 
+  2- Both transaction-service and transaction limit service have a set of tables (specifically the ones that start with bo and other ones) that are duplicates of each other, any change that happens in one is reflected directly on another by communicating this update through Kafka messages. The reason behind this is to avoid communication between both microservices as the data they need from each other is huge.
+- The normal cooling-off record for changing the limit can be found on the customer-restriction-service blocks table, but the new kind of cooling-off, the one related to using the effective limit, is in a table in customer-limit-service.
+- 
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------

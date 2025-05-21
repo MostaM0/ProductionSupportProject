@@ -1,0 +1,756 @@
+[
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 940033671 ns; [1. paymentApi.doAtmDebitCredit - SWTOX 202505210618071620042016] took 940033671 ns = 100%",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1",
+            "data": {
+                "requestId": "SWTOX 202505210618071620042016",
+                "functionId": "CardPaymentService.doATMSingleDebitCredit",
+                "input": {
+                    "requestId": "\"SWTOX 202505210618071620042016\"",
+                    "request": "{\"cicId\":\"1748736000003202\",\"transferType\":\"DEBIT\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110551310\",\"accountRelationType\":\"700\",\"amount\":10000.0,\"startDate\":\"20250521\",\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"posReadMethod\":\"0005\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"posCond\":\"02\",\"terminalId\":\"07000039\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"feeAmount\":0.5,\"functionId\":\"MTFDR\",\"denomination\":\"MYR\"}"
+                },
+                "result": {
+                    "statusCode": "2401",
+                    "statusSeverity": null,
+                    "statusDescription": "Account not available",
+                    "transactionReferenceId": null,
+                    "ledgerBalanceDescription": null,
+                    "ledgerBalanceAmount": null,
+                    "availableBalanceDescripiton": null,
+                    "availableBalanceAmount": null
+                },
+                "processTime": 940
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 942531557 ns; [1. doATMSingleDebitCredit - SWTOX 202505210618071620042016] took 942531557 ns = 100%",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1",
+            "data": {
+                "requestId": null,
+                "functionId": "CardPaymentController.doATMSingleDebitCredit",
+                "input": {
+                    "request": "{\"name\":\"{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq\",\"declaredType\":\"generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRqType\",\"scope\":\"javax.xml.bind.JAXBElement$GlobalScope\",\"value\":{\"rqUID\":\"SWTOX 202505210618071620042016\",\"msgRqHdr\":{\"asyncRqUID\":null,\"svcIdent\":null,\"credentialsRqHdr\":[{\"subjectRole\":\"SystemUser\",\"startSession\":null,\"partyRef\":null,\"seqNum\":null,\"secTokenCertOrSecTokenICCOrSecTokenMagCard\":[{\"secTokenOwner\":null,\"loginName\":\"CWS\",\"subjectPswd\":null,\"subjectPassCode\":null}],\"ovrdExceptionCode\":null}],\"contextRqHdr\":{\"fieldSelect\":[],\"clientTerminalSeqNum\":null,\"networkTrnData\":{\"networkOwner\":\"CWS\",\"originatorName\":null,\"originatorType\":null,\"terminalIdent\":null,\"terminalType\":null,\"postAddr\":null,\"desc\":null,\"name\":null,\"networkRefIdent\":null,\"acquirerIdent\":null,\"merchNum\":null,\"mcc\":null,\"fiidentType\":null,\"fiident\":null},\"pointOfServiceData\":null,\"msgAuthCode\":null,\"clientDt\":null,\"custLangPref\":\"en\",\"clearingLangCode\":null,\"clientApp\":null,\"proxyClient\":null,\"msgGroupReference\":null,\"emvrqData\":null},\"feeRqHdr\":[]},\"doATMSingleDebitCredit\":{\"accessCode\":null,\"internalReferenceNumber\":null,\"partyId\":\"1748736000003202\",\"transferType\":\"D\",\"accountBranchCodeFrom\":\"91201\",\"accountRelationTypeFrom\":\"700\",\"accountNumberFrom\":\"0110551310\",\"curAmt\":{\"amt\":10000.00,\"curCode\":null},\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"startDate\":\"20250521\",\"functionId\":\"MTFDR\",\"feeAmt\":{\"amt\":0.50,\"curCode\":null},\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000,\"cardExpiry\":null,\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":null,\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"terminalID\":\"07000039\",\"secure3DValStatus\":null,\"posreadMethod\":\"0005\",\"poscond\":\"02\",\"cvvvalCode\":\"X\",\"poscardHolderVerMethod\":null}},\"nil\":false,\"globalScope\":true,\"typeSubstituted\":false}"
+                },
+                "result": {
+                    "name": "{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRs",
+                    "declaredType": "generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRsType",
+                    "scope": "javax.xml.bind.JAXBElement$GlobalScope",
+                    "value": {
+                        "status": {
+                            "statusCode": 2401,
+                            "serverStatusCode": null,
+                            "severity": null,
+                            "statusDesc": "Account not available",
+                            "subjectElement": [],
+                            "additionalStatus": [],
+                            "asyncRsData": null,
+                            "id": null
+                        },
+                        "rqUID": "SWTOX 202505210618071620042016",
+                        "msgRsHdr": null,
+                        "dualBalanceRs": null
+                    },
+                    "nil": false,
+                    "globalScope": true,
+                    "typeSubstituted": false
+                },
+                "processTime": 942
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.198",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.198Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 938.158226 and headers request-id: SWTOX+202505210618071620042016\nrequest-id: SWTOX 202505210618071620042016\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json\ndate: Tue, 20 May 2025 22:18:08 GMT\nx-envoy-upstream-service-time: 930\nserver: envoy\ntransfer-encoding: chunked\n with status 200",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.198",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.198Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 938.158226 and headers request-id: SWTOX+202505210618071620042016\nrequest-id: SWTOX 202505210618071620042016\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json\ndate: Tue, 20 May 2025 22:18:08 GMT\nx-envoy-upstream-service-time: 930\nserver: envoy\ntransfer-encoding: chunked\n with status 200, response okhttp3.internal.http.RealResponseBody@2b1c7794 and response=Response{protocol=http/1.1, code=200, message=OK, url=http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit} ",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.182",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.181Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "ERROR",
+            "level_value": 40000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016",
+            "data": {
+                "requestId": "\"SWTOX 202505210618071620042016\"",
+                "functionId": "PurchasingController.doAtmDebitCredit",
+                "input": {
+                    "requestId": "\"SWTOX 202505210618071620042016\"",
+                    "debitCreditRequest": "{\"cicId\":\"1748736000003202\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110551310\",\"accountRelationType\":\"700\",\"amount\":10000.0,\"startDate\":\"20250521\",\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"posReadMethod\":\"0005\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"posCond\":\"02\",\"terminalId\":\"07000039\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"feeAmount\":0.5,\"functionId\":\"MTFDR\",\"denomination\":\"MYR\"}"
+                },
+                "result": "com.arbm.digibank.exception.AccountNotAvailableException: Account not available from framl with decision is: decline\n\tat com.arbm.digibank.service.CardMonitoringService.checkFraml(CardMonitoringService.kt:65)\n\tat com.arbm.digibank.service.CardMonitoringService$$FastClassBySpringCGLIB$$7ccb2cbe.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor$logAround$2$1.invokeSuspend(MethodLogInterceptor.kt:52)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:284)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor.logAround(MethodLogInterceptor.kt:51)\n\tat com.arbm.digibank.interceptor.ServiceLogInterceptor.logServiceCall(ServiceLogInterceptor.kt:41)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat com.arbm.digibank.service.CardMonitoringService$$EnhancerBySpringCGLIB$$1c4fe9be.checkFraml(<generated>)\n\tat com.arbm.digibank.service.CardPaymentService$doAtmDebitCreditSuspended$2$framlCheckJob$1.invokeSuspend(CardPaymentService.kt:241)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)\n\tat kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:95)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)\n",
+                "processTime": 760
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.181",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.18Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "ERROR",
+            "level_value": 40000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016",
+            "data": {
+                "requestId": "\"SWTOX 202505210618071620042016\"",
+                "functionId": "CardPaymentService.doAtmDebitCredit-gIAlu-s",
+                "input": {
+                    "requestId": "\"SWTOX 202505210618071620042016\"",
+                    "request": "{\"cicId\":\"1748736000003202\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110551310\",\"accountRelationType\":\"700\",\"amount\":10000.0,\"startDate\":\"20250521\",\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"posReadMethod\":\"0005\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"posCond\":\"02\",\"terminalId\":\"07000039\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"feeAmount\":0.5,\"functionId\":\"MTFDR\",\"denomination\":\"MYR\"}"
+                },
+                "result": "com.arbm.digibank.exception.AccountNotAvailableException: Account not available from framl with decision is: decline\n\tat com.arbm.digibank.service.CardMonitoringService.checkFraml(CardMonitoringService.kt:65)\n\tat com.arbm.digibank.service.CardMonitoringService$$FastClassBySpringCGLIB$$7ccb2cbe.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor$logAround$2$1.invokeSuspend(MethodLogInterceptor.kt:52)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:284)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor.logAround(MethodLogInterceptor.kt:51)\n\tat com.arbm.digibank.interceptor.ServiceLogInterceptor.logServiceCall(ServiceLogInterceptor.kt:41)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat com.arbm.digibank.service.CardMonitoringService$$EnhancerBySpringCGLIB$$1c4fe9be.checkFraml(<generated>)\n\tat com.arbm.digibank.service.CardPaymentService$doAtmDebitCreditSuspended$2$framlCheckJob$1.invokeSuspend(CardPaymentService.kt:241)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)\n\tat kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:95)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)\n",
+                "processTime": 733
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.103",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.103Z",
+            "@version": "1",
+            "message": "Kafka RecordInterceptor topic: {framl.card-monitor-response.snapshot.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = timestamp, value = [50, 48, 50, 53, 45, 48, 53, 45, 50, 48, 84, 50, 50, 58, 49, 56, 58, 48, 55, 46, 57, 51, 55, 90]), RecordHeader(key = x-amzn-trace-id, value = [82, 111, 111, 116, 61, 49, 45, 54, 56, 50, 99, 102, 102, 97, 48, 45, 52, 57, 56, 49, 102, 54, 99, 48, 50, 51, 97, 100, 51, 56, 48, 101, 101, 99, 52, 97, 101, 100, 55, 98, 59, 80, 97, 114, 101, 110, 116, 61, 50, 51, 97, 100, 51, 56, 48, 101, 101, 99, 52, 97, 101, 100, 55, 98, 59, 83, 97, 109, 112, 108, 101, 100, 61, 48])], isReadOnly = false)}, offset: {305433}, payload: {{\"status\": \"OK\", \"lifecycleId\": \"SWTOX 202505210618071620042016\", \"eventExternalId\": \"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\", \"actionCodes\": [\"[Cards-Threshold-1]\", \"Limit/Review Card\"], \"secondaryActionCodes\": [\"[Cards-SCAR10]\"], \"alert\": true, \"decision\": \"decline\", \"score\": 0, \"scaRequired\": true, \"errors\": \"\", \"warnings\": \"\", \"code\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingRecordInterceptor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.103",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.103Z",
+            "@version": "1",
+            "message": "Process CardMonitorResponseSnapshot event - lifecycleId: SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.messaging.consumer.CardMonitorResponseSnapshotProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#4-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cffa04981f6c023ad380eec4aed7b",
+            "spanId": "6fa0df69eab0f88c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.083",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.083Z",
+            "@version": "1",
+            "message": "Kafka ProducerInterceptor topic: {framl.card-monitor-response.snapshot.v1}, partition: {0}, headers: {RecordHeaders(headers = [RecordHeader(key = timestamp, value = [50, 48, 50, 53, 45, 48, 53, 45, 50, 48, 84, 50, 50, 58, 49, 56, 58, 48, 55, 46, 57, 51, 55, 90])], isReadOnly = false)}, payload: {{\"status\": \"OK\", \"lifecycleId\": \"SWTOX 202505210618071620042016\", \"eventExternalId\": \"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\", \"actionCodes\": [\"[Cards-Threshold-1]\", \"Limit/Review Card\"], \"secondaryActionCodes\": [\"[Cards-SCAR10]\"], \"alert\": true, \"decision\": \"decline\", \"score\": 0, \"scaRequired\": true, \"errors\": \"\", \"warnings\": \"\", \"code\": null}}",
+            "logger_name": "com.arbm.digibank.messaging.interceptor.KafkaLoggingProducerInterceptor",
+            "thread_name": "scheduling-1",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.944",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.942Z",
+            "@version": "1",
+            "message": "SWTOX 202505210618071620042016 - Failed doAtmDebitCredit - message: Account not available from framl with decision is: decline",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "ERROR",
+            "level_value": 40000,
+            "stack_trace": "com.arbm.digibank.exception.AccountNotAvailableException: Account not available from framl with decision is: decline\n\tat com.arbm.digibank.service.CardMonitoringService.checkFraml(CardMonitoringService.kt:65)\n\tat com.arbm.digibank.service.CardMonitoringService$$FastClassBySpringCGLIB$$7ccb2cbe.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor$logAround$2$1.invokeSuspend(MethodLogInterceptor.kt:52)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:284)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor.logAround(MethodLogInterceptor.kt:51)\n\tat com.arbm.digibank.interceptor.ServiceLogInterceptor.logServiceCall(ServiceLogInterceptor.kt:41)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat com.arbm.digibank.service.CardMonitoringService$$EnhancerBySpringCGLIB$$1c4fe9be.checkFraml(<generated>)\n\tat com.arbm.digibank.service.CardPaymentService$doAtmDebitCreditSuspended$2$framlCheckJob$1.invokeSuspend(CardPaymentService.kt:241)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)\n\tat kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:95)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)\n",
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.938",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.937Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "ERROR",
+            "level_value": 40000,
+            "bc": "cards",
+            "data": {
+                "requestId": "\"SWTOX 202505210618071620042016\"",
+                "functionId": "CardMonitoringService.checkFraml",
+                "input": {
+                    "requestId": "\"SWTOX 202505210618071620042016\"",
+                    "request": "{\"cicId\":\"1748736000003202\",\"transferType\":\"D\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110551310\",\"accountRelationType\":\"700\",\"amount\":10000.0,\"startDate\":\"20250521\",\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"posReadMethod\":\"0005\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"posCond\":\"02\",\"terminalId\":\"07000039\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"feeAmount\":0.5,\"functionId\":\"MTFDR\",\"denomination\":\"MYR\"}",
+                    "savingAccount": "{\"accountId\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"accountNumber\":\"912010110551310\",\"customerId\":\"1748736000003202\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"openingTimestamp\":\"2025-04-03T09:00:19.916482Z\",\"blockDetails\":null}",
+                    "cardId": "\"da534478-7052-43a6-8990-25f559786d05\""
+                },
+                "result": "com.arbm.digibank.exception.AccountNotAvailableException: Account not available from framl with decision is: decline\n\tat com.arbm.digibank.service.CardMonitoringService.checkFraml(CardMonitoringService.kt:65)\n\tat com.arbm.digibank.service.CardMonitoringService$$FastClassBySpringCGLIB$$7ccb2cbe.invoke(<generated>)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor$logAround$2$1.invokeSuspend(MethodLogInterceptor.kt:52)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:284)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:85)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat com.arbm.digibank.interceptor.MethodLogInterceptor.logAround(MethodLogInterceptor.kt:51)\n\tat com.arbm.digibank.interceptor.ServiceLogInterceptor.logServiceCall(ServiceLogInterceptor.kt:41)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)\n\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)\n\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)\n\tat com.arbm.digibank.service.CardMonitoringService$$EnhancerBySpringCGLIB$$1c4fe9be.checkFraml(<generated>)\n\tat com.arbm.digibank.service.CardPaymentService$doAtmDebitCreditSuspended$2$framlCheckJob$1.invokeSuspend(CardPaymentService.kt:241)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)\n\tat kotlinx.coroutines.internal.LimitedDispatcher.run(LimitedDispatcher.kt:42)\n\tat kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:95)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:570)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:677)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:664)\n",
+                "processTime": 239
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.934",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": "transactionResponseEntityKeyMapper:entity: {\"lifecycleId\": \"SWTOX 202505210618071620042016\"}"
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.934",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": "transactionResponseEntityValueMapper:TransferSnapshot:  {\"status\": \"OK\", \"lifecycleId\": \"SWTOX 202505210618071620042016\", \"eventExternalId\": \"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\", \"actionCodes\": [\"[Cards-Threshold-1]\", \"Limit/Review Card\"], \"secondaryActionCodes\": [\"[Cards-SCAR10]\"], \"alert\": true, \"decision\": \"decline\", \"score\": 0, \"scaRequired\": true, \"errors\": \"\", \"warnings\": \"\", \"code\": null}"
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.927",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.927Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "data": {
+                "requestId": "SWTOX 202505210618071620042016",
+                "functionId": "http://card-monitoring-service.card-monitoring-service.svc.cluster.local:8080/v1/card/transaction",
+                "input": "{\"account_id\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX7273\",\"card_bin\":\"432134\",\"ttc\":\"41\",\"currency_code\":\"458\",\"amount\":10000.0,\"cardholder_bill_amount\":10000.0,\"pos_card_read_method\":\"0005\",\"mcc\":\"6011\",\"action_code\":\"\",\"acceptor_id\":\"123456789012345\",\"account_number\":\"912010110551310\",\"customer_id\":\"1748736000003202\",\"event_occurred_at\":1747779487162,\"card_id\":\"da534478-7052-43a6-8990-25f559786d05\",\"currency_unit\":2,\"acceptor_name\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptor_country_code\":\"458\",\"acceptor_zip\":\"KUL\",\"event_external_id\":\"\",\"card_expiration_date\":\"2904\",\"cvv_val_code\":\"X\",\"card_type\":\"DEBIT\",\"card_brand\":\"SAN\",\"card_presence_flag\":\"Y\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_id\":\"07000039\",\"card_category\":\"physical\",\"cardholder_bill_currency_code\":\"458\",\"recurring_payment\":\"02\",\"secure_3d_val_status\":\"\",\"terminal_zip\":\"\"}",
+                "result": "{\"status\":\"OK\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"action_codes\":[\"[Cards-Threshold-1]\",\"Limit/Review Card\"],\"secondary_action_codes\":[\"[Cards-SCAR10]\"],\"alert\":true,\"score\":0,\"decision\":\"decline\",\"sca_required\":true}",
+                "processTime": 205
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.925",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.924Z",
+            "@version": "1",
+            "message": "storeResponse: class ScoringResponse {\n    code: null\n    status: ok\n    errors: null\n    warnings: null\n    lifecycleId: SWTOX 202505210618071620042016\n    eventExternalId: ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\n    actionCodes: [[Cards-Threshold-1], Limit/Review Card]\n    secondaryActionCodes: [[Cards-SCAR10]]\n    alert: true\n    decision: decline\n    score: 0\n    scaRequired: true\n}",
+            "logger_name": "com.arbm.digibank.service.CardMonitoringStoreServicesImpl",
+            "thread_name": "task-48",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "8ff1b800e5e72114",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.924",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.924Z",
+            "@version": "1",
+            "message": "<<<<< End Monitoring transaction for card SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.controller.CardMonitoringController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "34625af0d3b11905",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.924",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.924Z",
+            "@version": "1",
+            "message": "storeRequest: class AuthorizationRequestSchema {\n    mti: 0200\n    cardPan: 4321XXXXXXXX7273\n    ttc: 00\n    currencyCode: MYR\n    amount: 1000000\n    cardholderBillAmount: 1000000\n    lifecycleId: SWTOX 202505210618071620042016\n    posCardReadMethod: 0000\n    mcc: 6011\n    actionCode: \n    acceptorId: 123456789012345\n    acceptorCountryCode: MY\n    eventOccurredAt: 1747779487162\n    cardBin: 432134\n    accountId: d6d1b936-6b4f-48d9-9205-d7bcd0465099\n    accountIban: 912010110551310\n    customerId: 1748736000003202\n    atc1: null\n    atc2: null\n    currencyUnit: 2\n    transmissionDatetime: null\n    cardholderBillConvRate: null\n    stan: null\n    localDatetime: null\n    cardEffectiveDate: null\n    cardExpirationDate: 2904\n    lifecycleIndicator: null\n    lifecycleSeqNumber: null\n    lifecycleToken: null\n    posCardholderVerMethod: null\n    posEnvironment: null\n    posSecurityCharacteristics: null\n    cardSeqNumber: null\n    functionCode: null\n    reasonCode: null\n    posReadCap: null\n    posCardholderVerCap: null\n    posApprovalCodeLen: null\n    posCardholderRecDataLen: null\n    posAcceptorRecDataLen: null\n    posCardholderDispDataLen: null\n    posAcceptorDispDataLen: null\n    posIccDataLen: null\n    posTrack3Rw: null\n    posCardCaptureCap: null\n    posPinLenCap: null\n    acquirerId: null\n    forwardingInstitutionId: null\n    accountDigitalSignature: null\n    cardholderCertificateNumber: null\n    acceptorCertificateNumber: null\n    xid: null\n    transstain: null\n    posTrack2Data: null\n    posTrack3Data: null\n    retrievalReferenceNumber: null\n    approvalCode: null\n    serviceCode: null\n    terminalId: 07000039\n    acceptorName: 7E541 TMN AIR BIRU       JHR        JHMY\n    acceptorStreetAddr: \n    acceptorCity: \n    acceptorRegion: null\n    acceptorZip: KUL\n    acceptorPhone: null\n    acceptorCustServicePhone: null\n    acceptorAddContactInfo: null\n    acceptorUrl: null\n    acceptorEmail: null\n    posTrack1Data: null\n    amountFees: null\n    cardVerData: null\n    cardholderBillStreetAddr: null\n    cardholderBillZip: null\n    cardholderCompressBillAddr: null\n    cardholderAddIdType: null\n    cardholderAddId: null\n    avsCode: null\n    cardholderBillCurrencyCode: MYR\n    tvr: null\n    transactionSeqCounter: null\n    transactionCategoryCode: null\n    authAgentId: null\n    cardholderPresenceIndicator: null\n    cardPresenceFlag: true\n    fileTransferAckCode: null\n    fileTransferSeqNumber: null\n    returnAmount: null\n    destinationId: null\n    originatorId: null\n    receivingInstitutionId: null\n    eventExternalId: ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\n    cvvValCode: X\n    secure3dValCode: null\n    secure3dValStatus: null\n    cardId: da534478-7052-43a6-8990-25f559786d05\n    cardholderName: null\n    cardType: DEBIT\n    cardCategory: physical\n    cardProgram: null\n    cardBrand: SAN\n    cardIssuer: null\n    cardCountryCode: MY\n    cardLast4: null\n    cardStatus: null\n    cardCreditScore: null\n    cardTransactionAmountLimit: null\n    cardCreditLimit: null\n    cardAvailableBalance: null\n    cardNumberOfCardholders: null\n    cardFirstActivationDate: null\n    cardIssuedDate: null\n    accountBic: null\n    accountOpenDate: null\n    accountBalance: null\n    accountCreditLimit: null\n    accountOtbLimit: null\n    accountAvailableCredit: null\n    accountDebtBalance: null\n    accountCashAdvanceBalance: null\n    accountStatus: null\n    accountLastActivity: null\n    accountLastPaymentDate: null\n    accountLastPaymentAmount: null\n    accountPwChangeFlag: null\n    accountRewardsUsedCount: null\n    accountDebtPaymentMethod: null\n    accountNumberOfCards: null\n    accountType: savings\n    accountCurrency: null\n    accountAssociatedCards: null\n    customerAccounts: null\n    customerName: null\n    customerEmail: null\n    customerPhone: null\n    customerPhoneValCode: null\n    customerCitizenIdNumber: null\n    customerPassportNumber: null\n    customerDriverLicense: null\n    customerSsn: null\n    customerTaxNumber: null\n    customerRegistrationDate: null\n    customerStreetAddr: null\n    customerZip: null\n    customerCity: null\n    customerRegion: null\n    customerCountryCode: null\n    customerDob: null\n    customerNumberOfAccounts: null\n    customerTotalBalance: null\n    customerTotalCreditLimit: null\n    customerKycLvl: null\n    customerOccupation: null\n    customerSegment: null\n    customerNumberOfCards: null\n    customerOccupationStatus: null\n    customerRiskRating: null\n    customerCurrency: null\n    customerCards: null\n    terminalTimezone: null\n    terminalStreetAddr: null\n    terminalCity: null\n    terminalRegion: null\n    terminalZip: \n    terminalCountryCode: null\n    terminalLatitude: null\n    terminalLongitude: null\n    terminalIp: null\n    terminalIpLatitude: null\n    terminalIpLongitude: null\n    terminalIpZip: null\n    terminalIpCity: null\n    terminalIpRegion: null\n    terminalIpCountryCode: null\n    terminalPocFlag: null\n    acceptorDbaName: null\n    acceptorTaxNumber: null\n    sic: null\n    acceptorOpenDate: null\n    acceptorRiskyFlag: null\n    acceptorRisk: null\n    acceptorVisaRisk: null\n    acceptorMastercardRisk: null\n    acceptorPhoneValCode: null\n    acceptorLatitude: null\n    acceptorLongitude: null\n    deviceId: null\n    trustedAcceptor: null\n    recurringPayment: false\n    firstRecurringPayment: null\n    referenceFraudRate: null\n    authType: null\n    deviceIp: null\n    deviceIpCountryCode: null\n    customerCountryCodeChangeFlag: null\n    customerEmailChangeFlag: null\n    customerPhoneChangeFlag: null\n    deviceIpLatitude: null\n    deviceIpLongitude: null\n    malwareFlag: null\n    proxyFlag: null\n    deviceLanguage: null\n    lastScaAt: null\n    loginSessionId: null\n    sessionId: null\n    merchantInitiated: null\n    deviceFingerprint: null\n}",
+            "logger_name": "com.arbm.digibank.service.CardMonitoringStoreServicesImpl",
+            "thread_name": "task-47",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "4c14a8ae54e40a40",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.924",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.924Z",
+            "@version": "1",
+            "message": "publishAsyncCardReferenceEvent: full event class AuthorizationRequestSchema {\n    mti: 0200\n    cardPan: 4321XXXXXXXX7273\n    ttc: 00\n    currencyCode: MYR\n    amount: 1000000\n    cardholderBillAmount: 1000000\n    lifecycleId: SWTOX 202505210618071620042016\n    posCardReadMethod: 0000\n    mcc: 6011\n    actionCode: \n    acceptorId: 123456789012345\n    acceptorCountryCode: MY\n    eventOccurredAt: 1747779487162\n    cardBin: 432134\n    accountId: d6d1b936-6b4f-48d9-9205-d7bcd0465099\n    accountIban: 912010110551310\n    customerId: 1748736000003202\n    atc1: null\n    atc2: null\n    currencyUnit: 2\n    transmissionDatetime: null\n    cardholderBillConvRate: null\n    stan: null\n    localDatetime: null\n    cardEffectiveDate: null\n    cardExpirationDate: 2904\n    lifecycleIndicator: null\n    lifecycleSeqNumber: null\n    lifecycleToken: null\n    posCardholderVerMethod: null\n    posEnvironment: null\n    posSecurityCharacteristics: null\n    cardSeqNumber: null\n    functionCode: null\n    reasonCode: null\n    posReadCap: null\n    posCardholderVerCap: null\n    posApprovalCodeLen: null\n    posCardholderRecDataLen: null\n    posAcceptorRecDataLen: null\n    posCardholderDispDataLen: null\n    posAcceptorDispDataLen: null\n    posIccDataLen: null\n    posTrack3Rw: null\n    posCardCaptureCap: null\n    posPinLenCap: null\n    acquirerId: null\n    forwardingInstitutionId: null\n    accountDigitalSignature: null\n    cardholderCertificateNumber: null\n    acceptorCertificateNumber: null\n    xid: null\n    transstain: null\n    posTrack2Data: null\n    posTrack3Data: null\n    retrievalReferenceNumber: null\n    approvalCode: null\n    serviceCode: null\n    terminalId: 07000039\n    acceptorName: 7E541 TMN AIR BIRU       JHR        JHMY\n    acceptorStreetAddr: \n    acceptorCity: \n    acceptorRegion: null\n    acceptorZip: KUL\n    acceptorPhone: null\n    acceptorCustServicePhone: null\n    acceptorAddContactInfo: null\n    acceptorUrl: null\n    acceptorEmail: null\n    posTrack1Data: null\n    amountFees: null\n    cardVerData: null\n    cardholderBillStreetAddr: null\n    cardholderBillZip: null\n    cardholderCompressBillAddr: null\n    cardholderAddIdType: null\n    cardholderAddId: null\n    avsCode: null\n    cardholderBillCurrencyCode: MYR\n    tvr: null\n    transactionSeqCounter: null\n    transactionCategoryCode: null\n    authAgentId: null\n    cardholderPresenceIndicator: null\n    cardPresenceFlag: true\n    fileTransferAckCode: null\n    fileTransferSeqNumber: null\n    returnAmount: null\n    destinationId: null\n    originatorId: null\n    receivingInstitutionId: null\n    eventExternalId: ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\n    cvvValCode: X\n    secure3dValCode: null\n    secure3dValStatus: null\n    cardId: da534478-7052-43a6-8990-25f559786d05\n    cardholderName: null\n    cardType: DEBIT\n    cardCategory: physical\n    cardProgram: null\n    cardBrand: SAN\n    cardIssuer: null\n    cardCountryCode: MY\n    cardLast4: null\n    cardStatus: null\n    cardCreditScore: null\n    cardTransactionAmountLimit: null\n    cardCreditLimit: null\n    cardAvailableBalance: null\n    cardNumberOfCardholders: null\n    cardFirstActivationDate: null\n    cardIssuedDate: null\n    accountBic: null\n    accountOpenDate: null\n    accountBalance: null\n    accountCreditLimit: null\n    accountOtbLimit: null\n    accountAvailableCredit: null\n    accountDebtBalance: null\n    accountCashAdvanceBalance: null\n    accountStatus: null\n    accountLastActivity: null\n    accountLastPaymentDate: null\n    accountLastPaymentAmount: null\n    accountPwChangeFlag: null\n    accountRewardsUsedCount: null\n    accountDebtPaymentMethod: null\n    accountNumberOfCards: null\n    accountType: savings\n    accountCurrency: null\n    accountAssociatedCards: null\n    customerAccounts: null\n    customerName: null\n    customerEmail: null\n    customerPhone: null\n    customerPhoneValCode: null\n    customerCitizenIdNumber: null\n    customerPassportNumber: null\n    customerDriverLicense: null\n    customerSsn: null\n    customerTaxNumber: null\n    customerRegistrationDate: null\n    customerStreetAddr: null\n    customerZip: null\n    customerCity: null\n    customerRegion: null\n    customerCountryCode: null\n    customerDob: null\n    customerNumberOfAccounts: null\n    customerTotalBalance: null\n    customerTotalCreditLimit: null\n    customerKycLvl: null\n    customerOccupation: null\n    customerSegment: null\n    customerNumberOfCards: null\n    customerOccupationStatus: null\n    customerRiskRating: null\n    customerCurrency: null\n    customerCards: null\n    terminalTimezone: null\n    terminalStreetAddr: null\n    terminalCity: null\n    terminalRegion: null\n    terminalZip: \n    terminalCountryCode: null\n    terminalLatitude: null\n    terminalLongitude: null\n    terminalIp: null\n    terminalIpLatitude: null\n    terminalIpLongitude: null\n    terminalIpZip: null\n    terminalIpCity: null\n    terminalIpRegion: null\n    terminalIpCountryCode: null\n    terminalPocFlag: null\n    acceptorDbaName: null\n    acceptorTaxNumber: null\n    sic: null\n    acceptorOpenDate: null\n    acceptorRiskyFlag: null\n    acceptorRisk: null\n    acceptorVisaRisk: null\n    acceptorMastercardRisk: null\n    acceptorPhoneValCode: null\n    acceptorLatitude: null\n    acceptorLongitude: null\n    deviceId: null\n    trustedAcceptor: null\n    recurringPayment: false\n    firstRecurringPayment: null\n    referenceFraudRate: null\n    authType: null\n    deviceIp: null\n    deviceIpCountryCode: null\n    customerCountryCodeChangeFlag: null\n    customerEmailChangeFlag: null\n    customerPhoneChangeFlag: null\n    deviceIpLatitude: null\n    deviceIpLongitude: null\n    malwareFlag: null\n    proxyFlag: null\n    deviceLanguage: null\n    lastScaAt: null\n    loginSessionId: null\n    sessionId: null\n    merchantInitiated: null\n    deviceFingerprint: null\n}",
+            "logger_name": "com.arbm.digibank.service.CardReferenceEventServicesImpl",
+            "thread_name": "task-46",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "3da2fb3b1a84d407",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.923",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.923Z",
+            "@version": "1",
+            "message": "Feedzai Scoring response: class ScoringResponse {\n    code: null\n    status: ok\n    errors: null\n    warnings: null\n    lifecycleId: SWTOX 202505210618071620042016\n    eventExternalId: ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\n    actionCodes: [[Cards-Threshold-1], Limit/Review Card]\n    secondaryActionCodes: [[Cards-SCAR10]]\n    alert: true\n    decision: decline\n    score: 0\n    scaRequired: true\n}",
+            "logger_name": "com.arbm.digibank.service.CardMonitoringServiceImpl",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "34625af0d3b11905",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.921",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.921Z",
+            "@version": "1",
+            "message": "FEEDZAI: 7 Response received from feedzai api: <200,{\"status\":\"ok\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"action_codes\":[\"[Cards-Threshold-1]\",\"Limit/Review Card\"],\"secondary_action_codes\":[\"[Cards-SCAR10]\"],\"alert\":true,\"score\":0,\"decision\":\"decline\",\"sca_required\":true},[Date:\"Tue, 20 May 2025 22:18:07 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"289\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]>",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.921",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.921Z",
+            "@version": "1",
+            "message": "FEEDZAI: 8 returning result: <200,{\"status\":\"ok\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"action_codes\":[\"[Cards-Threshold-1]\",\"Limit/Review Card\"],\"secondary_action_codes\":[\"[Cards-SCAR10]\"],\"alert\":true,\"score\":0,\"decision\":\"decline\",\"sca_required\":true},[Date:\"Tue, 20 May 2025 22:18:07 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"289\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]> : <200,{\"status\":\"ok\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"action_codes\":[\"[Cards-Threshold-1]\",\"Limit/Review Card\"],\"secondary_action_codes\":[\"[Cards-SCAR10]\"],\"alert\":true,\"score\":0,\"decision\":\"decline\",\"sca_required\":true},[Date:\"Tue, 20 May 2025 22:18:07 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"289\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]> ",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.921",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.921Z",
+            "@version": "1",
+            "message": "FEEDZAI: 9 return function call Feedzai result to controller: <200,{\"status\":\"ok\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"action_codes\":[\"[Cards-Threshold-1]\",\"Limit/Review Card\"],\"secondary_action_codes\":[\"[Cards-SCAR10]\"],\"alert\":true,\"score\":0,\"decision\":\"decline\",\"sca_required\":true},[Date:\"Tue, 20 May 2025 22:18:07 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"289\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]>",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.921",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.921Z",
+            "@version": "1",
+            "message": "FEEDZAI: 10 feedzaiProxyService return <200,{\"status\":\"ok\",\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"action_codes\":[\"[Cards-Threshold-1]\",\"Limit/Review Card\"],\"secondary_action_codes\":[\"[Cards-SCAR10]\"],\"alert\":true,\"score\":0,\"decision\":\"decline\",\"sca_required\":true},[Date:\"Tue, 20 May 2025 22:18:07 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"289\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]>",
+            "logger_name": "com.arbm.digibank.controller.GatewayController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.789",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.789Z",
+            "@version": "1",
+            "message": "FEEDZAI: 5.2 transfer request body {\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX7273\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":1000000,\"cardholder_bill_amount\":1000000,\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"pos_card_read_method\":\"0000\",\"mcc\":\"6011\",\"action_code\":\"\",\"acceptor_id\":\"123456789012345\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1747779487162,\"card_bin\":\"432134\",\"account_id\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"account_iban\":\"912010110551310\",\"customer_id\":\"1748736000003202\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"07000039\",\"acceptor_name\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"\",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"cvv_val_code\":\"X\",\"card_id\":\"da534478-7052-43a6-8990-25f559786d05\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"SAN\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false}",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.789",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.789Z",
+            "@version": "1",
+            "message": "FEEDZAI: 6 print httpEntity: <{\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX7273\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":1000000,\"cardholder_bill_amount\":1000000,\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"pos_card_read_method\":\"0000\",\"mcc\":\"6011\",\"action_code\":\"\",\"acceptor_id\":\"123456789012345\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1747779487162,\"card_bin\":\"432134\",\"account_id\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"account_iban\":\"912010110551310\",\"customer_id\":\"1748736000003202\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"07000039\",\"acceptor_name\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"\",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"cvv_val_code\":\"X\",\"card_id\":\"da534478-7052-43a6-8990-25f559786d05\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"SAN\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false},[user-agent:\"ReactorNetty/1.0.24\", accept:\"application/json\", content-type:\"application/json\", content-length:\"1017\", x-forwarded-proto:\"http\", x-request-id:\"429c685a-0b05-9772-8eee-f180d397b6a4\", x-envoy-expected-rq-timeout-ms:\"200000\", Authorization:\"Bearer eyJ0eXAiOiJKV1QiLCJraWQiOiI2MWEzOTAxZC05NDdhLTQ0MjYtYjIzMy01NjE3NDFmNTE1ODIiLCJhbGciOiJSUzUxMiJ9.eyJleHAiOjE3NTAzNzE0ODcsIm5iZiI6MTc0Nzc3OTQ4NywiaXNzIjoiYXJibSIsInN1YiI6ImFyYm0iLCJqdGkiOiIyYWYyOTI1Mi1hODc0LTQ4ZTgtYTdiNC0yMTQ2Mzg1YjA2MzUifQ.nbrU2rCT4NzB1CsTq73h3jtRrRZthEyN_SUc9nhr09dnn0yn-fl5Id-w5KDHNSLdGVT8nNgtSblxpRwvAX-wL_MjENACNWLN_2e6Uf_G7WtMPWdh_35b98yd9q5z9wvxOH0pZFsiUYnzbhp6yaMwxnOZWQVkN44msSvdssb9KPYL-NAZDPByZ-DgITJ8dqM8X8nWAO9LxmbTXm99kYCRkILu6Sp7WpM2diP34VyiigKdJ9-n1vjKMCaUOXosHxlzNm9jldvofKZ1diaOCiOU-0aj4zPvdPyzkcL8BnUyfndOdsyMLtGryk1WhmB4ZwWiFzRUKordFk7-Sy5Q5JDuCWcu30k3R_kCySiN4sR_8Y6j3V2TPcE_mmjPFXK3ay5ywyoFfzO5G99W8rYpfBj5a1SOx-Ooyoh-aeZUvqHZPf3dD7vSo0IxahmIDo-z8epaabEXtXP-lWS30nQ1BlnTrBaDQDN-rsfKPrOI6mdCsExWABo-UIkQkmQYCPfahL_yv_2AYoyR0LfP7_lCq4QHQ4wf5U7w1DprE8-D-VqgGCeR2Fj6EPJD2P5669wFcY89vZfANyXHs3veXNfA2t4c4Pwtu5r0JKZpNGV0q0aM2Y1SJJgG5O8EwF_rl7luHsUz4DO9327NCDNny0MpnUvsN58M4-s2X9J5RiFG2tya2fo\"]>, uri: https://alrajhi-private.feedzai.com/api/transactions/authorization, method: POST",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.760",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.759Z",
+            "@version": "1",
+            "message": "FEEDZAI: 0.1 Initial Crr header: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@188e8042 , request: SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@5ea98ab7], method: POST ,body: {\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX7273\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":1000000,\"cardholder_bill_amount\":1000000,\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"pos_card_read_method\":\"0000\",\"mcc\":\"6011\",\"action_code\":\"\",\"acceptor_id\":\"123456789012345\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1747779487162,\"card_bin\":\"432134\",\"account_id\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"account_iban\":\"912010110551310\",\"customer_id\":\"1748736000003202\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"07000039\",\"acceptor_name\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"\",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"cvv_val_code\":\"X\",\"card_id\":\"da534478-7052-43a6-8990-25f559786d05\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"SAN\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false}",
+            "logger_name": "com.arbm.digibank.controller.GatewayController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682cff9fadae7372591c2fd30de921d6",
+            "spanId": "591c2fd30de921d6",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.749",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.749Z",
+            "@version": "1",
+            "message": "Post Card Authorization information: {\"mti\":\"0200\",\"card_pan\":\"4321XXXXXXXX7273\",\"ttc\":\"00\",\"currency_code\":\"MYR\",\"amount\":1000000,\"cardholder_bill_amount\":1000000,\"lifecycle_id\":\"SWTOX 202505210618071620042016\",\"pos_card_read_method\":\"0000\",\"mcc\":\"6011\",\"action_code\":\"\",\"acceptor_id\":\"123456789012345\",\"acceptor_country_code\":\"MY\",\"event_occurred_at\":1747779487162,\"card_bin\":\"432134\",\"account_id\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"account_iban\":\"912010110551310\",\"customer_id\":\"1748736000003202\",\"currency_unit\":2,\"card_expiration_date\":\"2904\",\"terminal_id\":\"07000039\",\"acceptor_name\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptor_street_addr\":\"\",\"acceptor_city\":\"\",\"acceptor_zip\":\"KUL\",\"cardholder_bill_currency_code\":\"MYR\",\"card_presence_flag\":true,\"event_external_id\":\"ec4b0f58-cec3-4d1c-ade9-be7babc67b8d\",\"cvv_val_code\":\"X\",\"card_id\":\"da534478-7052-43a6-8990-25f559786d05\",\"card_type\":\"DEBIT\",\"card_category\":\"physical\",\"card_brand\":\"SAN\",\"card_country_code\":\"MY\",\"account_type\":\"savings\",\"terminal_zip\":\"\",\"recurring_payment\":false}",
+            "logger_name": "com.arbm.digibank.service.client.FeedzaiClientService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "34625af0d3b11905",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.738",
+        "kubernetes.container_name": "card-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.737Z",
+            "@version": "1",
+            "message": "<<<<< Start Monitoring transaction for card CardTransactionRequestV1(lifecycleId=SWTOX 202505210618071620042016, accountId=d6d1b936-6b4f-48d9-9205-d7bcd0465099, mti=0200, cardPan=4321XXXXXXXX7273, cardBin=432134, ttc=41, currencyCode=458, amount=10000.0, cardholderBillAmount=10000.0, posCardReadMethod=0005, mcc=6011, actionCode=, acceptorId=123456789012345, accountNumber=912010110551310, customerId=1748736000003202, eventOccurredAt=1747779487162, cardId=da534478-7052-43a6-8990-25f559786d05, currencyUnit=2, acceptorName=7E541 TMN AIR BIRU       JHR        JHMY, acceptorCountryCode=458, acceptorZip=KUL, eventExternalId=, cardExpirationDate=2904, cvvValCode=X, cardType=DEBIT, cardBrand=SAN, cardPresenceFlag=Y, cardCountryCode=MY, accountType=savings, terminalCity=null, terminalId=07000039, terminalCountryCode=null, cardCategory=physical, cardholderBillCurrencyCode=458, recurringPayment=02, secure3dValStatus=, terminalZip=)",
+            "logger_name": "com.arbm.digibank.controller.CardMonitoringController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "card-monitoring-service",
+            "traceId": "682cff9f662bf74234625af0d3b11905",
+            "spanId": "34625af0d3b11905",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.642",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.642Z",
+            "@version": "1",
+            "message": "Found account with number=912010110551310, start checking account status",
+            "logger_name": "com.arbm.digibank.helper.TmPostingHelper",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.627",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.626Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016",
+            "data": {
+                "requestId": "SWTOX 202505210618071620042016",
+                "functionId": "http://deposit-account-service.deposit-account-service.svc.cluster.local:8080/saving-accounts?account_number=912010110551310",
+                "input": "",
+                "result": "{\"accountId\":\"d6d1b936-6b4f-48d9-9205-d7bcd0465099\",\"accountNumber\":\"912010110551310\",\"customerId\":\"1748736000003202\",\"status\":\"ACTIVE\",\"currency\":\"MYR\",\"openingTimestamp\":\"2025-04-03T09:00:19.916482Z\",\"activationTimestamp\":\"2025-04-03T09:31:42.178784Z\",\"blockDetails\":null}",
+                "processTime": 13
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.612",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.611Z",
+            "@version": "1",
+            "message": "Start finding account with number=912010110551310",
+            "logger_name": "com.arbm.digibank.helper.TmPostingHelper",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.608",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.608Z",
+            "@version": "1",
+            "message": "start doAtmDebitCreditSuspended",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.605",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.605Z",
+            "@version": "1",
+            "message": "Received request MEPS IBFT with id=SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.550",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.546Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016",
+            "data": {
+                "requestId": null,
+                "functionId": "CustomerRestrictionApiService.isServiceBlocked",
+                "input": {
+                    "customerId": "\"1748736000003202\"",
+                    "serviceCodeToCheck": "\"CARD_TRANSACTION\"",
+                    "productType": "\"SAVING_ACCOUNT\"",
+                    "productNumber": "\"0110551310\""
+                },
+                "result": false,
+                "processTime": 90
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.436",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.436Z",
+            "@version": "1",
+            "message": "Received request DEBIT with id=SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.controller.PurchasingController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f32323efdcc0493f918200372",
+            "spanId": "cc0493f918200372",
+            "RequestId": "SWTOX 202505210618071620042016"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.259",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.259Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.259",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.259Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTOX 202505210618071620042016\nContent-Type: application/json\nAccept: application/json\n",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.259",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.259Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTOX 202505210618071620042016\nContent-Type: application/json\nAccept: application/json\n and Body okhttp3.RequestBody$Companion$toRequestBody$2@5d804ff4",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.257",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.257Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    }
+]

@@ -1,0 +1,32 @@
+fun main() {
+    val acctId = "0007000006845"
+    val branchIdent = "91201"
+    val acctType = "700"
+    val currency = "412"
+    println(assembleAccountNumber(branchIdent, acctId, acctType, currency))
+}
+
+const val ACCOUNT_ID_LENGTH = 9
+
+fun assembleAccountNumber(
+    branchIdent: String,
+    acctId: String,
+    acctType: String,
+    currency: String?
+): String {
+    val sixthDigit = getSixthDigitFromAcctType(acctType, currency)
+    val restOfAccountNumber = acctId.takeLast(ACCOUNT_ID_LENGTH)
+    return "$branchIdent$sixthDigit$restOfAccountNumber"
+}
+fun getSixthDigitFromAcctType(acctType: String, currency: String?): String = when (acctType) {
+    "700" -> "7"
+    "005" -> "0"
+    "300" -> "3"
+    "001" -> when (currency) {
+        null -> throw IllegalArgumentException("Currency is mandatory for this account type mapping")
+        "412" -> "1"
+        else -> "5"
+    }
+
+    else -> throw IllegalArgumentException("Invalid Account Type, it has no mapping")
+}

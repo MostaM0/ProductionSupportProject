@@ -1,0 +1,210 @@
+[
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 940033671 ns; [1. paymentApi.doAtmDebitCredit - SWTOX 202505210618071620042016] took 940033671 ns = 100%",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1",
+            "data": {
+                "requestId": "SWTOX 202505210618071620042016",
+                "functionId": "CardPaymentService.doATMSingleDebitCredit",
+                "input": {
+                    "requestId": "\"SWTOX 202505210618071620042016\"",
+                    "request": "{\"cicId\":\"1748736000003202\",\"transferType\":\"DEBIT\",\"accountBranchCode\":\"91201\",\"accountNumber\":\"0110551310\",\"accountRelationType\":\"700\",\"amount\":10000.0,\"startDate\":\"20250521\",\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000.0,\"cardExpiry\":\"2904\",\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"posReadMethod\":\"0005\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":\"KUL\",\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"posCond\":\"02\",\"terminalId\":\"07000039\",\"secure3DValStatus\":\"\",\"cvvValCode\":\"X\",\"posCardHolderVerMethod\":\"\",\"accessCode\":null,\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"feeAmount\":0.5,\"functionId\":\"MTFDR\",\"denomination\":\"MYR\"}"
+                },
+                "result": {
+                    "statusCode": "2401",
+                    "statusSeverity": null,
+                    "statusDescription": "Account not available",
+                    "transactionReferenceId": null,
+                    "ledgerBalanceDescription": null,
+                    "ledgerBalanceAmount": null,
+                    "availableBalanceDescripiton": null,
+                    "availableBalanceAmount": null
+                },
+                "processTime": 940
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "message": "StopWatch '': running time = 942531557 ns; [1. doATMSingleDebitCredit - SWTOX 202505210618071620042016] took 942531557 ns = 100%",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.199",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.199Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1",
+            "data": {
+                "requestId": null,
+                "functionId": "CardPaymentController.doATMSingleDebitCredit",
+                "input": {
+                    "request": "{\"name\":\"{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRq\",\"declaredType\":\"generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRqType\",\"scope\":\"javax.xml.bind.JAXBElement$GlobalScope\",\"value\":{\"rqUID\":\"SWTOX 202505210618071620042016\",\"msgRqHdr\":{\"asyncRqUID\":null,\"svcIdent\":null,\"credentialsRqHdr\":[{\"subjectRole\":\"SystemUser\",\"startSession\":null,\"partyRef\":null,\"seqNum\":null,\"secTokenCertOrSecTokenICCOrSecTokenMagCard\":[{\"secTokenOwner\":null,\"loginName\":\"CWS\",\"subjectPswd\":null,\"subjectPassCode\":null}],\"ovrdExceptionCode\":null}],\"contextRqHdr\":{\"fieldSelect\":[],\"clientTerminalSeqNum\":null,\"networkTrnData\":{\"networkOwner\":\"CWS\",\"originatorName\":null,\"originatorType\":null,\"terminalIdent\":null,\"terminalType\":null,\"postAddr\":null,\"desc\":null,\"name\":null,\"networkRefIdent\":null,\"acquirerIdent\":null,\"merchNum\":null,\"mcc\":null,\"fiidentType\":null,\"fiident\":null},\"pointOfServiceData\":null,\"msgAuthCode\":null,\"clientDt\":null,\"custLangPref\":\"en\",\"clearingLangCode\":null,\"clientApp\":null,\"proxyClient\":null,\"msgGroupReference\":null,\"emvrqData\":null},\"feeRqHdr\":[]},\"doATMSingleDebitCredit\":{\"accessCode\":null,\"internalReferenceNumber\":null,\"partyId\":\"1748736000003202\",\"transferType\":\"D\",\"accountBranchCodeFrom\":\"91201\",\"accountRelationTypeFrom\":\"700\",\"accountNumberFrom\":\"0110551310\",\"curAmt\":{\"amt\":10000.00,\"curCode\":null},\"remarks\":\"21/05/2025 06:18:07 MEPS IBFT /MOHD FAZLI BIN OTHMA      929292  /MEPS FUNDS TRANSFER\",\"startDate\":\"20250521\",\"functionId\":\"MTFDR\",\"feeAmt\":{\"amt\":0.50,\"curCode\":null},\"rrn\":\"000002614988\",\"messageTypeIndicator\":\"0200\",\"pan\":\"4321XXXXXXXX7273\",\"tcc\":\"41\",\"currencyCode\":\"458\",\"amountInOriginalCurrency\":1000000,\"cardHolderBillCurrencyCode\":\"458\",\"cardHolderBillAmount\":1000000,\"cardExpiry\":null,\"lifeCycleId\":\"SWTOX 202505210618071620042016\",\"mcc\":\"6011\",\"acceptorId\":\"123456789012345\",\"acceptorName\":\"7E541 TMN AIR BIRU       JHR        JHMY\",\"acceptorZip\":null,\"acceptorCountryCode\":\"458\",\"cardPresence\":\"Y\",\"cardBIN\":\"432134\",\"cardBrand\":\"SAN\",\"occurredAt\":\"20250521061807162\",\"terminalID\":\"07000039\",\"secure3DValStatus\":null,\"posreadMethod\":\"0005\",\"poscond\":\"02\",\"cvvvalCode\":\"X\",\"poscardHolderVerMethod\":null}},\"nil\":false,\"globalScope\":true,\"typeSubstituted\":false}"
+                },
+                "result": {
+                    "name": "{http://finmeccanica.com/services/rcm/objectsIFX}DoATMSingleDebitCreditMsgRs",
+                    "declaredType": "generated.jaxb.server.rcm.DoATMSingleDebitCreditMsgRsType",
+                    "scope": "javax.xml.bind.JAXBElement$GlobalScope",
+                    "value": {
+                        "status": {
+                            "statusCode": 2401,
+                            "serverStatusCode": null,
+                            "severity": null,
+                            "statusDesc": "Account not available",
+                            "subjectElement": [],
+                            "additionalStatus": [],
+                            "asyncRsData": null,
+                            "id": null
+                        },
+                        "rqUID": "SWTOX 202505210618071620042016",
+                        "msgRsHdr": null,
+                        "dualBalanceRs": null
+                    },
+                    "nil": false,
+                    "globalScope": true,
+                    "typeSubstituted": false
+                },
+                "processTime": 942
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.198",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.198Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 938.158226 and headers request-id: SWTOX+202505210618071620042016\nrequest-id: SWTOX 202505210618071620042016\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json\ndate: Tue, 20 May 2025 22:18:08 GMT\nx-envoy-upstream-service-time: 930\nserver: envoy\ntransfer-encoding: chunked\n with status 200",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:08.198",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:08.198Z",
+            "@version": "1",
+            "message": "Received response for http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit in 938.158226 and headers request-id: SWTOX+202505210618071620042016\nrequest-id: SWTOX 202505210618071620042016\nx-content-type-options: nosniff\nx-xss-protection: 1; mode=block\ncache-control: no-cache, no-store, max-age=0, must-revalidate\npragma: no-cache\nexpires: 0\ncontent-type: application/json\ndate: Tue, 20 May 2025 22:18:08 GMT\nx-envoy-upstream-service-time: 930\nserver: envoy\ntransfer-encoding: chunked\n with status 200, response okhttp3.internal.http.RealResponseBody@2b1c7794 and response=Response{protocol=http/1.1, code=200, message=OK, url=http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit} ",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.259",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.259Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.service.CardPaymentService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.259",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.259Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTOX 202505210618071620042016\nContent-Type: application/json\nAccept: application/json\n",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.259",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.259Z",
+            "@version": "1",
+            "message": "Sending POST request http://card-service.card-service.svc.cluster.local:8080/v1/payment/doatmsingledebitcredit on null and headers Request-Id: SWTOX 202505210618071620042016\nContent-Type: application/json\nAccept: application/json\n and Body okhttp3.RequestBody$Companion$toRequestBody$2@5d804ff4",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 22:18:07.257",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T22:18:07.257Z",
+            "@version": "1",
+            "message": "Received request DEBIT with requestId=SWTOX 202505210618071620042016",
+            "logger_name": "com.arbm.digibank.controller.CardPaymentController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682cff9f5447e2907f1e96713d384992",
+            "spanId": "eb1cb94e83dcc9e1"
+        }
+    }
+]

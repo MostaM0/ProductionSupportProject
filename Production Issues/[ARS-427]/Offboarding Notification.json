@@ -1,0 +1,102 @@
+[
+    {
+        "@timestamp": "2025-05-15 18:00:01.027",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:00:01.027Z",
+            "@version": "1",
+            "message": "Notification Entity:  NotificationsEntity(notificationId=68046077-bc33-4efa-a1ee-3cfbf3fb8ee4, customerId=1748736000003483, content=Hi there! Let's complete your Rize account setup together., header=Let's finish setting up your Rize account with us!, isRead=false, internalNotifId=0ec535e2-3b74-489f-b12d-c46da6ed9d29, isDeleted=false) ",
+            "logger_name": "com.arbm.digibank.service.NotificationOnesignalService",
+            "thread_name": "DefaultDispatcher-worker-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:00:01.026",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:00:01.026Z",
+            "@version": "1",
+            "message": "Get the notification template name ONBOARDING_IFTV_REMINDER, for customer 1748736000003483",
+            "logger_name": "com.arbm.digibank.service.NotificationTemplateService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "68262ba0e5397cfc5dfb4da90448f41b",
+            "spanId": "15fccf566c69c688",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:00:01.017",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:00:01.017Z",
+            "@version": "1",
+            "message": "Get devices for customerId: 1748736000003483",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "68262ba1164448ef1cf87451a765596f",
+            "spanId": "1cf87451a765596f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:00:01.017",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:00:01.017Z",
+            "@version": "1",
+            "message": " Getting devices for customer=1748736000003483 and status=ACTIVE_VERIFIED",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "68262ba1164448ef1cf87451a765596f",
+            "spanId": "1cf87451a765596f",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:00:01.015",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:00:01.015Z",
+            "@version": "1",
+            "message": "consumeCreateNotificationCommand, notificationId: 0ec535e2-3b74-489f-b12d-c46da6ed9d29, customerId: 1748736000003483, templateName: ONBOARDING_IFTV_REMINDER",
+            "logger_name": "com.arbm.digibank.processor.CreateNotificationCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "68262ba0e5397cfc5dfb4da90448f41b",
+            "spanId": "15fccf566c69c688",
+            "bc": "shared"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:00:01.015",
+        "kubernetes.container_name": "notification-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:00:01.015Z",
+            "@version": "1",
+            "message": "Retrieving DeviceId from customer-service. CustomerId: [1748736000003483]",
+            "logger_name": "com.arbm.digibank.service.CustomerService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "notification-service",
+            "traceId": "68262ba0e5397cfc5dfb4da90448f41b",
+            "spanId": "15fccf566c69c688",
+            "bc": "shared"
+        }
+    }
+]

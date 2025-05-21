@@ -1,0 +1,2051 @@
+[
+    {
+        "@timestamp": "2025-05-16 00:18:56.971",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-16T00:18:56.97Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "68268470055de22a0ddbbad174ee92e3",
+            "spanId": "89dcc072e721eb18",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 10
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-16 00:18:56.971",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-16T00:18:56.971Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "68268470055de22a0ddbbad174ee92e3",
+            "spanId": "89dcc072e721eb18",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 12
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 23:02:51.559",
+        "kubernetes.container_name": "deposit-commodity-trading-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T23:02:46.998Z",
+            "@version": "1",
+            "message": "Received command: {\"customerId\": \"1691918854997419\", \"customerType\": \"RETAIL\", \"processId\": \"4ca47fc2-7ed5-448d-874b-13c94364d6ff\", \"numberOfCustomers\": 43816, \"tradingDate\": \"2025-05-16\", \"balanceDate\": \"2025-05-15\"}",
+            "logger_name": "com.arbm.digibank.processor.MurabahaCommandProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-commodity-trading-service",
+            "traceId": "682671f04d63da368f2c420bfd3b5fee",
+            "spanId": "259e4cb9ef069eae",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 23:02:51.559",
+        "kubernetes.container_name": "deposit-commodity-trading-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T23:02:47.005Z",
+            "@version": "1",
+            "message": "Calculated Customer Murabaha for customer [Customer(customerId=1691918854997419, customerType=RETAIL)] :  [CustomerMurabaha(murabahaSalePrice=0E-8, purchasePrice=0.00, agencyFee=0.00, remainingDays=231, customerProfit=0E-8, effectiveProfitRate=0.00939661, date=2025-05-15)]",
+            "logger_name": "com.arbm.digibank.service.TieredCustomerMurabahaCalculator",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-commodity-trading-service",
+            "traceId": "682671f04d63da368f2c420bfd3b5fee",
+            "spanId": "259e4cb9ef069eae",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:16:22.100",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:16:22.1Z",
+            "@version": "1",
+            "message": "Posting sent, request={\"postingInstructionBatch\":{\"postingInstructions\":[{\"glTransactionId\":\"2505151ifwuyuo\",\"glEvent\":\"ACCRUE_PROFIT\",\"committedPostings\":[{\"credit\":false,\"amount\":\"2.81938\",\"denomination\":\"MYR\",\"accountNumber\":\"912010110150840\",\"customerId\":\"1691918854997419\",\"glAccount\":\"PROFIT_PAID_SA\"},{\"credit\":true,\"amount\":\"2.81938\",\"denomination\":\"MYR\",\"accountNumber\":\"912010110150840\",\"customerId\":\"1691918854997419\",\"glAccount\":\"ACCRUED_PROFIT_PAYABLE_SA\"}]}],\"valueTimestamp\":\"2025-05-15T17:00:00.000Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"insertionTimestamp\":\"2025-05-15T17:03:34.299Z\",\"glDate\":\"20250515\",\"error\":null}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "68262f6d2360e91974dbb268d193df81",
+            "spanId": "a9d21be2e1a54c8e",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:16:21.832",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:16:21.832Z",
+            "@version": "1",
+            "message": "[5ca2ecf3-5890-5c89-b3ae-9d64a05fd225] Received PostingInstructionBatch: {\"postingInstructionBatch\": {\"id\": \"91c215d8-c252-4cdc-95ee-5412e1f7690d\", \"createRequestId\": \"5ca2ecf3-5890-5c89-b3ae-9d64a05fd225\", \"clientId\": \"CoreContracts\", \"clientBatchId\": \"ACCRUE_PROFIT-3dfcc725-08b1-47f6-b59b-fd5d2f678167_5_ACCRUE_PROFIT_1747328400000000000\", \"postingInstructions\": [{\"id\": \"44d9a41a-6d4a-4d6d-8fcc-5b8b73a9ff8d\", \"clientTransactionId\": \"INTERNAL_POSTING_ACCRUE_PROFIT_d89fce58-e3da-4316-b377-d1be6ea2996d_5_ACCRUE_PROFIT_1747328400000000000_INTERNAL\", \"pics\": [], \"instructionDetails\": {\"description\": \"Daily profit accrued at 0.00904% on balance of 31184.07\", \"account_type\": \"MURABAHAH\", \"event\": \"ACCRUE_PROFIT\", \"originating_account_id\": \"d89fce58-e3da-4316-b377-d1be6ea2996d\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110150840\", \"customerId\": \"1691918854997419\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"PROFIT_PAID_SA\"}, {\"credit\": true, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110150840\", \"customerId\": \"1691918854997419\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"ACCRUED_PROFIT_PAYABLE_SA\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": {\"postings\": [{\"credit\": false, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}, {\"credit\": true, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}]}, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"2505151ifwuyuo\", \"glEvent\": \"ACCRUE_PROFIT\"}], \"batchDetails\": {\"event\": \"ACCRUE_PROFIT\"}, \"valueTimestamp\": \"2025-05-15T17:00:00Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-05-15T17:03:34.299Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250515\"}, \"technicalMetadata\": {\"eventId\": \"event_91c215d8-c252-4cdc-95ee-5412e1f7690d\", \"captureTimestamp\": \"2025-05-15T17:03:34.344Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "68262f6d2360e91974dbb268d193df81",
+            "spanId": "a9d21be2e1a54c8e",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 18:16:21.832",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-15T18:16:21.832Z",
+            "@version": "1",
+            "message": "Batch={\"postingInstructionBatch\": {\"id\": \"91c215d8-c252-4cdc-95ee-5412e1f7690d\", \"createRequestId\": \"5ca2ecf3-5890-5c89-b3ae-9d64a05fd225\", \"clientId\": \"CoreContracts\", \"clientBatchId\": \"ACCRUE_PROFIT-3dfcc725-08b1-47f6-b59b-fd5d2f678167_5_ACCRUE_PROFIT_1747328400000000000\", \"postingInstructions\": [{\"id\": \"44d9a41a-6d4a-4d6d-8fcc-5b8b73a9ff8d\", \"clientTransactionId\": \"INTERNAL_POSTING_ACCRUE_PROFIT_d89fce58-e3da-4316-b377-d1be6ea2996d_5_ACCRUE_PROFIT_1747328400000000000_INTERNAL\", \"pics\": [], \"instructionDetails\": {\"description\": \"Daily profit accrued at 0.00904% on balance of 31184.07\", \"account_type\": \"MURABAHAH\", \"event\": \"ACCRUE_PROFIT\", \"originating_account_id\": \"d89fce58-e3da-4316-b377-d1be6ea2996d\"}, \"committedPostings\": [{\"credit\": false, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110150840\", \"customerId\": \"1691918854997419\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"PROFIT_PAID_SA\"}, {\"credit\": true, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110150840\", \"customerId\": \"1691918854997419\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"ACCRUED_PROFIT_PAYABLE_SA\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": {\"postings\": [{\"credit\": false, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"PROFIT_PAID\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}, {\"credit\": true, \"amount\": \"2.81938\", \"denomination\": \"MYR\", \"accountId\": \"ACCRUED_PROFIT_PAYABLE\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\"}]}, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": null, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"2505151ifwuyuo\", \"glEvent\": \"ACCRUE_PROFIT\"}], \"batchDetails\": {\"event\": \"ACCRUE_PROFIT\"}, \"valueTimestamp\": \"2025-05-15T17:00:00Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-05-15T17:03:34.299Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250515\"}, \"technicalMetadata\": {\"eventId\": \"event_91c215d8-c252-4cdc-95ee-5412e1f7690d\", \"captureTimestamp\": \"2025-05-15T17:03:34.344Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "68262f6d2360e91974dbb268d193df81",
+            "spanId": "a9d21be2e1a54c8e",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:12:59.075",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:12:59.075Z",
+            "@version": "1",
+            "message": "Posting enriched, posting=PostingInstructionBatch(postingInstructionBatch=InstructionBatch(id=91c215d8-c252-4cdc-95ee-5412e1f7690d, createRequestId=5ca2ecf3-5890-5c89-b3ae-9d64a05fd225, clientId=CoreContracts, clientBatchId=ACCRUE_PROFIT-3dfcc725-08b1-47f6-b59b-fd5d2f678167_5_ACCRUE_PROFIT_1747328400000000000, postingInstructions=[PostingInstructions(id=44d9a41a-6d4a-4d6d-8fcc-5b8b73a9ff8d, clientTransactionId=INTERNAL_POSTING_ACCRUE_PROFIT_d89fce58-e3da-4316-b377-d1be6ea2996d_5_ACCRUE_PROFIT_1747328400000000000_INTERNAL, pics=[], instructionDetails=InstructionDetails(data={account_type=MURABAHAH, description=Daily profit accrued at 0.00904% on balance of 31184.07, event=ACCRUE_PROFIT, originating_account_id=d89fce58-e3da-4316-b377-d1be6ea2996d}), committedPostings=[CommittedPosting(credit=false, amount=2.81938, denomination=MYR, accountId=PROFIT_PAID, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110150840, customerId=1691918854997419, accountType=SAVINGS_ACCOUNT, glAccount=PROFIT_PAID_SA), CommittedPosting(credit=true, amount=2.81938, denomination=MYR, accountId=ACCRUED_PROFIT_PAYABLE, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110150840, customerId=1691918854997419, accountType=SAVINGS_ACCOUNT, glAccount=ACCRUED_PROFIT_PAYABLE_SA)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=CustomInstruction(postings=[CustomInstructionPosting(credit=false, amount=2.81938, denomination=MYR, accountId=PROFIT_PAID, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), CustomInstructionPosting(credit=true, amount=2.81938, denomination=MYR, accountId=ACCRUED_PROFIT_PAYABLE, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)]), inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=null, outboundHardSettlement=null, transfer=null, glTransactionId=2505151ifwuyuo, glEvent=ACCRUE_PROFIT)], batchDetails={event=ACCRUE_PROFIT}, valueTimestamp=2025-05-15T17:00:00Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, insertionTimestamp=2025-05-15T17:03:34.299887Z, dryRun=false, error=null, glDate=20250515), technicalMetadata=TechnicalMetadata(eventId=event_91c215d8-c252-4cdc-95ee-5412e1f7690d, captureTimestamp=2025-05-15T17:03:34.344067389Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=UpdateMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6826208b2f6e8bd5460d8271fc2ba8a3",
+            "spanId": "2b4b8077e1b3cdc9",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:12:59.058",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:12:59.057Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=false, amount=2.81938, denomination=MYR, accountId=d89fce58-e3da-4316-b377-d1be6ea2996d, accountAddress=INTERNAL_CONTRA, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110150840, customerId=1691918854997419, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6826208b2f6e8bd5460d8271fc2ba8a3",
+            "spanId": "2b4b8077e1b3cdc9",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:12:59.058",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:12:59.058Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=true, amount=2.81938, denomination=MYR, accountId=d89fce58-e3da-4316-b377-d1be6ea2996d, accountAddress=ACCRUED_PROFIT_PAYABLE, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110150840, customerId=1691918854997419, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6826208b2f6e8bd5460d8271fc2ba8a3",
+            "spanId": "2b4b8077e1b3cdc9",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:12:59.057",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:12:59.057Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=true, amount=2.81938, denomination=MYR, accountId=ACCRUED_PROFIT_PAYABLE, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110150840, customerId=1691918854997419, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6826208b2f6e8bd5460d8271fc2ba8a3",
+            "spanId": "2b4b8077e1b3cdc9",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:12:59.056",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:12:59.056Z",
+            "@version": "1",
+            "message": "Enriched Savings Account/Pot committed postings: CommittedPosting(credit=false, amount=2.81938, denomination=MYR, accountId=PROFIT_PAID, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110150840, customerId=1691918854997419, accountType=SAVINGS_ACCOUNT, glAccount=null)",
+            "logger_name": "com.arbm.digibank.enrichment.AccountDataEnrichmentService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "6826208b2f6e8bd5460d8271fc2ba8a3",
+            "spanId": "2b4b8077e1b3cdc9",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:03:34.438",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:03:34.437Z",
+            "@version": "1",
+            "message": "Event doesn't inform about cleared saving pot or cleared saving account: {\"eventId\": \"d89fce58-e3da-4316-b377-d1be6ea2996d_91c215d8-c252-4cdc-95ee-5412e1f7690d\", \"valueTimestamp\": \"2025-05-15T17:03:34.299Z\", \"accountId\": \"d89fce58-e3da-4316-b377-d1be6ea2996d\", \"customerId\": \"1691918854997419\", \"availableBalance\": 31184.07, \"settledBalance\": 31184.07}",
+            "logger_name": "com.arbm.digibank.offboarding.service.OffboardingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "68261e6641bb49ad73393980ac8dc0d1",
+            "spanId": "945127d0980ae46a",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 17:03:34.436",
+        "kubernetes.container_name": "deposit-account-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T17:03:34.436Z",
+            "@version": "1",
+            "message": "Consume DepositBalanceEvent: {\"eventId\": \"d89fce58-e3da-4316-b377-d1be6ea2996d_91c215d8-c252-4cdc-95ee-5412e1f7690d\", \"valueTimestamp\": \"2025-05-15T17:03:34.299Z\", \"accountId\": \"d89fce58-e3da-4316-b377-d1be6ea2996d\", \"customerId\": \"1691918854997419\", \"availableBalance\": 31184.07, \"settledBalance\": 31184.07}",
+            "logger_name": "com.arbm.digibank.offboarding.OffboardingProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#9-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-account-service",
+            "traceId": "68261e6641bb49ad73393980ac8dc0d1",
+            "spanId": "945127d0980ae46a",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 15:57:30.885",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T15:57:30.885Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "68260eea4e72219f119a67265f0ac2d9",
+            "spanId": "eea145e4ab3102a0",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 15:57:30.885",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T15:57:30.885Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "68260eea4e72219f119a67265f0ac2d9",
+            "spanId": "eea145e4ab3102a0",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 13:28:35.319",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T13:28:35.318Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825ec03314193944d1b983d02e2f2c2",
+            "spanId": "c05dfdb320e868f1",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 13:28:35.318",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T13:28:35.318Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825ec03314193944d1b983d02e2f2c2",
+            "spanId": "c05dfdb320e868f1",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 11:38:47.098",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T11:38:47.098Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825d2474cd479a931c79c7d0508fbc2",
+            "spanId": "91c4e82104ebf734",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 11:38:47.098",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T11:38:47.098Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825d2474cd479a931c79c7d0508fbc2",
+            "spanId": "91c4e82104ebf734",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 10:31:30.725",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T10:31:30.725Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825c28204dd9fbc6d4bc26d08adb914",
+            "spanId": "376b4e304dc9d24e",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 10:31:30.725",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T10:31:30.725Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825c28204dd9fbc6d4bc26d08adb914",
+            "spanId": "376b4e304dc9d24e",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:48:08.587",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:48:08.587Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825aa4833608071102b9ada386929f5",
+            "spanId": "717c0b034fcc5e49",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:48:08.587",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:48:08.587Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825aa4833608071102b9ada386929f5",
+            "spanId": "717c0b034fcc5e49",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:37:13.315",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:37:13.315Z",
+            "@version": "1",
+            "message": "Jumio V4 callback data: JumioV4Callback(callbackSentAt=2025-05-15T08:37:13.282Z, userReference='1691918854997419', workflowExecution=WorkflowExecution(id='8f44e038-6523-4593-ac8c-2c2bce04f114', href=https://retrieval.apac-1.jumio.ai/api/v1/workflow-executions/8f44e038-6523-4593-ac8c-2c2bce04f114, definitionKey=10014, status=PROCESSED), account=Account(id='c6485f43-d5e2-4d68-82c5-31a9b3f37b91', href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/c6485f43-d5e2-4d68-82c5-31a9b3f37b91))",
+            "logger_name": "com.arbm.digibank.controller.JumioV4CallbackController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a7b962267bbe1b56556e73896046",
+            "spanId": "8e2143754ec7bc95",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.992",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:52.992Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-3]: for customerId(1691918854997419), for accountId(c6485f43-d5e2-4d68-82c5-31a9b3f37b91), for flow(10014), responseTopic(mfa.customer-identity-service.liveness-response.v1), resultTopic(null)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a7a49af58e8b4c26e5362c38a2f1",
+            "spanId": "4c26e5362c38a2f1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.991",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:52.991Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-2]: for customerId(1691918854997419), for accountId(c6485f43-d5e2-4d68-82c5-31a9b3f37b91), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a7a49af58e8b4c26e5362c38a2f1",
+            "spanId": "4c26e5362c38a2f1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.875",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "Update Jumio Account: UpdateAccountParams(workflowDefinitionKey=LIVENESS, accountId=c6485f43-d5e2-4d68-82c5-31a9b3f37b91, customerId=1691918854997419, userIp=128.0.0.1, country=MYS, state=KL)"
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.818",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "First Update Account Function Called, accountId:c6485f43-d5e2-4d68-82c5-31a9b3f37b91, customerId: 1691918854997419"
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.817",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:52.817Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1691918854997419), for accountId(null), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a7a49af58e8b4c26e5362c38a2f1",
+            "spanId": "4c26e5362c38a2f1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.815",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:52.814Z",
+            "@version": "1",
+            "message": "Init verification for 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a7a49af58e8b4c26e5362c38a2f1",
+            "spanId": "4c26e5362c38a2f1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.801",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:52.8Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a7a4f1e6965c9d0e50e3a9f1004f",
+            "spanId": "2fd2407f8bb1a869",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:52.801",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:52.801Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a7a4f1e6965c9d0e50e3a9f1004f",
+            "spanId": "2fd2407f8bb1a869",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:47.827",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:47.827Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1691918854997419, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a79f1cecef6266179fe4463e04d2",
+            "spanId": "fcad00024c70e657",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:47.782",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:47.782Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1691918854997419, loginFlow:LOGIN_SWITCH_DEVICE, isSwitchDevice:true",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a79f1cecef6266179fe4463e04d2",
+            "spanId": "fcad00024c70e657",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:47.629",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:47.629Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a79fc06c63b57d32ad8ae751003c",
+            "spanId": "c34dc18d396f8a16",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:47.629",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:47.629Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a79fc06c63b57d32ad8ae751003c",
+            "spanId": "c34dc18d396f8a16",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:34.767",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:34.766Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1691918854997419, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a792398dea7315dd71f509c8968f",
+            "spanId": "1f63ef4e0bf10aad",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:34.714",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:34.713Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1691918854997419, loginFlow:LOGIN_SWITCH_DEVICE, isSwitchDevice:true",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a792398dea7315dd71f509c8968f",
+            "spanId": "1f63ef4e0bf10aad",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:34.551",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:34.55Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a792ca703349fde6a159ae709936",
+            "spanId": "86598b0eea4c2810",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 7
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:34.551",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:34.551Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a792ca703349fde6a159ae709936",
+            "spanId": "86598b0eea4c2810",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 9
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:17.299",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:17.298Z",
+            "@version": "1",
+            "message": "saving OTP status for cic 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a78016f249ec6c326d3850faaa81",
+            "spanId": "449ecbcd01aa8a43",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:17.282",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:17.282Z",
+            "@version": "1",
+            "message": "PASSWORD_REQUIRED: cic= 1691918854997419, request=class VerifyUsernamePasswordRequest {\n    flowId: 0940a95e-b067-4691-9c5b-31a4baa89750\n    username: null\n    password: Happy@8028\n}, response=class FlowStatusResponse {\n    links: null\n    id: 0940a95e-b067-4691-9c5b-31a4baa89750\n    resumeUrl: null\n    status: OTP_REQUIRED\n    createdAt: 2025-05-15T08:36:16.753Z\n    expiresAt: 2025-05-15T08:51:17.225Z\n    bypassAllowed: false\n    embedded: class EmbeddedUserName {\n        devices: [class Device {\n            links: null\n            id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n            environment: null\n            user: null\n            type: SMS\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: *******56\n            os: null\n            model: null\n            application: null\n            pushEnabled: null\n            manufacturer: null\n            apiVersion: null\n            sdkVersion: null\n            rooted: null\n            lockEnabled: null\n            locale: null\n            notification: null\n            background: null\n            allowPushNotification: null\n            otpEnabled: null\n        }, class Device {\n            links: null\n            id: 4e35e0d6-40b1-41fe-b1da-9d74f8336568\n            environment: null\n            user: null\n            type: MOBILE\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: null\n            os: class OS {\n                version: 15\n                type: ANDROID\n            }\n            model: class Model {\n                name: V2246\n                marketingName: V2246\n            }\n            application: class ApplicationDevice {\n                id: c45ebfec-f95b-4143-bff7-34c1e6dac088\n                nativeName: Rize\n                version: 2.1.8\n                name: null\n                pushSandbox: false\n                passcodeRefreshDuration: class PasscodeRefreshDuration {\n                    duration: 30\n                    timeUnit: SECONDS\n                }\n            }\n            pushEnabled: false\n            manufacturer: vivo\n            apiVersion: 2.0\n            sdkVersion: 1.11.0(9230)\n            rooted: false\n            lockEnabled: true\n            locale: en-MY\n            notification: null\n            background: null\n            allowPushNotification: false\n            otpEnabled: true\n        }]\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    pingOneCookies: {ST=3e4b0df9-8acf-4573-af49-a5268344b373, ST-NO-SS=3e4b0df9-8acf-4573-af49-a5268344b373}\n    selectedDevice: class ID {\n        id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n    }\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a78016f249ec6c326d3850faaa81",
+            "spanId": "449ecbcd01aa8a43",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:16.813",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:16.813Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419, request=class InitialAuthorizationRequest {\n    usernameOrPingOneUserId: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n    mobilePayload: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJmbnAiOiJhMjJhMjJlMGU5NmI5OGFiIiwiZXhwIjoxNzQ3Mjk4Mjk0Njg0LCJtZXRhZGF0YSI6eyJhcHBsaWNhdGlvbiI6eyJidW5kbGVJZCI6Im15LmNvbS5hbHJhamhpYmFuay53aWNrIn19LCJqdGkiOiJiZDcwZDcwMy1iY2U1LTQ5NmEtODFkMC1kODlkNzdhNDg0NzYifQ.\n    acrValues: null\n    scopes: [profile, w:customer:device]\n    responseType: null\n    pingOneCookies: null\n    withoutMFA: null\n} response=class InitialAuthorizationResponse {\n    links: class Links {\n        self: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/0940a95e-b067-4691-9c5b-31a4baa89750\n        }\n        environment: null\n        population: null\n        devices: null\n        roleAssignments: null\n        password: null\n        passwordReset: null\n        passwordSet: null\n        passwordCheck: null\n        passwordRecover: null\n        passwordValidate: null\n        passwordPolicy: null\n        linkedAccounts: null\n        accountSendVerificationCode: null\n        memberOfGroups: null\n        user: null\n        usernamePasswordCheck: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/0940a95e-b067-4691-9c5b-31a4baa89750\n        }\n        otpCheck: null\n        deviceSelect: null\n        signOnPage: class Link {\n            href: https://apps.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/signon/?flowId=0940a95e-b067-4691-9c5b-31a4baa89750\n        }\n        deviceReorder: null\n    }\n    embedded: class EmbeddedUserName {\n        devices: null\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    id: 0940a95e-b067-4691-9c5b-31a4baa89750\n    environment: class ID {\n        id: 44e438c9-1f16-40ed-94fe-e4a18e19c517\n    }\n    resumeUrl: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/as/resume?flowId=0940a95e-b067-4691-9c5b-31a4baa89750\n    status: PASSWORD_REQUIRED\n    createdAt: 2025-05-15T08:36:16.753Z\n    expiresAt: 2025-05-15T08:51:16.753Z\n    bypassAllowed: null\n    selectedDevice: null\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a78016f249ec6c326d3850faaa81",
+            "spanId": "449ecbcd01aa8a43",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:16.446",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:16.446Z",
+            "@version": "1",
+            "message": "preparePairingAuthorizationRequest for cic: 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a78016f249ec6c326d3850faaa81",
+            "spanId": "449ecbcd01aa8a43",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:16.445",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:16.445Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=85957ba3-7b3c-4382-9f44-e596cd3113cc, customerId=1691918854997419, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a78016f249ec6c326d3850faaa81",
+            "spanId": "449ecbcd01aa8a43",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:16.445",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:16.445Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | [isDeviceBounded]: deviceBounded=false",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a78016f249ec6c326d3850faaa81",
+            "spanId": "449ecbcd01aa8a43",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:02.477",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:36:02.476] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:02.476",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:36:02.476] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\"}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:36:02.472",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:36:02.472Z",
+            "@version": "1",
+            "message": "Get customer lazy 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "6825a7720f3256fb87dce6aa54f34116",
+            "spanId": "c8a5144e701466a7",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:34:08.023",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:34:08.023Z",
+            "@version": "1",
+            "message": "Jumio V4 callback data: JumioV4Callback(callbackSentAt=2025-05-15T08:34:07.972Z, userReference='1691918854997419', workflowExecution=WorkflowExecution(id='26178bbf-853e-4913-8ddb-a4aa7b4f84b4', href=https://retrieval.apac-1.jumio.ai/api/v1/workflow-executions/26178bbf-853e-4913-8ddb-a4aa7b4f84b4, definitionKey=10014, status=PROCESSED), account=Account(id='c6485f43-d5e2-4d68-82c5-31a9b3f37b91', href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/c6485f43-d5e2-4d68-82c5-31a9b3f37b91))",
+            "logger_name": "com.arbm.digibank.controller.JumioV4CallbackController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a7005e2deeba412a4c095fafbd32",
+            "spanId": "db1b9e823327b79d",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.820",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:49.82Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-3]: for customerId(1691918854997419), for accountId(c6485f43-d5e2-4d68-82c5-31a9b3f37b91), for flow(10014), responseTopic(mfa.customer-identity-service.liveness-response.v1), resultTopic(null)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a6ed033091d19b2243423e810ba8",
+            "spanId": "9b2243423e810ba8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.819",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:49.818Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-2]: for customerId(1691918854997419), for accountId(c6485f43-d5e2-4d68-82c5-31a9b3f37b91), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a6ed033091d19b2243423e810ba8",
+            "spanId": "9b2243423e810ba8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.681",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "Update Jumio Account: UpdateAccountParams(workflowDefinitionKey=LIVENESS, accountId=c6485f43-d5e2-4d68-82c5-31a9b3f37b91, customerId=1691918854997419, userIp=128.0.0.1, country=MYS, state=KL)"
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.649",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:49.649Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1691918854997419), for accountId(null), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a6ed033091d19b2243423e810ba8",
+            "spanId": "9b2243423e810ba8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.649",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "First Update Account Function Called, accountId:c6485f43-d5e2-4d68-82c5-31a9b3f37b91, customerId: 1691918854997419"
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.646",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:49.645Z",
+            "@version": "1",
+            "message": "Init verification for 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a6ed033091d19b2243423e810ba8",
+            "spanId": "9b2243423e810ba8",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.629",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:49.629Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6edd94c715c5464bd02e7bb5396",
+            "spanId": "339336cb088a56d8",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:49.629",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:49.629Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6edd94c715c5464bd02e7bb5396",
+            "spanId": "339336cb088a56d8",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:46.404",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:46.403Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1691918854997419, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a6ea43535b1f261d92df031f1305",
+            "spanId": "60e3771519dd2979",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:46.343",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:46.343Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1691918854997419, loginFlow:LOGIN_SWITCH_DEVICE, isSwitchDevice:true",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a6ea43535b1f261d92df031f1305",
+            "spanId": "60e3771519dd2979",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:46.187",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:46.187Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6eaf73478432f85cac5b7bd1947",
+            "spanId": "6508bf7dda59e3b6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:46.187",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:46.187Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6eaf73478432f85cac5b7bd1947",
+            "spanId": "6508bf7dda59e3b6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:41.407",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:41.407Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1691918854997419, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a6e56fc3896b1373ab7649a91773",
+            "spanId": "36acf385ae4a63ce",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:41.360",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:41.359Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1691918854997419, loginFlow:LOGIN_SWITCH_DEVICE, isSwitchDevice:true",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a6e56fc3896b1373ab7649a91773",
+            "spanId": "36acf385ae4a63ce",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:41.203",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:41.203Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6e5c4861b361f209e305af600cb",
+            "spanId": "06b7a2e10d3a3016",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:41.203",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:41.203Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6e5c4861b361f209e305af600cb",
+            "spanId": "06b7a2e10d3a3016",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:24.119",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:24.119Z",
+            "@version": "1",
+            "message": "saving OTP status for cic 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a6d3285b0f657dcd6e8d3ebcb379",
+            "spanId": "8b55fe476e27eb10",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:24.107",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:24.106Z",
+            "@version": "1",
+            "message": "PASSWORD_REQUIRED: cic= 1691918854997419, request=class VerifyUsernamePasswordRequest {\n    flowId: 0974200e-f335-41eb-86d3-185b1fc70e16\n    username: null\n    password: Happy@8028\n}, response=class FlowStatusResponse {\n    links: null\n    id: 0974200e-f335-41eb-86d3-185b1fc70e16\n    resumeUrl: null\n    status: OTP_REQUIRED\n    createdAt: 2025-05-15T08:33:23.779Z\n    expiresAt: 2025-05-15T08:48:24.050Z\n    bypassAllowed: false\n    embedded: class EmbeddedUserName {\n        devices: [class Device {\n            links: null\n            id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n            environment: null\n            user: null\n            type: SMS\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: *******56\n            os: null\n            model: null\n            application: null\n            pushEnabled: null\n            manufacturer: null\n            apiVersion: null\n            sdkVersion: null\n            rooted: null\n            lockEnabled: null\n            locale: null\n            notification: null\n            background: null\n            allowPushNotification: null\n            otpEnabled: null\n        }, class Device {\n            links: null\n            id: 4e35e0d6-40b1-41fe-b1da-9d74f8336568\n            environment: null\n            user: null\n            type: MOBILE\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: null\n            os: class OS {\n                version: 15\n                type: ANDROID\n            }\n            model: class Model {\n                name: V2246\n                marketingName: V2246\n            }\n            application: class ApplicationDevice {\n                id: c45ebfec-f95b-4143-bff7-34c1e6dac088\n                nativeName: Rize\n                version: 2.1.8\n                name: null\n                pushSandbox: false\n                passcodeRefreshDuration: class PasscodeRefreshDuration {\n                    duration: 30\n                    timeUnit: SECONDS\n                }\n            }\n            pushEnabled: false\n            manufacturer: vivo\n            apiVersion: 2.0\n            sdkVersion: 1.11.0(9230)\n            rooted: false\n            lockEnabled: true\n            locale: en-MY\n            notification: null\n            background: null\n            allowPushNotification: false\n            otpEnabled: true\n        }]\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    pingOneCookies: {ST=cca06225-dca3-4771-b507-5810842b163f, ST-NO-SS=cca06225-dca3-4771-b507-5810842b163f}\n    selectedDevice: class ID {\n        id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n    }\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a6d3285b0f657dcd6e8d3ebcb379",
+            "spanId": "8b55fe476e27eb10",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:23.850",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:23.85Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419, request=class InitialAuthorizationRequest {\n    usernameOrPingOneUserId: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n    mobilePayload: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJmbnAiOiJhMjJhMjJlMGU5NmI5OGFiIiwiZXhwIjoxNzQ3Mjk4MTIxNTkxLCJtZXRhZGF0YSI6eyJhcHBsaWNhdGlvbiI6eyJidW5kbGVJZCI6Im15LmNvbS5hbHJhamhpYmFuay53aWNrIn19LCJqdGkiOiJjNzRhNmVjZi0xMjQ3LTQ5YzEtYjU1OC00NGRlMTVjNWNiZjUifQ.\n    acrValues: null\n    scopes: [profile, w:customer:device]\n    responseType: null\n    pingOneCookies: null\n    withoutMFA: null\n} response=class InitialAuthorizationResponse {\n    links: class Links {\n        self: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/0974200e-f335-41eb-86d3-185b1fc70e16\n        }\n        environment: null\n        population: null\n        devices: null\n        roleAssignments: null\n        password: null\n        passwordReset: null\n        passwordSet: null\n        passwordCheck: null\n        passwordRecover: null\n        passwordValidate: null\n        passwordPolicy: null\n        linkedAccounts: null\n        accountSendVerificationCode: null\n        memberOfGroups: null\n        user: null\n        usernamePasswordCheck: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/0974200e-f335-41eb-86d3-185b1fc70e16\n        }\n        otpCheck: null\n        deviceSelect: null\n        signOnPage: class Link {\n            href: https://apps.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/signon/?flowId=0974200e-f335-41eb-86d3-185b1fc70e16\n        }\n        deviceReorder: null\n    }\n    embedded: class EmbeddedUserName {\n        devices: null\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    id: 0974200e-f335-41eb-86d3-185b1fc70e16\n    environment: class ID {\n        id: 44e438c9-1f16-40ed-94fe-e4a18e19c517\n    }\n    resumeUrl: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/as/resume?flowId=0974200e-f335-41eb-86d3-185b1fc70e16\n    status: PASSWORD_REQUIRED\n    createdAt: 2025-05-15T08:33:23.779Z\n    expiresAt: 2025-05-15T08:48:23.779Z\n    bypassAllowed: null\n    selectedDevice: null\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a6d3285b0f657dcd6e8d3ebcb379",
+            "spanId": "8b55fe476e27eb10",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:23.480",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:23.479Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=85957ba3-7b3c-4382-9f44-e596cd3113cc, customerId=1691918854997419, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a6d3285b0f657dcd6e8d3ebcb379",
+            "spanId": "8b55fe476e27eb10",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:23.480",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:23.479Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | [isDeviceBounded]: deviceBounded=false",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a6d3285b0f657dcd6e8d3ebcb379",
+            "spanId": "8b55fe476e27eb10",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:23.480",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:23.479Z",
+            "@version": "1",
+            "message": "preparePairingAuthorizationRequest for cic: 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a6d3285b0f657dcd6e8d3ebcb379",
+            "spanId": "8b55fe476e27eb10",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:08.243",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:33:08.243] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\"}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:08.243",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:33:08.243] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:33:08.236",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:33:08.236Z",
+            "@version": "1",
+            "message": "Get customer lazy 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "6825a6c3d78121aa572d84802cb197eb",
+            "spanId": "31beac40a53341ca",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:30.440",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:30.439Z",
+            "@version": "1",
+            "message": "saving OTP status for cic 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a69d7fc60a08629575c80ec299a3",
+            "spanId": "afd199a2686bf9f7",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:30.431",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:30.431Z",
+            "@version": "1",
+            "message": "PASSWORD_REQUIRED: cic= 1691918854997419, request=class VerifyUsernamePasswordRequest {\n    flowId: 09356f67-c804-4c65-8f45-0d239d1512ad\n    username: null\n    password: Happy@8028\n}, response=class FlowStatusResponse {\n    links: null\n    id: 09356f67-c804-4c65-8f45-0d239d1512ad\n    resumeUrl: null\n    status: OTP_REQUIRED\n    createdAt: 2025-05-15T08:32:30.071Z\n    expiresAt: 2025-05-15T08:47:30.369Z\n    bypassAllowed: false\n    embedded: class EmbeddedUserName {\n        devices: [class Device {\n            links: null\n            id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n            environment: null\n            user: null\n            type: SMS\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: *******56\n            os: null\n            model: null\n            application: null\n            pushEnabled: null\n            manufacturer: null\n            apiVersion: null\n            sdkVersion: null\n            rooted: null\n            lockEnabled: null\n            locale: null\n            notification: null\n            background: null\n            allowPushNotification: null\n            otpEnabled: null\n        }, class Device {\n            links: null\n            id: 4e35e0d6-40b1-41fe-b1da-9d74f8336568\n            environment: null\n            user: null\n            type: MOBILE\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: null\n            os: class OS {\n                version: 15\n                type: ANDROID\n            }\n            model: class Model {\n                name: V2246\n                marketingName: V2246\n            }\n            application: class ApplicationDevice {\n                id: c45ebfec-f95b-4143-bff7-34c1e6dac088\n                nativeName: Rize\n                version: 2.1.8\n                name: null\n                pushSandbox: false\n                passcodeRefreshDuration: class PasscodeRefreshDuration {\n                    duration: 30\n                    timeUnit: SECONDS\n                }\n            }\n            pushEnabled: false\n            manufacturer: vivo\n            apiVersion: 2.0\n            sdkVersion: 1.11.0(9230)\n            rooted: false\n            lockEnabled: true\n            locale: en-MY\n            notification: null\n            background: null\n            allowPushNotification: false\n            otpEnabled: true\n        }]\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    pingOneCookies: {ST=a3a4d63a-2164-49e3-87e6-c2a55cc3bc57, ST-NO-SS=a3a4d63a-2164-49e3-87e6-c2a55cc3bc57}\n    selectedDevice: class ID {\n        id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n    }\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a69d7fc60a08629575c80ec299a3",
+            "spanId": "afd199a2686bf9f7",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:30.130",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:30.129Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419, request=class InitialAuthorizationRequest {\n    usernameOrPingOneUserId: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n    mobilePayload: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJmbnAiOiJhMjJhMjJlMGU5NmI5OGFiIiwiZXhwIjoxNzQ3Mjk4MDY4MDIwLCJtZXRhZGF0YSI6eyJhcHBsaWNhdGlvbiI6eyJidW5kbGVJZCI6Im15LmNvbS5hbHJhamhpYmFuay53aWNrIn19LCJqdGkiOiJhOGU2NTRhMC05MGE5LTQ2MGEtYTczZC1hNjZiNzA4YTdkMmYifQ.\n    acrValues: null\n    scopes: [profile, w:customer:device]\n    responseType: null\n    pingOneCookies: null\n    withoutMFA: null\n} response=class InitialAuthorizationResponse {\n    links: class Links {\n        self: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/09356f67-c804-4c65-8f45-0d239d1512ad\n        }\n        environment: null\n        population: null\n        devices: null\n        roleAssignments: null\n        password: null\n        passwordReset: null\n        passwordSet: null\n        passwordCheck: null\n        passwordRecover: null\n        passwordValidate: null\n        passwordPolicy: null\n        linkedAccounts: null\n        accountSendVerificationCode: null\n        memberOfGroups: null\n        user: null\n        usernamePasswordCheck: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/09356f67-c804-4c65-8f45-0d239d1512ad\n        }\n        otpCheck: null\n        deviceSelect: null\n        signOnPage: class Link {\n            href: https://apps.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/signon/?flowId=09356f67-c804-4c65-8f45-0d239d1512ad\n        }\n        deviceReorder: null\n    }\n    embedded: class EmbeddedUserName {\n        devices: null\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    id: 09356f67-c804-4c65-8f45-0d239d1512ad\n    environment: class ID {\n        id: 44e438c9-1f16-40ed-94fe-e4a18e19c517\n    }\n    resumeUrl: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/as/resume?flowId=09356f67-c804-4c65-8f45-0d239d1512ad\n    status: PASSWORD_REQUIRED\n    createdAt: 2025-05-15T08:32:30.071Z\n    expiresAt: 2025-05-15T08:47:30.071Z\n    bypassAllowed: null\n    selectedDevice: null\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a69d7fc60a08629575c80ec299a3",
+            "spanId": "afd199a2686bf9f7",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:29.819",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:29.819Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=85957ba3-7b3c-4382-9f44-e596cd3113cc, customerId=1691918854997419, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a69d7fc60a08629575c80ec299a3",
+            "spanId": "afd199a2686bf9f7",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:29.819",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:29.819Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | [isDeviceBounded]: deviceBounded=false",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a69d7fc60a08629575c80ec299a3",
+            "spanId": "afd199a2686bf9f7",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:29.819",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:29.819Z",
+            "@version": "1",
+            "message": "preparePairingAuthorizationRequest for cic: 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-3",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a69d7fc60a08629575c80ec299a3",
+            "spanId": "afd199a2686bf9f7",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:16.850",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:32:16.850] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\"}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:16.850",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:32:16.850] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:32:16.846",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:32:16.846Z",
+            "@version": "1",
+            "message": "Get customer lazy 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "6825a690961f070de8b93dd339a9c765",
+            "spanId": "7fd1c0651b3bb182",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:30:25.838",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:30:25.838Z",
+            "@version": "1",
+            "message": "Jumio V4 callback data: JumioV4Callback(callbackSentAt=2025-05-15T08:30:25.808Z, userReference='1691918854997419', workflowExecution=WorkflowExecution(id='bc84dbfa-768f-4ad0-a335-b9837710df3a', href=https://retrieval.apac-1.jumio.ai/api/v1/workflow-executions/bc84dbfa-768f-4ad0-a335-b9837710df3a, definitionKey=10014, status=PROCESSED), account=Account(id='c6485f43-d5e2-4d68-82c5-31a9b3f37b91', href=https://retrieval.apac-1.jumio.ai/api/v1/accounts/c6485f43-d5e2-4d68-82c5-31a9b3f37b91))",
+            "logger_name": "com.arbm.digibank.controller.JumioV4CallbackController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a621062fe2897defd66c17df1d08",
+            "spanId": "65c6ec168b77f1d7",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.685",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:55.685Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-3]: for customerId(1691918854997419), for accountId(c6485f43-d5e2-4d68-82c5-31a9b3f37b91), for flow(10014), responseTopic(mfa.customer-identity-service.liveness-response.v1), resultTopic(null)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a603e6b5574ad40b5b0e62342205",
+            "spanId": "d40b5b0e62342205",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.683",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:55.683Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-2]: for customerId(1691918854997419), for accountId(c6485f43-d5e2-4d68-82c5-31a9b3f37b91), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a603e6b5574ad40b5b0e62342205",
+            "spanId": "d40b5b0e62342205",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.127",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "Update Jumio Account: UpdateAccountParams(workflowDefinitionKey=LIVENESS, accountId=c6485f43-d5e2-4d68-82c5-31a9b3f37b91, customerId=1691918854997419, userIp=128.0.0.1, country=MYS, state=KL)"
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.033",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:55.033Z",
+            "@version": "1",
+            "message": "initVerificationV2-[Step-1]: for customerId(1691918854997419), for accountId(null), for flow(10014)",
+            "logger_name": "com.arbm.digibank.service.JumioV4AccountService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a603e6b5574ad40b5b0e62342205",
+            "spanId": "d40b5b0e62342205",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.033",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": "First Update Account Function Called, accountId:c6485f43-d5e2-4d68-82c5-31a9b3f37b91, customerId: 1691918854997419"
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.028",
+        "kubernetes.container_name": "customer-identity-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:55.028Z",
+            "@version": "1",
+            "message": "Init verification for 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.V2ApiController",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-identity-service",
+            "traceId": "6825a603e6b5574ad40b5b0e62342205",
+            "spanId": "d40b5b0e62342205",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.015",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:55.015Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6021936340eb9ba5235477b227d",
+            "spanId": "01043723de52f683",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:55.015",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:55.015Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a6021936340eb9ba5235477b227d",
+            "spanId": "01043723de52f683",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:48.443",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:48.443Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1691918854997419, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a5fc4532d3f9751e7fde31eedf0e",
+            "spanId": "1ba1af8fad5b3d85",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:48.393",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:48.393Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1691918854997419, loginFlow:LOGIN_SWITCH_DEVICE, isSwitchDevice:true",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-9",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a5fc4532d3f9751e7fde31eedf0e",
+            "spanId": "1ba1af8fad5b3d85",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:48.225",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:48.225Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a5fca04b718afa78beef1f2ce767",
+            "spanId": "6195db040ce61fc6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:48.225",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:48.225Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a5fca04b718afa78beef1f2ce767",
+            "spanId": "6195db040ce61fc6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:28.222",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:28.222Z",
+            "@version": "1",
+            "message": "login-complete[initiation][2], for customerId:1691918854997419, MFA request Initiation Done",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a5e71af5a8f82d8b1df33831a0ff",
+            "spanId": "c46608f71feebd6c",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:28.179",
+        "kubernetes.container_name": "bff-user-management",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:28.178Z",
+            "@version": "1",
+            "message": "login-complete[initiation][1], for customerId:1691918854997419, loginFlow:LOGIN_SWITCH_DEVICE, isSwitchDevice:true",
+            "logger_name": "com.arbm.digibank.service.authentication.CompleteLoginService",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "bff-user-management",
+            "traceId": "6825a5e71af5a8f82d8b1df33831a0ff",
+            "spanId": "c46608f71feebd6c",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:28.026",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:28.026Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a5e733262ec00976de97374dc211",
+            "spanId": "999f70a7804b3df6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": null,
+                "functionId": "ActiveCardsService.getCustomerActiveCardCount",
+                "input": {
+                    "customerId": "[1691918854997419]"
+                },
+                "result": [],
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:28.026",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:28.026Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "6825a5e733262ec00976de97374dc211",
+            "spanId": "999f70a7804b3df6",
+            "RequestId": "SWTRA 202111191029148140010965",
+            "data": {
+                "requestId": "\"SWTRA 202111191029148140010965\"",
+                "functionId": "ActiveCardsController.getNoOfActiveCards",
+                "input": {
+                    "requestId": "\"SWTRA 202111191029148140010965\"",
+                    "customerIds": "[\"1691918854997419\"]"
+                },
+                "result": {
+                    "headers": {},
+                    "body": [],
+                    "statusCodeValue": 200,
+                    "statusCode": "OK"
+                },
+                "processTime": 8
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:08.380",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:08.38Z",
+            "@version": "1",
+            "message": "saving OTP status for cic 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a5d3697c5642740757534bb88848",
+            "spanId": "ee2977cbdf67618d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:08.364",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:08.364Z",
+            "@version": "1",
+            "message": "PASSWORD_REQUIRED: cic= 1691918854997419, request=class VerifyUsernamePasswordRequest {\n    flowId: 09709a94-3f6a-4a3f-be26-8efc567ab91a\n    username: null\n    password: Happy@8028\n}, response=class FlowStatusResponse {\n    links: null\n    id: 09709a94-3f6a-4a3f-be26-8efc567ab91a\n    resumeUrl: null\n    status: OTP_REQUIRED\n    createdAt: 2025-05-15T08:29:07.812Z\n    expiresAt: 2025-05-15T08:44:08.307Z\n    bypassAllowed: false\n    embedded: class EmbeddedUserName {\n        devices: [class Device {\n            links: null\n            id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n            environment: null\n            user: null\n            type: SMS\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: *******56\n            os: null\n            model: null\n            application: null\n            pushEnabled: null\n            manufacturer: null\n            apiVersion: null\n            sdkVersion: null\n            rooted: null\n            lockEnabled: null\n            locale: null\n            notification: null\n            background: null\n            allowPushNotification: null\n            otpEnabled: null\n        }, class Device {\n            links: null\n            id: 4e35e0d6-40b1-41fe-b1da-9d74f8336568\n            environment: null\n            user: null\n            type: MOBILE\n            status: ACTIVE\n            createdAt: null\n            updatedAt: null\n            phone: null\n            os: class OS {\n                version: 15\n                type: ANDROID\n            }\n            model: class Model {\n                name: V2246\n                marketingName: V2246\n            }\n            application: class ApplicationDevice {\n                id: c45ebfec-f95b-4143-bff7-34c1e6dac088\n                nativeName: Rize\n                version: 2.1.8\n                name: null\n                pushSandbox: false\n                passcodeRefreshDuration: class PasscodeRefreshDuration {\n                    duration: 30\n                    timeUnit: SECONDS\n                }\n            }\n            pushEnabled: false\n            manufacturer: vivo\n            apiVersion: 2.0\n            sdkVersion: 1.11.0(9230)\n            rooted: false\n            lockEnabled: true\n            locale: en-MY\n            notification: null\n            background: null\n            allowPushNotification: false\n            otpEnabled: true\n        }]\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    pingOneCookies: {ST=634966f2-cd6e-460d-9ed9-1f569b4952c3, ST-NO-SS=634966f2-cd6e-460d-9ed9-1f569b4952c3}\n    selectedDevice: class ID {\n        id: 034f8f36-5f73-42fe-aa37-b1ed8ce9c7aa\n    }\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a5d3697c5642740757534bb88848",
+            "spanId": "ee2977cbdf67618d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:07.871",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:07.871Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419, request=class InitialAuthorizationRequest {\n    usernameOrPingOneUserId: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n    mobilePayload: eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJmbnAiOiJhMjJhMjJlMGU5NmI5OGFiIiwiZXhwIjoxNzQ3Mjk3ODY1NjMwLCJtZXRhZGF0YSI6eyJhcHBsaWNhdGlvbiI6eyJidW5kbGVJZCI6Im15LmNvbS5hbHJhamhpYmFuay53aWNrIn19LCJqdGkiOiJmZDY5YTEzNi1kYWY1LTQyMTUtYWQ3NC0zYjFjZGJlZWNiNDAifQ.\n    acrValues: null\n    scopes: [profile, w:customer:device]\n    responseType: null\n    pingOneCookies: null\n    withoutMFA: null\n} response=class InitialAuthorizationResponse {\n    links: class Links {\n        self: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/09709a94-3f6a-4a3f-be26-8efc567ab91a\n        }\n        environment: null\n        population: null\n        devices: null\n        roleAssignments: null\n        password: null\n        passwordReset: null\n        passwordSet: null\n        passwordCheck: null\n        passwordRecover: null\n        passwordValidate: null\n        passwordPolicy: null\n        linkedAccounts: null\n        accountSendVerificationCode: null\n        memberOfGroups: null\n        user: null\n        usernamePasswordCheck: class Link {\n            href: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/flows/09709a94-3f6a-4a3f-be26-8efc567ab91a\n        }\n        otpCheck: null\n        deviceSelect: null\n        signOnPage: class Link {\n            href: https://apps.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/signon/?flowId=09709a94-3f6a-4a3f-be26-8efc567ab91a\n        }\n        deviceReorder: null\n    }\n    embedded: class EmbeddedUserName {\n        devices: null\n        user: class UserName {\n            id: 85957ba3-7b3c-4382-9f44-e596cd3113cc\n            username: null\n            name: null\n        }\n        application: class Application {\n            name: Digibank ARB\n        }\n    }\n    error: null\n    id: 09709a94-3f6a-4a3f-be26-8efc567ab91a\n    environment: class ID {\n        id: 44e438c9-1f16-40ed-94fe-e4a18e19c517\n    }\n    resumeUrl: https://auth.pingone.asia/44e438c9-1f16-40ed-94fe-e4a18e19c517/as/resume?flowId=09709a94-3f6a-4a3f-be26-8efc567ab91a\n    status: PASSWORD_REQUIRED\n    createdAt: 2025-05-15T08:29:07.812Z\n    expiresAt: 2025-05-15T08:44:07.812Z\n    bypassAllowed: null\n    selectedDevice: null\n}",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a5d3697c5642740757534bb88848",
+            "spanId": "ee2977cbdf67618d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:07.503",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:07.503Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | Fetching user details [fetchUserDetails]:  UserDetails(pingOneUserId=85957ba3-7b3c-4382-9f44-e596cd3113cc, customerId=1691918854997419, environmentId=44e438c9-1f16-40ed-94fe-e4a18e19c517, enabled=true, disableReason=)",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a5d3697c5642740757534bb88848",
+            "spanId": "ee2977cbdf67618d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:07.503",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:07.503Z",
+            "@version": "1",
+            "message": "cic: 1691918854997419 | [isDeviceBounded]: deviceBounded=false",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a5d3697c5642740757534bb88848",
+            "spanId": "ee2977cbdf67618d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:29:07.503",
+        "kubernetes.container_name": "customer-iam-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:29:07.503Z",
+            "@version": "1",
+            "message": "preparePairingAuthorizationRequest for cic: 1691918854997419",
+            "logger_name": "com.arbm.digibank.service.login.BasicLoginServiceImpl",
+            "thread_name": "http-nio-8080-exec-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-iam-service",
+            "traceId": "6825a5d3697c5642740757534bb88848",
+            "spanId": "ee2977cbdf67618d",
+            "bc": "iamcustomer"
+        }
+    },
+    {
+        "@timestamp": "2025-05-15 08:28:52.601",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:28:52.601] [INFO] [apollo-server,,] default - Microservice response: {\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\"}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:28:52.601",
+        "kubernetes.container_name": "apollo-server",
+        "logBody": "[2025-05-15T08:28:52.601] [INFO] [apollo-server,,] default - {\"http\":{\"headers\":{}},\"data\":{\"getUserSecureWord\":{\"secureword\":\"*HIDDEN*\",\"nickname\":\"skhee777\",\"cic\":\"1691918854997419\",\"isDemoAccount\":false}}}"
+    },
+    {
+        "@timestamp": "2025-05-15 08:28:52.594",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-15T08:28:52.594Z",
+            "@version": "1",
+            "message": "Get customer lazy 1691918854997419",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "6825a5c4eaa61a4582cfea1ab03bb54f",
+            "spanId": "9824ab0b1b4d3e85",
+            "bc": "customers"
+        }
+    }
+]

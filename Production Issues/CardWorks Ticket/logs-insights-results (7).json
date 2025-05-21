@@ -1,0 +1,617 @@
+[
+    {
+        "@timestamp": "2025-05-20 23:24:03.023",
+        "kubernetes.container_name": "bff-products-management",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:03.022Z",
+            "@version": "1",
+            "message": "An error occurred with code[E413098], details[Integration Error, with the service: Card Service, and an error: {"name":"331","message":"Opps! We're unable to process your request, please try again.","errorId":"b5a060f7-a578-404d-8c6d-c496a3d27b33"}]",
+            "logger_name": "com.arbm.digibank.rest.exception.common.RestExceptionHandler",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "WARN",
+            "level_value": 30000,
+            "springAppName": "bff-products-management",
+            "traceId": "682d0f122829ed7f0d7f4e4355773593",
+            "spanId": "c710b26e622670d1",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:03.000",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.999Z",
+            "@version": "1",
+            "message": "Cardworks errors occurred: {"errorCode":"331","errorDescription":"Invalid Effective Date."}",
+            "logger_name": "com.arbm.digibank.exception.ExceptionControllerRestErrorMapping",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "ERROR",
+            "level_value": 40000,
+            "bc": "cards",
+            "traceId": "682d0f12b48d3bcdda4ad1eda8062f45",
+            "spanId": "da4ad1eda8062f45",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.994",
+        "kubernetes.container_name": "card-service",
+        "logBody": ""
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.992",
+        "kubernetes.container_name": "card-service",
+        "logBody": ""
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.988",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.987Z",
+            "@version": "1",
+            "message": "Failed updateCardPreferencesV2 - message: Client error : 422 Unprocessable Entity",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12b48d3bcdda4ad1eda8062f45",
+            "spanId": "da4ad1eda8062f45",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.984",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.979Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "CardworksSoapBindingStub.cardholderAuthParameterMaint",
+                "input": {
+                    "in0": "{"sequenceNo":"1302739641237400","sourceSystem":"DGB","accountIndicator":"2","actionCode":"OPT","actionType":"ALL","actionValue":"Y|Y","effectiveDate":"20250520|20250520","expiryDate":"20991231|20991231","authMethod":"","msgRefNo":"","signedMessage":"JRVj5q90Dz3tiHREqMbbp6w4d31LqJys1El7dr+LvA2TEjxv7im8v2gEkSWu4ziJdfMZTsmAJVCSp1cJ/BE3l2P4Vc5UYKxZW1PdKQ4fTivOMwX64FEqMOSRuS7mCbff3FRYwFBpEGE4g4h8D+6Ofkrr5ojFY/ycSmdNEORNnOa3tuWSZsevOZ6TMBnVxm/3uTixD1aisegFXJOQulYpyA/HTyMkZKPKKOaxROJqVVHjyDY8rwMjcXOoeMLCzBM7Sti6Sa0FNrvA78Q6wOb1/7Umov/mSkJT+wqZ+0Lo/0xlc0go1Wqng1deTpFmbwbL5OPwotbp4zVk7r+NaMbTMw==","fi":"432134","pan":"0031082250153834","otp":""}"
+                },
+                "result": {
+                    "sequenceNo": "1302739641237400",
+                    "responseCode": "331",
+                    "responseDescription": "Invalid Effective Date.",
+                    "authParameterValue": "",
+                    "maxLimitValue": "",
+                    "effectiveDate": "",
+                    "expiryDate": "****",
+                    "signedMessage": null
+                },
+                "processTime": 142
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.984",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.981Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "CardManagementService.updateCardParameter",
+                "input": {
+                    "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                    "request": "{"accountIndicator":"2","pan":"0031082250153834","actionCode":"OPT","actionType":"ALL","sequenceNo":"1302739641237400","fi":"432134","sourceSystem":"DGB","actionValue":"Y|Y","effectiveDate":"20250520|20250520","expiryDate":"20991231|20991231","authMethod":"","msgRefNo":"","otp":""}"
+                },
+                "result": null,
+                "processTime": 147
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.984",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.981Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "CardMgmtController.updateCardParameter",
+                "input": {
+                    "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                    "cardHolderAuthRequest": "{"accountIndicator":"2","pan":"0031082250153834","actionCode":"OPT","actionType":"ALL","sequenceNo":"1302739641237400","fi":"432134","sourceSystem":"DGB","actionValue":"Y|Y","effectiveDate":"20250520|20250520","expiryDate":"20991231|20991231","authMethod":"","msgRefNo":"","otp":""}"
+                },
+                "result": null,
+                "processTime": 147
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.984",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.982Z",
+            "@version": "1",
+            "message": "Response: method=POST uri=http://finexus-gateway.finexus-gateway.svc.cluster.local/v1/mgmt/update-card-parameter body={"name":"UNPROCESSABLE_ENTITY","message":"{"errorCode":"331","errorDescription":"Invalid Effective Date."}","errorId":"b5a060f7-a578-404d-8c6d-c496a3d27b33"}",
+            "logger_name": "com.arbm.digibank.rest.controller.advice.CustomResponseBodyAdvice",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "DEBUG",
+            "level_value": 10000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.984",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.983Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12b48d3bcdda4ad1eda8062f45",
+            "spanId": "da4ad1eda8062f45",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "http://finexus-gateway.finexus-gateway.svc.cluster.local:8080/v1/mgmt/update-card-parameter",
+                "input": "{"accountIndicator":"2","pan":"0031082250153834","actionCode":"OPT","actionType":"ALL","sequenceNo":"1302739641237400","fi":"432134","sourceSystem":"DGB","actionValue":"Y|Y","effectiveDate":"20250520|20250520","expiryDate":"20991231|20991231","authMethod":"","msgRefNo":"","otp":""}",
+                "result": "{"name":"UNPROCESSABLE_ENTITY","message":"{"errorCode":"331","errorDescription":"Invalid Effective Date."}","errorId":"b5a060f7-a578-404d-8c6d-c496a3d27b33"}",
+                "processTime": 152
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.890",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.834Z",
+            "@version": "1",
+            "message": "Received request with requestId=b5a060f7-a578-404d-8c6d-c496a3d27b33 and CardHolderAuthRequest(accountIndicator=2, pan=0031082250153834, actionCode=OPT, actionType=ALL, sequenceNo=1302739641237400, fi=432134, sourceSystem=DGB, actionValue=Y|Y, effectiveDate=20250520|20250520, expiryDate=20991231|20991231, authMethod=, msgRefNo=, otp=)",
+            "logger_name": "com.arbm.digibank.controller.CardMgmtController",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.890",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.834Z",
+            "@version": "1",
+            "message": "Received request b5a060f7-a578-404d-8c6d-c496a3d27b33 with requestUid=b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "logger_name": "com.arbm.digibank.service.CardManagementService",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.890",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.836Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-10",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12a64fc8f45399229a85c2a7be",
+            "spanId": "5399229a85c2a7be",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "SecretsSigner.generateDigiSign",
+                "input": {
+                    "rawInput": ""1302739641237400432134DGB20031082250153834   OPTALLY|Y                                                                                                 20250520|20250520                                 20991231|20991231                                                                      "",
+                    "privateKey": ""-----BEGIN PRIVATE KEY-----nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8n9Lg8q5RJg5rn8RXHs0DvswXRaJLoLzJTRar7JBHM9maG/SAiD6RxFwu+oyTatK+bT6eFfQmKiSHvn4ChHRxYlJTwfhSI7dIBZFrqslo2Wph1dVwnCYx6wm/0GKBvPdzyhBvs3GsJ2NaiOnpxZMZgTLZydXGCttN1ZN/Tm/dcDMo/429XpPaoG7/YVVWZ+O0GsRcn4+EQadyWBenQCeKAiFqYTzAAFMXa7M3wd/AGF6ZokuCtl2goc3jKDShM8O/O0SEI1QMJBjbyTiKnD0x/M25pYej3FwRQxxLstu5+oS8cYnOqBQ/3nWMT5komrc2jIukTNf6//tqlGYdpndEYezs0DAgMBAAECggEBAJ4CdLEkGoq4CpS53LjxnJAvs8v8gjQmdU30qoq/aHn+nX1ztZqGh4OsrlxcXq6PagNDmJTtZx0haICfF63fqQM7VJkxxRn/v1CTNOYuigvGUnLj0m0HIafncL9SXXK5TcGdn68y7yJ7zGrnDx32gYfiO2QepfwOE43f9vBZUxm1TRnCfPZY8lAl3UMsABHTs22xsf6pjfAn+cTZwqO6xA01a43TuktNEbGW9iGc6DrrVdXnZ0LJ14USnlC3gMHaG2bCJY6C7pdzESmKX7zs/nGbgU21jst7Kx3Q5biDqwJWYhUenyp6715O/Mp4kcWLd6/JPLLjaszch5jOtv+OpD4Er32ECgYEA8yDDUPTRvUreX/AVnu4hyC26Dx6qJ5R/1qH01tQSFwZaUY5lj1dOmY5QtCF40DQvII2PLVkqDVIaWJaSxnghX5oDUgavrmajZ/tObgbP0K6XPDr8xVhzUIWXKhmyPwXenRyoqJZldInXf/24wonxIB3p/sAWWvErLFh7Ovl3Jum/dUCgYEAxpxYScJIL97LmTOw72XcKTcnbIjwWVGRnn8C1JM1fGbMsTe3oi7hfERXHCI1fhhU+h7if9jzMVUXcymVzZ1DR0jCRoZARRMrMndvBJlfhBFtm4Rya3wkQIkgCiDtEuUz4DbZ2dngbPu/DiKbS6pbf7qwBDUUYtUm2bn3q0KRBX4E3cCgYBWx3rvinLSfcaht7AKH8mVCv0+Z0CQ57dnTEm/Mr4LOxP7+OQJnjmH1aQ4pznYFsg7dkuEhC7eUk/VDumUhaXaQGGZZyPQ1NP6gM0gnnqomaYuPU/+znItq4EpJcLZe97ZdUE963CLCChDJuyrhCaxhKfOzC/hRVD3tEdW62L1iLgQKBgBz2nbbWL3GUGs2AK9rFihEGKZnhgW9RancbTHldYj5a61yoiGHhPkaV3LIglvZla/bxjnAwiwgweoYXMuai7VzVM+e+44iRwkCr8JeWGiSzOe2k2d6swsiado6jkI7h17fJp+nkp6Z1a9NiF2WmmVSOCQOrMJsXm2XyFQnncih/4QvAoGAS4we097FgBqF2L0R5Jw6n6QQLv4RmrZECtIkEEGrd36+/KNlHYj5bycNUspc+V1RpbeZqnFyimXKWep+1l/wIn17qDXAlyWlwjyECmsOSIWTY0Bm9c4hG0ehUcFT3UdiuOPGTAnNwSbOQxcgPlTjnsn3Vu66dtZaGkvTGS8G4vkoj0=n-----END PRIVATE KEY-----""
+                },
+                "result": "JRVj5q90Dz3tiHREqMbbp6w4d31LqJys1El7dr+LvA2TEjxv7im8v2gEkSWu4ziJdfMZTsmAJVCSp1cJ/BE3l2P4Vc5UYKxZW1PdKQ4fTivOMwX64FEqMOSRuS7mCbff3FRYwFBpEGE4g4h8D+6Ofkrr5ojFY/ycSmdNEORNnOa3tuWSZsevOZ6TMBnVxm/3uTixD1aisegFXJOQulYpyA/HTyMkZKPKKOaxROJqVVHjyDY8rwMjcXOoeMLCzBM7Sti6Sa0FNrvA78Q6wOb1/7Umov/mSkJT+wqZ+0Lo/0xlc0go1Wqng1deTpFmbwbL5OPwotbp4zVk7r+NaMbTMw==",
+                "processTime": 1
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:24:02.815",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:24:02.814Z",
+            "@version": "1",
+            "message": "Update card preference with requestId = b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-5",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0f12b48d3bcdda4ad1eda8062f45",
+            "spanId": "da4ad1eda8062f45",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.925",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.911Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec45a63368d73229ea1a84e79c2",
+            "spanId": "73229ea1a84e79c2",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "data": {
+                "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                    "customerId": ""1748736000002863"",
+                    "accountNumber": ""912010110547920""
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "cardId": "694f5e10-eb19-4e1f-94fd-73d2cd97e6a1",
+                        "expiryDate": "****",
+                        "cardStatus": "ACTIVATED",
+                        "createdDate": "2025-03-23T09:31:53.551588Z",
+                        "cvv2": "****",
+                        "pan": "****",
+                        "cardHolderName": "AZHAR BIN AHMAD",
+                        "trackingNumber": "ENE053956036MY",
+                        "cardDeliverOption": "RESIDENTIAL",
+                        "delivCenterCode": "",
+                        "delivOffName": "",
+                        "delivOffDept": "",
+                        "delivAddress1": "19 JALAN KUBAH UB / 48DBUKIT JELUTONG",
+                        "delivAddress2": "",
+                        "delivAddress3": "",
+                        "delivAddress4": "",
+                        "delivPostCode": "40150",
+                        "delivTown": "SHAH ALAM",
+                        "delivState": "SELANGOR",
+                        "delivCountry": "MY"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 269
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.910",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.903Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec45a63368d73229ea1a84e79c2",
+            "spanId": "73229ea1a84e79c2",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "data": {
+                "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                "functionId": "CardMgmtService.getCardInfo",
+                "input": {
+                    "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                    "customerId": ""1748736000002863"",
+                    "accountNumber": ""912010110547920""
+                },
+                "result": {
+                    "cardId": "694f5e10-eb19-4e1f-94fd-73d2cd97e6a1",
+                    "expiryDate": "****",
+                    "cardStatus": "ACTIVATED",
+                    "createdDate": "2025-03-23T09:31:53.551588Z",
+                    "cvv2": "****",
+                    "pan": "****",
+                    "cardHolderName": "AZHAR BIN AHMAD",
+                    "trackingNumber": "ENE053956036MY",
+                    "cardDeliverOption": "RESIDENTIAL",
+                    "delivCenterCode": "",
+                    "delivOffName": "",
+                    "delivOffDept": "",
+                    "delivAddress1": "19 JALAN KUBAH UB / 48DBUKIT JELUTONG",
+                    "delivAddress2": "",
+                    "delivAddress3": "",
+                    "delivAddress4": "",
+                    "delivPostCode": "40150",
+                    "delivTown": "SHAH ALAM",
+                    "delivState": "SELANGOR",
+                    "delivCountry": "MY"
+                },
+                "processTime": 213
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.879",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.878Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.OkhttpLoggingInterceptor",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec45a63368d73229ea1a84e79c2",
+            "spanId": "73229ea1a84e79c2",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "http://finexus-gateway.finexus-gateway.svc.cluster.local:8080/v1/mgmt/get-card-info",
+                "input": "{"accountIndicator":"2","pan":"0031082250153834","actionIndicator":"C","sequenceNo":"1294929141838500","fi":"432134","sourceSystem":"DGB"}",
+                "result": "{"responseCode":"000","responseDescription":"Complete Response Without Errors","fi":"432134","panInfo":"bGpwTzRceqlgjkMmpaL/sg4Sy99nG9FsxTwHwMfLKc5td2yWEUeTqevuIUzZLYG8hSHl6DjUOXr2pWcDruNwze55BtxYz8aXJP4JfXwKU4njuSaFylsX/Y4tH/FdxrparrsGP3FY9Rs8c776qQ4cH8RnL4jKVAADVXe3oDCw9V2bokoRmXl2LKdw/q/eTPXo7iGufpK2GQ8Tk5sXCokDSVe17kxNjUZQ3UID/DvUMbgK8TSaglhKGPzOXOBMx/9RaSrPBXOAFwsQ2SwW44EE/q6HZwkupC4I8txDf2qGJFiyuZkMMYxtJlvHIQmdvN2UXR3TN6siQvDpspkToLFzIg==","signedMessage":"YQs5ljAebjQ6Rpr4KMSTNEUHmkhZ2NLXSfd9a/+G7+CXjrOKEhbdTjYu+PkT9t0nfXlS/pmZf2B2QYMjEEFjUQP9hvSPhzOWoyVQPzA6Od899QF2bkZfPGfHDZgKMgzavKgk6MbzJbe3mzghTkHFJGAlRYsVm2BLsSHpHaUSKAl9DB99u8iyXe2o6SCxZmirCCse3XUcInRArwD8Xm19Xbvqmv1dkrICCWTGWLENnoL4tXgUr2vngfpRSx89OWEwDNGUHBQh8SfdSnz/XlpBk+uls1aejDFBIG3mT0EBU5uTSyqkrRV2l7CNl5usU8tIDlx9RqelaT0RZTHoWzgYi1wKfTymZQ1GT9NJ6+vRFNGWGEJKq6EANA71n2QuwUIlQ+myAoGdU6cTu1l9n3DTjfzk+fMW1geYha7lFLNSFnXRA00fKLp3dP/PxQo1dm929ytMUEND/R5mGC9+FLJRBjlNa0J8ASIwITZYd0ubMui69fBYsnz2vYkroR1+g4pCK+iIXfAP3JqD4cZZ5Ndobp/6TmGBnREFrH0JprNGPoItZVthSboUq8dXDK748W65mED4YxFF4o0SkTfpJOcUS/evBtFVwhjUiu4v1f2jPUP/UqTwuI7F/YeYq2BnfON/DoJeneo2E38++cGonGPZoun+tIIevUWQ+z8XFMA88n8=","sequenceNo":"1294929141838500"}",
+                "processTime": 156
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.879",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.876Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "CardworksSoapBindingStub.getCardInfo",
+                "input": {
+                    "in0": "{"sequenceNo":"1294929141838500","sourceSystem":"DGB","accountIndicator":"2","actionIndicator":"C","signedMessage":"XlQahiUrEqsO1oFrqqQYbSvXQfNDEpOUtZ9BggL7x+EKlI7ZYDaBckahDsV3G6Df1exexMPyC/8SgWY7xkWI6RGFvrwqyhT/2fBpIW25kuU9lbpGxWBigbFUWmjwo8WmDmXJURWltyPzQuUK9Alc9eL/5cnbUjF/4949/aUz4wE+FD39D8iEsqVo8zlOd1NAc3w8qoq3c7NwIf1wW9ktlqrHCWtD3qIaRySIhSsleEY94NrcqPxnqtwUi9fqofo15H+cZzHW5JADsHwjA323Hd0uxuvtutKTMYjaK2YKz75zUHl4SjIXX6ow9NnOg06JwAsFIpYMZBEAehJ1yTYEgA==","fi":"432134","pan":"0031082250153834"}"
+                },
+                "result": {
+                    "sequenceNo": "1294929141838500",
+                    "responseCode": "000",
+                    "responseDescription": "Complete Response Without Errors",
+                    "panInfo": "****",
+                    "signedMessage": "YQs5ljAebjQ6Rpr4KMSTNEUHmkhZ2NLXSfd9a/+G7+CXjrOKEhbdTjYu+PkT9t0nfXlS/pmZf2B2QYMjEEFjUQP9hvSPhzOWoyVQPzA6Od899QF2bkZfPGfHDZgKMgzavKgk6MbzJbe3mzghTkHFJGAlRYsVm2BLsSHpHaUSKAl9DB99u8iyXe2o6SCxZmirCCse3XUcInRArwD8Xm19Xbvqmv1dkrICCWTGWLENnoL4tXgUr2vngfpRSx89OWEwDNGUHBQh8SfdSnz/XlpBk+uls1aejDFBIG3mT0EBU5uTSyqkrRV2l7CNl5usU8tIDlx9RqelaT0RZTHoWzgYi1wKfTymZQ1GT9NJ6+vRFNGWGEJKq6EANA71n2QuwUIlQ+myAoGdU6cTu1l9n3DTjfzk+fMW1geYha7lFLNSFnXRA00fKLp3dP/PxQo1dm929ytMUEND/R5mGC9+FLJRBjlNa0J8ASIwITZYd0ubMui69fBYsnz2vYkroR1+g4pCK+iIXfAP3JqD4cZZ5Ndobp/6TmGBnREFrH0JprNGPoItZVthSboUq8dXDK748W65mED4YxFF4o0SkTfpJOcUS/evBtFVwhjUiu4v1f2jPUP/UqTwuI7F/YeYq2BnfON/DoJeneo2E38++cGonGPZoun+tIIevUWQ+z8XFMA88n8=",
+                    "fi": "432134"
+                },
+                "processTime": 143
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.879",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.877Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "SecretsSigner.verifyDigiSign",
+                "input": {
+                    "raw": ""1294929141838500000Complete Response Without Errors                                           432134bGpwTzRceqlgjkMmpaL/sg4Sy99nG9FsxTwHwMfLKc5td2yWEUeTqevuIUzZLYG8hSHl6DjUOXr2pWcDruNwze55BtxYz8aXJP4JfXwKU4njuSaFylsX/Y4tH/FdxrparrsGP3FY9Rs8c776qQ4cH8RnL4jKVAADVXe3oDCw9V2bokoRmXl2LKdw/q/eTPXo7iGufpK2GQ8Tk5sXCokDSVe17kxNjUZQ3UID/DvUMbgK8TSaglhKGPzOXOBMx/9RaSrPBXOAFwsQ2SwW44EE/q6HZwkupC4I8txDf2qGJFiyuZkMMYxtJlvHIQmdvN2UXR3TN6siQvDpspkToLFzIg=="",
+                    "sign": ""YQs5ljAebjQ6Rpr4KMSTNEUHmkhZ2NLXSfd9a/+G7+CXjrOKEhbdTjYu+PkT9t0nfXlS/pmZf2B2QYMjEEFjUQP9hvSPhzOWoyVQPzA6Od899QF2bkZfPGfHDZgKMgzavKgk6MbzJbe3mzghTkHFJGAlRYsVm2BLsSHpHaUSKAl9DB99u8iyXe2o6SCxZmirCCse3XUcInRArwD8Xm19Xbvqmv1dkrICCWTGWLENnoL4tXgUr2vngfpRSx89OWEwDNGUHBQh8SfdSnz/XlpBk+uls1aejDFBIG3mT0EBU5uTSyqkrRV2l7CNl5usU8tIDlx9RqelaT0RZTHoWzgYi1wKfTymZQ1GT9NJ6+vRFNGWGEJKq6EANA71n2QuwUIlQ+myAoGdU6cTu1l9n3DTjfzk+fMW1geYha7lFLNSFnXRA00fKLp3dP/PxQo1dm929ytMUEND/R5mGC9+FLJRBjlNa0J8ASIwITZYd0ubMui69fBYsnz2vYkroR1+g4pCK+iIXfAP3JqD4cZZ5Ndobp/6TmGBnREFrH0JprNGPoItZVthSboUq8dXDK748W65mED4YxFF4o0SkTfpJOcUS/evBtFVwhjUiu4v1f2jPUP/UqTwuI7F/YeYq2BnfON/DoJeneo2E38++cGonGPZoun+tIIevUWQ+z8XFMA88n8="",
+                    "certification": "****"
+                },
+                "result": true,
+                "processTime": 1
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.879",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.877Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "CardManagementService.getCardInfo",
+                "input": {
+                    "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                    "request": "{"accountIndicator":"2","pan":"0031082250153834","actionIndicator":"C","sequenceNo":"1294929141838500","fi":"432134","sourceSystem":"DGB"}"
+                },
+                "result": {
+                    "responseCode": "000",
+                    "responseDescription": "Complete Response Without Errors",
+                    "fi": "432134",
+                    "panInfo": "****",
+                    "signedMessage": "YQs5ljAebjQ6Rpr4KMSTNEUHmkhZ2NLXSfd9a/+G7+CXjrOKEhbdTjYu+PkT9t0nfXlS/pmZf2B2QYMjEEFjUQP9hvSPhzOWoyVQPzA6Od899QF2bkZfPGfHDZgKMgzavKgk6MbzJbe3mzghTkHFJGAlRYsVm2BLsSHpHaUSKAl9DB99u8iyXe2o6SCxZmirCCse3XUcInRArwD8Xm19Xbvqmv1dkrICCWTGWLENnoL4tXgUr2vngfpRSx89OWEwDNGUHBQh8SfdSnz/XlpBk+uls1aejDFBIG3mT0EBU5uTSyqkrRV2l7CNl5usU8tIDlx9RqelaT0RZTHoWzgYi1wKfTymZQ1GT9NJ6+vRFNGWGEJKq6EANA71n2QuwUIlQ+myAoGdU6cTu1l9n3DTjfzk+fMW1geYha7lFLNSFnXRA00fKLp3dP/PxQo1dm929ytMUEND/R5mGC9+FLJRBjlNa0J8ASIwITZYd0ubMui69fBYsnz2vYkroR1+g4pCK+iIXfAP3JqD4cZZ5Ndobp/6TmGBnREFrH0JprNGPoItZVthSboUq8dXDK748W65mED4YxFF4o0SkTfpJOcUS/evBtFVwhjUiu4v1f2jPUP/UqTwuI7F/YeYq2BnfON/DoJeneo2E38++cGonGPZoun+tIIevUWQ+z8XFMA88n8=",
+                    "sequenceNo": "1294929141838500"
+                },
+                "processTime": 146
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.879",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.877Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "CardMgmtController.getCardInfo",
+                "input": {
+                    "requestId": ""b5a060f7-a578-404d-8c6d-c496a3d27b33"",
+                    "cardInfoRequest": "{"accountIndicator":"2","pan":"0031082250153834","actionIndicator":"C","sequenceNo":"1294929141838500","fi":"432134","sourceSystem":"DGB"}"
+                },
+                "result": {
+                    "headers": {},
+                    "body": {
+                        "responseCode": "000",
+                        "responseDescription": "Complete Response Without Errors",
+                        "fi": "432134",
+                        "panInfo": "****",
+                        "signedMessage": "YQs5ljAebjQ6Rpr4KMSTNEUHmkhZ2NLXSfd9a/+G7+CXjrOKEhbdTjYu+PkT9t0nfXlS/pmZf2B2QYMjEEFjUQP9hvSPhzOWoyVQPzA6Od899QF2bkZfPGfHDZgKMgzavKgk6MbzJbe3mzghTkHFJGAlRYsVm2BLsSHpHaUSKAl9DB99u8iyXe2o6SCxZmirCCse3XUcInRArwD8Xm19Xbvqmv1dkrICCWTGWLENnoL4tXgUr2vngfpRSx89OWEwDNGUHBQh8SfdSnz/XlpBk+uls1aejDFBIG3mT0EBU5uTSyqkrRV2l7CNl5usU8tIDlx9RqelaT0RZTHoWzgYi1wKfTymZQ1GT9NJ6+vRFNGWGEJKq6EANA71n2QuwUIlQ+myAoGdU6cTu1l9n3DTjfzk+fMW1geYha7lFLNSFnXRA00fKLp3dP/PxQo1dm929ytMUEND/R5mGC9+FLJRBjlNa0J8ASIwITZYd0ubMui69fBYsnz2vYkroR1+g4pCK+iIXfAP3JqD4cZZ5Ndobp/6TmGBnREFrH0JprNGPoItZVthSboUq8dXDK748W65mED4YxFF4o0SkTfpJOcUS/evBtFVwhjUiu4v1f2jPUP/UqTwuI7F/YeYq2BnfON/DoJeneo2E38++cGonGPZoun+tIIevUWQ+z8XFMA88n8=",
+                        "sequenceNo": "1294929141838500"
+                    },
+                    "statusCode": "OK",
+                    "statusCodeValue": 200
+                },
+                "processTime": 146
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.733",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.733Z",
+            "@version": "1",
+            "logger_name": "com.arbm.digibank.interceptor.MethodLogInterceptor",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373",
+            "data": {
+                "requestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33",
+                "functionId": "SecretsSigner.generateDigiSign",
+                "input": {
+                    "rawInput": ""1294929141838500432134DGB20031082250153834   C"",
+                    "privateKey": ""-----BEGIN PRIVATE KEY-----nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8n9Lg8q5RJg5rn8RXHs0DvswXRaJLoLzJTRar7JBHM9maG/SAiD6RxFwu+oyTatK+bT6eFfQmKiSHvn4ChHRxYlJTwfhSI7dIBZFrqslo2Wph1dVwnCYx6wm/0GKBvPdzyhBvs3GsJ2NaiOnpxZMZgTLZydXGCttN1ZN/Tm/dcDMo/429XpPaoG7/YVVWZ+O0GsRcn4+EQadyWBenQCeKAiFqYTzAAFMXa7M3wd/AGF6ZokuCtl2goc3jKDShM8O/O0SEI1QMJBjbyTiKnD0x/M25pYej3FwRQxxLstu5+oS8cYnOqBQ/3nWMT5komrc2jIukTNf6//tqlGYdpndEYezs0DAgMBAAECggEBAJ4CdLEkGoq4CpS53LjxnJAvs8v8gjQmdU30qoq/aHn+nX1ztZqGh4OsrlxcXq6PagNDmJTtZx0haICfF63fqQM7VJkxxRn/v1CTNOYuigvGUnLj0m0HIafncL9SXXK5TcGdn68y7yJ7zGrnDx32gYfiO2QepfwOE43f9vBZUxm1TRnCfPZY8lAl3UMsABHTs22xsf6pjfAn+cTZwqO6xA01a43TuktNEbGW9iGc6DrrVdXnZ0LJ14USnlC3gMHaG2bCJY6C7pdzESmKX7zs/nGbgU21jst7Kx3Q5biDqwJWYhUenyp6715O/Mp4kcWLd6/JPLLjaszch5jOtv+OpD4Er32ECgYEA8yDDUPTRvUreX/AVnu4hyC26Dx6qJ5R/1qH01tQSFwZaUY5lj1dOmY5QtCF40DQvII2PLVkqDVIaWJaSxnghX5oDUgavrmajZ/tObgbP0K6XPDr8xVhzUIWXKhmyPwXenRyoqJZldInXf/24wonxIB3p/sAWWvErLFh7Ovl3Jum/dUCgYEAxpxYScJIL97LmTOw72XcKTcnbIjwWVGRnn8C1JM1fGbMsTe3oi7hfERXHCI1fhhU+h7if9jzMVUXcymVzZ1DR0jCRoZARRMrMndvBJlfhBFtm4Rya3wkQIkgCiDtEuUz4DbZ2dngbPu/DiKbS6pbf7qwBDUUYtUm2bn3q0KRBX4E3cCgYBWx3rvinLSfcaht7AKH8mVCv0+Z0CQ57dnTEm/Mr4LOxP7+OQJnjmH1aQ4pznYFsg7dkuEhC7eUk/VDumUhaXaQGGZZyPQ1NP6gM0gnnqomaYuPU/+znItq4EpJcLZe97ZdUE963CLCChDJuyrhCaxhKfOzC/hRVD3tEdW62L1iLgQKBgBz2nbbWL3GUGs2AK9rFihEGKZnhgW9RancbTHldYj5a61yoiGHhPkaV3LIglvZla/bxjnAwiwgweoYXMuai7VzVM+e+44iRwkCr8JeWGiSzOe2k2d6swsiado6jkI7h17fJp+nkp6Z1a9NiF2WmmVSOCQOrMJsXm2XyFQnncih/4QvAoGAS4we097FgBqF2L0R5Jw6n6QQLv4RmrZECtIkEEGrd36+/KNlHYj5bycNUspc+V1RpbeZqnFyimXKWep+1l/wIn17qDXAlyWlwjyECmsOSIWTY0Bm9c4hG0ehUcFT3UdiuOPGTAnNwSbOQxcgPlTjnsn3Vu66dtZaGkvTGS8G4vkoj0=n-----END PRIVATE KEY-----""
+                },
+                "result": "XlQahiUrEqsO1oFrqqQYbSvXQfNDEpOUtZ9BggL7x+EKlI7ZYDaBckahDsV3G6Df1exexMPyC/8SgWY7xkWI6RGFvrwqyhT/2fBpIW25kuU9lbpGxWBigbFUWmjwo8WmDmXJURWltyPzQuUK9Alc9eL/5cnbUjF/4949/aUz4wE+FD39D8iEsqVo8zlOd1NAc3w8qoq3c7NwIf1wW9ktlqrHCWtD3qIaRySIhSsleEY94NrcqPxnqtwUi9fqofo15H+cZzHW5JADsHwjA323Hd0uxuvtutKTMYjaK2YKz75zUHl4SjIXX6ow9NnOg06JwAsFIpYMZBEAehJ1yTYEgA==",
+                "processTime": 2
+            }
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.731",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.731Z",
+            "@version": "1",
+            "message": "Received request with requestId=b5a060f7-a578-404d-8c6d-c496a3d27b33 and CardInfoRequest(accountIndicator=2, pan=0031082250153834, actionIndicator=C, sequenceNo=1294929141838500, fi=432134, sourceSystem=DGB)",
+            "logger_name": "com.arbm.digibank.controller.CardMgmtController",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.731",
+        "kubernetes.container_name": "finexus-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.731Z",
+            "@version": "1",
+            "message": "Received request b5a060f7-a578-404d-8c6d-c496a3d27b33 with requestUid=1294929141838500",
+            "logger_name": "com.arbm.digibank.service.CardManagementService",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec47bfa2b4924477df66affd373",
+            "spanId": "24477df66affd373"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.716",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.716Z",
+            "@version": "1",
+            "message": "Retryable function com.arbm.digibank.utils.RetrierModel@ec973ce.label has been executed 1 times",
+            "logger_name": "com.arbm.digibank.utils.Retrier",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "WARN",
+            "level_value": 30000,
+            "bc": "cards",
+            "traceId": "682d0ec45a63368d73229ea1a84e79c2",
+            "spanId": "73229ea1a84e79c2",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.692",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.692Z",
+            "@version": "1",
+            "message": "Getting card info by customerId=1748736000002863 and accountNumber=912010110547920",
+            "logger_name": "com.arbm.digibank.service.CardMgmtService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec45a63368d73229ea1a84e79c2",
+            "spanId": "73229ea1a84e79c2",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33"
+        }
+    },
+    {
+        "@timestamp": "2025-05-20 23:22:44.687",
+        "kubernetes.container_name": "card-service",
+        "logBody": {
+            "@timestamp": "2025-05-20T23:22:44.686Z",
+            "@version": "1",
+            "message": "Getting card info with requestId=b5a060f7-a578-404d-8c6d-c496a3d27b33",
+            "logger_name": "com.arbm.digibank.controller.CardMgmtController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "bc": "cards",
+            "traceId": "682d0ec45a63368d73229ea1a84e79c2",
+            "spanId": "73229ea1a84e79c2",
+            "RequestId": "b5a060f7-a578-404d-8c6d-c496a3d27b33"
+        }
+    }
+]
