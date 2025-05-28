@@ -1,0 +1,1090 @@
+[
+    {
+        "@timestamp": "2025-05-22 22:36:06.405",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.405Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"4786a238-1320-456f-89fa-391f51d856c3\", \"internalRequestId\": \"7d30143b-329c-4cdd-9e37-97ee3b9a0fd9\", \"externalRequestId\": null, \"customerId\": \"1711949863562173\", \"amount\": \"2.04\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"162263396221\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"WAN MOHAMAD SABQI BI      \", \"otherSideAccountType\": \"SVGS\", \"customerName\": \" WAN MOHAMAD SABQI BIN WAN ISMAIL\", \"customerAccountId\": \"59da1cb4-610b-430b-b53a-17969e3245ef\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110359581\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"FRAML_ACCEPTED\", \"otherSideExternalId\": null, \"tmStatus\": \"null\", \"transferType\": \"DEBIT\", \"paymentType\": \"PAY2ACCOUNT\", \"createdAt\": \"2025-05-22T22:36:06.252556Z\", \"updatedAt\": \"2025-05-22T22:36:06.252Z\", \"version\": \"0\", \"recipientReference\": \"Ggzggxx\", \"paymentDetails\": null, \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": null, \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "68c12277e5891577",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.257",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.257Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=7d30143b-329c-4cdd-9e37-97ee3b9a0fd9, externalRequestId=null, businessMessageId=null, customerId=1711949863562173, smeId=null, amount=2.04, denomination=MYR, otherSideAccountNumber=162263396221, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=WAN MOHAMAD SABQI BI      , customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountType=SVGS, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef, customerAccountNumber=912010110359581, transactionId=null, tmCreatedAt=null, paymentStatus=FRAML_ACCEPTED, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Ggzggxx, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 6 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.251",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.25Z",
+            "@version": "1",
+            "message": "Received FRAML validation response for payment with ID 4786a238-1320-456f-89fa-391f51d856c3. FRAML response: approve",
+            "logger_name": "com.arbm.digibank.service.client.FramlTransfersService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.248",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.248Z",
+            "@version": "1",
+            "message": "transferPayment: result of feedzai: TransferMonitoringResponseDto(status=ok, lifecycleId=4786a238-1320-456f-89fa-391f51d856c3, eventExternalId=27e22481-3ab8-4038-b553-25a97380db45, actionCodes=[[Transfers-DR6]], secondaryActionCodes=[[Transfers-SCA16-1], PSD2-Article-16], alert=false, score=0, decision=approve, scaRequired=false, code=null, errors=null)",
+            "logger_name": "com.arbm.digibank.services.TransferMonitoringServicesImpl",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.248",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.248Z",
+            "@version": "1",
+            "message": ">>>>>>>>>END TRANSFER INITIATION <<<<<<<<<",
+            "logger_name": "com.arbm.digibank.controller.TransferMonitoringController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.248",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.248Z",
+            "@version": "1",
+            "message": ">>>store Transaction Response: TransactionResponseEntity(lifecycleId=4786a238-1320-456f-89fa-391f51d856c3, status=ok, eventExternalId=27e22481-3ab8-4038-b553-25a97380db45, code=null, errors=, warnings=null, actionCodes=[Transfers-DR6], secondaryActionCodes=[Transfers-SCA16-1],PSD2-Article-16, alert=false, decision=approve, score=0, scaRequired=false)",
+            "logger_name": "com.arbm.digibank.services.StoreTransferDataServicesImpl",
+            "thread_name": "task-15",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "76e753f4a558da74",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.242",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.242Z",
+            "@version": "1",
+            "message": "END postFeedzaiTransfers",
+            "logger_name": "com.arbm.digibank.external.FeedzaiGatewayClientImpl",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.240",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.239Z",
+            "@version": "1",
+            "message": "FEEDZAI: 8 returning result: <200,{\"status\":\"ok\",\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"action_codes\":[\"[Transfers-DR6]\"],\"secondary_action_codes\":[\"[Transfers-SCA16-1]\",\"PSD2-Article-16\"],\"alert\":false,\"score\":0,\"decision\":\"approve\",\"sca_required\":false,\"sanctions_decision\":\"no match\",\"sanctions_checksums\":{\"originator_search_checksum_in\":\"\",\"originator_search_checksum_out\":\"\",\"beneficiary_search_checksum_in\":\"\",\"beneficiary_search_checksum_out\":\"\",\"transaction_notes_search_checksum_in\":\"\",\"transaction_notes_search_checksum_out\":\"\"},\"sanctions_identifiers\":{\"originator_search_id\":\"\",\"beneficiary_search_id\":\"\",\"transaction_notes_search_id\":\"\"}},[Date:\"Thu, 22 May 2025 22:36:06 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"693\", feedzai-enrichment-ms-revelock:\"10\", feedzai-enrichment-success-revelock:\"true\", feedzai-enrichment-ms-total:\"10\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]> : <200,{\"status\":\"ok\",\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"action_codes\":[\"[Transfers-DR6]\"],\"secondary_action_codes\":[\"[Transfers-SCA16-1]\",\"PSD2-Article-16\"],\"alert\":false,\"score\":0,\"decision\":\"approve\",\"sca_required\":false,\"sanctions_decision\":\"no match\",\"sanctions_checksums\":{\"originator_search_checksum_in\":\"\",\"originator_search_checksum_out\":\"\",\"beneficiary_search_checksum_in\":\"\",\"beneficiary_search_checksum_out\":\"\",\"transaction_notes_search_checksum_in\":\"\",\"transaction_notes_search_checksum_out\":\"\"},\"sanctions_identifiers\":{\"originator_search_id\":\"\",\"beneficiary_search_id\":\"\",\"transaction_notes_search_id\":\"\"}},[Date:\"Thu, 22 May 2025 22:36:06 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"693\", feedzai-enrichment-ms-revelock:\"10\", feedzai-enrichment-success-revelock:\"true\", feedzai-enrichment-ms-total:\"10\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]> ",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.240",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.239Z",
+            "@version": "1",
+            "message": "FEEDZAI: 9 return function call Feedzai result to controller: <200,{\"status\":\"ok\",\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"action_codes\":[\"[Transfers-DR6]\"],\"secondary_action_codes\":[\"[Transfers-SCA16-1]\",\"PSD2-Article-16\"],\"alert\":false,\"score\":0,\"decision\":\"approve\",\"sca_required\":false,\"sanctions_decision\":\"no match\",\"sanctions_checksums\":{\"originator_search_checksum_in\":\"\",\"originator_search_checksum_out\":\"\",\"beneficiary_search_checksum_in\":\"\",\"beneficiary_search_checksum_out\":\"\",\"transaction_notes_search_checksum_in\":\"\",\"transaction_notes_search_checksum_out\":\"\"},\"sanctions_identifiers\":{\"originator_search_id\":\"\",\"beneficiary_search_id\":\"\",\"transaction_notes_search_id\":\"\"}},[Date:\"Thu, 22 May 2025 22:36:06 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"693\", feedzai-enrichment-ms-revelock:\"10\", feedzai-enrichment-success-revelock:\"true\", feedzai-enrichment-ms-total:\"10\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]>",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.240",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.239Z",
+            "@version": "1",
+            "message": "FEEDZAI: 10 feedzaiProxyService return <200,{\"status\":\"ok\",\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"action_codes\":[\"[Transfers-DR6]\"],\"secondary_action_codes\":[\"[Transfers-SCA16-1]\",\"PSD2-Article-16\"],\"alert\":false,\"score\":0,\"decision\":\"approve\",\"sca_required\":false,\"sanctions_decision\":\"no match\",\"sanctions_checksums\":{\"originator_search_checksum_in\":\"\",\"originator_search_checksum_out\":\"\",\"beneficiary_search_checksum_in\":\"\",\"beneficiary_search_checksum_out\":\"\",\"transaction_notes_search_checksum_in\":\"\",\"transaction_notes_search_checksum_out\":\"\"},\"sanctions_identifiers\":{\"originator_search_id\":\"\",\"beneficiary_search_id\":\"\",\"transaction_notes_search_id\":\"\"}},[Date:\"Thu, 22 May 2025 22:36:06 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"693\", feedzai-enrichment-ms-revelock:\"10\", feedzai-enrichment-success-revelock:\"true\", feedzai-enrichment-ms-total:\"10\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]>",
+            "logger_name": "com.arbm.digibank.controller.GatewayController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.239",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.239Z",
+            "@version": "1",
+            "message": "FEEDZAI: 7 Response received from feedzai api: <200,{\"status\":\"ok\",\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"action_codes\":[\"[Transfers-DR6]\"],\"secondary_action_codes\":[\"[Transfers-SCA16-1]\",\"PSD2-Article-16\"],\"alert\":false,\"score\":0,\"decision\":\"approve\",\"sca_required\":false,\"sanctions_decision\":\"no match\",\"sanctions_checksums\":{\"originator_search_checksum_in\":\"\",\"originator_search_checksum_out\":\"\",\"beneficiary_search_checksum_in\":\"\",\"beneficiary_search_checksum_out\":\"\",\"transaction_notes_search_checksum_in\":\"\",\"transaction_notes_search_checksum_out\":\"\"},\"sanctions_identifiers\":{\"originator_search_id\":\"\",\"beneficiary_search_id\":\"\",\"transaction_notes_search_id\":\"\"}},[Date:\"Thu, 22 May 2025 22:36:06 GMT\", Server:\"HTTP Server\", X-Frame-Options:\"SAMEORIGIN\", Strict-Transport-Security:\"max-age=31536000; includeSubdomains;\", X-Content-Type-Options:\"nosniff\", Referrer-Policy:\"strict-origin-when-cross-origin\", Cache-control:\"no-store, no-cache\", Content-Type:\"application/json\", Content-Length:\"693\", feedzai-enrichment-ms-revelock:\"10\", feedzai-enrichment-success-revelock:\"true\", feedzai-enrichment-ms-total:\"10\", Keep-Alive:\"timeout=16\", Connection:\"Keep-Alive\"]>",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.239",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.239Z",
+            "@version": "1",
+            "message": "FEEDZAI: 7.1 End Feedzai request in try block, ID: d8621f82-6159-463c-94cc-d2d6ff110103, total: 69 ms, endpoint: POST /api/transfers",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.171",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.17Z",
+            "@version": "1",
+            "message": "FEEDZAI: 5 Start Feedzai request, ID: d8621f82-6159-463c-94cc-d2d6ff110103, endpoint: POST /api/transfers",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.171",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.17Z",
+            "@version": "1",
+            "message": "FEEDZAI: 5.2 transfer request body {\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"created_at\":1747953366031,\"sender_id\":\"1711949863562173\",\"sender_account_id\":\"59da1cb4-610b-430b-b53a-17969e3245ef\",\"sender_account_open_date\":1712110653041,\"receiver_account_open_date\":0,\"sender_account_iban\":\"912010110359581\",\"receiver_id\":\"\",\"receiver_account_iban\":\"162263396221\",\"device_id\":\"385947\",\"sender_email\":\"sabqi5269@gmail.com\",\"sender_name\":\"WAN MOHAMAD SABQI BIN WAN ISMAIL\",\"sender_phone\":\"+60199726049\",\"receiver_bank_bic\":\"MBBEMYKL\",\"receiver_bank_country_code\":\"MY\",\"receiver_country_code\":\"MY\",\"sender_bank_country_code\":\"MY\",\"sender_country_code\":\"MY\",\"receiver_transaction_foreign_exchange_rate\":1.0,\"product_code\":\"PAY2ACCOUNT\",\"sender_transaction_amount\":204,\"sender_transaction_bank_account_number\":\"912010110359581\",\"receiver_transaction_amount\":204,\"receiver_transaction_bank_account_number\":\"162263396221\",\"receiver_name\":\"WAN MOHAMAD SABQI BI      \",\"event_occurred_at\":1747953366031,\"payment_type\":\"fps\",\"channel_type\":\"mobile\",\"payment_sub_type\":\"instant_transfer\",\"payment_status\":\"entered\",\"number_of_payments\":1,\"sender_segment\":\"retail\",\"sender_account_type\":\"svgs\",\"sender_transaction_currency\":\"MYR\",\"sender_transaction_notes\":\"Ggzggxx\",\"sender_bank_bic\":\"RJHIMYKL\",\"receiver_transaction_currency\":\"MYR\",\"receiver_segment\":\"retail\",\"direction\":\"outgoing\",\"receiver_alias\":\"\",\"receiver_alias_type\":\"\",\"sender_alias\":\"\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"sender_initiated_at\":1747953366031,\"receiver_account_balance\":0,\"sender_account_balance\":5260,\"sender_account_bic\":\"RJHIMYKL\",\"receiver_account_bic\":\"MBBEMYKL\",\"receiver_currency\":\"MYR\",\"sender_currency\":\"MYR\",\"receiver_account_currency\":\"MYR\",\"receiver_account_type\":\"\",\"sender_account_currency\":\"MYR\",\"session_id\":\"cfa8d1c3-1e14-4eca-bbc2-6befd4909329\",\"sender_correspondent_bank_country_code\":\"MY\",\"receiver_correspondent_bank_country_code\":\"MY\"}",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.171",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.17Z",
+            "@version": "1",
+            "message": "FEEDZAI: 6 print httpEntity: <{\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"created_at\":1747953366031,\"sender_id\":\"1711949863562173\",\"sender_account_id\":\"59da1cb4-610b-430b-b53a-17969e3245ef\",\"sender_account_open_date\":1712110653041,\"receiver_account_open_date\":0,\"sender_account_iban\":\"912010110359581\",\"receiver_id\":\"\",\"receiver_account_iban\":\"162263396221\",\"device_id\":\"385947\",\"sender_email\":\"sabqi5269@gmail.com\",\"sender_name\":\"WAN MOHAMAD SABQI BIN WAN ISMAIL\",\"sender_phone\":\"+60199726049\",\"receiver_bank_bic\":\"MBBEMYKL\",\"receiver_bank_country_code\":\"MY\",\"receiver_country_code\":\"MY\",\"sender_bank_country_code\":\"MY\",\"sender_country_code\":\"MY\",\"receiver_transaction_foreign_exchange_rate\":1.0,\"product_code\":\"PAY2ACCOUNT\",\"sender_transaction_amount\":204,\"sender_transaction_bank_account_number\":\"912010110359581\",\"receiver_transaction_amount\":204,\"receiver_transaction_bank_account_number\":\"162263396221\",\"receiver_name\":\"WAN MOHAMAD SABQI BI      \",\"event_occurred_at\":1747953366031,\"payment_type\":\"fps\",\"channel_type\":\"mobile\",\"payment_sub_type\":\"instant_transfer\",\"payment_status\":\"entered\",\"number_of_payments\":1,\"sender_segment\":\"retail\",\"sender_account_type\":\"svgs\",\"sender_transaction_currency\":\"MYR\",\"sender_transaction_notes\":\"Ggzggxx\",\"sender_bank_bic\":\"RJHIMYKL\",\"receiver_transaction_currency\":\"MYR\",\"receiver_segment\":\"retail\",\"direction\":\"outgoing\",\"receiver_alias\":\"\",\"receiver_alias_type\":\"\",\"sender_alias\":\"\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"sender_initiated_at\":1747953366031,\"receiver_account_balance\":0,\"sender_account_balance\":5260,\"sender_account_bic\":\"RJHIMYKL\",\"receiver_account_bic\":\"MBBEMYKL\",\"receiver_currency\":\"MYR\",\"sender_currency\":\"MYR\",\"receiver_account_currency\":\"MYR\",\"receiver_account_type\":\"\",\"sender_account_currency\":\"MYR\",\"session_id\":\"cfa8d1c3-1e14-4eca-bbc2-6befd4909329\",\"sender_correspondent_bank_country_code\":\"MY\",\"receiver_correspondent_bank_country_code\":\"MY\"},[user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\", content-length:\"1921\", x-forwarded-proto:\"http\", x-request-id:\"a242b3ee-6d37-9be4-b289-d583094c7f22\", x-envoy-expected-rq-timeout-ms:\"200000\", Authorization:\"Bearer eyJ0eXAiOiJKV1QiLCJraWQiOiI2MWEzOTAxZC05NDdhLTQ0MjYtYjIzMy01NjE3NDFmNTE1ODIiLCJhbGciOiJSUzUxMiJ9.eyJleHAiOjE3NTA1NDUzNjYsIm5iZiI6MTc0Nzk1MzM2NiwiaXNzIjoiYXJibSIsInN1YiI6ImFyYm0iLCJqdGkiOiI4NjdjMjIzZS1hY2U0LTRmOWEtYmRmNS0zNjUwMTUzNTZkMzUifQ.r64SvIOID2EALdP8axd-em9ugt1-aXDDBG2MSV1sTc9UN4cuDL9FFLeSO9w68AFSzHP-2h5rwZA8jkYoldnNmHaZnCorXRjbGrYPmMIOyIuCVBmWx5mFTNr0SZtAIF4Sr3I6iIF5IIQRZxAdMQmRS6B0UcVOljc_aHiLzMYzefxSIvK-6WKcyjaWTNGw78RxoF5Xw7BMr75WmvfWz149zP8yDsnlXvbF7-kzchhvI8pJNXd8yMDTK9o8zNDFVBDjUujMJJTCrJwJYhHON99qbBmfNrQ2kHvEfPTDN8v36gG_fzAFrI8NyF58YKKGPX8NPnILizNcXwLxtAgDn3XrV67kRG6Gwy5rZKmHSpx1FK50FW9kFvnNK1Vjcud7YMvIWOQLWxW-RhNCnlY6AV61R5c2oqn0zQI7fvsMEIjW7NxXP693R_MKgKxySQpLvKmfuEgvkJTsuC9g0xknIZQtTRIPOldgPIDZGp2c1ILsWFCosGyM9ozu-xgfES2g-i4nIFceCa_d4dohFExGMhpWGmSq4rTD2hVeSzGUYmFEAhtCb5Auf_jUs3evZSd81CqQgAHg5_5PRr8KaslHKdwvY3xo4-5b3tORVqhMvqicXWKo8aVNVqdhRK11bnnfDxw_ZhZ-D_xv93o5VAcMPEwbTvB9_ZXTnW1gV8OKFx28Ls0\"]>, uri: https://alrajhi-private.feedzai.com/api/transfers, method: POST",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.170",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.17Z",
+            "@version": "1",
+            "message": "Feedzai: 4.1 cached JWT CachedJWT(jwtToken=eyJ0eXAiOiJKV1QiLCJraWQiOiI2MWEzOTAxZC05NDdhLTQ0MjYtYjIzMy01NjE3NDFmNTE1ODIiLCJhbGciOiJSUzUxMiJ9.eyJleHAiOjE3NTA1NDUzNjYsIm5iZiI6MTc0Nzk1MzM2NiwiaXNzIjoiYXJibSIsInN1YiI6ImFyYm0iLCJqdGkiOiI4NjdjMjIzZS1hY2U0LTRmOWEtYmRmNS0zNjUwMTUzNTZkMzUifQ.r64SvIOID2EALdP8axd-em9ugt1-aXDDBG2MSV1sTc9UN4cuDL9FFLeSO9w68AFSzHP-2h5rwZA8jkYoldnNmHaZnCorXRjbGrYPmMIOyIuCVBmWx5mFTNr0SZtAIF4Sr3I6iIF5IIQRZxAdMQmRS6B0UcVOljc_aHiLzMYzefxSIvK-6WKcyjaWTNGw78RxoF5Xw7BMr75WmvfWz149zP8yDsnlXvbF7-kzchhvI8pJNXd8yMDTK9o8zNDFVBDjUujMJJTCrJwJYhHON99qbBmfNrQ2kHvEfPTDN8v36gG_fzAFrI8NyF58YKKGPX8NPnILizNcXwLxtAgDn3XrV67kRG6Gwy5rZKmHSpx1FK50FW9kFvnNK1Vjcud7YMvIWOQLWxW-RhNCnlY6AV61R5c2oqn0zQI7fvsMEIjW7NxXP693R_MKgKxySQpLvKmfuEgvkJTsuC9g0xknIZQtTRIPOldgPIDZGp2c1ILsWFCosGyM9ozu-xgfES2g-i4nIFceCa_d4dohFExGMhpWGmSq4rTD2hVeSzGUYmFEAhtCb5Auf_jUs3evZSd81CqQgAHg5_5PRr8KaslHKdwvY3xo4-5b3tORVqhMvqicXWKo8aVNVqdhRK11bnnfDxw_ZhZ-D_xv93o5VAcMPEwbTvB9_ZXTnW1gV8OKFx28Ls0, expireAt=2025-06-21T22:36:06.162503Z)",
+            "logger_name": "com.arbm.digibank.utils.JWTUtils",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.170",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.17Z",
+            "@version": "1",
+            "message": "Feedzai: 4.2 cached JWT CachedJWT(jwtToken=eyJ0eXAiOiJKV1QiLCJraWQiOiI2MWEzOTAxZC05NDdhLTQ0MjYtYjIzMy01NjE3NDFmNTE1ODIiLCJhbGciOiJSUzUxMiJ9.eyJleHAiOjE3NTA1NDUzNjYsIm5iZiI6MTc0Nzk1MzM2NiwiaXNzIjoiYXJibSIsInN1YiI6ImFyYm0iLCJqdGkiOiI4NjdjMjIzZS1hY2U0LTRmOWEtYmRmNS0zNjUwMTUzNTZkMzUifQ.r64SvIOID2EALdP8axd-em9ugt1-aXDDBG2MSV1sTc9UN4cuDL9FFLeSO9w68AFSzHP-2h5rwZA8jkYoldnNmHaZnCorXRjbGrYPmMIOyIuCVBmWx5mFTNr0SZtAIF4Sr3I6iIF5IIQRZxAdMQmRS6B0UcVOljc_aHiLzMYzefxSIvK-6WKcyjaWTNGw78RxoF5Xw7BMr75WmvfWz149zP8yDsnlXvbF7-kzchhvI8pJNXd8yMDTK9o8zNDFVBDjUujMJJTCrJwJYhHON99qbBmfNrQ2kHvEfPTDN8v36gG_fzAFrI8NyF58YKKGPX8NPnILizNcXwLxtAgDn3XrV67kRG6Gwy5rZKmHSpx1FK50FW9kFvnNK1Vjcud7YMvIWOQLWxW-RhNCnlY6AV61R5c2oqn0zQI7fvsMEIjW7NxXP693R_MKgKxySQpLvKmfuEgvkJTsuC9g0xknIZQtTRIPOldgPIDZGp2c1ILsWFCosGyM9ozu-xgfES2g-i4nIFceCa_d4dohFExGMhpWGmSq4rTD2hVeSzGUYmFEAhtCb5Auf_jUs3evZSd81CqQgAHg5_5PRr8KaslHKdwvY3xo4-5b3tORVqhMvqicXWKo8aVNVqdhRK11bnnfDxw_ZhZ-D_xv93o5VAcMPEwbTvB9_ZXTnW1gV8OKFx28Ls0, expireAt=2025-06-21T22:36:06.162503Z) After if condition",
+            "logger_name": "com.arbm.digibank.utils.JWTUtils",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.162",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.162Z",
+            "@version": "1",
+            "message": "Feedzai: 4.3 private key SunRsaSign RSA private CRT key, 4096 bits\n  params: null\n  modulus: 721633545852108218439626209489304194175429322675340535110628252423132188061877305916992530255206895803138408627755840111337939954713513275467527479729254779562237576453275204408112555263594456278174781123216163988293101593015940853563253435409556354149581941552568650227660046726696096344868108927098657032910198403264954657376531799456632801520954252698040262482141582074867157357689695310281775494922566007881118847742222499592902764700897329556327595321456107678819054590107222142824196016772671028408435922742544838399129766752309404373487130752895514603888935721753576238299162178584509465283179002608193742463155829630878570551388876487306551769804187957524802874221048934554544223302081474474314615600984435523818943600150897259659459484269876669504659933770190268907883509926484860398770015528176117156842054192841404164570798017152503108118035424635076940558341733063547537786165876904360575202711756734630994692958560997217333619557875977813178822686506020433117023386898017364577173677528949664501360969230233795774048271115070395876347265536242174245410989112242447226537296349797610026850047209350866609566028438717038405454171436576699111442081649546108798721830379629247309162808063827689357347582605908789268576540211\n  private exponent: 518941474014129548603706968994940527752167608348965074373694232394674716437557647596959594708296775749669805761897935343504368099328519266361125815831668347742324103035940111823091331873871906403010501847140616637994805758231964790692014757425835503833188081899247873973166155640057682296066177970081520473992168401780277523345569177359226807801410698924362414064129432558805167449083077502453114993060494276293227492488871998768846825420580591797918172023511984051681694672889562725928277676342817231454921290308274649265492573313846985957826494732032481007166663894144136816375501080527173147829942524282795411577330822187466983865581143226166400084445134521322605347521011025442266195034966909267448215795864817525525579704108416961368571214262019334120803836329218967410828915937446734284818332448060864535511082568579151538555491469894884024973145253895613231124270612847876068343474407247441736030972141749729368888112224801093916589176698845680008740941168172177196626848502671057665149436905454851223545930471156305559668992466024582486669812933895411963669430453633544747592846241606264123313118620446633383063700647662728196969196394826557657165742416682368915828094014604391168343553166015321681780098799312667687970530737",
+            "logger_name": "com.arbm.digibank.utils.JWTUtils",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header host",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header user-agent",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header accept",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header content-type",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header x-amzn-trace-id",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header content-length",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\", content-length:\"1921\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header x-forwarded-proto",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\", content-length:\"1921\", x-forwarded-proto:\"http\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header x-request-id",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\", content-length:\"1921\", x-forwarded-proto:\"http\", x-request-id:\"a242b3ee-6d37-9be4-b289-d583094c7f22\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.1 print header name before set header x-envoy-expected-rq-timeout-ms",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.2 headerNames: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb , & headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\", content-length:\"1921\", x-forwarded-proto:\"http\", x-request-id:\"a242b3ee-6d37-9be4-b289-d583094c7f22\", x-envoy-expected-rq-timeout-ms:\"200000\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.146",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4.3 Final Header value for feedzai: headers: [host:\"feedzai-gateway.feedzai-gateway.svc.cluster.local:8080\", user-agent:\"ReactorNetty/1.0.24\", accept:\"*/*\", content-type:\"application/json\", x-amzn-trace-id:\"Root=1-682fa6d6-9718bd432384542c53014779;Parent=4432e2c59e2f7c3f;Sampled=0\", content-length:\"1921\", x-forwarded-proto:\"http\", x-request-id:\"a242b3ee-6d37-9be4-b289-d583094c7f22\", x-envoy-expected-rq-timeout-ms:\"200000\"]",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.145",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 0.1 Initial Crr header: org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@33b09a12 , request: SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@64ba3fa7], method: POST ,body: {\"lifecycle_id\":\"4786a238-1320-456f-89fa-391f51d856c3\",\"created_at\":1747953366031,\"sender_id\":\"1711949863562173\",\"sender_account_id\":\"59da1cb4-610b-430b-b53a-17969e3245ef\",\"sender_account_open_date\":1712110653041,\"receiver_account_open_date\":0,\"sender_account_iban\":\"912010110359581\",\"receiver_id\":\"\",\"receiver_account_iban\":\"162263396221\",\"device_id\":\"385947\",\"sender_email\":\"sabqi5269@gmail.com\",\"sender_name\":\"WAN MOHAMAD SABQI BIN WAN ISMAIL\",\"sender_phone\":\"+60199726049\",\"receiver_bank_bic\":\"MBBEMYKL\",\"receiver_bank_country_code\":\"MY\",\"receiver_country_code\":\"MY\",\"sender_bank_country_code\":\"MY\",\"sender_country_code\":\"MY\",\"receiver_transaction_foreign_exchange_rate\":1.0,\"product_code\":\"PAY2ACCOUNT\",\"sender_transaction_amount\":204,\"sender_transaction_bank_account_number\":\"912010110359581\",\"receiver_transaction_amount\":204,\"receiver_transaction_bank_account_number\":\"162263396221\",\"receiver_name\":\"WAN MOHAMAD SABQI BI      \",\"event_occurred_at\":1747953366031,\"payment_type\":\"fps\",\"channel_type\":\"mobile\",\"payment_sub_type\":\"instant_transfer\",\"payment_status\":\"entered\",\"number_of_payments\":1,\"sender_segment\":\"retail\",\"sender_account_type\":\"svgs\",\"sender_transaction_currency\":\"MYR\",\"sender_transaction_notes\":\"Ggzggxx\",\"sender_bank_bic\":\"RJHIMYKL\",\"receiver_transaction_currency\":\"MYR\",\"receiver_segment\":\"retail\",\"direction\":\"outgoing\",\"receiver_alias\":\"\",\"receiver_alias_type\":\"\",\"sender_alias\":\"\",\"event_external_id\":\"27e22481-3ab8-4038-b553-25a97380db45\",\"sender_initiated_at\":1747953366031,\"receiver_account_balance\":0,\"sender_account_balance\":5260,\"sender_account_bic\":\"RJHIMYKL\",\"receiver_account_bic\":\"MBBEMYKL\",\"receiver_currency\":\"MYR\",\"sender_currency\":\"MYR\",\"receiver_account_currency\":\"MYR\",\"receiver_account_type\":\"\",\"sender_account_currency\":\"MYR\",\"session_id\":\"cfa8d1c3-1e14-4eca-bbc2-6befd4909329\",\"sender_correspondent_bank_country_code\":\"MY\",\"receiver_correspondent_bank_country_code\":\"MY\"}",
+            "logger_name": "com.arbm.digibank.controller.GatewayController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.145",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 1 request url for feedzai call /api/transfers",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.145",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 2 query string for feedzai call null",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.145",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 3 headers for feedzai call []",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.145",
+        "kubernetes.container_name": "feedzai-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.145Z",
+            "@version": "1",
+            "message": "FEEDZAI: 4 headerNames for feedzai call org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest$2@23953adb",
+            "logger_name": "com.arbm.digibank.services.FeedzaiProxyService",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "feedzai-gateway",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "528daadde1e64f17",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.135",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.135Z",
+            "@version": "1",
+            "message": "transferPayment:enrichRequest: start send to feedzai: 4786a238-1320-456f-89fa-391f51d856c3",
+            "logger_name": "com.arbm.digibank.services.TransferMonitoringServicesImpl",
+            "thread_name": "reactor-http-epoll-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.134",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.134Z",
+            "@version": "1",
+            "message": "Call to Deposit Account Balance Service API endpoint: /accounts-balances/59da1cb4-610b-430b-b53a-17969e3245ef with method: GET succeeded with status code 200: OK in totalTime: 71 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.073",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.072Z",
+            "@version": "1",
+            "message": "Call to Revelock Service API endpoint: /v1/customers/1711949863562173/devices/385947/session with method: GET succeeded with status code 200: OK in totalTime: 8 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.063",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.063Z",
+            "@version": "1",
+            "message": "Retrieving revelock session information with customerId: 1711949863562173 - deviceId: 385947",
+            "logger_name": "com.arbm.digibank.external.RevelockApiClient",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.062",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.061Z",
+            "@version": "1",
+            "message": "Call to Deposit Account Service API endpoint: /customer-accounts/1711949863562173/accounts with method: GET succeeded with status code 200: OK in totalTime: 7 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.053",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.053Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customerActiveDevice/1711949863562173 with method: GET succeeded with status code 200: OK in totalTime: 5 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.047",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.047Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customerLazy/1711949863562173 with method: GET succeeded with status code 200: OK in totalTime: 11 ms",
+            "logger_name": "com.arbm.digibank.utils.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.036",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.035Z",
+            "@version": "1",
+            "message": ">>>>>>>>>>>>START TRANSFER INITIATION <<<<<<<<<",
+            "logger_name": "com.arbm.digibank.controller.TransferMonitoringController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.036",
+        "kubernetes.container_name": "transfer-monitoring-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.035Z",
+            "@version": "1",
+            "message": "START transferPayment>>requestDto",
+            "logger_name": "com.arbm.digibank.controller.TransferMonitoringController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "transfer-monitoring-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "69097baf6b08ce5c",
+            "bc": "framl"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.031",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.031Z",
+            "@version": "1",
+            "message": "enrichment Details : PaymentProspectEnrichmentDetails(customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountNumber=912010110359581, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef)",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.031",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.031Z",
+            "@version": "1",
+            "message": "To payment entity PaymentEntity(internalRequestId=7d30143b-329c-4cdd-9e37-97ee3b9a0fd9, externalRequestId=null, businessMessageId=null, customerId=1711949863562173, smeId=null, amount=2.04, denomination=MYR, otherSideAccountNumber=162263396221, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=WAN MOHAMAD SABQI BI      , customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerAccountType=SVGS, customerAccountId=59da1cb4-610b-430b-b53a-17969e3245ef, customerAccountNumber=912010110359581, transactionId=null, tmCreatedAt=null, paymentStatus=PROSPECT, tmStatus=null, transferType=DEBIT, otherSideExternalId=null, paymentType=PAY2ACCOUNT, recipientReference=Ggzggxx, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.031",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.031Z",
+            "@version": "1",
+            "message": "PaymentFraml Request: class TransferInitiationRequestV1 {\n    lifecycleId: 4786a238-1320-456f-89fa-391f51d856c3\n    paymentType: fps\n    channelType: mobile\n    paymentSubType: instant_transfer\n    paymentStatus: PROSPECT\n    createdAt: 1747953366031\n    numberOfPayments: 1\n    senderId: 1711949863562173\n    senderSmeId: null\n    receiverId: \n    receiverSmeId: null\n    senderSegment: retail\n    senderAccountType: svgs\n    receiverAccountType: \n    senderTransactionAmount: 2.04\n    senderTransactionCurrency: MYR\n    senderTransactionBankAccountNumber: 912010110359581\n    senderTransactionNotes: Ggzggxx\n    senderBankBic: RJHIMYKL\n    receiverTransactionAmount: 2.04\n    receiverTransactionCurrency: MYR\n    receiverTransactionBankAccountNumber: 162263396221\n    receiverSegment: retail\n    receiverName: WAN MOHAMAD SABQI BI      \n    otherSideName: null\n    direction: outgoing\n    eventOccurredAt: 1747953366031\n    textForReceiver: null\n    productCode: PAY2ACCOUNT\n    receiverBankBic: MBBEMYKL\n    receiverBankCountryCode: MY\n    receiverCountryCode: MY\n    senderBankCountryCode: MY\n    senderCountryCode: MY\n    receiverTransactionForeignExchangeRate: 1\n    receiverAlias: \n    receiverAliasType: \n    senderAlias: \n    eventExternalId: \n    receiverAliasLastUpdateTime: null\n    senderAliasLastUpdateTime: null\n    senderAliasRegistrationTime: null\n}",
+            "logger_name": "com.arbm.digibank.service.client.FramlTransfersService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.030",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.03Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1711949863562173/customerIft with method: GET succeeded with status code 200: OK in totalTime: 11 ms",
+            "logger_name": "com.arbm.digibank.filter.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.029",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.029Z",
+            "@version": "1",
+            "message": "Call to Account Deposit API endpoint: /customer-accounts/1711949863562173/accounts with method: GET succeeded with status code 200: OK in totalTime: 11 ms",
+            "logger_name": "com.arbm.digibank.filter.AccountDepositApiFilter",
+            "thread_name": "reactor-http-epoll-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.028",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.028Z",
+            "@version": "1",
+            "message": "response for customerIft:  GetCustomerIFTResponse(customerId=1711949863562173, customerName= WAN MOHAMAD SABQI BIN WAN ISMAIL, customerDPName=Qey Prod p)",
+            "logger_name": "com.arbm.digibank.service.CustomerQueryService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "de144cc560fd4a5e",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.021",
+        "kubernetes.container_name": "customer-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.021Z",
+            "@version": "1",
+            "message": "Customer Id: 1711949863562173",
+            "logger_name": "com.arbm.digibank.controller.CustomerController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "customer-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "de144cc560fd4a5e",
+            "bc": "customers"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.018",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.018Z",
+            "@version": "1",
+            "message": "[7d30143b-329c-4cdd-9e37-97ee3b9a0fd9] Fetching customer name from customer API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.018",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.018Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1711949863562173]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.017",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.017Z",
+            "@version": "1",
+            "message": "[7d30143b-329c-4cdd-9e37-97ee3b9a0fd9] Fetching customer account number from deposit API ...",
+            "logger_name": "com.arbm.digibank.service.EnrichableProspectService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.017",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.017Z",
+            "@version": "1",
+            "message": "Retrieving account information from saving-account-service. Customer ID: 1711949863562173",
+            "logger_name": "com.arbm.digibank.service.client.DepositAccountInfoService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.016",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.016Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.authorization.CustomerBlockRepository.findActiveBlocksByCustomerIdAndTransactionType(String,String,Instant)\n parameters: [1711949863562173, PAY_TO_ACCOUNT, 2025-05-22T22:36:06.012751Z]\n totalTime: 3 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:36:06.010",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:36:06.01Z",
+            "@version": "1",
+            "message": "Received reviewable account payment prospect request request with ID: 7d30143b-329c-4cdd-9e37-97ee3b9a0fd9",
+            "logger_name": "com.arbm.digibank.controller.PayToAccountRequestsController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682fa6d69718bd432384542c53014779",
+            "spanId": "2384542c53014779",
+            "bc": "payments"
+        }
+    }
+]

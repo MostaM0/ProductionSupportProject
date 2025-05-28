@@ -139,8 +139,8 @@
 
 	- The ETB elligibility found the prospect existing in the bank.
 	
-- The steps are generated dynamically, for example when we tried to bypass jumio on the onboarding we needed to delete steps for them to be generated gain.
-- There was an issue in case of ETB mobile mismatsh, when they fail Jumio liveness check it never changes to FAIL, keep an eye for that (this was solved, now it displays as FAILED).
+- The steps are generated dynamically, for example when we tried to bypass Jumio on the onboarding we needed to delete steps for them to be generated gain.
+- There was an issue in case of ETB mobile mismatch, when they fail Jumio liveness check it never changes to FAIL, keep an eye for that (this was solved, now it displays as FAILED).
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Online Banking e-Wallet (OBW-CA)
 - We display a list of banks the user can use to top up their account, and depending on the chosen bank, it opens in-app browser for this bank where you enter the data required to proceed with debiting the customer account in that bank.

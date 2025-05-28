@@ -1,0 +1,429 @@
+[
+    {
+        "@timestamp": "2025-05-22 21:45:30.276",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.275Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=null, externalRequestId=I20250523MBBEMYKL010ORM05216429, businessMessageId=20250523MBBEMYKL01005216429, customerId=1695435462398514, smeId=null, amount=541.00, denomination=MYR, otherSideAccountNumber=564566301449, otherSideBankCode=MBBEMYKL, otherSideAccountType=CACC, otherSideName=WORKSAFE CONSULTANCY, customerName=NUR MARDHIAH BINTI MOHD ASHAR, customerAccountType=SVGS, customerAccountId=a9cf70d9-0cc4-4e3f-9000-5392529f42dd, customerAccountNumber=912010110183049, transactionId=0d319741-6cf3-4116-896a-483bb3678d77, tmCreatedAt=2025-05-22T21:45:30.115401Z, paymentStatus=COMPLETED, tmStatus=ACCEPTED, transferType=CREDIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=LOCUM 20 MAY, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 5 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.276",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.276Z",
+            "@version": "1",
+            "message": "publishing TM Status",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentStatusHandlerService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.270",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.27Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL010ORM05216429]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.270",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.27Z",
+            "@version": "1",
+            "message": "Updated TM Status",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentStatusHandlerService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.267",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.266Z",
+            "@version": "1",
+            "message": "sending notification with template {\"customerId\": \"1695435462398514\", \"notificationId\": \"13a874c4-d3ce-4826-a5e4-de890b44d2c4\", \"templateName\": \"CREDIT_TRANSFER_RECEIVED\", \"placeholders\": [{\"name\": \"amount\", \"value\": \"541.00\"}, {\"name\": \"accountNumberSuffix\", \"value\": \"3049\"}, {\"name\": \"timestamp\", \"value\": \"23 May 2025 05:45:30\"}, {\"name\": \"digibank\", \"value\": \"MY alrajhi\"}]}.",
+            "logger_name": "com.arbm.digibank.producer.NotificationProducer",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.266",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.266Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=null, externalRequestId=I20250523MBBEMYKL010ORM05216429, businessMessageId=20250523MBBEMYKL01005216429, customerId=1695435462398514, smeId=null, amount=541.00, denomination=MYR, otherSideAccountNumber=564566301449, otherSideBankCode=MBBEMYKL, otherSideAccountType=CACC, otherSideName=WORKSAFE CONSULTANCY, customerName=NUR MARDHIAH BINTI MOHD ASHAR, customerAccountType=SVGS, customerAccountId=a9cf70d9-0cc4-4e3f-9000-5392529f42dd, customerAccountNumber=912010110183049, transactionId=0d319741-6cf3-4116-896a-483bb3678d77, tmCreatedAt=2025-05-22T21:45:30.115401Z, paymentStatus=COMPLETED, tmStatus=null, transferType=CREDIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=LOCUM 20 MAY, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 5 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.260",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.259Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL010ORM05216429]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.260",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.26Z",
+            "@version": "1",
+            "message": "Updating payment with external request id I20250523MBBEMYKL010ORM05216429 to status COMPLETED, enriched with TM data",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentStatusHandlerService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.257",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.257Z",
+            "@version": "1",
+            "message": "Retrieved payment status from TM: CbsPaymentResult(transactionId=0d319741-6cf3-4116-896a-483bb3678d77, payeeAccountId=a9cf70d9-0cc4-4e3f-9000-5392529f42dd, amount=541, denomination=MYR, createdAt=2025-05-22T21:45:30.115401Z, status=ACCEPTED)",
+            "logger_name": "com.arbm.digibank.service.vault.TmPostingService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.235",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.235Z",
+            "@version": "1",
+            "message": "Get posting instruction batches based on clientBatchId: I20250523MBBEMYKL010ORM05216429",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.013",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.013Z",
+            "@version": "1",
+            "message": "TM Posting creation result: CreatePostingInstructionBatchResponse(id=89985369-d135-494b-9e17-e5265434744a, createTimestamp=2025-05-22T21:45:29.971340Z, doneTimestamp=null, done=false) ",
+            "logger_name": "com.arbm.digibank.service.vault.TmPostingService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:30.013",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:30.013Z",
+            "@version": "1",
+            "message": "Get posting instruction batches based on clientBatchId: I20250523MBBEMYKL010ORM05216429",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.923",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.922Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Optional org.springframework.data.repository.CrudRepository.findById(Object)\n parameters: [1695435462398514]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.923",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.923Z",
+            "@version": "1",
+            "message": "About to register posting instruction batch from request: CreatePostingInstructionBatchRequest(requestId=I20250523MBBEMYKL010ORM05216429, postingInstructionBatch=PostingInstructionBatch(clientId=payments, clientBatchId=I20250523MBBEMYKL010ORM05216429, postingInstructions=[PostingInstruction(clientTransactionId=0d319741-6cf3-4116-896a-483bb3678d77, inboundHardSettlement=HardSettlement(amount=541.00, denomination=MYR, internalAccountId=PAYNET_RPP_SETTLEMENT, targetAccount=TargetAccount(paymentDeviceToken=null, accountId=a9cf70d9-0cc4-4e3f-9000-5392529f42dd), targetAccountId=null), outboundHardSettlement=null, instructionDetails={busMsgId=20250523MBBEMYKL01005216429, transferType=5, dbtracctTpPrtry=CACC, cdtracctTpPrtry=SVGS, paymentType=DUITNOW_ACC, PAYMENT_TYPE=duitnow_acc_interbank, PAYMENT_CATEGORY=cat_duitnow_acc_proxy}, override=null)], status=null, insertionTimestamp=null, batchDetails={original_posting_client_batch_id=I20250523MBBEMYKL010ORM05216429}))",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.920",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.92Z",
+            "@version": "1",
+            "message": "Created payment with external request id I20250523MBBEMYKL010ORM05216429 with status CREATED",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.919",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.919Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=null, externalRequestId=I20250523MBBEMYKL010ORM05216429, businessMessageId=20250523MBBEMYKL01005216429, customerId=1695435462398514, smeId=null, amount=541.00, denomination=MYR, otherSideAccountNumber=564566301449, otherSideBankCode=MBBEMYKL, otherSideAccountType=CACC, otherSideName=WORKSAFE CONSULTANCY, customerName=NUR MARDHIAH BINTI MOHD ASHAR, customerAccountType=SVGS, customerAccountId=a9cf70d9-0cc4-4e3f-9000-5392529f42dd, customerAccountNumber=912010110183049, transactionId=null, tmCreatedAt=null, paymentStatus=CREATED, tmStatus=null, transferType=CREDIT, otherSideExternalId=, paymentType=PAY2ACCOUNT, recipientReference=LOCUM 20 MAY, paymentDetails=null, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 6 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.913",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.913Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL010ORM05216429]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.910",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.91Z",
+            "@version": "1",
+            "message": "Call to Customer Service API endpoint: /customer-service/v1/customers/1695435462398514 with method: GET succeeded with status code 200: OK in totalTime: 30 ms",
+            "logger_name": "com.arbm.digibank.filter.BasicExternalApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.880",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.88Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.payment.PaymentRepository.findIfReversalExists(String,BigDecimal,String,String,Instant,String,String)\n parameters: [564566301449, 541.00, MBBEMYKL, WORKSAFE CONSULTANCY, 2025-05-22T21:44:54.875888Z, I20250523MBBEMYKL010ORM05216429, 20250523MBBEMYKL01005216429]\n totalTime: 5 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.880",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.88Z",
+            "@version": "1",
+            "message": "Processing payment with transferType=CREDIT",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.880",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.88Z",
+            "@version": "1",
+            "message": "Retrieving customer information from customer-service. CustomerId: [1695435462398514]",
+            "logger_name": "com.arbm.digibank.service.client.CustomerInfoService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.875",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.875Z",
+            "@version": "1",
+            "message": "Call to Account Deposit API endpoint: /saving-accounts with method: GET succeeded with status code 200: OK in totalTime: 5 ms",
+            "logger_name": "com.arbm.digibank.filter.AccountDepositApiFilter",
+            "thread_name": "reactor-http-epoll-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.870",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.869Z",
+            "@version": "1",
+            "message": "[null Processing interbankPayment",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.870",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.87Z",
+            "@version": "1",
+            "message": "Retrieving account information from saving-account-service. Account number: 912010110183049",
+            "logger_name": "com.arbm.digibank.service.client.DepositAccountInfoService",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.860",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.86Z",
+            "@version": "1",
+            "message": "Call to Account Deposit API endpoint: /saving-accounts with method: GET succeeded with status code 200: OK in totalTime: 7 ms",
+            "logger_name": "com.arbm.digibank.filter.AccountDepositApiFilter",
+            "thread_name": "reactor-http-epoll-2",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 21:45:29.852",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T21:45:29.852Z",
+            "@version": "1",
+            "message": "Registering incoming payment for externalRequestId I20250523MBBEMYKL010ORM05216429",
+            "logger_name": "com.arbm.digibank.controller.PaymentsController",
+            "thread_name": "http-nio-8080-exec-6",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9af915e50ab632a87d9163fc2507",
+            "spanId": "89e6ea52c8e06b04",
+            "bc": "payments"
+        }
+    }
+]

@@ -108,6 +108,8 @@
 - Inside the "May Production Deployment" you can find "Assemble Account Number Code" this is a kotlin function I wrote you can use to assemble account number based on the four parts.
 - You can notice any RBS request log always starts with "AXIS Request" and similarly RBS response start with "AXIS Response". You will also find "Response Retrieved from Method: xxxx with rqUID: xxxxx" log, very useful.
 - In account inquiry, you can see the balance in both "ledgarAcctBal" and "availableAcctBal" fields.
+- We get all the cards now from CardWorks directly as a customer, it was said that the customer will always has one card, it's to be confirmed with the bank.
+- We mapped the CardWorks status “2”, which means not activated to be in Rize Db “DELIVERED” to enable the customer to initiate the Card activation flow.
 
 
 ## Caching System
@@ -161,13 +163,13 @@ The cache.ttl flag is found at the application.yaml files
 
   2- Both transaction-service and transaction limit service have a set of tables (specifically the ones that start with bo and other ones) that are duplicates of each other, any change that happens in one is reflected directly on another by communicating this update through Kafka messages. The reason behind this is to avoid communication between both microservices as the data they need from each other is huge.
 - The normal cooling-off record for changing the limit can be found on the customer-restriction-service blocks table, but the new kind of cooling-off, the one related to using the effective limit, is in a table in customer-limit-service.
-- 
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Onboarding (Branch ETB with NRIC)
 
 - There was a critical issue during regression where during syncing the prospect customer data with the customer service data in the very end, the Rize email was not saved in the database before sending the Kafka message that syncs the data. This means the email will always be null on the customer database and any other flow that depends on it will always fail.
-
+- The issue was solved by only triggering the sync process to happen only after the email has successfully been saved on the Rize database and using an "outbox", which is basically like a cache fo the custoemr data in case it was not synced properly, there is a job that gets triggered every half a minute that checks if this table has data or not, if it does, it syncs the customer data.
+- The "outbox" is there in case anything happened that prevented the customer syncing process.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------

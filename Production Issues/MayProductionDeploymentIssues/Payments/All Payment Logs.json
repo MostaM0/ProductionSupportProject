@@ -1,0 +1,547 @@
+[
+    {
+        "@timestamp": "2025-05-22 22:04:48.694",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:48.693Z",
+            "@version": "1",
+            "message": "[I20250523MBBEMYKL040OQR75216275] Posting send to Postings Service.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "682f9f7fe056f525269fa15006e7774d",
+            "spanId": "440345bfe4e48cc7",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.567",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.567Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"87df989f-1876-4d0e-995c-c7f8d4477981\", \"internalRequestId\": null, \"externalRequestId\": \"I20250523MBBEMYKL040OQR75216275\", \"customerId\": \"1688000036356458\", \"amount\": \"6.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"912010110102783\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"MOHAMAD IQBAL SHAHIRAN BI\", \"otherSideAccountType\": \"SVGS\", \"customerName\": \"NUR HAMIZAH BINTI MD HISHAM\", \"customerAccountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110102783\", \"transactionId\": \"0f8a5f5d-c1a9-4f4a-9163-148ecc842436\", \"tmCreatedAt\": \"2025-05-22T22:04:46.978665Z\", \"paymentStatus\": \"COMPLETED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"ACCEPTED\", \"transferType\": \"QR_CREDIT\", \"paymentType\": \"PAY2QR_P2P\", \"createdAt\": \"2025-05-22T22:04:46.546076Z\", \"updatedAt\": \"2025-05-22T22:04:47.450Z\", \"version\": \"2\", \"recipientReference\": \"75216275\", \"paymentDetails\": \"DuitQR P2P Transfer\", \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250523MBBEMYKL04075216275\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "64b9e50d3e767c40",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.474",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.474Z",
+            "@version": "1",
+            "message": "Payment processed with following result: ProcessedRetailPayment(externalRequestId=I20250523MBBEMYKL040OQR75216275, fisInternalReferenceNumber=null, failureReason=null)",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "4bd9ff5eb9387e42",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.456",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.455Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=null, externalRequestId=I20250523MBBEMYKL040OQR75216275, businessMessageId=20250523MBBEMYKL04075216275, customerId=1688000036356458, smeId=null, amount=6.00, denomination=MYR, otherSideAccountNumber=912010110102783, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=MOHAMAD IQBAL SHAHIRAN BI, customerName=NUR HAMIZAH BINTI MD HISHAM, customerAccountType=SVGS, customerAccountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba, customerAccountNumber=912010110102783, transactionId=0f8a5f5d-c1a9-4f4a-9163-148ecc842436, tmCreatedAt=2025-05-22T22:04:46.978665Z, paymentStatus=COMPLETED, tmStatus=ACCEPTED, transferType=QR_CREDIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=75216275, paymentDetails=DuitQR P2P Transfer, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 9 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.446",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.446Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL040OQR75216275]\n totalTime: 2 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.446",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.446Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"87df989f-1876-4d0e-995c-c7f8d4477981\", \"internalRequestId\": null, \"externalRequestId\": \"I20250523MBBEMYKL040OQR75216275\", \"customerId\": \"1688000036356458\", \"amount\": \"6.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"912010110102783\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"MOHAMAD IQBAL SHAHIRAN BI\", \"otherSideAccountType\": \"SVGS\", \"customerName\": \"NUR HAMIZAH BINTI MD HISHAM\", \"customerAccountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110102783\", \"transactionId\": \"0f8a5f5d-c1a9-4f4a-9163-148ecc842436\", \"tmCreatedAt\": \"2025-05-22T22:04:46.978665Z\", \"paymentStatus\": \"COMPLETED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"null\", \"transferType\": \"QR_CREDIT\", \"paymentType\": \"PAY2QR_P2P\", \"createdAt\": \"2025-05-22T22:04:46.546076Z\", \"updatedAt\": \"2025-05-22T22:04:47.195Z\", \"version\": \"1\", \"recipientReference\": \"75216275\", \"paymentDetails\": \"DuitQR P2P Transfer\", \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250523MBBEMYKL04075216275\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "47fcdf88810bd769",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.404",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.403Z",
+            "@version": "1",
+            "message": "Consuming batch with id=I20250523MBBEMYKL040OQR75216275",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "682f9f7fe056f525269fa15006e7774d",
+            "spanId": "440345bfe4e48cc7",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.404",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.403Z",
+            "@version": "1",
+            "message": "Batch={\"postingInstructionBatch\": {\"id\": \"e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f\", \"createRequestId\": \"I20250523MBBEMYKL040OQR75216275\", \"clientId\": \"payments\", \"clientBatchId\": \"I20250523MBBEMYKL040OQR75216275\", \"postingInstructions\": [{\"id\": \"a7cd8fd9-732a-45c7-ba89-61cb5c22e297\", \"clientTransactionId\": \"0f8a5f5d-c1a9-4f4a-9163-148ecc842436\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_qr\", \"busMsgId\": \"20250523MBBEMYKL04075216275\", \"transferType\": \"7\", \"dbtracctTpPrtry\": \"SVGS\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_QR_P2P\"}, \"committedPostings\": [{\"credit\": true, \"amount\": \"6\", \"denomination\": \"MYR\", \"accountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110102783\", \"customerId\": \"1688000036356458\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": false, \"amount\": \"6\", \"denomination\": \"MYR\", \"accountId\": \"PAYNET_RPP_SETTLEMENT\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110102783\", \"customerId\": \"1688000036356458\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DUITNOW_DUMMY_SETTLEMENT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": {\"amount\": \"6\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"PAYNET_RPP_SETTLEMENT\", \"advice\": false, \"targetAccountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\"}, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"2505231mu6n35i\", \"glEvent\": \"DUITNOW_IN_QR\"}], \"batchDetails\": {\"original_posting_client_batch_id\": \"I20250523MBBEMYKL040OQR75216275\"}, \"valueTimestamp\": \"2025-05-22T22:04:46.978Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-05-22T22:04:46.978Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250523\"}, \"technicalMetadata\": {\"eventId\": \"event_e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f\", \"captureTimestamp\": \"2025-05-22T22:04:47.008Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "682f9f7fe056f525269fa15006e7774d",
+            "spanId": "440345bfe4e48cc7",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.403",
+        "kubernetes.container_name": "oracle-fah-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.403Z",
+            "@version": "1",
+            "message": "[I20250523MBBEMYKL040OQR75216275] Received PostingInstructionBatch: {\"postingInstructionBatch\": {\"id\": \"e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f\", \"createRequestId\": \"I20250523MBBEMYKL040OQR75216275\", \"clientId\": \"payments\", \"clientBatchId\": \"I20250523MBBEMYKL040OQR75216275\", \"postingInstructions\": [{\"id\": \"a7cd8fd9-732a-45c7-ba89-61cb5c22e297\", \"clientTransactionId\": \"0f8a5f5d-c1a9-4f4a-9163-148ecc842436\", \"pics\": [], \"instructionDetails\": {\"PAYMENT_TYPE\": \"duitnow_qr\", \"busMsgId\": \"20250523MBBEMYKL04075216275\", \"transferType\": \"7\", \"dbtracctTpPrtry\": \"SVGS\", \"cdtracctTpPrtry\": \"SVGS\", \"paymentType\": \"DUITNOW_QR_P2P\"}, \"committedPostings\": [{\"credit\": true, \"amount\": \"6\", \"denomination\": \"MYR\", \"accountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110102783\", \"customerId\": \"1688000036356458\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"CUSTOMER_CMSA\"}, {\"credit\": false, \"amount\": \"6\", \"denomination\": \"MYR\", \"accountId\": \"PAYNET_RPP_SETTLEMENT\", \"accountAddress\": \"DEFAULT\", \"asset\": \"COMMERCIAL_BANK_MONEY\", \"phase\": \"POSTING_PHASE_COMMITTED\", \"accountNumber\": \"912010110102783\", \"customerId\": \"1688000036356458\", \"accountType\": \"SAVINGS_ACCOUNT\", \"glAccount\": \"DUITNOW_DUMMY_SETTLEMENT\"}], \"postingViolations\": [], \"accountViolations\": [], \"restrictionViolations\": [], \"contractViolations\": [], \"override\": {\"all\": false, \"restrictions\": {\"all\": false, \"restrictionSetIds\": []}}, \"transactionCode\": null, \"outboundAuthorisation\": null, \"customInstruction\": null, \"inboundAuthorisation\": null, \"authorisationAdjustment\": null, \"settlement\": null, \"release\": null, \"inboundHardSettlement\": {\"amount\": \"6\", \"denomination\": \"MYR\", \"targetAccount\": {\"accountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\"}, \"targetDeviceToken\": null, \"accountId\": null, \"internalAccountId\": \"PAYNET_RPP_SETTLEMENT\", \"advice\": false, \"targetAccountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\"}, \"outboundHardSettlement\": null, \"transfer\": null, \"glTransactionId\": \"2505231mu6n35i\", \"glEvent\": \"DUITNOW_IN_QR\"}], \"batchDetails\": {\"original_posting_client_batch_id\": \"I20250523MBBEMYKL040OQR75216275\"}, \"valueTimestamp\": \"2025-05-22T22:04:46.978Z\", \"status\": \"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\", \"insertionTimestamp\": \"2025-05-22T22:04:46.978Z\", \"dryRun\": false, \"error\": null, \"glDate\": \"20250523\"}, \"technicalMetadata\": {\"eventId\": \"event_e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f\", \"captureTimestamp\": \"2025-05-22T22:04:47.008Z\", \"vaultVersion\": {\"major\": 4, \"minor\": 6, \"patch\": 28, \"label\": \"\"}, \"context\": {}}, \"updateMask\": {\"paths\": [\"posting_instruction_batch\", \"technical_metadata\"]}}.",
+            "logger_name": "com.arbm.digibank.kafka.PostingInstructionBatchListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "oracle-fah-gateway",
+            "traceId": "682f9f7fe056f525269fa15006e7774d",
+            "spanId": "440345bfe4e48cc7",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.292",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.292Z",
+            "@version": "1",
+            "message": "Posting enriched, posting=PostingInstructionBatch(postingInstructionBatch=InstructionBatch(id=e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f, createRequestId=I20250523MBBEMYKL040OQR75216275, clientId=payments, clientBatchId=I20250523MBBEMYKL040OQR75216275, postingInstructions=[PostingInstructions(id=a7cd8fd9-732a-45c7-ba89-61cb5c22e297, clientTransactionId=0f8a5f5d-c1a9-4f4a-9163-148ecc842436, pics=[], instructionDetails=InstructionDetails(data={PAYMENT_TYPE=duitnow_qr, busMsgId=20250523MBBEMYKL04075216275, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=SVGS, paymentType=DUITNOW_QR_P2P, transferType=7}), committedPostings=[CommittedPosting(credit=true, amount=6, denomination=MYR, accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110102783, customerId=1688000036356458, accountType=SAVINGS_ACCOUNT, glAccount=CUSTOMER_CMSA), CommittedPosting(credit=false, amount=6, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED, accountNumber=912010110102783, customerId=1688000036356458, accountType=SAVINGS_ACCOUNT, glAccount=DUITNOW_DUMMY_SETTLEMENT)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObject(all=false, restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, customInstruction=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=InboundHardSettlement(amount=6, denomination=MYR, targetAccount=TargetAccount(accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba), accountId=null, internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false, targetAccountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba), outboundHardSettlement=null, transfer=null, glTransactionId=2505231mu6n35i, glEvent=DUITNOW_IN_QR)], batchDetails={original_posting_client_batch_id=I20250523MBBEMYKL040OQR75216275}, valueTimestamp=2025-05-22T22:04:46.978665Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, insertionTimestamp=2025-05-22T22:04:46.978665Z, dryRun=false, error=null, glDate=20250523), technicalMetadata=TechnicalMetadata(eventId=event_e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f, captureTimestamp=2025-05-22T22:04:47.008859291Z, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=UpdateMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "682f9f7f7699a1a83cd516380b604c23",
+            "spanId": "fbc92e607875c263",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.291",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.291Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"87df989f-1876-4d0e-995c-c7f8d4477981\", \"internalRequestId\": null, \"externalRequestId\": \"I20250523MBBEMYKL040OQR75216275\", \"customerId\": \"1688000036356458\", \"amount\": \"6.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"912010110102783\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"MOHAMAD IQBAL SHAHIRAN BI\", \"otherSideAccountType\": \"SVGS\", \"customerName\": \"NUR HAMIZAH BINTI MD HISHAM\", \"customerAccountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110102783\", \"transactionId\": \"0f8a5f5d-c1a9-4f4a-9163-148ecc842436\", \"tmCreatedAt\": \"2025-05-22T22:04:46.978665Z\", \"paymentStatus\": \"COMPLETED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"null\", \"transferType\": \"QR_CREDIT\", \"paymentType\": \"PAY2QR_P2P\", \"createdAt\": \"2025-05-22T22:04:46.546076Z\", \"updatedAt\": \"2025-05-22T22:04:47.195Z\", \"version\": \"1\", \"recipientReference\": \"75216275\", \"paymentDetails\": \"DuitQR P2P Transfer\", \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250523MBBEMYKL04075216275\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "cc011b7b9c912aac",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.256",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.255Z",
+            "@version": "1",
+            "message": "Lock I20250523MBBEMYKL040OQR75216275 acquired",
+            "logger_name": "com.arbm.digibank.service.DuplicationDetectionService",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "682f9f7f7699a1a83cd516380b604c23",
+            "spanId": "fbc92e607875c263",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.248",
+        "kubernetes.container_name": "posting-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.248Z",
+            "@version": "1",
+            "message": "Processing new posting, posting={\"posting_instruction_batch\":{\"id\":\"e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f\",\"create_request_id\":\"I20250523MBBEMYKL040OQR75216275\",\"client_id\":\"payments\",\"client_batch_id\":\"I20250523MBBEMYKL040OQR75216275\",\"posting_instructions\":[{\"id\":\"a7cd8fd9-732a-45c7-ba89-61cb5c22e297\",\"client_transaction_id\":\"0f8a5f5d-c1a9-4f4a-9163-148ecc842436\",\"pics\":[],\"instruction_details\":{\"PAYMENT_TYPE\":\"duitnow_qr\",\"busMsgId\":\"20250523MBBEMYKL04075216275\",\"cdtracctTpPrtry\":\"SVGS\",\"dbtracctTpPrtry\":\"SVGS\",\"paymentType\":\"DUITNOW_QR_P2P\",\"transferType\":\"7\"},\"committed_postings\":[{\"credit\":true,\"amount\":\"6\",\"denomination\":\"MYR\",\"account_id\":\"a88f8e25-051b-4b0e-8c28-5a98ca588dba\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"},{\"credit\":false,\"amount\":\"6\",\"denomination\":\"MYR\",\"account_id\":\"PAYNET_RPP_SETTLEMENT\",\"account_address\":\"DEFAULT\",\"asset\":\"COMMERCIAL_BANK_MONEY\",\"phase\":\"POSTING_PHASE_COMMITTED\"}],\"posting_violations\":[],\"account_violations\":[],\"restriction_violations\":[],\"contract_violations\":[],\"override\":{\"all\":false,\"restrictions\":{\"all\":false,\"restriction_set_ids\":[]}},\"transaction_code\":null,\"outbound_authorisation\":null,\"custom_instruction\":null,\"inbound_authorisation\":null,\"authorisation_adjustment\":null,\"settlement\":null,\"release\":null,\"inbound_hard_settlement\":{\"amount\":\"6\",\"denomination\":\"MYR\",\"target_account\":{\"account_id\":\"a88f8e25-051b-4b0e-8c28-5a98ca588dba\"},\"account_id\":null,\"internal_account_id\":\"PAYNET_RPP_SETTLEMENT\",\"advice\":false,\"target_account_id\":\"a88f8e25-051b-4b0e-8c28-5a98ca588dba\"},\"outbound_hard_settlement\":null,\"transfer\":null}],\"batch_details\":{\"original_posting_client_batch_id\":\"I20250523MBBEMYKL040OQR75216275\"},\"value_timestamp\":\"2025-05-22T22:04:46.978665Z\",\"status\":\"POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED\",\"insertion_timestamp\":\"2025-05-22T22:04:46.978665Z\",\"dry_run\":false,\"error\":null},\"technical_metadata\":{\"event_id\":\"event_e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f\",\"capture_timestamp\":\"2025-05-22T22:04:47.008859291Z\",\"vault_version\":{\"major\":4,\"minor\":6,\"patch\":28,\"label\":\"\"},\"context\":{}},\"update_mask\":{\"paths\":[\"posting_instruction_batch\",\"technical_metadata\"]}}",
+            "logger_name": "com.arbm.digibank.service.PostingInstructionListener",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "posting-service",
+            "traceId": "682f9f7f7699a1a83cd516380b604c23",
+            "spanId": "fbc92e607875c263",
+            "bc": "glrr"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.248",
+        "kubernetes.container_name": "deposit-transfer-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.247Z",
+            "@version": "1",
+            "message": "Received event with posting instruction batch: PostingInstructionBatchCreatedEvent(postingInstructionBatch=PostingInstructionBatch(id=e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f, createRequestId=I20250523MBBEMYKL040OQR75216275, clientId=payments, clientBatchId=I20250523MBBEMYKL040OQR75216275, postingInstructions=[PostingInstruction(id=a7cd8fd9-732a-45c7-ba89-61cb5c22e297, clientTransactionId=0f8a5f5d-c1a9-4f4a-9163-148ecc842436, pics=[], instructionDetails={PAYMENT_TYPE=duitnow_qr, busMsgId=20250523MBBEMYKL04075216275, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=SVGS, paymentType=DUITNOW_QR_P2P, transferType=7}, committedPostings=[Posting(credit=true, amount=6, denomination=MYR, accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), Posting(credit=false, amount=6, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObj(restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=ExternalPostingInstruction(amount=6, denomination=MYR, targetAccount=Account(paymentDeviceToken=null, accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba), internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false), outboundHardSettlement=null, transfer=null, customInstruction=null)], batchDetails={original_posting_client_batch_id=I20250523MBBEMYKL040OQR75216275}, valueTimestamp=2025-05-22T22:04:46.978665Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, error=null, insertionTimestamp=2025-05-22T22:04:46.978665Z, dryRun=false), technicalMetadata=TechnicalMetadata(eventId=event_e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f, timestamp=null, vaultVersion=VaultVersion(major=4, minor=6, patch=28, label=), context={}), updateMask=FieldMask(paths=[posting_instruction_batch, technical_metadata]))",
+            "logger_name": "com.arbm.digibank.common.PostingEventProcessor",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "deposit-transfer-service",
+            "traceId": "682f9f7fcd315db64a4043da4632aca6",
+            "spanId": "ba07ca4926836f33",
+            "bc": "deposits"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.227",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.227Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL040OQR75216275]\n totalTime: 27 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#7-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7f4e72d22d0f957ac9a40eee18",
+            "spanId": "64ac2cd6740725b2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.201",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.2Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=null, externalRequestId=I20250523MBBEMYKL040OQR75216275, businessMessageId=20250523MBBEMYKL04075216275, customerId=1688000036356458, smeId=null, amount=6.00, denomination=MYR, otherSideAccountNumber=912010110102783, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=MOHAMAD IQBAL SHAHIRAN BI, customerName=NUR HAMIZAH BINTI MD HISHAM, customerAccountType=SVGS, customerAccountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba, customerAccountNumber=912010110102783, transactionId=0f8a5f5d-c1a9-4f4a-9163-148ecc842436, tmCreatedAt=2025-05-22T22:04:46.978665Z, paymentStatus=COMPLETED, tmStatus=null, transferType=QR_CREDIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=75216275, paymentDetails=DuitQR P2P Transfer, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 23 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.200",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.199Z",
+            "@version": "1",
+            "message": "Received TM Posting Instruction Batch history event: PostingInstructionBatch(id=e5ce1173-9e60-4dec-aaa9-3ae15c18ed3f, createRequestId=I20250523MBBEMYKL040OQR75216275, clientId=payments, clientBatchId=I20250523MBBEMYKL040OQR75216275, postingInstructions=[PostingInstruction(id=a7cd8fd9-732a-45c7-ba89-61cb5c22e297, clientTransactionId=0f8a5f5d-c1a9-4f4a-9163-148ecc842436, pics=[], instructionDetails={PAYMENT_TYPE=duitnow_qr, busMsgId=20250523MBBEMYKL04075216275, cdtracctTpPrtry=SVGS, dbtracctTpPrtry=SVGS, paymentType=DUITNOW_QR_P2P, transferType=7}, committedPostings=[Posting(credit=true, amount=6, denomination=MYR, accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED), Posting(credit=false, amount=6, denomination=MYR, accountId=PAYNET_RPP_SETTLEMENT, accountAddress=DEFAULT, asset=COMMERCIAL_BANK_MONEY, phase=POSTING_PHASE_COMMITTED)], postingViolations=[], accountViolations=[], restrictionViolations=[], contractViolations=[], override=OverrideObj(restrictions=Restrictions(all=false, restrictionSetIds=[])), transactionCode=null, outboundAuthorisation=null, inboundAuthorisation=null, authorisationAdjustment=null, settlement=null, release=null, inboundHardSettlement=ExternalPostingInstruction(amount=6, denomination=MYR, targetAccount=Account(paymentDeviceToken=null, accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba), internalAccountId=PAYNET_RPP_SETTLEMENT, advice=false), outboundHardSettlement=null, transfer=null, customInstruction=null)], batchDetails={original_posting_client_batch_id=I20250523MBBEMYKL040OQR75216275}, valueTimestamp=2025-05-22T22:04:46.978665Z, status=POSTING_INSTRUCTION_BATCH_STATUS_ACCEPTED, error=null, insertionTimestamp=2025-05-22T22:04:46.978665Z, dryRun=false)",
+            "logger_name": "com.arbm.digibank.consumer.PaymentVaultPostingConsumer",
+            "thread_name": "org.springframework.kafka.KafkaListenerEndpointContainer#7-0-C-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7f4e72d22d0f957ac9a40eee18",
+            "spanId": "64ac2cd6740725b2",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.177",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.177Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL040OQR75216275]\n totalTime: 9 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.177",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.177Z",
+            "@version": "1",
+            "message": "Updating payment with external request id I20250523MBBEMYKL040OQR75216275 to status COMPLETED, enriched with TM data",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentStatusHandlerService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:47.136",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:47.136Z",
+            "@version": "1",
+            "message": "Get posting instruction batches based on clientBatchId: I20250523MBBEMYKL040OQR75216275",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.854",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.854Z",
+            "@version": "1",
+            "message": "Get posting instruction batches based on clientBatchId: I20250523MBBEMYKL040OQR75216275",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.812",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.811Z",
+            "@version": "1",
+            "message": "Received FRAML validation response for payment with ID 87df989f-1876-4d0e-995c-c7f8d4477981. FRAML response: approve",
+            "logger_name": "com.arbm.digibank.service.client.FramlTransfersService",
+            "thread_name": "inbound-payment-framl-I20250523MBBEMYKL040OQR75216275",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.656",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.656Z",
+            "@version": "1",
+            "message": "Requesting PaymentSnapshot for customerId: {\"id\": \"87df989f-1876-4d0e-995c-c7f8d4477981\", \"internalRequestId\": null, \"externalRequestId\": \"I20250523MBBEMYKL040OQR75216275\", \"customerId\": \"1688000036356458\", \"amount\": \"6.00\", \"denomination\": \"MYR\", \"otherSideAccountNumber\": \"912010110102783\", \"otherSideBankCode\": \"MBBEMYKL\", \"otherSideName\": \"MOHAMAD IQBAL SHAHIRAN BI\", \"otherSideAccountType\": \"SVGS\", \"customerName\": \"NUR HAMIZAH BINTI MD HISHAM\", \"customerAccountId\": \"a88f8e25-051b-4b0e-8c28-5a98ca588dba\", \"customerAccountType\": \"SVGS\", \"customerAccountNumber\": \"912010110102783\", \"transactionId\": null, \"tmCreatedAt\": null, \"paymentStatus\": \"CREATED\", \"otherSideExternalId\": \"\", \"tmStatus\": \"null\", \"transferType\": \"QR_CREDIT\", \"paymentType\": \"PAY2QR_P2P\", \"createdAt\": \"2025-05-22T22:04:46.546076Z\", \"updatedAt\": \"2025-05-22T22:04:46.546Z\", \"version\": \"0\", \"recipientReference\": \"75216275\", \"paymentDetails\": \"DuitQR P2P Transfer\", \"proxyRegistrationNumber\": null, \"isInitialPayment\": false, \"isInitialPaymentReversal\": false, \"enquiryAssociationId\": \"null\", \"otherSideQrId\": null, \"otherSideFinancialInstitutionId\": null, \"otherSideQrCode\": null, \"QrCategory\": null, \"acceptedTransactionTypes\": \"null\", \"businessMessageId\": \"20250523MBBEMYKL04075216275\", \"smeId\": null}",
+            "logger_name": "com.arbm.digibank.producer.PaymentEventProducer",
+            "thread_name": "kafka-producer-network-thread | producer-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "8c5eae68b7056704",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.599",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.599Z",
+            "@version": "1",
+            "message": "About to register posting instruction batch from request: CreatePostingInstructionBatchRequest(requestId=I20250523MBBEMYKL040OQR75216275, postingInstructionBatch=PostingInstructionBatch(clientId=payments, clientBatchId=I20250523MBBEMYKL040OQR75216275, postingInstructions=[PostingInstruction(clientTransactionId=0f8a5f5d-c1a9-4f4a-9163-148ecc842436, inboundHardSettlement=HardSettlement(amount=6.00, denomination=MYR, internalAccountId=PAYNET_RPP_SETTLEMENT, targetAccount=TargetAccount(paymentDeviceToken=null, accountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba), targetAccountId=null), outboundHardSettlement=null, instructionDetails={busMsgId=20250523MBBEMYKL04075216275, transferType=7, dbtracctTpPrtry=SVGS, cdtracctTpPrtry=SVGS, paymentType=DUITNOW_QR_P2P, PAYMENT_TYPE=duitnow_qr}, override=null)], status=null, insertionTimestamp=null, batchDetails={original_posting_client_batch_id=I20250523MBBEMYKL040OQR75216275}))",
+            "logger_name": "com.arbm.digibank.service.vault.TmCoreApiClientService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.578",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.578Z",
+            "@version": "1",
+            "message": "PaymentFraml Request: class TransferInitiationRequestV1 {\n    lifecycleId: 87df989f-1876-4d0e-995c-c7f8d4477981\n    paymentType: fps\n    channelType: mobile\n    paymentSubType: instant_transfer\n    paymentStatus: CREATED\n    createdAt: 1747951486546\n    numberOfPayments: 1\n    senderId: \n    senderSmeId: null\n    receiverId: 1688000036356458\n    receiverSmeId: null\n    senderSegment: retail\n    senderAccountType: svgs\n    receiverAccountType: \n    senderTransactionAmount: 6.00\n    senderTransactionCurrency: MYR\n    senderTransactionBankAccountNumber: 912010110102783\n    senderTransactionNotes: 75216275\n    senderBankBic: MBBEMYKL\n    receiverTransactionAmount: 6.00\n    receiverTransactionCurrency: MYR\n    receiverTransactionBankAccountNumber: 912010110102783\n    receiverSegment: retail\n    receiverName: NUR HAMIZAH BINTI MD HISHAM\n    otherSideName: MOHAMAD IQBAL SHAHIRAN BI\n    direction: incoming\n    eventOccurredAt: 1747951486546\n    textForReceiver: DuitQR P2P Transfer\n    productCode: PAY2QR\n    receiverBankBic: RJHIMYKL\n    receiverBankCountryCode: MY\n    receiverCountryCode: MY\n    senderBankCountryCode: MY\n    senderCountryCode: MY\n    receiverTransactionForeignExchangeRate: 1\n    receiverAlias: \n    receiverAliasType: \n    senderAlias: \n    eventExternalId: \n    receiverAliasLastUpdateTime: null\n    senderAliasLastUpdateTime: null\n    senderAliasRegistrationTime: null\n}",
+            "logger_name": "com.arbm.digibank.service.client.FramlTransfersService",
+            "thread_name": "inbound-payment-framl-I20250523MBBEMYKL040OQR75216275",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.554",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.553Z",
+            "@version": "1",
+            "message": "Created payment with external request id I20250523MBBEMYKL040OQR75216275 with status CREATED",
+            "logger_name": "com.arbm.digibank.service.interbank.PaymentService",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.551",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.551Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: Object org.springframework.data.repository.CrudRepository.save(Object)\n parameters: [PaymentEntity(internalRequestId=null, externalRequestId=I20250523MBBEMYKL040OQR75216275, businessMessageId=20250523MBBEMYKL04075216275, customerId=1688000036356458, smeId=null, amount=6.00, denomination=MYR, otherSideAccountNumber=912010110102783, otherSideBankCode=MBBEMYKL, otherSideAccountType=SVGS, otherSideName=MOHAMAD IQBAL SHAHIRAN BI, customerName=NUR HAMIZAH BINTI MD HISHAM, customerAccountType=SVGS, customerAccountId=a88f8e25-051b-4b0e-8c28-5a98ca588dba, customerAccountNumber=912010110102783, transactionId=null, tmCreatedAt=null, paymentStatus=CREATED, tmStatus=null, transferType=QR_CREDIT, otherSideExternalId=, paymentType=PAY2QR_P2P, recipientReference=75216275, paymentDetails=DuitQR P2P Transfer, proxyRegistrationNumber=null, isInitialPayment=false, isInitialPaymentReversal=false, enquiryAssociationId=null, otherSideQrId=null, otherSideFinancialInstitutionId=null, otherSideQrCode=null, qrCategory=null, acceptedTransactionTypes=null, paymentInfo=null)]\n totalTime: 6 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.541",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.541Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: PaymentEntity com.arbm.digibank.repository.payment.PaymentRepository.findByExternalRequestId(String)\n parameters: [I20250523MBBEMYKL040OQR75216275]\n totalTime: 18 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.440",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.44Z",
+            "@version": "1",
+            "message": "Repository method intercepted: \n signature: List com.arbm.digibank.repository.payment.PaymentRepository.findIfReversalExists(String,BigDecimal,String,String,Instant,String,String)\n parameters: [912010110102783, 6.00, MBBEMYKL, MOHAMAD IQBAL SHAHIRAN BI, 2025-05-22T22:04:11.415260Z, I20250523MBBEMYKL040OQR75216275, 20250523MBBEMYKL04075216275]\n totalTime: 24 ms\n result: SUCCESS",
+            "logger_name": "com.arbm.digibank.aspect.RepositoryPerformanceTrackingAspect",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.362",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.362Z",
+            "@version": "1",
+            "message": "Registering incoming payment for externalRequestId I20250523MBBEMYKL040OQR75216275",
+            "logger_name": "com.arbm.digibank.controller.PaymentsController",
+            "thread_name": "http-nio-8080-exec-1",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "0091c602941836de",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.298",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.298Z",
+            "@version": "1",
+            "message": "Payment request: class PaymentRequest {\n    internalRequestId: null\n    externalRequestId: I20250523MBBEMYKL040OQR75216275\n    customerAccountNumber: 912010110102783\n    amount: 6.00\n    denomination: MYR\n    otherSideFullName: MOHAMAD IQBAL SHAHIRAN BI\n    otherSideExternalId: \n    otherSideAccountNumber: 912010110102783\n    otherSideBankCode: MBBEMYKL\n    transferType: QR_CREDIT\n    recipientReference: 75216275\n    paymentDetails: DuitQR P2P Transfer\n    instructionDetails: {businessMessageId=20250523MBBEMYKL04075216275, transferType=7}\n    debtorAccountType: SVGS\n    creditorAccountType: SVGS\n    identificationType: null\n    identificationId: null\n    paymentType: PAY_TO_QR_P2P\n}",
+            "logger_name": "com.arbm.digibank.service.IncomingPaymentsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "4bd9ff5eb9387e42",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.298",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.298Z",
+            "@version": "1",
+            "message": "[I20250523MBBEMYKL040OQR75216275] Registering incoming payment in payments-service",
+            "logger_name": "com.arbm.digibank.service.client.PaymentsService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "spanId": "4bd9ff5eb9387e42",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-22 22:04:46.235",
+        "kubernetes.container_name": "fis-gateway",
+        "logBody": {
+            "@timestamp": "2025-05-22T22:04:46.235Z",
+            "@version": "1",
+            "message": "Received retailPayment request with requestID [I20250523MBBEMYKL040OQR75216275], channelRef: [20250523MBBEMYKL04075216275]",
+            "logger_name": "com.arbm.digibank.controller.soap.IncomingPaymentsController",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "fis-gateway",
+            "traceId": "682f9f7e23ed76db068da0c223ea05c1",
+            "spanId": "4bd9ff5eb9387e42",
+            "bc": "payments"
+        }
+    }
+]
