@@ -1,0 +1,34 @@
+[
+    {
+        "@timestamp": "2025-05-26 09:25:53.640",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-26T09:25:53.64Z",
+            "@version": "1",
+            "message": "AXIS Response =<?xml version=\"1.0\" encoding=\"utf-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"><soapenv:Body><ns2:DoRetailPaymentTrxRs xmlns:ns2=\"http://finmeccanica.com/services/rcm/objectsIFX\" xmlns=\"http://www.ifxforum.org/IFX_2X\"><RqUID>I20250526HLBBMYKL010ORM48439375</RqUID><Status><StatusCode>0</StatusCode><Severity>Info</Severity></Status><ns2:InternalReferenceNumber>20250526HLBBMYKL01048439375   </ns2:InternalReferenceNumber></ns2:DoRetailPaymentTrxRs></soapenv:Body></soapenv:Envelope>",
+            "logger_name": "com.arbm.digibank.rcm.handler.SOAPLogHandler",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "c498993a92bdeca6",
+            "bc": "payments"
+        }
+    },
+    {
+        "@timestamp": "2025-05-26 09:25:52.187",
+        "kubernetes.container_name": "payment-service",
+        "logBody": {
+            "@timestamp": "2025-05-26T09:25:52.187Z",
+            "@version": "1",
+            "message": "AXIS Request=<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n <soapenv:Body>\n  <DoRetailPaymentTrxRq xmlns=\"http://finmeccanica.com/services/rcm/objectsIFX\">\n   <ns1:RqUID xmlns:ns1=\"http://www.ifxforum.org/IFX_2X\">I20250526HLBBMYKL010ORM48439375</ns1:RqUID>\n   <ns2:MsgRqHdr xmlns:ns2=\"http://www.ifxforum.org/IFX_2X\">\n    <ns2:CredentialsRqHdr xsi:type=\"ns2:CredentialsRqHdr_Type\">\n     <ns2:SubjectRole>SystemUser</ns2:SubjectRole>\n     <ns2:SecTokenLogin>\n      <ns2:LoginName>IBK</ns2:LoginName>\n      <ns2:SubjectPswd>\n       <ns2:CryptType></ns2:CryptType>\n       <ns2:Pswd></ns2:Pswd>\n       <ns2:CryptPswd>\n        <ns2:ContentType></ns2:ContentType>\n        <ns2:BinLength>0</ns2:BinLength>\n        <ns2:BinData/>\n       </ns2:CryptPswd>\n      </ns2:SubjectPswd>\n     </ns2:SecTokenLogin>\n    </ns2:CredentialsRqHdr>\n    <ns2:ContextRqHdr>\n     <ns2:NetworkTrnData>\n      <ns2:NetworkOwner>IBK</ns2:NetworkOwner>\n     </ns2:NetworkTrnData>\n     <ns2:CustLangPref>en</ns2:CustLangPref>\n    </ns2:ContextRqHdr>\n   </ns2:MsgRqHdr>\n   <AccessCode></AccessCode>\n   <InternalReferenceNumber>20250526HLBBMYKL01048439375</InternalReferenceNumber>\n   <TransferType>5</TransferType>\n   <CancelationFlag>A</CancelationFlag>\n   <ReversalRqUID></ReversalRqUID>\n   <AccountBranchCodeFrom>91201</AccountBranchCodeFrom>\n   <AccountRelationTypeFrom>700</AccountRelationTypeFrom>\n   <AccountNumberFrom>0007000805279</AccountNumberFrom>\n   <ns3:CurAmt xmlns:ns3=\"http://www.ifxforum.org/IFX_2X\">\n    <ns3:Amt>20.00</ns3:Amt>\n    <ns3:CurCode>\n     <ns3:CurCodeType>412</ns3:CurCodeType>\n     <ns3:CurCodeValue>412</ns3:CurCodeValue>\n    </ns3:CurCode>\n   </ns3:CurAmt>\n   <Remarks></Remarks>\n   <StartDate>20250526</StartDate>\n   <FeeAmt>\n    <ns4:Amt xmlns:ns4=\"http://www.ifxforum.org/IFX_2X\">0.0</ns4:Amt>\n   </FeeAmt>\n   <RecipientSenderName>HUAN HUI YAN</RecipientSenderName>\n   <RecipientReference>Fund transfer</RecipientReference>\n   <OtherPaymentDetails></OtherPaymentDetails>\n   <ThirdPartAccNo>35650108247</ThirdPartAccNo>\n   <ThirdPartAccType>SVGS</ThirdPartAccType>\n   <BICIdentifier>HLBBMYKL</BICIdentifier>\n   <IdentificationType></IdentificationType>\n   <IdentificationId></IdentificationId>\n   <ResidentStatus>1</ResidentStatus>\n   <Details>1</Details>\n   <ThirdPartIdentification></ThirdPartIdentification>\n   <ChannelRef>20250526HLBBMYKL01048439375</ChannelRef>\n  </DoRetailPaymentTrxRq>\n </soapenv:Body>\n</soapenv:Envelope>",
+            "logger_name": "com.arbm.digibank.rcm.handler.SOAPLogHandler",
+            "thread_name": "http-nio-8080-exec-4",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-service",
+            "spanId": "c498993a92bdeca6",
+            "bc": "payments"
+        }
+    }
+]

@@ -1,0 +1,129 @@
+1st FRAML request from payment-service:
+{
+        "@timestamp": "2025-05-24 03:51:17.139",
+        "kubernetes.container_name": "payment-service",
+        "log": "2025-05-24T03:51:17.139887803Z stdout F {"@timestamp":"2025-05-24T03:51:17.139Z","@version":"1","message":"PaymentFraml Request: class TransferInitiationRequestV1 {
+            lifecycleId: 16336725-1167-4eac-b056-33056b45e37e
+            paymentType: fps
+            channelType: mobile
+            paymentSubType: instant_transfer
+            paymentStatus: PROSPECT
+            createdAt: 1748058677139
+            numberOfPayments: 1
+            senderId: 441803
+            senderSmeId: null
+            receiverId:     
+            receiverSmeId: null    
+            senderSegment: retail    
+            senderAccountType: svgs    
+            receiverAccountType:     
+            senderTransactionAmount: 100    
+            senderTransactionCurrency: MYR    
+            senderTransactionBankAccountNumber: 123007101828770    
+            senderTransactionNotes: Bak    
+            senderBankBic: RJHIMYKL    
+            receiverTransactionAmount: 100    
+            receiverTransactionCurrency: MYR    
+            receiverTransactionBankAccountNumber: 162106895306    
+            receiverSegment: retail    
+            receiverName: MUHAMMAD FARED BIN M          
+            otherSideName: null    
+            direction: outgoing    
+            eventOccurredAt: 1748058677139    
+            textForReceiver: null    
+            productCode: PAY2ACCOUNT    
+            receiverBankBic: MBBEMYKL    
+            receiverBankCountryCode: MY    
+            receiverCountryCode: MY    
+            senderBankCountryCode: MY    
+            senderCountryCode: MY    
+            receiverTransactionForeignExchangeRate: 1    
+            receiverAlias:     
+            receiverAliasType:     
+            senderAlias:     
+            eventExternalId:     
+            receiverAliasLastUpdateTime: null    
+            senderAliasLastUpdateTime: null    
+            senderAliasRegistrationTime: null}","logger_name":"com.arbm.digibank.service.client.FramlTransfersService","thread_name":"http-nio-8080-exec-8","level":"INFO","level_value":20000,"springAppName":"payment-service","traceId":"68314232e82f9444dcd134bfaaeb9ef7","spanId":"dcd134bfaaeb9ef7","bc":"payments"}"
+}
+
+
+
+1st Feedzai Request:
+{
+        "@timestamp": "2025-05-24 03:51:19.941",
+        "kubernetes.container_name": "feedzai-gateway",
+        "log": "2025-05-24T03:51:19.941760178Z stdout F {"@timestamp":"2025-05-24T03:51:19.941Z","@version":"1","message":"FEEDZAI: 6 print httpEntity:
+         <{"lifecycle_id":"16336725-1167-4eac-b056-33056b45e37e",
+         "created_at":1748058677139,
+         "sender_id":"441803",
+         "sender_account_id":"912017000000582", /////////////////////////////////
+         "sender_account_open_date":0,
+         "receiver_account_open_date":0,
+         "sender_account_iban":"123007101828770", /////////////////////////////////
+         "receiver_id":"","receiver_account_iban":"162106895306",
+         "device_id":"384965",
+         "sender_email":"faredfuad@gmail.com",
+         "sender_name":"MUHAMMAD FARED BIN MOHD FUAD",
+         "sender_phone":"+60173046979",
+         "receiver_bank_bic":"MBBEMYKL",
+         "receiver_bank_country_code":"MY",
+         "receiver_country_code":"MY",
+         "sender_bank_country_code":"MY",
+         "sender_country_code":"MY",
+         "receiver_transaction_foreign_exchange_rate":1.0,
+         "product_code":"PAY2ACCOUNT",
+         "sender_transaction_amount":10000,
+         "sender_transaction_bank_account_number":"123007101828770",
+         "receiver_transaction_amount":10000,
+         "receiver_transaction_bank_account_number":"162106895306",
+         "receiver_name":"MUHAMMAD FARED BIN M      ",
+         "event_occurred_at":1748058677139,
+         "payment_type":"fps",
+         "channel_type":"mobile",
+         "payment_sub_type":"instant_transfer",
+         "payment_status":"entered",
+         "number_of_payments":1,
+         "sender_segment":"retail",
+         "sender_account_type":"svgs",
+         "sender_transaction_currency":"MYR",
+         "sender_transaction_notes":"Bak",
+         "sender_bank_bic":"RJHIMYKL",
+         "receiver_transaction_currency":"MYR",
+         "receiver_segment":"retail",
+         "direction":"outgoing",
+         "receiver_alias":"",
+         "receiver_alias_type":"",
+         "sender_alias":"",
+         "event_external_id":"6f105a20-b789-49e2-9de7-7cf19b5a6936",
+         "sender_initiated_at":1748058677139,
+         "receiver_account_balance":0,
+         "sender_account_balance":42, /////////////////////////////////
+         "sender_account_bic":"RJHIMYKL",
+         "receiver_account_bic":"MBBEMYKL",
+         "receiver_currency":"MYR",
+         "sender_currency":"MYR",
+         "receiver_account_currency":"MYR",
+         "receiver_account_type":""
+         ,"sender_account_currency":"MYR",
+         "session_id":"417b7a23-991e-4036-a334-8441307a4636",
+         "sender_correspondent_bank_country_code":"MY",
+         "receiver_correspondent_bank_country_code":"MY"},[user-agent:"ReactorNetty/1.0.24", accept:"*/*", content-type:"application/json", x-amzn-trace-id:"Root=1-68314232-e82f9444dcd134bfaaeb9ef7;Parent=499b9ad298cc15a6;Sampled=0", content-length:"1872", x-forwarded-proto:"http", x-request-id:"7f53a326-c5a8-9089-9ebf-9a6a52275784", x-envoy-expected-rq-timeout-ms:"200000", Authorization:"Bearer eyJ0eXAiOiJKV1QiLCJraWQiOiI2MWEzOTAxZC05NDdhLTQ0MjYtYjIzMy01NjE3NDFmNTE1ODIiLCJhbGciOiJSUzUxMiJ9.eyJleHAiOjE3NTA2NTA2NzksIm5iZiI6MTc0ODA1ODY3OSwiaXNzIjoiYXJibSIsInN1YiI6ImFyYm0iLCJqdGkiOiJlYzQzODBiNy01MDM1LTQ0ZDMtYjc2Ni01ZTY3ZDRmM2FlYjAifQ.cDtUR3mZxBB-DExDbqDbztAIrffYd9yPQNFwaPREjj5xWthgGQMRJykrZ7TNH8mzKuhLkmtPV_638aNOU3mNesrCTMwf7VMajTbcwYEAjxqmxnaz-doLWrQ-2MRw9szJJQJjqt0JpA65WL8YIFd9XlxgKzT8iB8KNP8PERtk8Ee7xqJsVwJ3SisKlKwzdvY7ifGW349nV0acyPq1lsn-aIDV2uxHXNVmyLcfQ2JPhEXbSdpH-cbluUH5l0mHvroo32SWzUzl4RTDFFvXlPBZwhCwYpcbQSgRYOn1pDVx_uqC_TpOLbiccQLYGxxDboAOu02TZvqimSURdszpEdqTq5qEcHI-Y-PF0kQCAN0PlyOp2vzZ-f50p4cYZ6BnB5uU1KevvLeHTBMw32jeuAoXtsnSnZY6JAR1bkNlhDnoxY6ldvgRxcqNEfrQl9QBBulPpL7KI4YI4NSebUrecihKVvi1JeUIzJzR_eLOTa3B4JKzF6jORKnXROM4gL8VuDTkbjLB0bQTAJfnoKAJmDG6n8e8qXZdVMfugLj63L8-5hhTxxcPvS2RxVnYnGKPzJm9H3Pw2whH2V8SiWqLQ5CkqUJhu0Py3iEQYgKuvGsGA8grMecXan4w6QJy38ElG818uq6sH_AbRMqWFqOPhi1u47RFwm268-vEdgkAKqZL9JM"]>, uri: https://alrajhi-private.feedzai.com/api/transfers, method: POST","logger_name":"com.arbm.digibank.services.FeedzaiProxyService","thread_name":"http-nio-8080-exec-5","level":"INFO","level_value":20000,"springAppName":"feedzai-gateway","traceId":"68314232e82f9444dcd134bfaaeb9ef7","spanId":"8dbac460a82132b9","bc":"framl"}"
+    }
+
+1st Feedzai Response:
+
+{
+        "@timestamp": "2025-05-24 03:51:19.983",
+        "kubernetes.container_name": "feedzai-gateway",
+        "log": "2025-05-24T03:51:19.983430747Z stdout F {"@timestamp":"2025-05-24T03:51:19.983Z","@version":"1","message":"FEEDZAI: 7 Response received from feedzai api: <200,{"status":"ok",
+        "lifecycle_id":"16336725-1167-4eac-b056-33056b45e37e",
+        "event_external_id":"6f105a20-b789-49e2-9de7-7cf19b5a6936",
+        "action_codes":["[Transfers-FR5]"],
+        "secondary_action_codes":["[Transfers-DR3]","[Transfers-SCAR5]"],
+        "alert":true,"score":0,
+        "decision":"decline",
+        "sca_required":true,
+        "sanctions_decision":"no match",
+        "sanctions_checksums":{"originator_search_checksum_in":"","originator_search_checksum_out":"","beneficiary_search_checksum_in":"","beneficiary_search_checksum_out":"","transaction_notes_search_checksum_in":"","transaction_notes_search_checksum_out":""},"sanctions_identifiers":{"originator_search_id":"","beneficiary_search_id":"","transaction_notes_search_id":""}},[Date:"Sat, 24 May 2025 03:51:19 GMT", Server:"HTTP Server", X-Frame-Options:"SAMEORIGIN", Strict-Transport-Security:"max-age=31536000; includeSubdomains;", X-Content-Type-Options:"nosniff", Referrer-Policy:"strict-origin-when-cross-origin", Cache-control:"no-store, no-cache", Content-Type:"application/json", Content-Length:"689", feedzai-enrichment-ms-revelock:"8", feedzai-enrichment-success-revelock:"true", feedzai-enrichment-ms-total:"8", Keep-Alive:"timeout=16", Connection:"Keep-Alive"]>","logger_name":"com.arbm.digibank.services.FeedzaiProxyService","thread_name":"http-nio-8080-exec-5","level":"INFO","level_value":20000,"springAppName":"feedzai-gateway","traceId":"68314232e82f9444dcd134bfaaeb9ef7","spanId":"8dbac460a82132b9","bc":"framl"}"
+    },

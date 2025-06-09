@@ -1,0 +1,54 @@
+
+Request:
+
+{
+        "@timestamp": "2025-05-26 03:14:40.771",
+        "kubernetes.container_name": "payment-proxy-management-service",
+        "logBody": {
+            "@timestamp": "2025-05-26T03:14:40.77Z",
+            "message": "[a8cd2a2d-24e5-4611-85a0-803ef6f61a20] Sending request to FIS for proxy update:
+             RequestedProxyUpdate(
+             requestId=a8cd2a2d-24e5-4611-85a0-803ef6f61a20,
+              customerId=452184,
+               smeId=null,
+                customerName=MUHAMMAD AZFAR AZRI BIN AMINARIFF,
+                 fisProxyId=0011788630,
+                  proxyForUpdate=ProxyForUpdate(
+                  type=NRIC,
+                   value=900810035453),
+                    accountNumber=912017000005094,
+                     secondaryIdType=NRIC,
+                      secondaryId=900810035453)",
+            "logger_name": "com.arbm.digibank.service.PaymentProxyStatusUpdateService",
+            "thread_name": "http-nio-8080-exec-8",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "payment-proxy-management-service",
+            "traceId": "6833dc9fe7b17d58bfefc3980c6a6561",
+            "spanId": "bfefc3980c6a6561",
+            "bc": "payments"
+        }
+    }
+
+Response:
+{
+        "@timestamp": "2025-05-26 03:14:41.581",
+        "kubernetes.container_name": "async-response-service",
+        "logBody": {
+            "@timestamp": "2025-05-26T03:14:41.58Z",
+            "@version": "1",
+            "message": "Received request for saving Async Result:
+             AsyncResultRequest(
+             requestId=a8cd2a2d-24e5-4611-85a0-803ef6f61a20,
+              type=PROXY_UPDATE_COMPLETED,
+               payload={\"customerId\":\"452184\",\"status\":\"FAILED\",\"mappedErrorCode\":\"U806_DUPLICATE_PROXY\"})",
+            "logger_name": "com.arbm.digibank.controller.AsyncResultsController",
+            "thread_name": "http-nio-8080-exec-7",
+            "level": "INFO",
+            "level_value": 20000,
+            "springAppName": "async-response-service",
+            "traceId": "6833dc9fe7b17d58bfefc3980c6a6561",
+            "spanId": "89cbadfd45290cc0",
+            "bc": "payments"
+        }
+    }
